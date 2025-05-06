@@ -1,4 +1,4 @@
-<a href = "../index.md">< Home</a>
+<a href = "../">< Home</a>
 
 # VIA Metropolitan Transit Information
 <p>
