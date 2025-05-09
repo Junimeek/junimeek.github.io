@@ -1,4 +1,7 @@
-<link rel="icon" href="../resources/favicon.ico" type="image/vnd.microsoft.icon">
+<head>
+    <link rel="icon" href="../resources/favicon.ico" type="image/vnd.microsoft.icon">
+</head>
+
 <a href = "../">< Home</a>
 
 # VIA Metropolitan Transit Information
