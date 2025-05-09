@@ -1,3 +1,5 @@
+<link rel="icon" href="../resources/favicon.ico" type="image/vnd.microsoft.icon">
+
 # Junimeek's Website
 Under construction
 
