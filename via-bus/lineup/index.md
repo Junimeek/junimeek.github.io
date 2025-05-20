@@ -2,14 +2,13 @@
     <link rel="icon" href="../resources/favicon.ico" type="image/vnd.microsoft.icon">
 </head>
 
-<a href = "../">< Home</a>
+<a href = ".../">< Home</a><br/>
+<a>< Back to VIA Info Hub</a>
 
-# VIA Metropolitan Transit Information
+# Lineup Timetables
 <p>
-    Although VIA provides a lot of information for riders, there is some information that remains obscure.
+Lineup is a service that VIA operates every night, with buses departing the Downtown Service Hub (near Travis Park) at 10:30pm, 11:30pm, and 12:30pm to give riders a final chance to make transfers and reach their final destinations. VIA, however, does not provide dedicated timetables for lineup routes, instead scattering the times across their regular daytime timetables. This page contains custom timetables that I have made for routes 202-296 in the style of their daytime schedules as a convenient alternative to VIA's brochures.
 </p>
-
-## Lineup Timetables
 <p>
     When VIA <a target="_blank" href="https://viainfo.net/servicechanges">announces service changes</a> that affect lineup scheduling, new timetables will be uploaded here as fast as I can create them.
 </p>
@@ -70,6 +69,3 @@
 - <a target="_blank" href="../documents/2025/05/v1_Schedule246Web.pdf">246 [March 5, 2025; eff. Aug 19, 2024] - web version</a>
 - <a target="_blank" href="../documents/2025/05/v1_Schedule246Printable.pdf">246 [March 5, 2025; eff. Aug 19, 2024] - Printable version</a>
 - <a target="_blank" href="../documents/2025/05/v1_Schedule246Grayscale.pdf">246 [March 5, 2025; eff. Aug 19, 2024] - Grayscale version</a>
-
-# Disclaimer
-This is an unofficial source of information for VIA Metropolitan Transit's bus services. By continuing to use this site, you acknowledge that this website, as well as the creator of this site (<a target="_blank" href="https://twitter.com/junimeek39">Junimeek</a>), has no affiliation with VIA Metropolitan Transit.
