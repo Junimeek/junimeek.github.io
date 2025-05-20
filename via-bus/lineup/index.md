@@ -2,8 +2,8 @@
     <link rel="icon" href="../resources/favicon.ico" type="image/vnd.microsoft.icon">
 </head>
 
-<a href = ".../">< Home</a><br/>
-<a>< Back to VIA Info Hub</a>
+<a href="https://junimeek.github.io/">< Home</a><br/>
+<a href="https://junimeek.github.io/via-bus/">< Back to VIA Info Hub</a>
 
 # Lineup Timetables
 <p>
