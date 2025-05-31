@@ -6,33 +6,28 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>VIA Metropolitan Transit Information</title>
         <link rel="stylesheet" href="./style.css">
+        <link rel="stylesheet" href="../resources/navBar.css">
         <link rel="icon" href="https://junimeek.github.io/resources/favicon.ico" type="image/vnd.microsoft.icon">
         </head>
     
     <body>
-        <a href="https://junimeek.github.io/">< Home</a><br/>
-        <div class="mainBody">
-            <!--
-            <div style="position: fixed; top: 0; width: 100%;">
-                <header>
-                    <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
-                        <tbody>
-                            <tr>
-                                <td style="vertical-align: middle; text-align: center;">
-                                    <img src="../resources/JuniperTree.png" height="69px">
-                                    </td>
-                                <td style="vertical-align: middle; text-align: center;">
-                                    <span>
-                                        juni
-                                        </span>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </header>
-                </div>
-            -->
+        <nav class="navBar">
+            <ul>
+                <li><a class="navButton" href="https://junimeek.github.io/">Home</a></li>
+                <li>
+                    <div class="navDropdown">
+                        <button>Site Categories</button>
+                        <div class="dropdownContent">
+                            <a href="https://junimeek.github.io/via-bus/">VIA Information</a>
+                            </div>
+                    </div>
+                    </li>
+                <li><a class="navButton" href="https://junimeek.github.io/about">About</a></li>
+                <li><a class="navButton" href="https://junimeek.github.io/contact">Contact</a></li>
+                </ul>
+            </nav>
 
+        <div class="mainBody">
             <table border="0" width="100%" cellpadding="7" cellspacing="0">
                 <tbody>
                     <tr>
@@ -74,6 +69,18 @@
                             <a href="./lineup/index.html"><strong>Lineup Timetables</strong></a>
                             <br/>
                             A collection of timetables for routes 202–296.
+                            </td>
+                        </tr>
+                    <tr>
+                        <td align="center" height="60" width="100" bgcolor="#bdae80">
+                            <font color="#ffffff">
+                                <a class="hubButton" style="color: #ffffff;" href="./errors/index.html">Errors</a>
+                                </font>
+                            </td>
+                        <td height="60">
+                            <a href="./errors/index.html"><strong>Schedule Errors</strong></a>
+                            <br/>
+                            List of errors that I've been able to find on each timetable.
                             </td>
                         </tr>
                     <tr>

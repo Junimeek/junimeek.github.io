@@ -1,0 +1,45 @@
+.mainBody {
+    background-color: aliceblue;
+    padding: 10px 15px;
+    height: auto;
+}
+
+.errorsTable {
+    border: 1;
+    background-color: #ffffff;
+    border-collapse: collapse;
+    width: 80%;
+    max-width: 900px;
+}
+
+.tableHeader {
+    padding: 10px, 10px;
+    border: #c0c0c0;
+    font-weight: bold;
+    background-color: #a0a0a0;
+}
+
+.routeFrequent {
+    padding: 10px, 10px;
+    background-color: #b93838;
+}
+
+.routeStandard30 {
+    padding: 10px, 10px;
+    background-color: #375c9f;
+}
+
+.routeStandard60 {
+    padding: 10px, 10px;
+    background-color: #6e9dbb;
+}
+
+.routeNum {
+    color: #ffffff;
+    font-weight: bold;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #c23234;
+}

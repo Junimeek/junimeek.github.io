@@ -1,0 +1,92 @@
+.navBar {
+    position: sticky;
+    top: 0;
+    width: 100%;
+}
+
+.navBar ul {
+    list-style-type: none;
+    background-color: #444444;
+    padding: 0px;
+    margin: 0px;
+    overflow: hidden;
+}
+
+.navBar a {
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+    display: block;
+    text-align: center;
+}
+
+.navBar a:hover {
+    background-color: #777777;
+}
+
+.navBar li {
+    float: left;
+}
+
+.navDropdown {
+    display: inline-block;
+}
+
+.navDropdown button {
+    background-color: #444444;
+    color: white;
+    padding: 15px;
+    border: none;
+    cursor: pointer;
+}
+
+.navDropdown a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+}
+
+.navDropdown .dropdownContent {
+    display: none;
+    position: absolute;
+    background-color: #444444;
+    min-width: 100px;
+}
+
+.navDropdown:hover .dropdownContent {
+    display: block;
+}
+
+.navDropdown:hover button {
+    background-color: #777777;
+}
+
+.navDropdown a:hover {
+    background-color: #777777;
+}
+
+.mainBody {
+    background-color: aliceblue;
+    padding: 10px 15px;
+    height: auto;
+}
+
+.webTable {
+    border: 1;
+    background-color: #ffffff;
+    border-collapse: collapse;
+    width: 80%;
+    max-width: 900px;
+}
+
+.hubButton {
+    padding: 10px, 10px;
+    border: #c0c0c0;
+    cursor: pointer;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #c23234;
+}
