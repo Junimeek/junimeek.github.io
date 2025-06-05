@@ -34,6 +34,11 @@
     background-color: #6e9dbb;
 }
 
+.routeLineup {
+    padding: 10px, 10px;
+    background-color: #431a46;
+}
+
 .routeNum {
     color: #ffffff;
     font-weight: bold;

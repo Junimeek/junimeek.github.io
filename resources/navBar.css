@@ -2,6 +2,7 @@
     position: sticky;
     top: 0;
     width: 100%;
+    padding: 0%;
 }
 
 .navBar ul {
@@ -54,6 +55,10 @@
     min-width: 100px;
 }
 
+.dropdownContent a {
+    text-align: left;
+}
+
 .navDropdown:hover .dropdownContent {
     display: block;
 }
@@ -64,29 +69,4 @@
 
 .navDropdown a:hover {
     background-color: #777777;
-}
-
-.mainBody {
-    background-color: aliceblue;
-    padding: 10px 15px;
-    height: auto;
-}
-
-.webTable {
-    border: 1;
-    background-color: #ffffff;
-    border-collapse: collapse;
-    width: 80%;
-    max-width: 900px;
-}
-
-.hubButton {
-    padding: 10px, 10px;
-    border: #c0c0c0;
-    cursor: pointer;
-}
-
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #c23234;
 }

@@ -1,0 +1,62 @@
+function GetTimetableLink(route)
+{
+    let scheduleLink = "";
+
+    switch(route)
+    {
+        case 4:
+            scheduleLink = "https://www.viainfo.net/wp-content/uploads/2024/07/Schedule004.pdf";
+            break;
+        case 17:
+            scheduleLink = "https://www.viainfo.net/wp-content/uploads/2025/01/Schedule017.pdf";
+            break;
+        case 22:
+            scheduleLink = "https://www.viainfo.net/wp-content/uploads/2025/01/Schedule022.pdf";
+            break;
+        case 24:
+            scheduleLink = "https://www.viainfo.net/wp-content/uploads/2024/07/Schedule024.pdf";
+            break;
+        case 32:
+            scheduleLink = "https://www.viainfo.net/wp-content/uploads/2025/01/Schedule032.pdf";
+            break;
+        case 62:
+            scheduleLink = "https://www.viainfo.net/wp-content/uploads/2024/07/Schedule062.pdf";
+            break;
+        case 76:
+            scheduleLink = "https://www.viainfo.net/wp-content/uploads/2025/04/Schedule076.pdf";
+            break;
+        case 93:
+            scheduleLink = "https://www.viainfo.net/wp-content/uploads/2025/01/Schedule093.pdf";
+            break;
+        case 202:
+            scheduleLink = "https://www.viainfo.net/wp-content/uploads/2024/10/LineUp-0924_Rt202.pdf";
+            break;
+        case 204:
+            scheduleLink = "https://www.viainfo.net/wp-content/uploads/2024/10/LineUp-0924_Rt204.pdf";
+            break;
+        case 222:
+            scheduleLink = "https://www.viainfo.net/wp-content/uploads/2024/10/LineUp-0924_Rt222.pdf";
+            break;
+        case 232:
+            scheduleLink = "https://www.viainfo.net/wp-content/uploads/2024/10/LineUp-0924_Rt232.pdf";
+            break;
+        case 246:
+            scheduleLink = "https://www.viainfo.net/wp-content/uploads/2024/10/LineUp-0924_Rt246.pdf";
+            break;
+        case 251:
+            scheduleLink = "https://www.viainfo.net/wp-content/uploads/2024/10/LineUp-0924_Rt251.pdf";
+            break;
+        case 276:
+            scheduleLink = "https://www.viainfo.net/wp-content/uploads/2024/10/LineUp-0924_Rt276.pdf";
+            break;
+        default:
+            scheduleLink = "";
+            break;
+    }
+
+    if (scheduleLink == "") {
+        throw("EVIL number detected!");
+    }
+
+    window.open(scheduleLink);
+}

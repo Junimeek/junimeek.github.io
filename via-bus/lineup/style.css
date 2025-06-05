@@ -10,6 +10,8 @@
     border-collapse: collapse;
     width: 80%;
     max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .tableHeader {
@@ -45,9 +47,19 @@
     border-collapse: collapse;
     width: 80%;
     max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.printableTable td {
+   text-align: center;
 }
 
 body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: #c23234;
+}
+
+table th {
+    background-color: #eaecf0;
 }
