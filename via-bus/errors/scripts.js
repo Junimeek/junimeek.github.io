@@ -16,6 +16,12 @@ function GetTimetableLink(route)
         case 24:
             scheduleLink = "https://www.viainfo.net/wp-content/uploads/2024/07/Schedule024.pdf";
             break;
+        case 26:
+            scheduleLink = "https://www.viainfo.net/wp-content/uploads/2025/04/Schedule026.pdf";
+            break;
+        case 28:
+            scheduleLink = "https://www.viainfo.net/wp-content/uploads/2025/04/Schedule028.pdf";
+            break;
         case 32:
             scheduleLink = "https://www.viainfo.net/wp-content/uploads/2025/01/Schedule032.pdf";
             break;
@@ -34,8 +40,14 @@ function GetTimetableLink(route)
         case 204:
             scheduleLink = "https://www.viainfo.net/wp-content/uploads/2024/10/LineUp-0924_Rt204.pdf";
             break;
+        case 209:
+            scheduleLink = "https://www.viainfo.net/wp-content/uploads/2024/10/LineUp-0924_Rt209.pdf";
+            break;
         case 222:
             scheduleLink = "https://www.viainfo.net/wp-content/uploads/2024/10/LineUp-0924_Rt222.pdf";
+            break;
+        case 225:
+            scheduleLink = "https://www.viainfo.net/wp-content/uploads/2024/10/LineUp-0924_Rt225.pdf";
             break;
         case 232:
             scheduleLink = "https://www.viainfo.net/wp-content/uploads/2024/10/LineUp-0924_Rt232.pdf";
