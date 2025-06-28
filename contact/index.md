@@ -12,5 +12,5 @@ doesnt exist yet
 
 ## Social Media
 - **Discord username:** @junimeek
-- **Discord server:** https://discord.gg/6FMZSGdha4
+- **Discord server:** [https://discord.gg/6FMZSGdha4](https://discord.gg/6FMZSGdha4)
 - **Twitter:** [@junimeek39](https://twitter.com/junimeek39)
