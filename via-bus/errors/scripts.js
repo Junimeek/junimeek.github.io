@@ -52,6 +52,9 @@ function GetTimetableLink(route)
         case 76:
             scheduleLink = "https://www.viainfo.net/wp-content/uploads/2025/04/Schedule076.pdf";
             break;
+        case 79:
+            scheduleLink = "https://www.viainfo.net/wp-content/uploads/2024/08/Schedule079.pdf";
+            break;
         case 93:
             scheduleLink = "https://www.viainfo.net/wp-content/uploads/2025/01/Schedule093.pdf";
             break;

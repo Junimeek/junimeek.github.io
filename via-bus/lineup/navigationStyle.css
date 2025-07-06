@@ -1,0 +1,151 @@
+.navTable {
+    border: 2;
+    background-color: #ffffff;
+    border-collapse: collapse;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+.tableHeader {
+    padding: 10px, 10px;
+    border: #c0c0c0;
+    background-color: #a0a0a0;
+}
+
+.tableHeader td {
+    text-align: center;
+}
+
+.tableHeader a {
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.routeList {
+    padding: 5px, 10px;
+    border: #c0c0c0;
+}
+
+.routeList td {
+    text-align: center;
+}
+
+.routeList a {
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.routeInfo {
+    padding: 5px, 10px;
+    border: #c0c0c0;
+}
+
+.routeInfo td {
+    background-color: aliceblue;
+}
+
+.numF {
+    color: #b93838;
+    font-weight: bold;
+}
+
+.num30 {
+    color: #375c9f;
+    font-weight: bold;
+}
+
+.num60 {
+    color: #6e9dbb;
+    font-weight: bold;
+}
+
+.num90 {
+    color: #bdae80;
+    font-weight: bold;
+}
+
+.routeF30 {
+    padding: 5px, 5px;
+    background-image: linear-gradient(90deg, #b93838, #375c9f);
+}
+
+.routeF60 {
+    padding: 5px, 5px;
+    background-image: linear-gradient(90deg, #b93838, #6e9dbb);
+}
+
+.route6030 {
+    padding: 5px, 5px;
+    background-image: linear-gradient(90deg, #6e9dbb, #375c9f);
+}
+
+.route60F {
+    padding: 5px, 5px;
+    background-image: linear-gradient(90deg, #6e9dbb, #b93838);
+}
+
+.route6090 {
+    padding: 5px, 5px;
+    background-image: linear-gradient(90deg, #6e9dbb, #bdae80);
+}
+
+.routeFrequent {
+    padding: 5px, 5px;
+    background-color: #b93838;
+}
+
+.routeStandard30 {
+    padding: 5px, 5px;
+    background-color: #375c9f;
+}
+
+.routeStandard60 {
+    padding: 5px, 5px;
+    background-color: #6e9dbb;
+}
+
+.routeStandard90 {
+    padding: 10px, 10px;
+    background-color: #bdae80;
+}
+
+.routeLineup {
+    padding: 10px, 10px;
+    background-color: #431a46;
+}
+
+.routeNum {
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.smallRouteNum {
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.printableTable {
+    border: 1;
+    background-color: #ffffff;
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.printableTable td {
+   text-align: center;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: linear-gradient(135deg, #da4c3f, #af3034);
+    padding: 0px 0px;
+    height: auto
+}
+
+table th {
+    background-color: #eaecf0;
+}

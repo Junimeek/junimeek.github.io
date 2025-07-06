@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>VIA Lineup Timetables</title>
+        <link rel="stylesheet" href="./style.css">
+        <link rel="stylesheet" href="../../resources/navBar.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="icon" href="https://junimeek.github.io/resources/favicon.ico" type="image/vnd.microsoft.icon">
+        <script src="./scripts.js"></script>
+        </head>
+    
+    <body>
+        <nav class="navBar">
+            <ul>
+                <li><a href="https://junimeek.github.io/"><i class="fa fa-home"></i> Home</a></li>
+                <li>
+                    <div class="navDropdown">
+                        <button>
+                            Site Categories
+                            <i class="fa fa-chevron-down"></i>
+                        </button>
+                        <div class="dropdownContent">
+                            <a href="https://junimeek.github.io/via-bus/">VIA Information</a>
+                            <a href="https://junimeek.github.io/sakemitech/">SakemiTech</a>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="https://junimeek.github.io/about"><i class="fa fa-info-circle"></i> About</a></li>
+                <li><a href="https://junimeek.github.io/contact"><i class="fa fa-envelope"></i> Contact</a></li>
+            </ul>
+        </nav>
+
+        <div class="browserBody">
+            <div style="float:left; width: 20%;">
+                <iframe src="./navigation.html" style="border: none; width: 100%; height: 100%;"></iframe>
+            </div>
+            <div style="float: left; width: 80%; overflow-x: visible;">
+                <iframe name="viewport" src="./viewport.html" style="width: 100%; height: 100%;"></iframe>
+            </div>
+        </div>
+    </body>
+</html>
