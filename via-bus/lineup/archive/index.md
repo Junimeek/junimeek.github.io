@@ -3,13 +3,18 @@
 
 # Lineup Timetable Archive
 <p>
-    Upon updating lineup schedules, the older versions will still be available for viewing down below.
+    Upon updating lineup schedules, the older versions will still be available for viewing by clicking on any of the dropdowns down below.
 </p>
 
+<details>
+<summary>Effective dates: 8-19-2024, 1-6-2025, and 4-14-2025</summary>
+
 ## Effective dates: 8-19-2024, 1-6-2025, and 4-14-2025
-On August 18, 2025, every current schedule will be rendered outdated as the introduction of Route 10 requires that it be added in the transfer list on every map.
+
+On August 18, 2025, every current schedule will be rendered outdated as the introduction of [Route 10](https://www.viainfo.net/wp-content/uploads/2025/05/2025_0818-Improvement-Map-Route-010-scaled.jpg) requires that it be added in the transfer list on every map.
 
 ### Web maps
+
 | Route Number | Effective Date | Map Creation Date |
 |:--:|:--:|:--:|
 | <a target="_blank" href="https://junimeek.github.io/documents/2025/05/Schedule202.pdf">202</a> | 8-19-2024 | 5-20-2025 |
@@ -34,6 +39,7 @@ On August 18, 2025, every current schedule will be rendered outdated as the intr
 <hr/>
 
 ### Printable color maps
+
 | Route Number | Effective Date | Map Creation Date |
 |:--:|:--:|:--:|
 | <a target="_blank" href="https://junimeek.github.io/documents/2025/05/Schedule202Printable.pdf">202</a> | 8-19-2024 | 5-20-2025 |
@@ -58,6 +64,7 @@ On August 18, 2025, every current schedule will be rendered outdated as the intr
 <hr/>
 
 ### Printable grayscale maps
+
 | Route Number | Effective Date | Map Creation Date |
 |:--:|:--:|:--:|
 | <a target="_blank" href="https://junimeek.github.io/documents/2025/05/Schedule202Grayscale.pdf">202</a> | 8-19-2024 | 5-20-2025 |
@@ -79,9 +86,13 @@ On August 18, 2025, every current schedule will be rendered outdated as the intr
 | <a target="_blank" href="https://junimeek.github.io/documents/2025/07/Schedule277Grayscale.pdf">277</a> | 1-6-2025 | 7-6-2025 |
 | <a target="_blank" href="https://junimeek.github.io/documents/2025/07/Schedule288Grayscale.pdf">288</a> | 8-19-2024 | 7-15-2025 |
 
-<hr/>
+</details>
+
+<details>
+<summary>Prototype Schedules</summary>
 
 ## Prototype Schedules
+
 These are the oldest schedules that I've made, which use the colors that VIA used to use for lineup up until the August 19, 2024 rebrand. These schedules were never available for viewing on the main site, but I figured it'd be fun to leave them all here for historical purposes.
 
 | Route Number | Type | Effective Date | Map Creation Date |
@@ -92,3 +103,5 @@ These are the oldest schedules that I've made, which use the colors that VIA use
 | <a target="_blank" href="https://junimeek.github.io/documents/2025/04/214-Web.pdf">214</a> | Web | 1-6-2025 | 4-15-2025 |
 | <a target="_blank" href="https://junimeek.github.io/documents/2025/04/276-Printable.pdf">276</a> | Printable | 1-6-2025 | 4-10-2025 |
 | <a target="_blank" href="https://junimeek.github.io/documents/2025/04/214-Printable.pdf">214</a> | Printable | 1-6-2025 | 4-9-2025 |
+
+</details>
