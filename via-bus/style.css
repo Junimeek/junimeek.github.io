@@ -1,15 +1,32 @@
+* {
+    box-sizing: border-box;
+}
+
 .mainBody {
     background-color: aliceblue;
     padding: 10px 15px;
-    height: auto;
+    height: calc(100vh - 66px);
 }
 
 .hubTable {
     border: 1;
     background-color: #ffffff;
     border-collapse: collapse;
-    width: 80%;
-    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media screen and (min-width: 800px) {
+    .hubTable {
+        width: 80%;
+        max-width: 900px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .hubTable {
+        width: 100%;
+    }
 }
 
 .hubButton {

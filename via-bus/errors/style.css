@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 .mainBody {
     background-color: aliceblue;
     padding: 10px 15px;
@@ -8,8 +12,21 @@
     border: 1;
     background-color: #ffffff;
     border-collapse: collapse;
-    width: 80%;
-    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media screen and (min-width: 800px) {
+    .errorsTable {
+        width: 80%;
+        max-width: 900px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .errorsTable {
+        width: 100%;
+    }
 }
 
 .tableHeader {
@@ -46,6 +63,22 @@
 
 .imgHover {
     color: #c0c0c0;
+}
+
+@media screen and (min-width: 800px) {
+    .imgHover {
+        width: 90%;
+        height: 90%;
+        max-width: 450px;
+        max-height: 284px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .imgHover {
+        width: 100%;
+        height: 100%;
+    }
 }
 
 .imgHover:hover {
