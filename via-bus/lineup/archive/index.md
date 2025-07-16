@@ -89,7 +89,7 @@ These are the oldest schedules that I've made, which use the colors that VIA use
 
 | Route Number | Type | Effective Date | Map Creation Date |
 |:--:|:--:|:--:|:--:|
-| <a target="_blank" href="https://junimeek.github.io/documents/2025/04/276-Web.pdf">222</a> | Web | 1-6-2025 | 4-10-2025 |
+| <a target="_blank" href="https://junimeek.github.io/documents/2025/04/222-Web.pdf">222</a> | Web | 1-6-2025 | 4-10-2025 |
 | <a target="_blank" href="https://junimeek.github.io/documents/2025/04/222-Printable.pdf">222</a> | Printable | 1-6-2025 | 4-10-2025 |
 | <a target="_blank" href="https://junimeek.github.io/documents/2025/04/202-Web.pdf">202</a> | Web | 8-19-2024 | 4-16-2025 |
 | <a target="_blank" href="https://junimeek.github.io/documents/2025/04/214-Web.pdf">214</a> | Web | 1-6-2025 | 4-15-2025 |
