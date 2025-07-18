@@ -3,7 +3,7 @@
 
 # Lineup Timetable Archive
 <p>
-    Upon updating lineup schedules, the older versions will still be available for viewing by clicking on any of the dropdowns down below.
+    Upon updating lineup schedules, the older versions will still be available for viewing down below.
 </p>
 
 ## Effective dates: 8-19-2024, 1-6-2025, and 4-14-2025
@@ -32,6 +32,8 @@ On August 18, 2025, every current schedule will be rendered outdated as the intr
 | <a target="_blank" href="https://junimeek.github.io/documents/2025/05/Schedule276.pdf">276</a> | 4-14-2025 | 5-26-2025 |
 | <a target="_blank" href="https://junimeek.github.io/documents/2025/07/Schedule277.pdf">277</a> | 1-6-2025 | 7-6-2025 |
 | <a target="_blank" href="https://junimeek.github.io/documents/2025/07/Schedule288.pdf">288</a> | 8-19-2024 | 7-15-2025 |
+| <a target="_blank" href="https://junimeek.github.io/documents/2025/07/Schedule289.pdf">289</a> | 1-6-2025 | 7-18-2025 |
+| <a target="_blank" href="https://junimeek.github.io/documents/2025/07/Schedule288.pdf">296</a> | 1-6-2025 | 7-18-2025 |
 
 <hr/>
 
@@ -57,6 +59,8 @@ On August 18, 2025, every current schedule will be rendered outdated as the intr
 | <a target="_blank" href="https://junimeek.github.io/documents/2025/05/Schedule276-Printable.pdf">276</a> | 4-14-2025 | 5-26-2025 |
 | <a target="_blank" href="https://junimeek.github.io/documents/2025/07/Schedule277Printable.pdf">277</a> | 1-6-2025 | 7-6-2025 |
 | <a target="_blank" href="https://junimeek.github.io/documents/2025/07/Schedule288Printable.pdf">288</a> | 8-19-2024 | 7-15-2025 |
+| <a target="_blank" href="https://junimeek.github.io/documents/2025/07/Schedule289Printable.pdf">289</a> | 1-6-2025 | 7-18-2025 |
+| <a target="_blank" href="https://junimeek.github.io/documents/2025/07/Schedule296Printable.pdf">296</a> | 1-6-2025 | 7-18-2025 |
 
 <hr/>
 
@@ -82,6 +86,8 @@ On August 18, 2025, every current schedule will be rendered outdated as the intr
 | <a target="_blank" href="https://junimeek.github.io/documents/2025/05/Schedule276-Grayscale.pdf">276</a> | 4-14-2025 | 5-26-2025 |
 | <a target="_blank" href="https://junimeek.github.io/documents/2025/07/Schedule277Grayscale.pdf">277</a> | 1-6-2025 | 7-6-2025 |
 | <a target="_blank" href="https://junimeek.github.io/documents/2025/07/Schedule288Grayscale.pdf">288</a> | 8-19-2024 | 7-15-2025 |
+| <a target="_blank" href="https://junimeek.github.io/documents/2025/07/Schedule289Grayscale.pdf">289</a> | 1-6-2025 | 7-18-2025 |
+| <a target="_blank" href="https://junimeek.github.io/documents/2025/07/Schedule296Grayscale.pdf">296</a> | 1-6-2025 | 7-18-2025 |
 
 ## Prototype Schedules
 
