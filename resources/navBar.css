@@ -1,3 +1,12 @@
+* {
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "Ammys Handwriting";
+    src: url("./Ammys Handwriting.ttf") format("ttf");
+}
+
 .navBar {
     position: sticky;
     top: 0;
@@ -19,6 +28,9 @@
     padding: 15px;
     display: block;
     text-align: center;
+    font-family: "Ammys Handwriting";
+    font-weight: bold;
+    font-size: 12pt;
 }
 
 .navBar a:hover {
@@ -29,6 +41,10 @@
     float: left;
 }
 
+.navBar i {
+    font-size: 14pt;
+}
+
 .navDropdown {
     display: inline-block;
 }
@@ -36,7 +52,6 @@
 .navDropdown button {
     background-color: #444444;
     color: white;
-    padding: 15px;
     border: none;
     cursor: pointer;
 }

@@ -43,7 +43,7 @@ On August 18, 2025, every current schedule will be rendered outdated as the intr
 |:--:|:--:|:--:|
 | <a target="_blank" href="https://junimeek.github.io/documents/2025/05/Schedule202Printable.pdf">202</a> | 8-19-2024 | 5-20-2025 |
 | <a target="_blank" href="https://junimeek.github.io/documents/2025/06/Schedule204Printable.pdf">204</a> | 4-14-2025 | 6-5-2025 |
-| <a target="_blank" href="https://junimeek.github.io/documents/2025/06/Schedule209Printable.pdf">209</a> | 8-19-2024 | 6-9-2025 |
+| <a target="_blank" href="https://junimeek.github.io/documents/2025/06/Schedule209-Printable.pdf">209</a> | 8-19-2024 | 6-9-2025 |
 | <a target="_blank" href="https://junimeek.github.io/documents/2025/05/Schedule214Printable.pdf">214</a> | 4-14-2025 | 5-18-2025 |
 | <a target="_blank" href="https://junimeek.github.io/documents/2025/05/Schedule222Printable.pdf">222</a> | 1-6-2025 | 5-29-2025 |
 | <a target="_blank" href="https://junimeek.github.io/documents/2025/06/Schedule225Printable.pdf">225</a> | 4-14-2025 | 6-11-2025 |
@@ -70,7 +70,7 @@ On August 18, 2025, every current schedule will be rendered outdated as the intr
 |:--:|:--:|:--:|
 | <a target="_blank" href="https://junimeek.github.io/documents/2025/05/Schedule202Grayscale.pdf">202</a> | 8-19-2024 | 5-20-2025 |
 | <a target="_blank" href="https://junimeek.github.io/documents/2025/06/Schedule204Grayscale.pdf">204</a> | 4-14-2025 | 6-5-2025 |
-| <a target="_blank" href="https://junimeek.github.io/documents/2025/06/Schedule209Grayscale.pdf">209</a> | 8-19-2024 | 6-9-2025 |
+| <a target="_blank" href="https://junimeek.github.io/documents/2025/06/Schedule209-Grayscale.pdf">209</a> | 8-19-2024 | 6-9-2025 |
 | <a target="_blank" href="https://junimeek.github.io/documents/2025/05/Schedule214Grayscale.pdf">214</a> | 4-14-2025 | 5-18-2025 |
 | <a target="_blank" href="https://junimeek.github.io/documents/2025/05/Schedule222Grayscale.pdf">222</a> | 1-6-2025 | 5-29-2025 |
 | <a target="_blank" href="https://junimeek.github.io/documents/2025/06/Schedule225Grayscale.pdf">225</a> | 4-14-2025 | 6-11-2025 |
