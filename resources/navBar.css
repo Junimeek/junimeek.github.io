@@ -4,7 +4,7 @@
 
 @font-face {
     font-family: "Ammys Handwriting";
-    src: url("./Ammys Handwriting.ttf") format("ttf");
+    src: url("./AmmysHandwriting.ttf") format("ttf");
 }
 
 .navBar {
@@ -39,6 +39,10 @@
 
 .navBar li {
     float: left;
+}
+
+.navBarMenuButton {
+    float: right !important;
 }
 
 .navBar i {
@@ -84,4 +88,24 @@
 
 .navDropdown a:hover {
     background-color: #777777;
+}
+
+@media screen and (min-width: 900px) {
+    .navBarWideShow {
+        display: block;
+    }
+
+    .navBarMenuButton {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .navBarWideShow {
+        display: none;
+    }
+
+    .navBarMenuButton {
+        display: block;
+    }
 }

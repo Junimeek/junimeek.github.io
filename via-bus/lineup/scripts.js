@@ -33,11 +33,6 @@ function TogglePrintableTables()
 
 function GetCurrentLineupTimetable(route)
 {
-    if (route == 282) {
-        window.open("https://www.viainfo.net/wp-content/uploads/2024/08/Schedule082.pdf");
-        return;
-    }
-
     let scheduleLink = "https://junimeek.github.io/documents/";
     let timetablePath = new String();
     timetablePath = TimetablePath(route);
@@ -141,6 +136,8 @@ function TimetablePath(route)
             return "2025/05/Schedule276";
         case 277:
             return "2025/07/Schedule277";
+        case 282:
+            return "2025/07/Schedule282";
         case 288:
             return "2025/07/Schedule288";
         case 289:

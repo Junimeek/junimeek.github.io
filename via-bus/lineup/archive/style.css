@@ -32,16 +32,7 @@
     height: auto;
 }
 
-.notification {
-    background-color: #ffffff;
-    border-collapse: collapse;
-    margin-left: auto;
-    margin-right: auto;
-    width: 90%;
-    max-width: 700px;
-}
-
-.webTable {
+.archiveTable {
     background-color: #ffffff;
     border-collapse: collapse;
     margin-left: auto;
@@ -49,71 +40,41 @@
     border-radius: 2px;
 }
 
-.webTable tr {
+.archiveTable tr {
     border-bottom: 2px dashed #c0c0c0;
-    height: 70px;
+    height: 50px;
 }
 
-.webTable tr:hover {
+.archiveTable tr:hover {
     background-color: #eefbff;
 }
 
-.webTable b {
+.archiveTable b {
     font-family: "Scene Pro Black";
     font-size: 14pt;
 }
 
-.webTable i {
+.archiveTable i {
     color: #da4346;
     font-size: 16pt;
     padding: 10px;
 }
 
-.webTable i:hover {
+.archiveTable i:hover {
     color: #375c9f;
 }
 
-.webTable img {
+.archiveTable img {
     width: 40px;
     height: 40px;
 }
 
-.webTable td {
-    font-size: 12pt;
-    text-align: center;
-}
-
-.bigNumber {
-    width: 50px !important;
-    height: 50px !important;
-}
-
-.mainParagraph {
-    margin-left: auto;
-    margin-right: auto;
-    text-align: justify;
-}
-
-.smallParagraph {
-    margin-left: auto;
-    margin-right: auto;
+.archiveTable td {
     text-align: center;
 }
 
 @media screen and (min-width: 900px) {
-    .mainParagraph {
-        max-width: 85%;
-        font-size: 14pt;
-        line-height: 18pt;
-    }
-
-    .smallParagraph {
-        max-width: 85%;
-        font-size: 14pt;
-        line-height: 18pt;
-    }
-
-    .webTable {
+    .archiveTable {
         width: 80%;
         max-width: 900px;
     }
@@ -124,32 +85,11 @@
 
     .tableHeaderMobile {
         display: none;
-    }
-
-    .printableContainer {
-        display: grid;
-    }
-
-    .printableTable {
-        width: 80%;
-        max-width: 900px;
     }
 }
 
 @media screen and (max-width: 900px) {
-    .mainParagraph {
-        max-width: 100%;
-        font-size: 12pt;
-        line-height: 16pt;
-    }
-
-    .smallParagraph {
-        max-width: 100%;
-        font-size: 12pt;
-        line-height: 16pt;
-    }
-
-    .webTable {
+    .archiveTable {
         width: 100%;
     }
 
@@ -159,14 +99,6 @@
 
     .tableHeaderMobile {
         display: inline;
-    }
-
-    .printableContainer {
-        display: inline;
-    }
-
-    .printableTable {
-        width: 100%;
     }
 }
 
@@ -183,59 +115,34 @@
     font-weight: normal;
 }
 
-.printableSide {
-    display: block;
-}
-
-.printableContainer {
-    grid-template-columns: 48% 4% 48%;
-    justify-content: center;
-}
-
-.printableTable {
+.bigDropdownContainer {
     background-color: #ffffff;
     border-collapse: collapse;
     margin-left: auto;
     margin-right: auto;
-    border-radius: 2px;
+    width: 90%;
+    max-width: 1100px;
 }
 
-.printableTable tr {
-    border-bottom: 2px dashed #c0c0c0;
-    height: 40px;
+.bigDropdownContainer tr:hover {
+    background-color: #ffebd8;
+    cursor: pointer;
 }
 
-.printableTable tr:hover {
-    background-color: #eefbff;
-}
-
-.printableTable b {
-    font-family: "Scene Pro Black";
-    font-size: 14pt;
-}
-
-.printableTable i {
-    color: #da4346;
-    font-size: 16pt;
-    padding: 10px;
-}
-
-.printableTable i:hover {
-    color: #375c9f;
-}
-
-.printableTable img {
-    width: 40px;
-    height: 40px;
-}
-
-.printableTable td {
-    text-align: center;
-    font-size: 12pt;
-}
-
-.disabledTable {
+.dropdownCollapsed {
     display: none;
+}
+
+.dropdownExpanded {
+    display: inline;
+}
+
+.arrowBGEnabled {
+    background-color: #add3a9;
+}
+
+.arrowBGDisabled {
+    background-color: #d98c97;
 }
 
 h1 {
@@ -252,7 +159,6 @@ h2 {
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 14pt;
     background-image: linear-gradient(135deg, #da4c3f, #af3034);
 }
 
