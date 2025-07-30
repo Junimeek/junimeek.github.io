@@ -3,27 +3,27 @@
 }
 
 @font-face {
-    font-family: "Scene Pro";
+    font-family: Scene Pro;
     font-style: normal;
-    src: url("https://junimeek.github.io/resources/via/SceneProRg.OTF") format("otf");
+    src: url("https://junimeek.net/resources/via/SceneProRg.OTF") format("otf");
 }
 
 @font-face {
-    font-family: "Scene Pro";
+    font-family: Scene Pro;
     font-style: bold;
-    src: url("https://junimeek.github.io/resources/via/SceneProBold.OTF") format("otf");
+    src: url("https://junimeek.net/resources/via/SceneProBold.OTF") format("otf");
 }
 
 @font-face {
-    font-family: "Scene Pro Black";
+    font-family: Scene Pro Black;
     font-style: normal;
-    src: url("https://junimeek.github.io/resources/via/SceneProBlack.OTF") format("otf");
+    src: url("https://junimeek.net/resources/via/SceneProBlack.OTF") format("otf");
 }
 
 @font-face {
-    font-family: "Scene Pro Black";
+    font-family: Scene Pro Black;
     font-style: bold;
-    src: url("https://junimeek.github.io/resources/via/SceneProUltBlk.OTF") format("otf");
+    src: url("https://junimeek.net/resources/via/SceneProUltBlk.OTF") format("otf");
 }
 
 .mainBody {
@@ -59,7 +59,7 @@
 }
 
 .webTable b {
-    font-family: "Scene Pro Black";
+    font-family: Scene Pro Black;
     font-size: 14pt;
 }
 
@@ -126,6 +126,12 @@
         display: none;
     }
 
+    .descriptionContainer {
+        max-width: 85%;
+        display: grid;
+        align-items: center;
+    }
+
     .printableContainer {
         display: grid;
     }
@@ -133,6 +139,10 @@
     .printableTable {
         width: 80%;
         max-width: 900px;
+    }
+
+    body {
+        margin: 8px;
     }
 }
 
@@ -161,12 +171,21 @@
         display: inline;
     }
 
+    .descriptionContainer {
+        max-width: 100%;
+        display: inline;
+    }
+
     .printableContainer {
         display: inline;
     }
 
     .printableTable {
         width: 100%;
+    }
+
+    body {
+        margin: 0px;
     }
 }
 
@@ -179,17 +198,37 @@
 
 .tableHeader a {
     color: #ffffff;
-    font-family: "Scene Pro Black";
+    font-family: Scene Pro Black;
     font-weight: normal;
+}
+
+.descriptionSide {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .printableSide {
     display: block;
 }
 
+.descriptionContainer {
+    grid-template-columns: 65% 35%;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .printableContainer {
     grid-template-columns: 48% 4% 48%;
     justify-content: center;
+}
+
+.lineupDiagram {
+    height: 100%;
+    width: 100%;
+    max-width: 356px;
+    max-height: 296px;
 }
 
 .printableTable {
@@ -210,7 +249,7 @@
 }
 
 .printableTable b {
-    font-family: "Scene Pro Black";
+    font-family: Scene Pro Black;
     font-size: 14pt;
 }
 
@@ -239,13 +278,13 @@
 }
 
 h1 {
-    font-family: "Scene Pro Black";
+    font-family: Scene Pro Black;
     font-weight: normal;
     text-align: center;
 }
 
 h2 {
-    font-family: "Scene Pro Black";
+    font-family: Scene Pro Black;
     font-weight: bold;
     text-align: center;
 }

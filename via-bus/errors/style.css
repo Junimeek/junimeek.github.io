@@ -21,11 +21,19 @@
         width: 80%;
         max-width: 900px;
     }
+
+    body {
+        margin: 8px;
+    }
 }
 
 @media screen and (max-width: 800px) {
     .errorsTable {
         width: 100%;
+    }
+
+    body {
+        margin: 0px;
     }
 }
 

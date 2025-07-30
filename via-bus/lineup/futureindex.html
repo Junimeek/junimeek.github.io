@@ -9,27 +9,27 @@
         <link rel="stylesheet" href="./route-icons/routestyle.css">
         <link rel="stylesheet" href="../../resources/navBar.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="icon" href="https://junimeek.github.io/resources/favicon.ico" type="image/vnd.microsoft.icon">
+        <link rel="icon" href="https://junimeek.net/resources/favicon.ico" type="image/vnd.microsoft.icon">
         <script src="./scripts.js"></script>
     </head>
     
     <body onload="Initialize()">
         <nav class="navBar">
             <ul>
-                <li><a href="https://junimeek.github.io/"><i class="fa fa-home"></i> Home</a></li>
+                <li><a href="https://junimeek.net/"><i class="fa fa-home"></i> Home</a></li>
                 <li>
                     <div class="navDropdown">
                         <button>
                             <a>Site Categories <i class="fa fa-chevron-down"></i></a>
                         </button>
                         <div class="dropdownContent">
-                            <a href="https://junimeek.github.io/via-bus/" target="_parent">VIA Information</a>
-                            <a href="https://junimeek.github.io/sakemitech/" target="_parent">SakemiTech</a>
+                            <a href="https://junimeek.net/via-bus/" target="_parent">VIA Information</a>
+                            <a href="https://junimeek.net/sakemitech/" target="_parent">SakemiTech</a>
                         </div>
                     </div>
                 </li>
-                <li><a href="https://junimeek.github.io/about"><i class="fa fa-info-circle"></i> About</a></li>
-                <li><a href="https://junimeek.github.io/contact"><i class="fa fa-envelope"></i> Contact</a></li>
+                <li><a href="https://junimeek.net/about"><i class="fa fa-info-circle"></i> About</a></li>
+                <li><a href="https://junimeek.net/contact"><i class="fa fa-envelope"></i> Contact</a></li>
             </ul>
         </nav>
 
@@ -40,18 +40,29 @@
             </p>
             <hr/>
 
-            <p class="mainParagraph">
-                Lineup is a service that VIA operates every night, with buses departing the Downtown Service Hub
-                (near Travis Park) at 10:30pm, 11:30pm, and 12:30am to give riders a final chance to make transfers
-                and reach their final destinations. VIA, however, does not provide dedicated timetables for
-                lineup routes, instead scattering the times across their regular daytime timetables.
-                This page contains custom timetables that I have made for routes 202–296 in the style of their
-                daytime schedules as a convenient alternative to VIA's brochures.
-            </p>
-            <p class="mainParagraph">
-                When VIA <a target="_blank" href="https://viainfo.net/servicechanges">announces service changes</a> that
-                affect lineup scheduling, new timetables will be uploaded here as fast as I can create them.
-            </p>
+            <div class="descriptionContainer">
+                <div class="descriptionSide">
+                    <p class="mainParagraph">
+                        Lineup is a service that VIA operates every night, with buses departing the Downtown Service Hub
+                        (near Travis Park) at 10:30pm, 11:30pm, and 12:30am to give riders a final chance to make transfers
+                        and reach their final destinations. VIA, however, does not provide dedicated timetables for
+                        lineup routes, instead scattering the times across their regular daytime timetables.
+                        This page contains custom timetables that I have made for routes 202–296 in the style of their
+                        daytime schedules as a convenient alternative to VIA's brochures.
+                    </p>
+                    <p class="mainParagraph">
+                        When VIA <a target="_blank" href="https://viainfo.net/servicechanges">announces service changes</a> that
+                        affect lineup scheduling, new timetables will be uploaded here as fast as I can create them.
+                    </p>
+                </div>
+                <div class="descriptionSide">
+                    <div style="display: flex; justify-content: center;">
+                        <img src="./LineupLocations.png" class="lineupDiagram" alt="diagram of downtown lineup locations">
+                    </div>
+                </div>
+            </div>
+
+            <hr/>
             
             <table class="webTable" cellpadding="5" bordercolor="#c0c0c0">
                 <colgroup>
@@ -928,7 +939,7 @@
                 Timetable archive
             </h2>
             <p class="smallParagraph">
-                Old schedules are linked <a href="https://junimeek.github.io/via-bus/lineup/archive/">here</a>.
+                Old schedules are linked <a href="https://junimeek.net/via-bus/lineup/archive/">here</a>.
             </p>
                 
             <hr/>

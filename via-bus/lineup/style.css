@@ -47,6 +47,10 @@
     .tableHeaderMobile {
         display: none;
     }
+
+    body {
+        margin: 8px;
+    }
 }
 
 @media screen and (max-width: 800px) {
@@ -60,6 +64,10 @@
 
     .tableHeaderMobile {
         display: inline;
+    }
+
+    body {
+        margin: 0px;
     }
 }
 

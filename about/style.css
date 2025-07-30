@@ -3,9 +3,9 @@
 }
 
 @font-face {
-    font-family: "Ammys Handwriting";
+    font-family: Ammys Handwriting;
     font-style: normal;
-    src: url("https://junimeek.github.io/resources/AmmysHandwriting.ttf") format("ttf");
+    src: url("https://junimeek.net/resources/AmmysHandwriting.ttf") format("ttf");
 }
 
 .mainBody {
@@ -23,12 +23,20 @@
     max-width: 700px;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (min-width: 900px) {
+    body {
+        margin: 8px;
+    }
+}
 
+@media screen and (max-width: 900px) {
+    body {
+        margin: 0px;
+    }
 }
 
 h1 {
-    font-family: "Ammys Handwriting";
+    font-family: Ammys Handwriting;
     font-weight: bold;
     text-align: center;
     color: #ab4eb9;

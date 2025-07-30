@@ -1,0 +1,143 @@
+* {
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: Ammys Handwriting;
+    font-style: normal;
+    src: url("https://junimeek.net/resources/AmmysHandwriting.ttf");
+}
+
+@font-face {
+    font-family: Scene Pro;
+    font-style: normal;
+    src: url("https://junimeek.net/resources/via/SceneProRg.OTF") format("otf");
+}
+
+.bgFilter {
+    margin: 0px;
+    padding: 0px;
+    background-color: #000000aa;
+    backdrop-filter: blur(10px);
+}
+
+.mainBody {
+    padding: 10px 15px;
+    min-height: calc(100vh - 52px);
+    font-size: 20pt;
+}
+
+.mainHeader {
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+}
+
+.buttonContainer {
+    grid-template-columns: 48% 4% 48%;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media screen and (min-width: 900px) {
+    .mainHeader {
+        width: 70%;
+    }
+
+    .buttonContainer {
+        max-width: 85%;
+        display: grid;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .mainHeader {
+        width: 95%;
+    }
+
+    .buttonContainer {
+        max-width: 100%;
+        display: inline;
+    }
+}
+
+.buttonSide {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.bigPinkButton {
+    padding: 8px;
+    background-color: #f19dff99;
+    width: 100%;
+    height: fit-content;
+}
+
+.bigPinkButton:hover {
+    background-color: #cccccc99;
+    cursor: pointer;
+}
+
+.mainHeader h1 {
+    font-family: Ammys Handwriting;
+    font-weight: bold;
+    color: #f19dff;
+    text-align: center;
+}
+
+hr {
+    height: 2px;
+    border-width: 0;
+    color: #cc70da;
+    background-color: #cc70da
+}
+
+.mainHeader p {
+    font-family: Scene Pro;
+    color: #f19dff;
+    text-align: center;
+}
+
+.bigPinkButton h1 {
+    color: #ffffff;
+    font-family: Scene Pro;
+    font-size: 20pt;
+    text-align: center;
+}
+
+.bigPinkButton p {
+    color: #ffffff;
+    font-family: Scene Pro;
+    font-size: 16pt;
+    text-align: center;
+}
+
+.footerText {
+    color: #d186dc;
+    font-family: Ammys Handwriting;
+    font-size: 14pt;
+    font-weight: bold;
+    text-align: center;
+}
+
+.hyperlink {
+    color: aqua;
+}
+
+.twitter {
+    color: #4a99e9;
+}
+
+body {
+    background-image: url("./resources/mainPageBG.jpg");
+    background-color: #cccccc;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+    background-clip: border-box;
+    background-attachment: fixed;
+    margin: 0px;
+}
