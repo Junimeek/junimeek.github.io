@@ -3,7 +3,7 @@
 }
 
 @font-face {
-    font-family: "Ammys Handwriting";
+    font-family: Ammys Handwriting;
     src: url("./AmmysHandwriting.ttf") format("ttf");
 }
 
@@ -28,7 +28,7 @@
     padding: 15px;
     display: block;
     text-align: center;
-    font-family: "Ammys Handwriting";
+    font-family: Ammys Handwriting;
     font-weight: bold;
     font-size: 12pt;
 }
