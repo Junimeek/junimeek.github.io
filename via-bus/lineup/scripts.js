@@ -1,9 +1,12 @@
+var linkDebugMode = false;
+var scheduleLink = "./pdfViewerPlaceholder.html";
+
 function Initialize()
 {
     let printableTableState = document.getElementById("printedTableState"); 
 
     // Hides the printable schedules list by default on narrower screens
-    if (visualViewport.width < 800) {
+    if (visualViewport.width < 900) {
         printableTableState.innerHTML = "visible";
     }
     else {
@@ -11,6 +14,34 @@ function Initialize()
     }
 
     TogglePrintableTables();
+}
+
+function EnableDocumentViewer(route)
+{
+    if (visualViewport.width < 900) {
+        window.open(GetCurrentLineupTimetable(route));
+        return;
+    }
+
+    let viewerFrame = document.getElementById("pdfViewerFrame");
+    viewerFrame.src = GetCurrentLineupTimetable(route);
+
+    let viewer = document.getElementById("pdfViewer");
+    viewer.className = "pdfViewerEnabled";
+}
+
+function DisableDocumentViewer()
+{
+    let viewer = document.getElementById("pdfViewer");
+    viewer.className = "pdfViewerDisabled"
+
+    document.getElementById("pdfViewerFrame").src = "./pdfViewerPlaceholder.html";
+    scheduleLink = "./pdfViewerPlaceholder.html";
+}
+
+function OpenLinkedTimetable()
+{
+    window.open(scheduleLink);
 }
 
 function TogglePrintableTables()
@@ -33,41 +64,37 @@ function TogglePrintableTables()
 
 function GetCurrentLineupTimetable(route)
 {
-    let scheduleLink = "https://junimeek.github.io/documents/";
-    let timetablePath = new String();
-    timetablePath = TimetablePath(route);
+    scheduleLink = "https://junimeek.net/documents/";
+    if (linkDebugMode) {
+        scheduleLink = "../../documents/";
+    }
 
-    let suffix = new String();
-    suffix = TimetableSuffix(0);
+    let timetablePath = GetTimetablePath(route);
+    timetablePath += "Schedule";
+
+    let suffix = TimetableSuffix(0);
 
     scheduleLink += timetablePath;
+    scheduleLink += route;
     scheduleLink += suffix;
 
-    window.open(scheduleLink);
+    return scheduleLink;
 }
 
 function GetCurrentPrintableLineupTimetable(route)
 {
-    let scheduleLink = "https://junimeek.github.io/documents/";
-    let timetablePath = new String();
-    timetablePath = TimetablePath(route);
-
-    let suffix = new String();
-
-    switch(route)
-    {
-        case 209:
-            suffix = TimetableSuffix(2091);
-            break;
-        case 276:
-            suffix = TimetableSuffix(2761);
-            break;
-        default:
-            suffix = TimetableSuffix(1);
-            break;
+    scheduleLink = "https://junimeek.net/documents/";
+    if (linkDebugMode) {
+        scheduleLink = "../../documents/";
     }
 
+    let timetablePath = GetTimetablePath(route);
+    timetablePath += "Printable/Printable";
+
+    let suffix = TimetableSuffix(0);
+
     scheduleLink += timetablePath;
+    scheduleLink += route;
     scheduleLink += suffix;
 
     window.open(scheduleLink);
@@ -75,75 +102,69 @@ function GetCurrentPrintableLineupTimetable(route)
 
 function GetCurrentGrayscaleLineupTimetable(route)
 {
-    let scheduleLink = "https://junimeek.github.io/documents/";
-    let timetablePath = new String();
-    timetablePath = TimetablePath(route);
-
-    let suffix = new String();
-
-    switch(route)
-    {
-        case 209:
-            suffix = TimetableSuffix(2092);
-            break;
-        case 276:
-            suffix = TimetableSuffix(2762);
-            break;
-        default:
-            suffix = TimetableSuffix(2);
-            break;
+    scheduleLink = "https://junimeek.net/documents/";
+    if (linkDebugMode) {
+        scheduleLink = "../../documents/";
     }
 
+    let timetablePath = GetTimetablePath(route);
+    timetablePath += "Grayscale/Grayscale";
+
+    let suffix = TimetableSuffix(0);
+
     scheduleLink += timetablePath;
+    scheduleLink += route;
     scheduleLink += suffix;
 
     window.open(scheduleLink);
 }
 
-function TimetablePath(route)
+function GetTimetablePath(route)
 {
     switch(route)
     {
         case 202:
-            return "2025/05/Schedule202";
+            return "2025/08/";
         case 204:
-            return "2025/06/Schedule204";
+            return "2025/08/";
         case 209:
-            return "2025/06/Schedule209";
+            return "2025/08/";
         case 214:
-            return "2025/05/Schedule214";
+            return "2025/08/";
         case 222:
-            return "2025/05/Schedule222";
+            return "2025/08/";
         case 225:
-            return "2025/06/Schedule225";
+            return "2025/08/";
         case 230:
-            return "2025/06/Schedule230";
+            return "2025/08/";
         case 232:
-            return "2025/05/Schedule232";
+            return "2025/08/";
         case 242:
-            return "2025/06/Schedule242";
+            return "2025/08/";
         case 243:
-            return "2025/06/Schedule243";
+            return "2025/08/";
         case 246:
-            return "2025/05/Schedule246";
+            return "2025/08/";
         case 251:
-            return "2025/05/Schedule251";
+            return "2025/08/";
         case 268:
-            return "2025/06/Schedule268";
+            return "2025/08/";
         case 275:
-            return "2025/07/Schedule275";
+            return "2025/08/";
         case 276:
-            return "2025/05/Schedule276";
+            return "2025/08/";
         case 277:
-            return "2025/07/Schedule277";
+            return "2025/08/";
         case 282:
-            return "2025/07/Schedule282";
+            return "2025/08/";
         case 288:
-            return "2025/07/Schedule288";
+            return "2025/08/";
         case 289:
-            return "2025/07/Schedule289";
+            return "2025/08/";
         case 296:
-            return "2025/07/Schedule296";
+            return "2025/08/";
+        default:
+            throw "EVIL number!";
     }
 }
 
@@ -157,13 +178,5 @@ function TimetableSuffix(scheduleType)
             return "Printable.pdf";
         case 2:
             return "Grayscale.pdf";
-        case 2091:
-            return "-Printable.pdf";
-        case 2092:
-            return "-Grayscale.pdf";
-        case 2761:
-            return "-Printable.pdf";
-        case 2762:
-            return "-Grayscale.pdf";
     }
 }

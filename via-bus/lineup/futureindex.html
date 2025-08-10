@@ -14,6 +14,23 @@
     </head>
     
     <body onload="Initialize()">
+        <div id="pdfViewer" class="pdfViewerDisabled" onclick="DisableDocumentViewer()">
+            <a href="javascript:void(0);">
+                <div class="pdfViewerCloseButton">
+                    <i class="fa fa-window-close"></i>
+                </div>
+            </a>
+            <a href="javascript:void(0);">
+                <div class="pdfViewerMaxButton" onclick="OpenLinkedTimetable()">
+                    <i class="fa fa-window-maximize"></i>
+                </div>
+            </a>
+
+            <div class="documentPreviewWindow">
+                <iframe class="documentPreviewContent" id="pdfViewerFrame" src="./pdfViewerPlaceholder.html"></iframe>
+            </div>
+        </div>
+        
         <nav class="navBar">
             <ul>
                 <li><a href="https://junimeek.net/"><i class="fa fa-home"></i> Home</a></li>
@@ -86,7 +103,7 @@
                     </tr>
                     <tr>
                         <td>
-                            <a href="javascript:void(0)" onclick="GetCurrentLineupTimetable(202)">
+                            <a href="javascript:void(0)" onclick="EnableDocumentViewer(202)">
                                 <img class="bigNumber" src="./route-icons/202.webp">
                             </a>
                         </td>
@@ -96,13 +113,13 @@
                             Downtown
                         </td>
                         <td>
-                            <a href="javascript:void(0)" onclick="GetCurrentLineupTimetable(202)"><i class="fa fa-download"></i></a>
+                            <a href="javascript:void(0)" onclick="EnableDocumentViewer(202)"><i class="fa fa-download"></i></a>
                         </td>
                         <td><img src="./route-icons/002.webp"> <img src="./route-icons/651.webp"></td>
                     </tr>
                     <tr>
                         <td>
-                            <a href="javascript:void(0)" onclick="GetCurrentLineupTimetable(204)">
+                            <a href="javascript:void(0)" onclick="EnableDocumentViewer(204)">
                                 <img class="bigNumber" src="./route-icons/204.webp">
                             </a>
                         </td>
@@ -112,13 +129,13 @@
                             Downtown, North Star Transit Center, Olmos Park
                         </td>
                         <td>
-                            <a href="javascript:void(0)" onclick="GetCurrentLineupTimetable(204)"><i class="fa fa-download"></i></a>
+                            <a href="javascript:void(0)" onclick="EnableDocumentViewer(204)"><i class="fa fa-download"></i></a>
                         </td>
                         <td><img src="./route-icons/004.webp"> <img src="./route-icons/005.webp"></td>
                     </tr>
                     <tr>
                         <td>
-                            <a href="javascript:void(0)" onclick="GetCurrentLineupTimetable(209)">
+                            <a href="javascript:void(0)" onclick="EnableDocumentViewer(209)">
                                 <img class="bigNumber" src="./route-icons/209.webp">
                             </a>
                         </td>
@@ -128,13 +145,13 @@
                             Downtown, Alamo Heights
                         </td>
                         <td>
-                            <a href="javascript:void(0)" onclick="GetCurrentLineupTimetable(209)"><i class="fa fa-download"></i></a>
+                            <a href="javascript:void(0)" onclick="EnableDocumentViewer(209)"><i class="fa fa-download"></i></a>
                         </td>
                         <td><img src="./route-icons/009.webp"></td>
                     </tr>
                     <tr>
                         <td>
-                            <a href="javascript:void(0)" onclick="GetCurrentLineupTimetable(214)">
+                            <a href="javascript:void(0)" onclick="EnableDocumentViewer(214)">
                                 <img class="bigNumber" src="./route-icons/214.webp">
                             </a>
                         </td>
@@ -144,13 +161,13 @@
                             Downtown, University of the Incarnate Word, Alamo Heights, Randolph Park & Ride
                         </td>
                         <td>
-                            <a href="javascript:void(0)" onclick="GetCurrentLineupTimetable(214)"><i class="fa fa-download"></i></a>
+                            <a href="javascript:void(0)" onclick="EnableDocumentViewer(214)"><i class="fa fa-download"></i></a>
                         </td>
                         <td><img src="./route-icons/014.webp"> <img src="./route-icons/017.webp"></td>
                     </tr>
                     <tr>
                         <td>
-                            <a href="javascript:void(0)" onclick="GetCurrentLineupTimetable(222)">
+                            <a href="javascript:void(0)" onclick="EnableDocumentViewer(222)">
                                 <img class="bigNumber" src="./route-icons/222.webp">
                             </a>
                         </td>
@@ -160,13 +177,13 @@
                             Downtown, University Health Robert Hillard Center, Towne Twin Village, Frost Bank Center
                         </td>
                         <td>
-                            <a href="javascript:void(0)" onclick="GetCurrentLineupTimetable(222)"><i class="fa fa-download"></i></a>
+                            <a href="javascript:void(0)" onclick="EnableDocumentViewer(222)"><i class="fa fa-download"></i></a>
                         </td>
                         <td><img src="./route-icons/022.webp"> <img src="./route-icons/024.webp"></td>
                     </tr>
                     <tr>
                         <td>
-                            <a href="javascript:void(0)" onclick="GetCurrentLineupTimetable(225)">
+                            <a href="javascript:void(0)" onclick="EnableDocumentViewer(225)">
                                 <img class="bigNumber" src="./route-icons/225.webp">
                             </a>
                         </td>
@@ -176,13 +193,13 @@
                             Downtown, Ellis Alley Park & Ride, Eastwood Village, Alamodome
                         </td>
                         <td>
-                            <a href="javascript:void(0)" onclick="GetCurrentLineupTimetable(225)"><i class="fa fa-download"></i></a>
+                            <a href="javascript:void(0)" onclick="EnableDocumentViewer(225)"><i class="fa fa-download"></i></a>
                         </td>
                         <td><img src="./route-icons/025.webp"> <img src="./route-icons/026.webp"></td>
                     </tr>
                     <tr>
                         <td>
-                            <a href="javascript:void(0)" onclick="GetCurrentLineupTimetable(230)">
+                            <a href="javascript:void(0)" onclick="EnableDocumentViewer(230)">
                                 <img class="bigNumber" src="./route-icons/230.webp">
                             </a>
                         </td>
@@ -192,13 +209,13 @@
                             Downtown, Comanche Park, Dellcrest
                         </td>
                         <td>
-                            <a href="javascript:void(0)" onclick="GetCurrentLineupTimetable(230)"><i class="fa fa-download"></i></a>
+                            <a href="javascript:void(0)" onclick="EnableDocumentViewer(230)"><i class="fa fa-download"></i></a>
                         </td>
                         <td><img src="./route-icons/030.webp"> <img src="./route-icons/028.webp"></td>
                     </tr>
                     <tr>
                         <td>
-                            <a href="javascript:void(0)" onclick="GetCurrentLineupTimetable(232)">
+                            <a href="javascript:void(0)" onclick="EnableDocumentViewer(232)">
                                 <img class="bigNumber" src="./route-icons/232.webp">
                             </a>
                         </td>
@@ -208,13 +225,13 @@
                             Downtown, Highland Hills, McCreless Marketplace
                         </td>
                         <td>
-                            <a href="javascript:void(0)" onclick="GetCurrentLineupTimetable(232)"><i class="fa fa-download"></i></a>
+                            <a href="javascript:void(0)" onclick="EnableDocumentViewer(232)"><i class="fa fa-download"></i></a>
                         </td>
                         <td><img src="./route-icons/032.webp"> <img src="./route-icons/034.webp"></td>
                     </tr>
                     <tr>
                         <td>
-                            <a href="javascript:void(0)" onclick="GetCurrentLineupTimetable(242)">
+                            <a href="javascript:void(0)" onclick="EnableDocumentViewer(242)">
                                 <img class="bigNumber" src="./route-icons/242.webp">
                             </a>
                         </td>
@@ -224,13 +241,13 @@
                             Downtown, Vibrant Works, Brooks Transit Center, San Antonio State Hospital
                         </td>
                         <td>
-                            <a href="javascript:void(0)" onclick="GetCurrentLineupTimetable(242)"><i class="fa fa-download"></i></a>
+                            <a href="javascript:void(0)" onclick="EnableDocumentViewer(242)"><i class="fa fa-download"></i></a>
                         </td>
                         <td><img src="./route-icons/042.webp"> <img src="./route-icons/036.webp"></td>
                     </tr>
                     <tr>
                         <td>
-                            <a href="javascript:void(0)" onclick="GetCurrentLineupTimetable(243)">
+                            <a href="javascript:void(0)" onclick="EnableDocumentViewer(243)">
                                 <img class="bigNumber" src="./route-icons/243.webp">
                             </a>
                         </td>
@@ -240,13 +257,13 @@
                             Downtown, Bellaire, Kingsborough
                         </td>
                         <td>
-                            <a href="javascript:void(0)" onclick="GetCurrentLineupTimetable(243)"><i class="fa fa-download"></i></a>
+                            <a href="javascript:void(0)" onclick="EnableDocumentViewer(243)"><i class="fa fa-download"></i></a>
                         </td>
                         <td><img src="./route-icons/043.webp"> <img src="./route-icons/044.webp"></td>
                     </tr>
                     <tr>
                         <td>
-                            <a href="javascript:void(0)" onclick="GetCurrentLineupTimetable(246)">
+                            <a href="javascript:void(0)" onclick="EnableDocumentViewer(246)">
                                 <img class="bigNumber" src="./route-icons/246.webp">
                             </a>
                         </td>
@@ -256,13 +273,13 @@
                             Downtown, Kingsborough, Madla Transit Center<sup><a href="#timetablenotes">[see note 1]</a></sup>
                         </td>
                         <td>
-                            <a href="javascript:void(0)" onclick="GetCurrentLineupTimetable(246)"><i class="fa fa-download"></i></a>
+                            <a href="javascript:void(0)" onclick="EnableDocumentViewer(246)"><i class="fa fa-download"></i></a>
                         </td>
                         <td><img src="./route-icons/046.webp"> <img src="./route-icons/048.webp"></td>
                     </tr>
                     <tr>
                         <td>
-                            <a href="javascript:void(0)" onclick="GetCurrentLineupTimetable(251)">
+                            <a href="javascript:void(0)" onclick="EnableDocumentViewer(251)">
                                 <img class="bigNumber" src="./route-icons/251.webp">
                             </a>
                         </td>
@@ -272,13 +289,13 @@
                             Downtown
                         </td>
                         <td>
-                            <a href="javascript:void(0)" onclick="GetCurrentLineupTimetable(251)"><i class="fa fa-download"></i></a>
+                            <a href="javascript:void(0)" onclick="EnableDocumentViewer(251)"><i class="fa fa-download"></i></a>
                         </td>
                         <td><img src="./route-icons/051.webp"> <img src="./route-icons/524.webp"> <img src="./route-icons/062.webp"></td>
                     </tr>
                     <tr>
                         <td>
-                            <a href="javascript:void(0)" onclick="GetCurrentLineupTimetable(268)">
+                            <a href="javascript:void(0)" onclick="EnableDocumentViewer(268)">
                                 <img class="bigNumber" src="./route-icons/268.webp">
                             </a>
                         </td>
@@ -288,13 +305,13 @@
                             Downtown, Centro Plaza, Las Palmas Shopping Center
                         </td>
                         <td>
-                            <a href="javascript:void(0)" onclick="GetCurrentLineupTimetable(268)"><i class="fa fa-download"></i></a>
+                            <a href="javascript:void(0)" onclick="EnableDocumentViewer(268)"><i class="fa fa-download"></i></a>
                         </td>
                         <td><img src="./route-icons/068.webp"> <img src="./route-icons/066.webp"></td>
                     </tr>
                     <tr>
                         <td>
-                            <a href="javascript:void(0)" onclick="GetCurrentLineupTimetable(275)">
+                            <a href="javascript:void(0)" onclick="EnableDocumentViewer(275)">
                                 <img class="bigNumber" src="./route-icons/275.webp">
                             </a>
                         </td>
@@ -304,13 +321,13 @@
                             Downtown, Centro Plaza, Our Lady of the Lake University, Las Palmas Shopping Center
                         </td>
                         <td>
-                            <a href="javascript:void(0)" onclick="GetCurrentLineupTimetable(275)"><i class="fa fa-download"></i></a>
+                            <a href="javascript:void(0)" onclick="EnableDocumentViewer(275)"><i class="fa fa-download"></i></a>
                         </td>
                         <td><img src="./route-icons/075.webp"> <img src="./route-icons/067.webp"></td>
                     </tr>
                     <tr>
                         <td>
-                            <a href="javascript:void(0)" onclick="GetCurrentLineupTimetable(276)">
+                            <a href="javascript:void(0)" onclick="EnableDocumentViewer(276)">
                                 <img class="bigNumber" src="./route-icons/276.webp">
                             </a>
                         </td>
@@ -320,13 +337,13 @@
                             Downtown, Centro Plaza, Our Lady of the Lake University, Kel-Lac Transit Center
                         </td>
                         <td>
-                            <a href="javascript:void(0)" onclick="GetCurrentLineupTimetable(276)"><i class="fa fa-download"></i></a>
+                            <a href="javascript:void(0)" onclick="EnableDocumentViewer(276)"><i class="fa fa-download"></i></a>
                         </td>
                         <td><img src="./route-icons/076.webp"> <img src="./route-icons/064.webp"></td>
                     </tr>
                     <tr>
                         <td>
-                            <a href="javascript:void(0)" onclick="GetCurrentLineupTimetable(277)">
+                            <a href="javascript:void(0)" onclick="EnableDocumentViewer(277)">
                                 <img class="bigNumber" src="./route-icons/277.webp">
                             </a>
                         </td>
@@ -336,13 +353,13 @@
                             Downtown, Rosedale Park, University Health Robert B. Green Campus
                         </td>
                         <td>
-                            <a href="javascript:void(0)" onclick="GetCurrentLineupTimetable(277)"><i class="fa fa-download"></i></a>
+                            <a href="javascript:void(0)" onclick="EnableDocumentViewer(277)"><i class="fa fa-download"></i></a>
                         </td>
                         <td><img src="./route-icons/077.webp"> <img src="./route-icons/079.webp"></td>
                     </tr>
                     <tr>
                         <td>
-                            <a href="javascript:void(0)" onclick="GetCurrentLineupTimetable(282)">
+                            <a href="javascript:void(0)" onclick="EnableDocumentViewer(282)">
                                 <img class="bigNumber" src="./route-icons/282.webp">
                             </a>
                         </td>
@@ -352,13 +369,13 @@
                             Downtown, St. Mary's University, SW Research Center, Northside Athletic Complex, Ingram Mall, Ingram Transit Center
                         </td>
                         <td>
-                            <a href="javascript:void(0)" onclick="GetCurrentLineupTimetable(282)"><i class="fa fa-download"></i></a>
+                            <a href="javascript:void(0)" onclick="EnableDocumentViewer(282)"><i class="fa fa-download"></i></a>
                         </td>
                         <td><img src="./route-icons/082.webp"></td>
                     </tr>
                     <tr>
                         <td>
-                            <a href="javascript:void(0)" onclick="GetCurrentLineupTimetable(288)">
+                            <a href="javascript:void(0)" onclick="EnableDocumentViewer(288)">
                                 <img class="bigNumber" src="./route-icons/288.webp">
                             </a>
                         </td>
@@ -368,13 +385,13 @@
                             Downtown
                         </td>
                         <td>
-                            <a href="javascript:void(0)" onclick="GetCurrentLineupTimetable(288)"><i class="fa fa-download"></i></a>
+                            <a href="javascript:void(0)" onclick="EnableDocumentViewer(288)"><i class="fa fa-download"></i></a>
                         </td>
                         <td><img src="./route-icons/088.webp"></td>
                     </tr>
                     <tr>
                         <td>
-                            <a href="javascript:void(0)" onclick="GetCurrentLineupTimetable(289)">
+                            <a href="javascript:void(0)" onclick="EnableDocumentViewer(289)">
                                 <img class="bigNumber" src="./route-icons/289.webp">
                             </a>
                         </td>
@@ -384,13 +401,13 @@
                             Downtown, Centro Plaza, University Health Robert B. Green Campus, St. Mary's University
                         </td>
                         <td>
-                            <a href="javascript:void(0)" onclick="GetCurrentLineupTimetable(289)"><i class="fa fa-download"></i></a>
+                            <a href="javascript:void(0)" onclick="EnableDocumentViewer(289)"><i class="fa fa-download"></i></a>
                         </td>
                         <td><img src="./route-icons/089.webp"> <img src="./route-icons/090.webp"></td>
                     </tr>
                     <tr>
                         <td>
-                            <a href="javascript:void(0)" onclick="GetCurrentLineupTimetable(296)">
+                            <a href="javascript:void(0)" onclick="EnableDocumentViewer(296)">
                                 <img class="bigNumber" src="./route-icons/296.webp">
                             </a>
                         </td>
@@ -400,7 +417,7 @@
                             Downtown, Deco District
                         </td>
                         <td>
-                            <a href="javascript:void(0)" onclick="GetCurrentLineupTimetable(296)"><i class="fa fa-download"></i></a>
+                            <a href="javascript:void(0)" onclick="EnableDocumentViewer(296)"><i class="fa fa-download"></i></a>
                         </td>
                         <td><img src="./route-icons/096.webp"> <img src="./route-icons/097.webp"></td>
                     </tr>

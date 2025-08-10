@@ -277,6 +277,85 @@
     display: none;
 }
 
+.pdfViewerCloseButton {
+    display: block;
+    position: fixed;
+    z-index: 40;
+    top: 16px;
+    right: 16px;
+    background-color: #ffffff44;
+    color: white;
+    padding-left: 4px;
+    padding-right: 4px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+.pdfViewerCloseButton:hover {
+    border-color: aqua;
+    color: aqua;
+}
+
+.pdfViewerCloseButton i {
+    color: inherit;
+    font-size: 24pt;
+}
+
+.pdfViewerMaxButton {
+    display: block;
+    position: fixed;
+    z-index: 40;
+    top: calc(24pt + 30px);
+    right: 16px;
+    background-color: #ffffff44;
+    color: white;
+    padding-left: 4px;
+    padding-right: 4px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+.pdfViewerMaxButton:hover {
+    border-color: aqua;
+    color: aqua;
+}
+
+.pdfViewerMaxButton i {
+    color: inherit;
+    font-size: 24pt;
+}
+
+.pdfViewerEnabled {
+    display: block;
+    position: fixed;
+    background-color: #00000088;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 39;
+}
+
+.pdfViewerDisabled {
+    display: none;
+}
+
+.documentPreviewWindow {
+    width: 85vw;
+    height: 100vh;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.documentPreviewContent {
+    width: 100%;
+    height: 100%;
+    border-color: #da4c3f;
+    border-width: 6px;
+}
+
 h1 {
     font-family: Scene Pro Black;
     font-weight: normal;
