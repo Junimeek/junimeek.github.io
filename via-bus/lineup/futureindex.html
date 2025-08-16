@@ -40,8 +40,9 @@
                             <a>Site Categories <i class="fa fa-chevron-down"></i></a>
                         </button>
                         <div class="dropdownContent">
-                            <a href="https://junimeek.net/via-bus/" target="_parent">VIA Information</a>
-                            <a href="https://junimeek.net/sakemitech/" target="_parent">SakemiTech</a>
+                            <a href="https://junimeek.net/via-bus/" target="_parent" class="navBar-via">VIA Information</a>
+                            <a href="https://junimeek.net/sakemitech/" target="_parent" class="navBar-sakemi">SakemiTech</a>
+                            <a href="https://junimeek.net/uniterra/" target="_parent" class="navBar-uniterra">UniTerra</a>
                         </div>
                     </div>
                 </li>
@@ -52,8 +53,13 @@
 
         <div class="mainBody">
             <h1>VIA Lineup Timetables</h1>
-            <p style="text-align: center;">
-                <em>New schedules that are set to go into effect on August 18, 2025 are available here.</em>
+            <p class="smallParagraph">
+                <em>These schedules were last updated on August 16, 2025 to reflect the upcoming service changes on August 18, 2025</em>
+            </p>
+            <p class="smallParagraph">
+                <a style="color: red;"><b><u>Updated schedule alert:</u></b></a>
+                If you downloaded the schedules for routes 209, 230, 277, or 289 before <b>August 16</b>, those schedules are now outdated.
+                Please download the latest versions of these schedules down below.
             </p>
             <hr/>
 
@@ -80,6 +86,13 @@
             </div>
 
             <hr/>
+
+            <noscript>
+                <p class="smallParagraph">
+                    <a style="color: red;"><b>JavaScript is disabled in your browser settings. Please enable it to download these schedules.</b></a>
+                </p>
+                <hr/>
+            </noscript>
             
             <table class="webTable" cellpadding="5" bordercolor="#c0c0c0">
                 <colgroup>
@@ -207,7 +220,7 @@
                             <a name="route230"></a>
                             <b><u>Rigsby / Porter Lineup</u></b>
                             <br/>
-                            Downtown, Comanche Park, Dellcrest<sup><a href="#timetablenotes">[see error 230]</a></sup>
+                            Downtown, Comanche Park, Dellcrest
                         </td>
                         <td>
                             <a href="javascript:void(0)" onclick="EnableDocumentViewer(230)"><i class="fa fa-download"></i></a>
@@ -353,7 +366,7 @@
                             <a name="route277"></a>
                             <b><u>Martin / Ruiz Lineup</u></b>
                             <br/>
-                            Downtown, Rosedale Park, University Health Robert B. Green Campus<sup><a href="#timetablenotes">[see note 2]</a></sup>
+                            Downtown, Rosedale Park, University Health Robert B. Green Campus
                         </td>
                         <td>
                             <a href="javascript:void(0)" onclick="EnableDocumentViewer(277)"><i class="fa fa-download"></i></a>
@@ -401,7 +414,7 @@
                         <td>
                             <b><u>Poplar / Woodlawn Lineup</u></b>
                             <br/>
-                            Downtown, Centro Plaza, University Health Robert B. Green Campus, St. Mary's University<sup><a href="#timetablenotes">[see note 2]</a></sup>
+                            Downtown, Centro Plaza, University Health Robert B. Green Campus, St. Mary's University
                         </td>
                         <td>
                             <a href="javascript:void(0)" onclick="EnableDocumentViewer(289)"><i class="fa fa-download"></i></a>
@@ -965,17 +978,12 @@
             <hr/>
 
             <h2>
-                Notes and Known Errors
+                Notes
             </h2>
             <p class="smallParagraph">
                 <a name="timetablenotes"></a>
                 <li><b>[Note 1] <a href="#route246">^</a></b> : Although <b>Route 48 IH-35 South Express</b> ended service in 2020, the number continues to be referenced
                     in Route 46's note about the lineup service.
-                </li><br/>
-                <li><b>[Note 2] <a href="#route277">^</a></b> : For Routes 277 and 289, I had to guess some of the times since I created these schedules before the service changes officially go into effect.
-                    Therefore, you should be aware that there's a high chance that the timetables will need to be corrected after August 18th.
-                </li><br/>
-                <li><b>[Error 230] <a href="#route230">^</a></b> : <b>Point D</b> is mislabeled; the name should be <b>Rigsby & Clark</b>.
                 </li>
             </p>
                 

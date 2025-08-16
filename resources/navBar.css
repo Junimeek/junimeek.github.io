@@ -37,6 +37,18 @@
     background-color: #777777;
 }
 
+.navBar-via:hover {
+    background-color: #eb747d !important;
+}
+
+.navBar-sakemi:hover {
+    background-color: #f19dff !important;
+}
+
+.navBar-uniterra:hover {
+    background-color: #8bb47b !important;
+}
+
 .navBar li {
     float: left;
 }

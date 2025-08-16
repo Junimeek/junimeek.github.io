@@ -1,3 +1,5 @@
+var linkDebugMode = false;
+
 function ToggleDropdown(id)
 {
     let clickerName = "clicker" + id;
@@ -21,10 +23,24 @@ function ToggleDropdown(id)
 
 function GetTimetableArchive(id)
 {
-    let documentURL = "https://junimeek.github.io/documents/"
+    let documentURL = "";
+    linkDebugMode = false;
+
+    if (linkDebugMode) {
+        documentURL = "../../../documents/";
+    }
+    else {
+        documentURL = "https://junimeek.net/documents/";
+    }
 
     if (id < 2500) {
         documentURL += List24(id);
+    }
+    else if (id < 2600) {
+        documentURL += List25(id);
+    }
+    else {
+        throw("EVIL number detected!");
     }
 
     window.open(documentURL);
@@ -166,5 +182,42 @@ function List24(id)
             return "2025/07/Schedule296Printable.pdf";
         case 2466:
             return "2025/07/Schedule296Grayscale.pdf";
+        case 2467:
+            return "2025/07/Schedule282.pdf";
+        case 2468:
+            return "2025/07/Schedule282Printable.pdf";
+        case 2469:
+            return "2025/07/Schedule282Grayscale.pdf";
+    }
+}
+
+function List25(id)
+{
+    switch(id)
+    {
+        case 2501:
+            return "2025/08/Older/Schedule209.pdf";
+        case 2502:
+            return "2025/08/Older/Printable209.pdf";
+        case 2503:
+            return "2025/08/Older/Grayscale209.pdf";
+        case 2504:
+            return "2025/08/Older/Schedule230.pdf";
+        case 2505:
+            return "2025/08/Older/Printable230.pdf";
+        case 2506:
+            return "2025/08/Older/Grayscale230.pdf";
+        case 2507:
+            return "2025/08/Older/Schedule277.pdf";
+        case 2508:
+            return "2025/08/Older/Printable277.pdf";
+        case 2509:
+            return "2025/08/Older/Grayscale277.pdf";
+        case 2510:
+            return "2025/08/Older/Schedule289.pdf";
+        case 2511:
+            return "2025/08/Older/Printable289.pdf";
+        case 2512:
+            return "2025/08/Older/Grayscale289.pdf";
     }
 }

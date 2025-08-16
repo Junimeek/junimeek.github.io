@@ -1,0 +1,162 @@
+* {
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    src: url("./MontserratRegular.ttf") format("ttf");
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    src: url("./MontserratBold.ttf") format("ttf");
+}
+
+.mainBody {
+    background-color: aliceblue;
+    padding: 10px 15px;
+    height: auto;
+}
+
+.normalTable {
+    background-color: #ffffff;
+    border-collapse: collapse;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 2px;
+}
+
+.tableHeader {
+    padding: 10px, 10px;
+    border: #c0c0c0;
+    background-color: #4b7937 !important;
+    height: 30px !important;
+}
+
+.tableHeader a {
+    color: white;
+    font-weight: bold;
+}
+
+.normalTable tr {
+    border-bottom: 2px dashed #c0c0c0;
+    height: 50px;
+}
+
+.normalTable tr:hover {
+    background-color: #eefbff;
+}
+
+.normalTable b {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14pt;
+}
+
+.normalTable td {
+    font-size: 12pt;
+    text-align: center;
+}
+
+.oldBuilding {
+    background-color: khaki;
+}
+
+.oldBuilding:hover {
+    background-color: #feffb7 !important;
+}
+
+.mainParagraph {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: justify;
+}
+
+.smallParagraph {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+@media screen and (min-width: 900px) {
+    .mainParagraph {
+        max-width: 85%;
+        font-size: 14pt;
+        line-height: 18pt;
+    }
+
+    .smallParagraph {
+        max-width: 85%;
+        font-size: 14pt;
+        line-height: 18pt;
+    }
+
+    .normalTable {
+        width: 80%;
+        max-width: 900px;
+    }
+
+    body {
+        margin: 8px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .mainParagraph {
+        max-width: 100%;
+        font-size: 12pt;
+        line-height: 16pt;
+    }
+
+    .smallParagraph {
+        max-width: 100%;
+        font-size: 12pt;
+        line-height: 16pt;
+    }
+
+    .normalTable {
+        width: 100%;
+    }
+
+    body {
+        margin: 0px;
+    }
+}
+
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    text-align: center;
+}
+
+h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    text-align: center;
+}
+
+h3 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    text-align: center;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14pt;
+    background-image: linear-gradient(135deg, #4b7937, #0b5f10);
+}
+
+.navBarFrame {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    max-height: 66px;
+    padding: 0%;
+    border: none;
+    overflow: visible;
+}
