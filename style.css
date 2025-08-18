@@ -2,18 +2,6 @@
     box-sizing: border-box;
 }
 
-@font-face {
-    font-family: Ammys Handwriting;
-    font-style: normal;
-    src: url("https://junimeek.net/resources/AmmysHandwriting.ttf");
-}
-
-@font-face {
-    font-family: Scene Pro;
-    font-style: normal;
-    src: url("https://junimeek.net/resources/via/SceneProRg.OTF") format("otf");
-}
-
 .bgFilter {
     margin: 0px;
     padding: 0px;
@@ -34,8 +22,11 @@
 }
 
 .buttonContainer {
-    grid-template-columns: 32% 2% 32% 2% 32%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
+    align-items: stretch;
     margin-left: auto;
     margin-right: auto;
 }
@@ -44,65 +35,66 @@
     .mainHeader {
         width: 70%;
     }
-
-    .buttonContainer {
-        max-width: 85%;
-        display: grid;
-        align-items: center;
-    }
 }
 
 @media screen and (max-width: 900px) {
     .mainHeader {
         width: 95%;
     }
-
-    .buttonContainer {
-        max-width: 100%;
-        display: inline;
-    }
 }
 
 .buttonSide {
     display: block;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 14px;
+    width: 400px;
 }
 
-.bigPinkButton {
+.bigSakemiButton {
     padding: 8px;
     background-color: #f19dff99;
+    background-image: url("./resources/sakemi-tree.webp");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
     border-color: #00000000;
     border-width: 4px;
     border-style: solid;
-    width: 100%;
-    height: fit-content;
     border-radius: 10px;
+    height: 100%;
+    width: 100%;
 }
 
 .bigViaButton {
     padding: 8px;
     background-color: #d2203099;
+    background-image: url("./resources/via-swoosh-gray.webp");
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: contain;
     border-color: #00000000;
     border-width: 4px;
     border-style: solid;
-    width: 100%;
-    height: fit-content;
     border-radius: 10px;
+    height: 100%;
+    width: 100%;
 }
 
 .bigUniterraButton {
     padding: 8px;
     background-color: #4b793799;
+    background-image: url("./resources/ut-logo.webp");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
     border-color: #00000000;
     border-width: 4px;
     border-style: solid;
-    width: 100%;
-    height: fit-content;
     border-radius: 10px;
+    height: 100%;
+    width: 100%;
 }
 
-.bigPinkButton:hover {
+.bigSakemiButton:hover {
     background-color: #fad9ff99;
     border-color: #f19dff;
     cursor: pointer;
@@ -121,7 +113,7 @@
 }
 
 .mainHeader h1 {
-    font-family: Ammys Handwriting;
+    font-family: 'Ammys Handwriting';
     font-weight: bold;
     color: #f19dff;
     text-align: center;
@@ -135,28 +127,28 @@ hr {
 }
 
 .mainHeader p {
-    font-family: Scene Pro;
+    font-family: 'Scene Pro';
     color: #f19dff;
     text-align: center;
 }
 
 .buttonSide h1 {
     color: #ffffff;
-    font-family: Scene Pro;
+    font-family: 'Scene Pro Black';
     font-size: 20pt;
     text-align: center;
 }
 
 .buttonSide p {
     color: #ffffff;
-    font-family: Scene Pro;
+    font-family: 'Scene Pro';
     font-size: 16pt;
     text-align: center;
 }
 
 .footerText {
     color: #d186dc;
-    font-family: Ammys Handwriting;
+    font-family: 'Ammys Handwriting';
     font-size: 14pt;
     font-weight: bold;
     text-align: center;

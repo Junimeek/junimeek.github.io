@@ -1,5 +1,5 @@
 var linkDebugMode = false;
-var scheduleLink = "./pdfViewerPlaceholder.html";
+var scheduleLink = "../../resources/pdfViewerPlaceholder.html";
 
 function Initialize()
 {
@@ -35,8 +35,8 @@ function DisableDocumentViewer()
     let viewer = document.getElementById("pdfViewer");
     viewer.className = "pdfViewerDisabled"
 
-    document.getElementById("pdfViewerFrame").src = "./pdfViewerPlaceholder.html";
-    scheduleLink = "./pdfViewerPlaceholder.html";
+    document.getElementById("pdfViewerFrame").src = "../../resources/pdfViewerPlaceholder.html";
+    scheduleLink = "../../resources/pdfViewerPlaceholder.html";
 }
 
 function OpenLinkedTimetable()

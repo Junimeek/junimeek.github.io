@@ -1,0 +1,29 @@
+@font-face {
+    font-family: 'Ammys Handwriting';
+    font-style: normal;
+    src: url("./sources/AmmysHandwriting.ttf") format("ttf");
+}
+
+@font-face {
+    font-family: 'Scene Pro';
+    font-style: normal;
+    src: url("./sources/SceneProRg.otf") format("otf");
+}
+
+@font-face {
+    font-family: 'Scene Pro';
+    font-style: bold;
+    src: url("./sources/SceneProBold.otf") format("otf");
+}
+
+@font-face {
+    font-family: 'Scene Pro Black';
+    font-style: normal;
+    src: url("./sources/SceneProBlack.otf") format("otf");
+}
+
+@font-face {
+    font-family: 'Scene Pro Black';
+    font-style: bold;
+    src: url("./sources/SceneProUltBlk.otf") format("otf");
+}

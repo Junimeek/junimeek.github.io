@@ -4,15 +4,33 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>VIA Lineup Timetables</title>
+        <title>Juniper's UniTerra Experience</title>
         <link rel="stylesheet" href="./style.css">
         <link rel="stylesheet" href="../resources/navBar.css">
+        <link rel="stylesheet" href="../resources/fonts/font-style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="icon" href="https://junimeek.net/resources/favicon.ico" type="image/vnd.microsoft.icon">
+        <link rel="icon" href="./favicon.ico" type="image/vnd.microsoft.icon">
         <script src="./scripts.js"></script>
     </head>
     
     <body>
+        <div id="pdfViewer" class="pdfViewerDisabled" onclick="DisableDocumentViewer()">
+            <a href="javascript:void(0);" title="Close document viewer">
+                <div class="pdfViewerCloseButton">
+                    <i class="fa fa-window-close"></i>
+                </div>
+            </a>
+            <a href="javascript:void(0);" title="Open document in new tab">
+                <div class="pdfViewerMaxButton" onclick="OpenNewTab()">
+                    <i class="fa fa-window-maximize"></i>
+                </div>
+            </a>
+
+            <div class="documentPreviewWindow">
+                <img class="documentPreviewContent" id="pdfViewerFrame" src="../resources/pdfViewerPlaceholder.html">
+            </div>
+        </div>
+
         <nav class="navBar">
             <ul>
                 <li><a href="https://junimeek.net/"><i class="fa fa-home"></i> Home</a></li>
@@ -59,7 +77,141 @@
 
             <hr/>
 
-            <h2>Additional Information</h2>
+            <h2>My Builds</h2>
+            <p class="mainParagraph">
+                Below is the list of major builds that I have created in UniTerra.
+                Currently, I have two major completed builds, both in Apetria: Apetria Highway 6, and Heimo International Airport.
+            </p>
+
+            <div class="scrollableTable">
+                <table class="normalTable" cellpadding="5" bordercolor="#c0c0c0">
+                    <tbody>
+                        <tr class="tableHeader">
+                            <th width="10%" colspan="2"><a>Country</a></th>
+                            <th width="20%"><a>Build</a></th>
+                            <th width="40%"><a>Description</a></th>
+                            <th width="30%"><a>Image</a></th>
+                        </tr>
+                        <tr>
+                            <td class="flagColumn">
+                                <a title="Apetria" target="_blank" href="https://uniterra.fandom.com/wiki/Apetria">
+                                    <img class="countryFlag" src="https://static.wikia.nocookie.net/one-minecraft/images/d/d8/Flag_of_Apetria.png/revision/latest/scale-to-width-down/128">
+                                </a>
+                            </td>
+                            <td>Apetria</td>
+                            <td>Apetria Highway 6</td>
+                            <td class="descColumn">A highway that connects <a href="https://uniterra.fandom.com/wiki/Heimo" target="_blank">Heimo</a> to Heimo International Airport and Glacia Town</td>
+                            <td class="imageColumn">
+                                <a href="javascript:void(0);" onclick="EnableDocumentViewer('a6.jpg')">
+                                    <img class="screenshot" src="./screenshots/a6.jpg">
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a title="Apetria" target="_blank" href="https://uniterra.fandom.com/wiki/Apetria">
+                                    <img class="countryFlag" src="https://static.wikia.nocookie.net/one-minecraft/images/d/d8/Flag_of_Apetria.png/revision/latest/scale-to-width-down/128">
+                                </a>
+                            </td>
+                            <td>Apetria</td>
+                            <td><a target="_blank" href="https://uniterra.fandom.com/wiki/Heimo_International_Airport">Heimo International Airport</a></td>
+                            <td>
+                                One of the largest airports in the server. Singlehandedly built by me, it current only has one passenger terminal (Terminal A)
+                                with 41 gates that accomodate small aircraft.
+                            </td>
+                            <td>
+                                <a href="javascript:void(0);" onclick="EnableDocumentViewer('hmo-terma.jpg')">
+                                    <img class="screenshot" src="./screenshots/hmo-terma.jpg">
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a title="Leedonia" target="_blank" href="https://uniterra.fandom.com/wiki/Leedonia">
+                                    <img class="countryFlag" src="https://static.wikia.nocookie.net/one-minecraft/images/d/da/Flag_of_Leedonia.jpg/revision/latest/scale-to-width-down/128">
+                                </a>
+                            </td>
+                            <td>Leedonia</td>
+                            <td>Regal University</td>
+                            <td>
+                                Currently in the planning stage.
+                                A university in <a target="_blank" href="https://uniterra.fandom.com/wiki/Nouvarcha">Nouvarcha, Leedonia</a>
+                                that will be built in collaberation with <a target="_blank" href="https://uniterra.fandom.com/wiki/User:Roadmaster2020">KingCrafterino</a>.
+                            </td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <hr/>
+
+            <h2>My Assets</h2>
+            <p class="mainParagraph">
+                Along with being the mayor of Glacia Town, I own a few companies.
+            </p>
+
+            <div class="scrollableTable">
+                <table class="normalTable" cellpadding="5" bordercolor="#c0c0c0">
+                    <tbody>
+                        <tr class="tableHeader">
+                            <th width="10%" colspan="2"><a>Base Country</a></th>
+                            <th width="20%"><a>Company</a></th>
+                            <th width="40%"><a>Description</a></th>
+                            <th width="10%"><a>Locations</a></th>
+                        </tr>
+                        <tr>
+                            <td class="flagColumn">
+                                <a title="Apetria" target="_blank" href="https://uniterra.fandom.com/wiki/Apetria">
+                                    <img class="countryFlag" src="https://static.wikia.nocookie.net/one-minecraft/images/d/d8/Flag_of_Apetria.png/revision/latest/scale-to-width-down/128">
+                                </a>
+                            </td>
+                            <td>Apetria</td>
+                            <td>BorderStop</td>
+                            <td class="descColumn">A chain of supermarkets with locations near border crossings</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td class="flagColumn">
+                                <a title="Apetria" target="_blank" href="https://uniterra.fandom.com/wiki/Apetria">
+                                    <img class="countryFlag" src="https://static.wikia.nocookie.net/one-minecraft/images/d/d8/Flag_of_Apetria.png/revision/latest/scale-to-width-down/128">
+                                </a>
+                            </td>
+                            <td>Apetria</td>
+                            <td>Natasha's Italian Resturant</td>
+                            <td class="descColumn">A chain of resturants that aims to sell high quality Italian food</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td class="flagColumn">
+                                <a title="Leedonia" target="_blank" href="https://uniterra.fandom.com/wiki/Leedonia">
+                                    <img class="countryFlag" src="https://static.wikia.nocookie.net/one-minecraft/images/d/da/Flag_of_Leedonia.jpg/revision/latest/scale-to-width-down/128">
+                                </a>
+                            </td>
+                            <td>Leedonia</td>
+                            <td>Juniper International Construction Agency</td>
+                            <td class="descColumn">A multinational agency that can be contracted to build anything in a variety of countries.
+                                Specializes in infrastructure.</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td class="flagColumn">
+                                <a title="Leedonia" target="_blank" href="https://uniterra.fandom.com/wiki/Leedonia">
+                                    <img class="countryFlag" src="https://static.wikia.nocookie.net/one-minecraft/images/d/da/Flag_of_Leedonia.jpg/revision/latest/scale-to-width-down/128">
+                                </a>
+                            </td>
+                            <td>Leedonia</td>
+                            <td>Nalayamë</td>
+                            <td class="descColumn">Transportation manufacturing company based in Idalia</td>
+                            <td>0</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <hr/>
+
+            <h2>Technical Information</h2>
             <p class="mainParagraph">
                 Everything below is mainly information that I use for my own purposes, but I figured it'd be fun to leave it all visible here.
             </p>

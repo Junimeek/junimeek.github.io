@@ -2,12 +2,6 @@
     box-sizing: border-box;
 }
 
-@font-face {
-    font-family: Ammys Handwriting;
-    font-style: normal;
-    src: url("https://junimeek.net/resources/AmmysHandwriting.ttf") format("ttf");
-}
-
 .mainBody {
     background-color: aliceblue;
     padding: 10px 15px;
@@ -36,7 +30,7 @@
 }
 
 h1 {
-    font-family: Ammys Handwriting;
+    font-family: 'Ammys Handwriting';
     font-weight: bold;
     text-align: center;
     color: #ab4eb9;

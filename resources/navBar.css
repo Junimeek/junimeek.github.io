@@ -2,11 +2,6 @@
     box-sizing: border-box;
 }
 
-@font-face {
-    font-family: Ammys Handwriting;
-    src: url("https://junimeek/net/resources/AmmysHandwriting.ttf") format("ttf");
-}
-
 .navBar {
     position: sticky;
     top: 0;
@@ -28,7 +23,7 @@
     padding: 15px;
     display: block;
     text-align: center;
-    font-family: Ammys Handwriting;
+    font-family: 'Ammys Handwriting';
     font-weight: bold;
     font-size: 12pt;
 }

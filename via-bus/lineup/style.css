@@ -8,33 +8,87 @@
     height: auto;
 }
 
-.browserBody {
-    background-color: aliceblue;
-    padding: 10px 10px;
-    width: 100%;
-    height: calc(100vh - 66px);
-}
-
-.browserBody div {
-    float: left;
-    height: 100%;
-}
-
-.browserBody::after {
-    content: "";
-    clear: both;
-    display: table;
-}
-
-.webTable {
-    border: 1;
+.notification {
     background-color: #ffffff;
     border-collapse: collapse;
     margin-left: auto;
     margin-right: auto;
+    width: 90%;
+    max-width: 700px;
 }
 
-@media screen and (min-width: 800px) {
+.webTable {
+    background-color: #ffffff;
+    border-collapse: collapse;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 2px;
+}
+
+.webTable tr {
+    border-bottom: 2px dashed #c0c0c0;
+    height: 70px;
+}
+
+.webTable tr:hover {
+    background-color: #eefbff;
+}
+
+.webTable b {
+    font-family: 'Scene Pro Black';
+    font-size: 14pt;
+}
+
+.webTable i {
+    color: #da4346;
+    font-size: 16pt;
+    padding: 10px;
+}
+
+.webTable i:hover {
+    color: #375c9f;
+}
+
+.webTable img {
+    width: 40px;
+    height: 40px;
+}
+
+.webTable td {
+    font-size: 12pt;
+    text-align: center;
+}
+
+.bigNumber {
+    width: 50px !important;
+    height: 50px !important;
+}
+
+.mainParagraph {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: justify;
+}
+
+.smallParagraph {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+@media screen and (min-width: 900px) {
+    .mainParagraph {
+        max-width: 85%;
+        font-size: 14pt;
+        line-height: 18pt;
+    }
+
+    .smallParagraph {
+        max-width: 85%;
+        font-size: 14pt;
+        line-height: 18pt;
+    }
+
     .webTable {
         width: 80%;
         max-width: 900px;
@@ -48,12 +102,39 @@
         display: none;
     }
 
+    .descriptionContainer {
+        max-width: 85%;
+        display: grid;
+        align-items: center;
+    }
+
+    .printableContainer {
+        display: grid;
+    }
+
+    .printableTable {
+        width: 80%;
+        max-width: 900px;
+    }
+
     body {
         margin: 8px;
     }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 900px) {
+    .mainParagraph {
+        max-width: 100%;
+        font-size: 12pt;
+        line-height: 16pt;
+    }
+
+    .smallParagraph {
+        max-width: 100%;
+        font-size: 12pt;
+        line-height: 16pt;
+    }
+
     .webTable {
         width: 100%;
     }
@@ -66,6 +147,19 @@
         display: inline;
     }
 
+    .descriptionContainer {
+        max-width: 100%;
+        display: inline;
+    }
+
+    .printableContainer {
+        display: inline;
+    }
+
+    .printableTable {
+        width: 100%;
+    }
+
     body {
         margin: 0px;
     }
@@ -74,72 +168,195 @@
 .tableHeader {
     padding: 10px, 10px;
     border: #c0c0c0;
-    background-color: #a0a0a0;
-}
-
-.tableHeader td {
-    text-align: center;
+    background-color: #a0a0a0 !important;
+    height: 30px !important;
 }
 
 .tableHeader a {
     color: #ffffff;
-    font-weight: bold;
+    font-family: 'Scene Pro Black';
+    font-weight: normal;
 }
 
-.routeFrequent {
-    padding: 10px, 10px;
-    background-color: #b93838;
-}
-
-.routeStandard30 {
-    padding: 10px, 10px;
-    background-color: #375c9f;
-}
-
-.routeStandard60 {
-    padding: 10px, 10px;
-    background-color: #6e9dbb;
-}
-
-.routeStandard90 {
-    padding: 10px, 10px;
-    background-color: #bdae80;
-}
-
-.routeLineup {
-    padding: 10px, 10px;
-    background-color: #431a46;
-}
-
-.routeNum {
-    color: #ffffff;
-    font-weight: bold;
-}
-
-.smallRouteNum {
-    color: #ffffff;
-    font-weight: bold;
-}
-
-.printableTable {
-    border: 1;
-    background-color: #ffffff;
-    border-collapse: collapse;
-    width: 100%;
-    max-width: 700px;
+.descriptionSide {
+    display: block;
     margin-left: auto;
     margin-right: auto;
 }
 
+.printableSide {
+    display: block;
+}
+
+.descriptionContainer {
+    grid-template-columns: 65% 35%;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.printableContainer {
+    grid-template-columns: 48% 4% 48%;
+    justify-content: center;
+}
+
+.lineupDiagram {
+    height: 100%;
+    width: 100%;
+    max-width: 356px;
+    max-height: 296px;
+}
+
+.printableTable {
+    background-color: #ffffff;
+    border-collapse: collapse;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 2px;
+}
+
+.printableTable tr {
+    border-bottom: 2px dashed #c0c0c0;
+    height: 40px;
+}
+
+.printableTable tr:hover {
+    background-color: #eefbff;
+}
+
+.printableTable b {
+    font-family: 'Scene Pro Black';
+    font-size: 14pt;
+}
+
+.printableTable i {
+    color: #da4346;
+    font-size: 16pt;
+    padding: 10px;
+}
+
+.printableTable i:hover {
+    color: #375c9f;
+}
+
+.printableTable img {
+    width: 40px;
+    height: 40px;
+}
+
 .printableTable td {
-   text-align: center;
+    text-align: center;
+    font-size: 12pt;
+}
+
+.disabledTable {
+    display: none;
+}
+
+.pdfViewerCloseButton {
+    display: block;
+    position: fixed;
+    z-index: 40;
+    top: 16px;
+    right: 16px;
+    background-color: #ffffff44;
+    color: white;
+    padding-left: 4px;
+    padding-right: 4px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+.pdfViewerCloseButton:hover {
+    border-color: aqua;
+    color: aqua;
+}
+
+.pdfViewerCloseButton i {
+    color: inherit;
+    font-size: 24pt;
+}
+
+.pdfViewerMaxButton {
+    display: block;
+    position: fixed;
+    z-index: 40;
+    top: calc(24pt + 30px);
+    right: 16px;
+    background-color: #ffffff44;
+    color: white;
+    padding-left: 4px;
+    padding-right: 4px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+.pdfViewerMaxButton:hover {
+    border-color: aqua;
+    color: aqua;
+}
+
+.pdfViewerMaxButton i {
+    color: inherit;
+    font-size: 24pt;
+}
+
+.pdfViewerEnabled {
+    display: block;
+    position: fixed;
+    background-color: #00000088;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 39;
+}
+
+.pdfViewerDisabled {
+    display: none;
+}
+
+.documentPreviewWindow {
+    width: 85vw;
+    height: 100vh;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.documentPreviewContent {
+    width: 100%;
+    height: 100%;
+    border-color: #da4c3f;
+    border-width: 6px;
+}
+
+h1 {
+    font-family: 'Scene Pro Black';
+    font-weight: normal;
+    text-align: center;
+}
+
+h2 {
+    font-family: 'Scene Pro Black';
+    font-weight: bold;
+    text-align: center;
 }
 
 body {
     font-family: Arial, Helvetica, sans-serif;
+    font-size: 14pt;
     background-image: linear-gradient(135deg, #da4c3f, #af3034);
 }
 
-table th {
-    background-color: #eaecf0;
+.navBarFrame {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    max-height: 66px;
+    padding: 0%;
+    border: none;
+    overflow: visible;
 }
