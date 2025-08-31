@@ -1,0 +1,1 @@
+this is just for my own usage to ensure that i update every navbar on the site that i have to whenever i make any changes

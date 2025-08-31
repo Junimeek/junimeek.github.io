@@ -14,3 +14,5 @@ doesnt exist yet
 - **Discord username:** @junimeek
 - **Discord server:** [https://discord.gg/6FMZSGdha4](https://discord.gg/6FMZSGdha4)
 - **Twitter:** [@junimeek39](https://twitter.com/junimeek39)
+
+<em>This page is not powered by SayakaUI</em>

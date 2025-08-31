@@ -1,118 +1,75 @@
-* {
-    box-sizing: border-box;
-}
+@import url('./resources/sayaka/sayaka.css');
+@import url('./resources/sayaka/sayaka-navbar.css');
+@import url('./resources/sayaka/sayaka-flexbuttons.css');
+@import url('./resources/fonts/font-style.css');
 
-.bgFilter {
+.bg-filter {
     margin: 0px;
     padding: 0px;
     background-color: #000000aa;
     backdrop-filter: blur(10px);
 }
 
-.mainBody {
+.saya-body {
+    background-color: #00000000;
     padding: 10px 15px;
-    min-height: calc(100vh - 52px);
+    min-height: calc(100vh - 54px);
     font-size: 20pt;
 }
 
-.mainHeader {
+.header {
     margin-left: auto;
     margin-right: auto;
     width: 70%;
 }
 
-.buttonContainer {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: stretch;
-    margin-left: auto;
-    margin-right: auto;
-}
-
 @media screen and (min-width: 900px) {
-    .mainHeader {
+    .header {
         width: 70%;
     }
 }
 
 @media screen and (max-width: 900px) {
-    .mainHeader {
+    .header {
         width: 95%;
     }
 }
 
-.buttonSide {
-    display: block;
-    margin: 14px;
-    width: 400px;
-}
-
-.bigSakemiButton {
-    padding: 8px;
-    background-color: #f19dff99;
-    background-image: url("./resources/sakemi-tree.webp");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    border-color: #00000000;
-    border-width: 4px;
-    border-style: solid;
-    border-radius: 10px;
-    height: 100%;
-    width: 100%;
-}
-
-.bigViaButton {
-    padding: 8px;
+.bigbutton-via {
     background-color: #d2203099;
     background-image: url("./resources/via-swoosh-gray.webp");
-    background-repeat: no-repeat;
     background-position: right;
     background-size: contain;
-    border-color: #00000000;
-    border-width: 4px;
-    border-style: solid;
-    border-radius: 10px;
-    height: 100%;
-    width: 100%;
 }
 
-.bigUniterraButton {
-    padding: 8px;
+.bigbutton-sakemi {
+    background-color: #f19dff99;
+    background-image: url("./resources/sakemi-tree.webp");
+    background-size: contain;
+}
+
+.bigbutton-uniterra {
     background-color: #4b793799;
     background-image: url("./resources/ut-logo.webp");
-    background-repeat: no-repeat;
-    background-position: center;
     background-size: contain;
-    border-color: #00000000;
-    border-width: 4px;
-    border-style: solid;
-    border-radius: 10px;
-    height: 100%;
-    width: 100%;
 }
 
-.bigSakemiButton:hover {
-    background-color: #fad9ff99;
-    border-color: #f19dff;
-    cursor: pointer;
-}
-
-.bigViaButton:hover {
+.bigbutton-via:hover {
     background-color: #eb747d99;
     border-color: #eb747d;
-    cursor: pointer;
 }
 
-.bigUniterraButton:hover {
+.bigbutton-sakemi:hover {
+    background-color: #fad9ff99;
+    border-color: #f19dff;
+}
+
+.bigbutton-uniterra:hover {
     background-color: #8bb47b99;
     border-color: #8bb47b;
-    cursor: pointer;
 }
 
-.mainHeader h1 {
+.header h1 {
     font-family: 'Ammys Handwriting';
     font-weight: bold;
     color: #f19dff;
@@ -126,20 +83,20 @@ hr {
     background-color: #cc70da;
 }
 
-.mainHeader p {
+.header p {
     font-family: 'Scene Pro';
     color: #f19dff;
     text-align: center;
 }
 
-.buttonSide h1 {
+.saya-flexbutton-buttonarea h1 {
     color: #ffffff;
     font-family: 'Scene Pro Black';
     font-size: 20pt;
     text-align: center;
 }
 
-.buttonSide p {
+.saya-flexbutton-buttonarea p {
     color: #ffffff;
     font-family: 'Scene Pro';
     font-size: 16pt;

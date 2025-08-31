@@ -6,66 +6,69 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>VIA Lineup Timetables</title>
         <link rel="stylesheet" href="./style.css">
-        <link rel="stylesheet" href="../../resources/navBar.css">
-        <link rel="stylesheet" href="../../resources/fonts/font-style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="icon" href="../favicon.ico" type="image/vnd.microsoft.icon">
         <script src="./scripts.js"></script>
+        <script src="../../resources/sayaka/miki.js"></script>
     </head>
     
-    <body onload="Initialize()">
-        <div id="pdfViewer" class="pdfViewerDisabled" onclick="DisableDocumentViewer()">
+    <body class="saya-lower-bg" onload="Initialize()">
+        <div id="miki-viewer" class="miki-disabled" onclick="DisableMiki()">
             <a href="javascript:void(0);" title="Close document viewer">
-                <div class="pdfViewerCloseButton">
+                <div class="miki-button-close">
                     <i class="fa fa-window-close"></i>
                 </div>
             </a>
             <a href="javascript:void(0);" title="Open document in new tab">
-                <div class="pdfViewerMaxButton" onclick="OpenLinkedTimetable()">
+                <div class="miki-button-maximize" onclick="OpenMikiEmbedInNewTab()">
                     <i class="fa fa-window-maximize"></i>
                 </div>
             </a>
 
-            <div class="documentPreviewWindow">
-                <iframe class="documentPreviewContent" id="pdfViewerFrame" src="../../resources/pdfViewerPlaceholder.html"></iframe>
+            <div class="miki-window miki-windowtype-pdf">
+                <iframe class="miki-frame" id="miki-frame" src="../../resources/sayaka/miki-loadscreen.html"></iframe>
             </div>
         </div>
         
-        <nav class="navBar">
-            <ul>
-                <li><a href="https://junimeek.net/"><i class="fa fa-home"></i> Home</a></li>
-                <li>
-                    <div class="navDropdown">
-                        <button>
-                            <a>Site Categories <i class="fa fa-chevron-down"></i></a>
-                        </button>
-                        <div class="dropdownContent">
-                            <a href="https://junimeek.net/via-bus/" target="_parent" class="navBar-via">VIA Information</a>
-                            <a href="https://junimeek.net/sakemitech/" target="_parent" class="navBar-sakemi">SakemiTech</a>
-                            <a href="https://junimeek.net/uniterra/" target="_parent" class="navBar-uniterra">UniTerra</a>
-                        </div>
-                    </div>
-                </li>
-                <li><a href="https://junimeek.net/about"><i class="fa fa-info-circle"></i> About</a></li>
-                <li><a href="https://junimeek.net/contact"><i class="fa fa-envelope"></i> Contact</a></li>
-            </ul>
+        <nav class="saya-navbar" style="font-family: 'Scene Pro';">
+            <div class="saya-navbar-container">
+                <script src="../../resources/sayaka/sayaka-navbar-loader.js" onload="LoadNavBar(1)"></script>
+            </div>
         </nav>
 
-        <div class="mainBody">
-            <h1>VIA Lineup Timetables</h1>
-            <p class="smallParagraph">
-                <em>These schedules were last updated on August 16, 2025 to reflect the upcoming service changes on August 18, 2025</em>
+        <div class="saya-banner-header"><div class="saya-banner-body">
+            <table class="saya-notification-wide" bordercolor="#c0c0c0">
+                <tbody>
+                    <tr>
+                        <td style="background-color: #d22030; width: 65px; text-align: center; padding: 0px;">
+                            <img src="../../resources/via/GrayViaLogo.png" style="width: 60px; height: 60px;">
+                        </td>
+                        <td style="background-color: #a0a1a3; padding: 4px;">
+                            <a style="text-align: left; font-weight: bold; color: white;"><u>DISCLAIMER:</u></a><br/>
+                            <a style="text-align: left; color: white;">
+                                This site is not affiliated with VIA Metropolitan Transit.
+                                To view official information such as schedules, route detours, and service changes,
+                                visit <a href="https://viainfo.net" target="_blank"><b>viainfo.net</b>
+                            </a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h1 class="saya-h1" style="color: white;">VIA Lineup Timetables</h1>
+            <p class="saya-short-paragraph" style="color: white;">
+                <em>These schedules were last updated on August 16, 2025 to reflect the latest service changes on August 18, 2025</em>
             </p>
-            <p class="smallParagraph">
-                <a style="color: red;"><b><u>Updated schedule alert:</u></b></a>
+            <p class="saya-short-paragraph" style="color: white;">
+                <a style="color: #ff9494;"><b><u>Updated schedule alert:</u></b></a>
                 If you downloaded the schedules for routes 209, 230, 277, or 289 before <b>August 16</b>, those schedules are now outdated.
                 Please download the latest versions of these schedules down below.
             </p>
             <hr/>
 
-            <div class="descriptionContainer">
-                <div class="descriptionSide">
-                    <p class="mainParagraph">
+            <div class="description-container">
+                <div class="description-side">
+                    <p class="description-paragraph" style="color: white;">
                         Lineup is a service that VIA operates every night, with buses departing the Downtown Service Hub
                         (near Travis Park) at 10:30pm, 11:30pm, and 12:30am to give riders a final chance to make transfers
                         and reach their final destinations. VIA, however, does not provide dedicated timetables for
@@ -73,51 +76,51 @@
                         This page contains custom timetables that I have made for routes 202–296 in the style of their
                         daytime schedules as a convenient alternative to VIA's brochures.
                     </p>
-                    <p class="mainParagraph">
-                        When VIA <a target="_blank" href="https://viainfo.net/servicechanges">announces service changes</a> that
+                    <p class="description-paragraph" style="color: white;">
+                        When VIA <a target="_blank" href="https://viainfo.net/servicechanges" style="color: white;"><b>announces service changes</b></a> that
                         affect lineup scheduling, new timetables will be uploaded here as fast as I can create them.
                     </p>
                 </div>
-                <div class="descriptionSide">
-                    <div style="display: flex; justify-content: center;">
-                        <img src="./LineupLocations.png" class="lineupDiagram" alt="diagram of downtown lineup locations">
+                <div class="description-side">
+                    <div>
+                        <img src="./LineupLocations.png" class="lineup-diagram" alt="diagram of downtown lineup locations">
                     </div>
                 </div>
             </div>
-
             <hr/>
+            <div style="text-align: right;">
+                <span style="color: white; text-align: right;"><em>Photo by Junimeek</em></span>
+            </div>
+        </div></div>
 
+        <div class="saya-body">
             <noscript>
-                <p class="smallParagraph">
+                <p class="saya-short-paragraph">
                     <a style="color: red;"><b>JavaScript is disabled in your browser settings. Please enable it to download these schedules.</b></a>
                 </p>
                 <hr/>
             </noscript>
             
-            <table class="webTable" cellpadding="5" bordercolor="#c0c0c0">
-                <colgroup>
-                    <col span="3">
-                    <col span="1">
-                </colgroup>
+            <table class="saya-table saya-tablewidth-900" cellpadding="5" bordercolor="#c0c0c0">
                 <tbody>
-                    <tr class="tableHeader">
+                    <tr class="saya-table-header">
                         <th width="10%">
-                            <a>Route</a><a class="tableHeaderDesktop"><br/>Number</a>
+                            <a>Route</a><a class="saya-desktop-exclusive-contents"><br/>Number</a>
                         </th>
                         <th width="66%">
                             <a>Route Name</a>
                         </th>
                         <th width="10%">
-                            <a class="tableHeaderDesktop">Download</a><a class="tableHeaderMobile">Down-<br/>load</a>
+                            <a class="saya-desktop-exclusive-contents">Download</a><a class="saya-mobile-exclusive-contents">Down-<br/>load</a>
                         </th>
                         <th>
-                            <a>Base</a><br/><a class="tableHeaderDesktop">Routes</a><a class="tableHeaderMobile">Rts.</a>
+                            <a>Base</a><br/><a class="saya-desktop-exclusive-contents">Routes</a><a class="saya-mobile-exclusive-contents">Rts.</a>
                         </th>
                     </tr>
                     <tr>
                         <td>
-                            <a href="javascript:void(0)" onclick="EnableDocumentViewer(202)">
-                                <img class="bigNumber" src="../../resources/via/route-icons/202.webp">
+                            <a href="javascript:void(0)" onclick="GetCurrentLineupTimetable(202)">
+                                <img class="big-number" src="../../resources/via/route-icons/202.webp">
                             </a>
                         </td>
                         <td>
@@ -126,14 +129,14 @@
                             Downtown
                         </td>
                         <td>
-                            <a href="javascript:void(0)" onclick="EnableDocumentViewer(202)"><i class="fa fa-download"></i></a>
+                            <a href="javascript:void(0)" onclick="GetCurrentLineupTimetable(202)"><i class="fa fa-download"></i></a>
                         </td>
                         <td><img src="../../resources/via/route-icons/002.webp"> <img src="../../resources/via/route-icons/651.webp"></td>
                     </tr>
                     <tr>
                         <td>
-                            <a href="javascript:void(0)" onclick="EnableDocumentViewer(204)">
-                                <img class="bigNumber" src="../../resources/via/route-icons/204.webp">
+                            <a href="javascript:void(0)" onclick="GetCurrentLineupTimetable(204)">
+                                <img class="big-number" src="../../resources/via/route-icons/204.webp">
                             </a>
                         </td>
                         <td>
@@ -142,14 +145,14 @@
                             Downtown, North Star Transit Center, Olmos Park
                         </td>
                         <td>
-                            <a href="javascript:void(0)" onclick="EnableDocumentViewer(204)"><i class="fa fa-download"></i></a>
+                            <a href="javascript:void(0)" onclick="GetCurrentLineupTimetable(204)"><i class="fa fa-download"></i></a>
                         </td>
                         <td><img src="../../resources/via/route-icons/004.webp"> <img src="../../resources/via/route-icons/005.webp"></td>
                     </tr>
                     <tr>
                         <td>
-                            <a href="javascript:void(0)" onclick="EnableDocumentViewer(209)">
-                                <img class="bigNumber" src="../../resources/via/route-icons/209.webp">
+                            <a href="javascript:void(0)" onclick="GetCurrentLineupTimetable(209)">
+                                <img class="big-number" src="../../resources/via/route-icons/209.webp">
                             </a>
                         </td>
                         <td>
@@ -158,14 +161,14 @@
                             Downtown, Alamo Heights
                         </td>
                         <td>
-                            <a href="javascript:void(0)" onclick="EnableDocumentViewer(209)"><i class="fa fa-download"></i></a>
+                            <a href="javascript:void(0)" onclick="GetCurrentLineupTimetable(209)"><i class="fa fa-download"></i></a>
                         </td>
                         <td><img src="../../resources/via/route-icons/009.webp"></td>
                     </tr>
                     <tr>
                         <td>
-                            <a href="javascript:void(0)" onclick="EnableDocumentViewer(214)">
-                                <img class="bigNumber" src="../../resources/via/route-icons/214.webp">
+                            <a href="javascript:void(0)" onclick="GetCurrentLineupTimetable(214)">
+                                <img class="big-number" src="../../resources/via/route-icons/214.webp">
                             </a>
                         </td>
                         <td>
@@ -174,14 +177,14 @@
                             Downtown, University of the Incarnate Word, Alamo Heights, Randolph Park & Ride
                         </td>
                         <td>
-                            <a href="javascript:void(0)" onclick="EnableDocumentViewer(214)"><i class="fa fa-download"></i></a>
+                            <a href="javascript:void(0)" onclick="GetCurrentLineupTimetable(214)"><i class="fa fa-download"></i></a>
                         </td>
                         <td><img src="../../resources/via/route-icons/014.webp"> <img src="../../resources/via/route-icons/017.webp"></td>
                     </tr>
                     <tr>
                         <td>
-                            <a href="javascript:void(0)" onclick="EnableDocumentViewer(222)">
-                                <img class="bigNumber" src="../../resources/via/route-icons/222.webp">
+                            <a href="javascript:void(0)" onclick="GetCurrentLineupTimetable(222)">
+                                <img class="big-number" src="../../resources/via/route-icons/222.webp">
                             </a>
                         </td>
                         <td>
@@ -190,14 +193,14 @@
                             Downtown, University Health Robert Hillard Center, Towne Twin Village, Frost Bank Center
                         </td>
                         <td>
-                            <a href="javascript:void(0)" onclick="EnableDocumentViewer(222)"><i class="fa fa-download"></i></a>
+                            <a href="javascript:void(0)" onclick="GetCurrentLineupTimetable(222)"><i class="fa fa-download"></i></a>
                         </td>
                         <td><img src="../../resources/via/route-icons/022.webp"> <img src="../../resources/via/route-icons/024.webp"></td>
                     </tr>
                     <tr>
                         <td>
-                            <a href="javascript:void(0)" onclick="EnableDocumentViewer(225)">
-                                <img class="bigNumber" src="../../resources/via/route-icons/225.webp">
+                            <a href="javascript:void(0)" onclick="GetCurrentLineupTimetable(225)">
+                                <img class="big-number" src="../../resources/via/route-icons/225.webp">
                             </a>
                         </td>
                         <td>
@@ -206,14 +209,14 @@
                             Downtown, Ellis Alley Park & Ride, Eastwood Village, Alamodome
                         </td>
                         <td>
-                            <a href="javascript:void(0)" onclick="EnableDocumentViewer(225)"><i class="fa fa-download"></i></a>
+                            <a href="javascript:void(0)" onclick="GetCurrentLineupTimetable(225)"><i class="fa fa-download"></i></a>
                         </td>
                         <td><img src="../../resources/via/route-icons/025.webp"> <img src="../../resources/via/route-icons/026.webp"></td>
                     </tr>
                     <tr>
                         <td>
-                            <a href="javascript:void(0)" onclick="EnableDocumentViewer(230)">
-                                <img class="bigNumber" src="../../resources/via/route-icons/230.webp">
+                            <a href="javascript:void(0)" onclick="GetCurrentLineupTimetable(230)">
+                                <img class="big-number" src="../../resources/via/route-icons/230.webp">
                             </a>
                         </td>
                         <td>
@@ -223,14 +226,14 @@
                             Downtown, Comanche Park, Dellcrest
                         </td>
                         <td>
-                            <a href="javascript:void(0)" onclick="EnableDocumentViewer(230)"><i class="fa fa-download"></i></a>
+                            <a href="javascript:void(0)" onclick="GetCurrentLineupTimetable(230)"><i class="fa fa-download"></i></a>
                         </td>
                         <td><img src="../../resources/via/route-icons/030.webp"> <img src="../../resources/via/route-icons/028.webp"></td>
                     </tr>
                     <tr>
                         <td>
-                            <a href="javascript:void(0)" onclick="EnableDocumentViewer(232)">
-                                <img class="bigNumber" src="../../resources/via/route-icons/232.webp">
+                            <a href="javascript:void(0)" onclick="GetCurrentLineupTimetable(232)">
+                                <img class="big-number" src="../../resources/via/route-icons/232.webp">
                             </a>
                         </td>
                         <td>
@@ -239,14 +242,14 @@
                             Downtown, Highland Hills, McCreless Marketplace
                         </td>
                         <td>
-                            <a href="javascript:void(0)" onclick="EnableDocumentViewer(232)"><i class="fa fa-download"></i></a>
+                            <a href="javascript:void(0)" onclick="GetCurrentLineupTimetable(232)"><i class="fa fa-download"></i></a>
                         </td>
                         <td><img src="../../resources/via/route-icons/032.webp"> <img src="../../resources/via/route-icons/034.webp"></td>
                     </tr>
                     <tr>
                         <td>
-                            <a href="javascript:void(0)" onclick="EnableDocumentViewer(242)">
-                                <img class="bigNumber" src="../../resources/via/route-icons/242.webp">
+                            <a href="javascript:void(0)" onclick="GetCurrentLineupTimetable(242)">
+                                <img class="big-number" src="../../resources/via/route-icons/242.webp">
                             </a>
                         </td>
                         <td>
@@ -255,14 +258,14 @@
                             Downtown, Vibrant Works, Brooks Transit Center, San Antonio State Hospital
                         </td>
                         <td>
-                            <a href="javascript:void(0)" onclick="EnableDocumentViewer(242)"><i class="fa fa-download"></i></a>
+                            <a href="javascript:void(0)" onclick="GetCurrentLineupTimetable(242)"><i class="fa fa-download"></i></a>
                         </td>
                         <td><img src="../../resources/via/route-icons/042.webp"> <img src="../../resources/via/route-icons/036.webp"></td>
                     </tr>
                     <tr>
                         <td>
-                            <a href="javascript:void(0)" onclick="EnableDocumentViewer(243)">
-                                <img class="bigNumber" src="../../resources/via/route-icons/243.webp">
+                            <a href="javascript:void(0)" onclick="GetCurrentLineupTimetable(243)">
+                                <img class="big-number" src="../../resources/via/route-icons/243.webp">
                             </a>
                         </td>
                         <td>
@@ -271,31 +274,32 @@
                             Downtown, Bellaire, Kingsborough
                         </td>
                         <td>
-                            <a href="javascript:void(0)" onclick="EnableDocumentViewer(243)"><i class="fa fa-download"></i></a>
+                            <a href="javascript:void(0)" onclick="GetCurrentLineupTimetable(243)"><i class="fa fa-download"></i></a>
                         </td>
                         <td><img src="../../resources/via/route-icons/043.webp"> <img src="../../resources/via/route-icons/044.webp"></td>
                     </tr>
                     <tr>
                         <td>
-                            <a href="javascript:void(0)" onclick="EnableDocumentViewer(246)">
-                                <img class="bigNumber" src="../../resources/via/route-icons/246.webp">
+                            <a href="javascript:void(0)" onclick="GetCurrentLineupTimetable(246)">
+                                <img class="big-number" src="../../resources/via/route-icons/246.webp">
                             </a>
                         </td>
                         <td>
                             <a name="route246"></a>
                             <b><u>Commercial / IH-35 South Lineup</u></b>
                             <br/>
-                            Downtown, Kingsborough, Madla Transit Center<sup><a href="#timetablenotes">[see note 1]</a></sup>
+                            Downtown, Kingsborough, Madla Transit Center<br/>
+                            <sub><a href="#timetablenotes">[see note 1]</a></sub>
                         </td>
                         <td>
-                            <a href="javascript:void(0)" onclick="EnableDocumentViewer(246)"><i class="fa fa-download"></i></a>
+                            <a href="javascript:void(0)" onclick="GetCurrentLineupTimetable(246)"><i class="fa fa-download"></i></a>
                         </td>
                         <td><img src="../../resources/via/route-icons/046.webp"> <img src="../../resources/via/route-icons/048.webp"></td>
                     </tr>
                     <tr>
                         <td>
-                            <a href="javascript:void(0)" onclick="EnableDocumentViewer(251)">
-                                <img class="bigNumber" src="../../resources/via/route-icons/251.webp">
+                            <a href="javascript:void(0)" onclick="GetCurrentLineupTimetable(251)">
+                                <img class="big-number" src="../../resources/via/route-icons/251.webp">
                             </a>
                         </td>
                         <td>
@@ -304,14 +308,14 @@
                             Downtown
                         </td>
                         <td>
-                            <a href="javascript:void(0)" onclick="EnableDocumentViewer(251)"><i class="fa fa-download"></i></a>
+                            <a href="javascript:void(0)" onclick="GetCurrentLineupTimetable(251)"><i class="fa fa-download"></i></a>
                         </td>
                         <td><img src="../../resources/via/route-icons/051.webp"> <img src="../../resources/via/route-icons/524.webp"> <img src="../../resources/via/route-icons/062.webp"></td>
                     </tr>
                     <tr>
                         <td>
-                            <a href="javascript:void(0)" onclick="EnableDocumentViewer(268)">
-                                <img class="bigNumber" src="../../resources/via/route-icons/268.webp">
+                            <a href="javascript:void(0)" onclick="GetCurrentLineupTimetable(268)">
+                                <img class="big-number" src="../../resources/via/route-icons/268.webp">
                             </a>
                         </td>
                         <td>
@@ -320,14 +324,14 @@
                             Downtown, Centro Plaza, Las Palmas Shopping Center
                         </td>
                         <td>
-                            <a href="javascript:void(0)" onclick="EnableDocumentViewer(268)"><i class="fa fa-download"></i></a>
+                            <a href="javascript:void(0)" onclick="GetCurrentLineupTimetable(268)"><i class="fa fa-download"></i></a>
                         </td>
                         <td><img src="../../resources/via/route-icons/068.webp"> <img src="../../resources/via/route-icons/066.webp"></td>
                     </tr>
                     <tr>
                         <td>
-                            <a href="javascript:void(0)" onclick="EnableDocumentViewer(275)">
-                                <img class="bigNumber" src="../../resources/via/route-icons/275.webp">
+                            <a href="javascript:void(0)" onclick="GetCurrentLineupTimetable(275)">
+                                <img class="big-number" src="../../resources/via/route-icons/275.webp">
                             </a>
                         </td>
                         <td>
@@ -336,14 +340,14 @@
                             Downtown, Centro Plaza, Our Lady of the Lake University, Las Palmas Shopping Center
                         </td>
                         <td>
-                            <a href="javascript:void(0)" onclick="EnableDocumentViewer(275)"><i class="fa fa-download"></i></a>
+                            <a href="javascript:void(0)" onclick="GetCurrentLineupTimetable(275)"><i class="fa fa-download"></i></a>
                         </td>
                         <td><img src="../../resources/via/route-icons/075.webp"> <img src="../../resources/via/route-icons/067.webp"></td>
                     </tr>
                     <tr>
                         <td>
-                            <a href="javascript:void(0)" onclick="EnableDocumentViewer(276)">
-                                <img class="bigNumber" src="../../resources/via/route-icons/276.webp">
+                            <a href="javascript:void(0)" onclick="GetCurrentLineupTimetable(276)">
+                                <img class="big-number" src="../../resources/via/route-icons/276.webp">
                             </a>
                         </td>
                         <td>
@@ -352,14 +356,14 @@
                             Downtown, Centro Plaza, Our Lady of the Lake University, Kel-Lac Transit Center
                         </td>
                         <td>
-                            <a href="javascript:void(0)" onclick="EnableDocumentViewer(276)"><i class="fa fa-download"></i></a>
+                            <a href="javascript:void(0)" onclick="GetCurrentLineupTimetable(276)"><i class="fa fa-download"></i></a>
                         </td>
                         <td><img src="../../resources/via/route-icons/076.webp"> <img src="../../resources/via/route-icons/064.webp"></td>
                     </tr>
                     <tr>
                         <td>
-                            <a href="javascript:void(0)" onclick="EnableDocumentViewer(277)">
-                                <img class="bigNumber" src="../../resources/via/route-icons/277.webp">
+                            <a href="javascript:void(0)" onclick="GetCurrentLineupTimetable(277)">
+                                <img class="big-number" src="../../resources/via/route-icons/277.webp">
                             </a>
                         </td>
                         <td>
@@ -369,14 +373,14 @@
                             Downtown, Rosedale Park, University Health Robert B. Green Campus
                         </td>
                         <td>
-                            <a href="javascript:void(0)" onclick="EnableDocumentViewer(277)"><i class="fa fa-download"></i></a>
+                            <a href="javascript:void(0)" onclick="GetCurrentLineupTimetable(277)"><i class="fa fa-download"></i></a>
                         </td>
                         <td><img src="../../resources/via/route-icons/077.webp"> <img src="../../resources/via/route-icons/079.webp"></td>
                     </tr>
                     <tr>
                         <td>
-                            <a href="javascript:void(0)" onclick="EnableDocumentViewer(282)">
-                                <img class="bigNumber" src="../../resources/via/route-icons/282.webp">
+                            <a href="javascript:void(0)" onclick="GetCurrentLineupTimetable(282)">
+                                <img class="big-number" src="../../resources/via/route-icons/282.webp">
                             </a>
                         </td>
                         <td>
@@ -385,14 +389,14 @@
                             Downtown, St. Mary's University, SW Research Center, Northside Athletic Complex, Ingram Mall, Ingram Transit Center
                         </td>
                         <td>
-                            <a href="javascript:void(0)" onclick="EnableDocumentViewer(282)"><i class="fa fa-download"></i></a>
+                            <a href="javascript:void(0)" onclick="GetCurrentLineupTimetable(282)"><i class="fa fa-download"></i></a>
                         </td>
                         <td><img src="../../resources/via/route-icons/082.webp"></td>
                     </tr>
                     <tr>
                         <td>
-                            <a href="javascript:void(0)" onclick="EnableDocumentViewer(288)">
-                                <img class="bigNumber" src="../../resources/via/route-icons/288.webp">
+                            <a href="javascript:void(0)" onclick="GetCurrentLineupTimetable(288)">
+                                <img class="big-number" src="../../resources/via/route-icons/288.webp">
                             </a>
                         </td>
                         <td>
@@ -401,14 +405,14 @@
                             Downtown
                         </td>
                         <td>
-                            <a href="javascript:void(0)" onclick="EnableDocumentViewer(288)"><i class="fa fa-download"></i></a>
+                            <a href="javascript:void(0)" onclick="GetCurrentLineupTimetable(288)"><i class="fa fa-download"></i></a>
                         </td>
                         <td><img src="../../resources/via/route-icons/088.webp"></td>
                     </tr>
                     <tr>
                         <td>
-                            <a href="javascript:void(0)" onclick="EnableDocumentViewer(289)">
-                                <img class="bigNumber" src="../../resources/via/route-icons/289.webp">
+                            <a href="javascript:void(0)" onclick="GetCurrentLineupTimetable(289)">
+                                <img class="big-number" src="../../resources/via/route-icons/289.webp">
                             </a>
                         </td>
                         <td>
@@ -417,14 +421,14 @@
                             Downtown, Centro Plaza, University Health Robert B. Green Campus, St. Mary's University
                         </td>
                         <td>
-                            <a href="javascript:void(0)" onclick="EnableDocumentViewer(289)"><i class="fa fa-download"></i></a>
+                            <a href="javascript:void(0)" onclick="GetCurrentLineupTimetable(289)"><i class="fa fa-download"></i></a>
                         </td>
                         <td><img src="../../resources/via/route-icons/089.webp"> <img src="../../resources/via/route-icons/090.webp"></td>
                     </tr>
                     <tr>
                         <td>
-                            <a href="javascript:void(0)" onclick="EnableDocumentViewer(296)">
-                                <img class="bigNumber" src="../../resources/via/route-icons/296.webp">
+                            <a href="javascript:void(0)" onclick="GetCurrentLineupTimetable(296)">
+                                <img class="big-number" src="../../resources/via/route-icons/296.webp">
                             </a>
                         </td>
                         <td>
@@ -433,7 +437,7 @@
                             Downtown, Deco District
                         </td>
                         <td>
-                            <a href="javascript:void(0)" onclick="EnableDocumentViewer(296)"><i class="fa fa-download"></i></a>
+                            <a href="javascript:void(0)" onclick="GetCurrentLineupTimetable(296)"><i class="fa fa-download"></i></a>
                         </td>
                         <td><img src="../../resources/via/route-icons/096.webp"> <img src="../../resources/via/route-icons/097.webp"></td>
                     </tr>
@@ -441,50 +445,46 @@
             </table>
 
             <hr/>
-            <h2>Printable Schedules</h2>
-            <p class="mainParagraph">
+            <h2 class="saya-h2">Printable Schedules</h2>
+            <p class="saya-paragraph">
                 Would you like to have a physical copy of a particular schedule to bring with you while you're out and about?
                 Using one of the download links below, you can do that very easily! Because the actual timetables are so short,
                 all lineup schedules fit on a single piece of US letter paper (8.5 x 11 inches).
             </p>
-            <p class="mainParagraph">
+            <p class="saya-paragraph">
                 The printable copies of the schedules have lines outside of the actual content area.
                 The solid lines are fold lines: just fold the paper along those lines.
                 The broken (or dashed) lines are cut lines: after you fold the schedule, just take a pair of scissors
                 and cut along those lines.
             </p>
-            <p class="mainParagraph">
+            <p class="saya-paragraph">
                 A quirk you'll notice about the printable schedules is that the second page (for the backside) is upside down.
                 This is intentional by design; if you unfold and look at an official pocket schedule from VIA, you'll notice
                 that they share the exact same quirk: the backside with the Saturday and Sunday schedules is upside down.
                 This was done to ensure that the cover page is directly behind the map.
             </p>
 
-            <table class="notification" bordercolor="#c0c0c0">
+            <table class="saya-notification" bordercolor="#c0c0c0">
                 <tbody>
                     <tr>
                         <td width="15px" style="background-color: #add3a9;"></td>
                         <td>
                             <p style="text-align: center; font-weight: bold;">
-                                The printable schedule list is currently <a id="printedTableState">hidden</a>.<br/>
-                                Click <a href="javascript:void(0)" onclick="TogglePrintableTables()">here</a> to <a id="tableRevealer">show</a> the list.
+                                The printable schedule list is currently <a id="printed-table-state">hidden</a>.<br/>
+                                Click <a href="javascript:void(0)" onclick="TogglePrintableTables()">here</a> to <a id="table-revealer">show</a> the list.
                             </p>
                         </td>
                     </tr>
                 </tbody>
             </table>
 
-            <div id="theTableOfInvisibility" class="printableContainer">
-                <div class="printableSide">
-                    <h2>Color schedules</h2>
+            <div id="theTableOfInvisibility" class="printable-container">
+                <div class="printable-side">
+                    <h2 class="saya-h2">Color schedules</h2>
                 
-                    <table class="printableTable" cellpadding="5" bordercolor="#c0c0c0">
-                        <colgroup>
-                            <col span="2">
-                            <col span="1">
-                        </colgroup>
+                    <table class="saya-table saya-tablewidth-lineupprintable" cellpadding="5" bordercolor="#c0c0c0">
                         <tbody>
-                            <tr class="tableHeader">
+                            <tr class="saya-table-header">
                                 <th width="10%">
                                     <a>Route<br/>Number</a>
                                 </th>
@@ -721,15 +721,11 @@
 
                 <div></div>
 
-                <div class="printableSide">
-                    <h2>Black and white schedules</h2>
-                    <table class="printableTable" cellpadding="5" bordercolor="#c0c0c0">
-                        <colgroup>
-                            <col span="2">
-                            <col span="1">
-                        </colgroup>
+                <div class="printable-side">
+                    <h2 class="saya-h2">Black and white schedules</h2>
+                    <table class="saya-table saya-tablewidth-lineupprintable" cellpadding="5" bordercolor="#c0c0c0">
                         <tbody>
-                            <tr class="tableHeader">
+                            <tr class="saya-table-header">
                                 <th width="10%">
                                     <a>Route<br/>Number</a>
                                 </th>
@@ -968,28 +964,28 @@
             <br/>
             <hr/>
 
-            <h2>
+            <h2 class="saya-h2">
                 Timetable archive
             </h2>
-            <p class="smallParagraph">
+            <p class="saya-short-paragraph">
                 Old schedules are linked <a href="https://junimeek.net/via-bus/lineup/archive/">here</a>.
             </p>
                 
             <hr/>
 
-            <h2>
+            <h2 class="saya-h2">
                 Timetable changelog
             </h2>
-            <p class="smallParagraph">
+            <p class="saya-short-paragraph">
                 The list of changes made to these timetables is available <a href="https://junimeek.net/via-bus/lineup/changelog/">here</a>.
             </p>
                 
             <hr/>
 
-            <h2>
+            <h2 class="saya-h2">
                 Notes
             </h2>
-            <p class="smallParagraph">
+            <p class="saya-short-paragraph">
                 <a name="timetablenotes"></a>
                 <li><b>[Note 1] <a href="#route246">^</a></b> : Although <b>Route 48 IH-35 South Express</b> ended service in 2020, the number continues to be referenced
                     in Route 46's note about the lineup service.
@@ -1000,5 +996,21 @@
             <br/>
             <br/>
         </div>
+
+        <footer class="saya-footer-container">
+            <div class="saya-footer-group" style="font-size: 20pt;">
+                <a href="https://youtube.com/@Junimeek" target="_blank"><i class="fa fa-youtube-play"></i></a>
+                <a href="https://github.com/Junimeek" target="_blank"><i class="fa fa-github"></i></a>
+                <a href="https://twitter.com/junimeek39" target="_blank"><i class="fa fa-twitter"></i></a>
+                <a href="https://en.wikipedia.org/wiki/User:Junimeek" target="_blank"><i class="fa fa-wikipedia-w"></i></a>
+            </div>
+            <div class="saya-footer-group">
+               <span>Copyright 2025 Junimeek</span><br/>
+               <span>All right reserved</span>
+            </div>
+            <div class="saya-footer-group">
+               <span>Powered by SayakaUI</span>
+            </div>
+        </footer>
     </body>
 </html>

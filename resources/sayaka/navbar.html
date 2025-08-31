@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>navigation bar</title>
+        <link rel="stylesheet" href="./sayaka-navbar.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="./sayaka-navbar-script.js"></script>
+    </head>
+
+    <body>
+        <nav class="saya-navbar">
+            <div class="saya-navbar-container">
+                <div class="saya-navbar-item">
+                    <a href="https://junimeek.net/"><i class="fa fa-home"></i> Home</a>
+                </div>
+                <div class="saya-navbar-item saya-navbar-leftborder saya-navbar-underline-via">
+                    <div class="saya-navbar-dropdown-container">
+                        <div class="saya-navbar-dropdown-button">
+                            <a>Site Categories <i class="fa fa-chevron-down"></i></a>
+                        </div>
+                        <div class="saya-navbar-dropdown-content-large">
+                            <a href="https://junimeek.net/via-bus/" target="_parent" class="saya-navbar-highlight-via">VIA Information</a>
+                            <a href="https://junimeek.net/sakemitech/" target="_parent" class="saya-navbar-highlight-sakemi">SakemiTech</a>
+                            <a href="https://junimeek.net/uniterra/" target="_parent" class="saya-navbar-highlight-uniterra">UniTerra</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="saya-navbar-item saya-navbar-leftborder">
+                    <a href="https://junimeek.net/about"><i class="fa fa-info-circle"></i> About</a>
+                </div>
+                <div class="saya-navbar-item saya-navbar-leftborder">
+                    <a href="https://junimeek.net/contact"><i class="fa fa-envelope"></i> Contact</a>
+                </div>
+                <div class="saya-navbar-filler saya-navbar-leftborder"></div>
+                <div class="saya-navbar-item saya-navbar-leftborder saya-navbar-button-menu">
+                    <a href="javascript:void(0);" id="button-nav-menu">Menu <i class="fa fa-bars"></i></a>
+                </div>
+            </div>
+        </nav>
+    </body>
+</html>

@@ -1,0 +1,69 @@
+.saya-table {
+    background-color: #ffffff;
+    border-collapse: collapse;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 2px;
+}
+
+.saya-table tr {
+    border-bottom: 2px dashed #c0c0c0;
+    height: 70px;
+}
+
+.saya-table tr:hover {
+    background-color: #eefbff;
+}
+
+.saya-table b {
+    font-size: 14pt;
+}
+
+@media screen and (min-width: 900px) {
+    .saya-tablewidth-600 {
+        width: 80%;
+        max-width: 600px;
+    }
+
+    .saya-tablewidth-900 {
+        width: 80%;
+        max-width: 900px;
+    }
+
+    .saya-tablewidth-lineupprintable {
+        width: 90%;
+        max-width: 900px;
+    }
+
+    .saya-tablewidth-1300 {
+        width: 80%;
+        max-width: 1300px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .saya-table {
+        width: 100%;
+    }
+}
+
+.saya-tablewidth-lineupprintable tr {
+    height: 40px;
+}
+
+.saya-tablewidth-archive tr {
+    height: 50px;
+}
+
+.saya-table-header {
+    padding: 10px, 10px;
+    border: #c0c0c0;
+    background-color: #a0a0a0 !important;
+    height: 30px !important;
+}
+
+.saya-table-header a {
+    color: #ffffff;
+    font-family: 'Scene Pro Black';
+    font-weight: normal;
+}

@@ -1,9 +1,8 @@
-var linkDebugMode = false;
-var scheduleLink = "../../resources/pdfViewerPlaceholder.html";
+let linkDebugMode = false;
 
 function Initialize()
 {
-    let printableTableState = document.getElementById("printedTableState"); 
+    let printableTableState = document.getElementById("printed-table-state"); 
 
     // Hides the printable schedules list by default on narrower screens
     if (visualViewport.width < 900) {
@@ -16,55 +15,29 @@ function Initialize()
     TogglePrintableTables();
 }
 
-function EnableDocumentViewer(route)
-{
-    if (visualViewport.width < 900) {
-        window.open(GetCurrentLineupTimetable(route));
-        return;
-    }
-
-    let viewerFrame = document.getElementById("pdfViewerFrame");
-    viewerFrame.src = GetCurrentLineupTimetable(route);
-
-    let viewer = document.getElementById("pdfViewer");
-    viewer.className = "pdfViewerEnabled";
-}
-
-function DisableDocumentViewer()
-{
-    let viewer = document.getElementById("pdfViewer");
-    viewer.className = "pdfViewerDisabled"
-
-    document.getElementById("pdfViewerFrame").src = "../../resources/pdfViewerPlaceholder.html";
-    scheduleLink = "../../resources/pdfViewerPlaceholder.html";
-}
-
-function OpenLinkedTimetable()
-{
-    window.open(scheduleLink);
-}
-
 function TogglePrintableTables()
 {
-    let tableState = document.getElementById("printedTableState");
-    let button = document.getElementById("tableRevealer");
+    let tableState = document.getElementById("printed-table-state");
+    let button = document.getElementById("table-revealer");
     let realTable = document.getElementById("theTableOfInvisibility");
 
     if (tableState.innerHTML == "visible") {
         button.innerHTML = "show";
         tableState.innerHTML = "hidden";
-        realTable.className = "disabledTable";
+        realTable.className = "disabled-table";
     }
     else if (tableState.innerHTML == "hidden") {
         button.innerHTML = "hide";
         tableState.innerHTML = "visible";
-        realTable.className = "printableContainer";
+        realTable.className = "printable-container";
     }
 }
 
 function GetCurrentLineupTimetable(route)
 {
-    scheduleLink = "https://junimeek.net/documents/";
+    currentLoadLocation = 2;
+
+    let scheduleLink = "https://junimeek.net/documents/";
     if (linkDebugMode) {
         scheduleLink = "../../documents/";
     }
@@ -78,7 +51,8 @@ function GetCurrentLineupTimetable(route)
     scheduleLink += route;
     scheduleLink += suffix;
 
-    return scheduleLink;
+    embedPath = scheduleLink;
+    EnableMiki();
 }
 
 function GetCurrentPrintableLineupTimetable(route)

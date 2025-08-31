@@ -1,6 +1,4 @@
-* {
-    box-sizing: border-box;
-}
+@import url('../../resources/sayaka/sayaka.css');
 
 .mainBody {
     background-color: aliceblue;

@@ -6,51 +6,35 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Juniper's Realm</title>
         <link rel="stylesheet" href="./style.css">
-        <link rel="stylesheet" href="./resources/navBar.css">
-        <link rel="stylesheet" href="./resources/fonts/font-style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="icon" href="https://junimeek.net/resources/favicon.ico" type="image/vnd.microsoft.icon">
     </head>
     
     <body>
-        <div class="bgFilter">
-            <nav class="navBar">
-                <ul>
-                    <li><a href="https://junimeek.net/"><i class="fa fa-home"></i> Home</a></li>
-                    <li>
-                        <div class="navDropdown">
-                            <button>
-                                <a>Site Categories <i class="fa fa-chevron-down"></i></a>
-                            </button>
-                            <div class="dropdownContent">
-                                <a href="https://junimeek.net/via-bus/" target="_parent" class="navBar-via">VIA Information</a>
-                                <a href="https://junimeek.net/sakemitech/" target="_parent" class="navBar-sakemi">SakemiTech</a>
-                                <a href="https://junimeek.net/uniterra/" target="_parent" class="navBar-uniterra">UniTerra</a>
-                            </div>
-                        </div>
-                    </li>
-                    <li><a href="https://junimeek.net/about"><i class="fa fa-info-circle"></i> About</a></li>
-                    <li><a href="https://junimeek.net/contact"><i class="fa fa-envelope"></i> Contact</a></li>
-                </ul>
+        <div class="bg-filter">
+            <nav class="saya-navbar" style="font-family: 'Ammys Handwriting';">
+                <div class="saya-navbar-container">
+                    <script src="./resources/sayaka/sayaka-navbar-loader.js" onload="LoadNavBar(0)"></script>
+                </div>
             </nav>
 
-            <div class="mainBody">
-                <div class="mainHeader">
-                    <h1>Juniper's Realm</h1>
+            <div class="saya-body">
+                <div class="header">
+                    <h1 class="saya-h1">Juniper's Realm</h1>
                     <hr/>
-                    <p>
+                    <p class="saya-short-paragraph">
                         Welcome to my domain.
                     </p>
-                    <p>
+                    <p class="saya-short-paragraph">
                         This homepage is still under construction, but feel free to look around at the different site categories below.
                     </p>
                     <hr/>
                 </div>
 
-                <div class="buttonContainer">
-                    <div class="buttonSide">
+                <div class="saya-flexbutton-container">
+                    <div class="saya-flexbutton-buttonarea">
                         <a href="https://junimeek.net/via-bus/" style="text-decoration: none;">
-                            <div class="bigViaButton">
+                            <div class="saya-flexbutton-bigbutton bigbutton-via">
                                 <h1>VIA Metropolitan Transit Information</h1>
                                 <p>
                                     A hub of random information about San Antonio's transit agency that I document
@@ -58,10 +42,9 @@
                             </div>
                         </a>
                     </div>
-
-                    <div class="buttonSide">
+                    <div class="saya-flexbutton-buttonarea">
                         <a href="https://junimeek.net/sakemitech/" style="text-decoration: none;">
-                            <div class="bigSakemiButton">
+                            <div class="saya-flexbutton-bigbutton bigbutton-sakemi">
                                 <h1>SakemiTech</h1>
                                 <p>
                                     My indie software development team consisting of one person
@@ -69,10 +52,9 @@
                             </div>
                         </a>
                     </div>
-
-                    <div class="buttonSide">
+                    <div class="saya-flexbutton-buttonarea">
                         <a href="https://junimeek.net/uniterra/" style="text-decoration: none;">
-                            <div class="bigUniterraButton">
+                            <div class="saya-flexbutton-bigbutton bigbutton-uniterra">
                                 <h1>UniTerra</h1>
                                 <p>
                                     Information about my roles in the UniTerra Minecraft server
@@ -87,6 +69,9 @@
                 </p>
                 <p class="footerText">
                     View the site source on GitHub <a href="https://github.com/Junimeek/junimeek.github.io/" target="_blank" class="hyperlink">here</a>.
+                </p><br/>
+                <p class="footerText">
+                    Copyright 2025 Junimeek<br/>All rights reserved
                 </p>
             </div>
         </div>

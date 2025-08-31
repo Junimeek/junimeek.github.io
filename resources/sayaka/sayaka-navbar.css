@@ -1,0 +1,149 @@
+.saya-navbar {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    padding: 0%;
+    background-color: #444444;
+}
+
+.saya-navbar-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: left;
+    background-color: #444444;
+    align-items: stretch;
+    min-height: 54px;
+}
+
+.saya-navbar-item {
+    background-color: #444444;
+    border-bottom-style: solid;
+    border-bottom-color: #777777;
+    border-bottom-width: 5px;
+}
+
+.saya-navbar-item:hover {
+    background-color: #777777;
+}
+
+.saya-navbar-filler {
+    border-bottom-style: solid;
+    border-bottom-width: 5px;
+    border-bottom-color: #777777;
+    background-color: #444444;
+    flex-grow: 1;
+}
+
+.saya-navbar-leftborder {
+    border-left-style: dashed;
+    border-left-color: #777777;
+    border-left-width: 2px;
+}
+
+.saya-navbar-underline-home {
+    border-bottom-color: #92d0df;
+}
+
+.saya-navbar-underline-normal {
+    border-bottom-color: #444444;
+}
+
+.saya-navbar-underline-via {
+    border-bottom-color: #eb747d;
+}
+
+.saya-navbar-underline-sakemi {
+    border-bottom-color: #f19dff;
+}
+
+.saya-navbar-underline-uniterra {
+    border-bottom-color: #8bb47b;
+}
+
+.saya-navbar-underline-about {
+    border-bottom-color: #f19dff;
+}
+
+.saya-navbar-underline-contact {
+    border-bottom-color: greenyellow;
+}
+
+.saya-navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+    display: block;
+    text-align: center;
+    font-weight: bold;
+    font-size: 12pt;
+}
+
+.saya-navbar-highlight-via:hover {
+    background-color: #eb747d !important;
+}
+
+.saya-navbar-highlight-sakemi:hover {
+    background-color: #f19dff !important;
+}
+
+.saya-navbar-highlight-uniterra:hover {
+    background-color: #8bb47b !important;
+}
+
+.saya-navbar-dropdown-container {
+    display: block;
+}
+
+.saya-navbar-dropdown-button {
+    background-color: #444444;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.saya-navbar-dropdown-container a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+}
+
+.saya-navbar-dropdown-container .saya-navbar-dropdown-content-large {
+    display: none;
+    position: absolute;
+    background-color: #444444;
+}
+
+.saya-navbar-dropdown-content-large a {
+    text-align: left;
+}
+
+.saya-navbar-dropdown-container:hover .saya-navbar-dropdown-content-large {
+    display: block;
+}
+
+.saya-navbar-dropdown-button:hover {
+    background-color: #777777;
+}
+
+
+@media screen and (min-width: 900px) {
+    .saya-navbar-wide {
+        display: block;
+    }
+
+    .saya-navbar-button-menu {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .saya-navbar-wide {
+        display: none;
+    }
+
+    .saya-navbar-button-menu {
+        display: none;
+    }
+}

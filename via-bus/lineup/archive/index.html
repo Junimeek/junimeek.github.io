@@ -6,60 +6,45 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Lineup Timetable Archive</title>
         <link rel="stylesheet" href="./style.css">
-        <link rel="stylesheet" href="../../../resources/navBar.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="icon" href="../../favicon.ico" type="image/vnd.microsoft.icon">
         <script src="./scripts.js"></script>
         <script src="../scripts.js"></script>
     </head>
     
-    <body>
-        <nav class="navBar">
-            <ul>
-                <li><a href="https://junimeek.net/"><i class="fa fa-home"></i> Home</a></li>
-                <li>
-                    <div class="navDropdown">
-                        <button>
-                            <a>Site Categories <i class="fa fa-chevron-down"></i></a>
-                        </button>
-                        <div class="dropdownContent">
-                            <a href="https://junimeek.net/via-bus/" target="_parent" class="navBar-via">VIA Information</a>
-                            <a href="https://junimeek.net/sakemitech/" target="_parent" class="navBar-sakemi">SakemiTech</a>
-                            <a href="https://junimeek.net/uniterra/" target="_parent" class="navBar-uniterra">UniTerra</a>
-                        </div>
-                    </div>
-                </li>
-                <li><a href="https://junimeek.net/about"><i class="fa fa-info-circle"></i> About</a></li>
-                <li><a href="https://junimeek.net/contact"><i class="fa fa-envelope"></i> Contact</a></li>
-            </ul>
+    <body class="saya-lower-bg">
+        <nav class="saya-navbar" style="font-family: 'Scene Pro';">
+            <div class="saya-navbar-container">
+                <script src="../../../resources/sayaka/sayaka-navbar-loader.js" onload="LoadNavBar(1)"></script>
+            </div>
         </nav>
 
-        <div class="mainBody">
+        <div class="saya-body">
             <a href="../index.html">< Return to current schedules</a>
-            <h1>Lineup Timetable Archive</h1>
+            <h1 class="saya-h1">Lineup Timetable Archive</h1>
             <hr/>
 
-            <p>
+            <p class="saya-short-paragraph">
                 Upon updating lineup schedules, the older versions will still be available for viewing down below.
                 Just click any of the arrows to expand each section.
             </p>
-            <p>
+            <p class="saya-short-paragraph">
                 For the most part, the schedules will be categorized by the dates they go into effect from newest to oldest.
             </p>
 
             <hr/>
 
             <noscript>
-                <p class="smallParagraph">
+                <p class="saya-short-paragraph">
                     <a style="color: red;"><b>JavaScript is disabled in your browser settings. Please enable it to download these schedules.</b></a>
                 </p>
                 <hr/>
             </noscript>
 
-            <table class="bigDropdownContainer" bordercolor="#c0c0c0">
+            <table class="big-dropdown-container" bordercolor="#c0c0c0">
                 <tbody>
                     <tr href="javascript:void(0)" onclick="ToggleDropdown(252)">
-                        <td id="bg252" class="arrowBGDisabled" width="10px">
+                        <td id="bg252" class="arrow-bg-disabled" width="10px">
                             <a><i id="clicker252" class="fa fa-chevron-down" style="color: #ffffff; padding: 10px;"></i></a>
                         </td>
                         <td>
@@ -71,22 +56,22 @@
                 </tbody>
             </table>
 
-            <div id="collection252" class="dropdownCollapsed">
-                <p style="text-align: center;">
+            <div id="collection252" class="dropdown-collapsed">
+                <p class="saya-paragraph">
                     The initial batch of schedules for the August 18, 2025 service changes were created around three weeks before they went into effect.
                     I rely on <a href="https://transitapp.com/" target="_blank">Transit</a>'s schedule data to determine times that
                     aren't listed on VIA's timetables, however that data was not available at the time of me creating the new schedules.
                 </p>
-                <p style="text-align: center;">
+                <p class="saya-paragraph">
                     The scheduling data has since been made available, and four timetables needed to be corrected.
                     The original versions of those corrected timetables are listed down below.
                 </p>
                 <br/>
 
-                <div class="scrollableTable">
-                    <table class="archiveTable" cellpadding="5" bordercolor="#c0c0c0">
+                <div class="saya-scrollable-element">
+                    <table class="saya-table saya-tablewidth-archive" cellpadding="5" bordercolor="#c0c0c0">
                         <tbody>
-                            <tr class="tableHeader">
+                            <tr class="saya-table-header">
                                 <th width="10%"><a>Route</a></th>
                                 <th><a>Effective Date</a></th>
                                 <th><a>Map Creation Date</a></th>
@@ -133,10 +118,10 @@
 
             <hr/>
 
-            <table class="bigDropdownContainer" bordercolor="#c0c0c0">
+            <table class="big-dropdown-container" bordercolor="#c0c0c0">
                 <tbody>
                     <tr href="javascript:void(0)" onclick="ToggleDropdown(251)">
-                        <td id="bg251" class="arrowBGDisabled" width="10px">
+                        <td id="bg251" class="arrow-bg-disabled" width="10px">
                             <a><i id="clicker251" class="fa fa-chevron-down" style="color: #ffffff; padding: 10px;"></i></a>
                         </td>
                         <td>
@@ -148,21 +133,21 @@
                 </tbody>
             </table>
 
-            <div id="collection251" class="dropdownCollapsed">
-                <p style="text-align: center;">
-                    On August 18, 2025, every current schedule will be rendered outdated as the introduction of
-                    <a href="https://www.viainfo.net/wp-content/uploads/2025/05/2025_0818-Improvement-Map-Route-010-scaled.jpg" target="_blank">Route 10</a>
-                    requires that it be added in the transfer list on every map.
+            <div id="collection251" class="dropdown-collapsed">
+                <p class="saya-short-paragraph">
+                    On August 18, 2025, every current schedule was rendered outdated as the introduction of
+                    <a href="https://www.viainfo.net/wp-content/uploads/2025/07/Schedule010.pdf" target="_blank">Route 10</a>
+                    required that it be added in the transfer list on every map.
                 </p>
-                <p style="text-align: center;">
+                <p class="saya-short-paragraph">
                     Note that because every single schedule was changed, this list is ordered by route number instead of by date.
                 </p>
                 <br/>
 
-                <div class="scrollableTable">
-                    <table class="archiveTable" cellpadding="5" bordercolor="#c0c0c0">
+                <div class="saya-scrollable-element">
+                    <table class="saya-table saya-tablewidth-archive" cellpadding="5" bordercolor="#c0c0c0">
                         <tbody>
-                            <tr class="tableHeader">
+                            <tr class="saya-table-header">
                                 <th width="10%"><a>Route</a></th>
                                 <th><a>Effective Date</a></th>
                                 <th><a>Map Creation Date</a></th>
@@ -345,10 +330,10 @@
 
             <hr/>
 
-            <table class="bigDropdownContainer" bordercolor="#c0c0c0">
+            <table class="big-dropdown-container" bordercolor="#c0c0c0">
                 <tbody>
                     <tr href="javascript:void(0)" onclick="ToggleDropdown(101)">
-                        <td id="bg101" class="arrowBGDisabled" width="10px">
+                        <td id="bg101" class="arrow-bg-disabled" width="10px">
                             <a><i id="clicker101" class="fa fa-chevron-down" style="color: #ffffff; padding: 10px;"></i></a>
                         </td>
                         <td>
@@ -360,18 +345,18 @@
                 </tbody>
             </table>
 
-            <div id="collection101" class="dropdownCollapsed">
-                <p style="text-align: center;">
+            <div id="collection101" class="dropdown-collapsed">
+                <p class="saya-paragraph">
                     These are the oldest schedules that I’ve made, which use the colors that VIA used to use for lineup up until
                     the August 19, 2024 rebrand. These schedules were never available for viewing on the main site,
                     but I figured it’d be fun to leave them all here for historical purposes.
                 </p>
                 <br/>
 
-                <div class="scrollableTable">
-                    <table class="archiveTable" cellpadding="5" bordercolor="#c0c0c0">
+                <div class="saya-scrollable-element">
+                    <table class="saya-table saya-tablewidth-archive" cellpadding="5" bordercolor="#c0c0c0">
                         <tbody>
-                            <tr class="tableHeader">
+                            <tr class="saya-table-header">
                                 <th width="10%"><a>Route</a></th>
                                 <th><a>Effective Date</a></th>
                                 <th><a>Map Creation Date</a></th>
@@ -416,11 +401,25 @@
                 </div>
             </div>
 
-            <hr/>
-            
             <br/>
             <br/>
             <br/>
         </div>
+
+        <footer class="saya-footer-container">
+            <div class="saya-footer-group" style="font-size: 20pt;">
+                <a href="https://youtube.com/@Junimeek" target="_blank"><i class="fa fa-youtube-play"></i></a>
+                <a href="https://github.com/Junimeek" target="_blank"><i class="fa fa-github"></i></a>
+                <a href="https://twitter.com/junimeek39" target="_blank"><i class="fa fa-twitter"></i></a>
+                <a href="https://en.wikipedia.org/wiki/User:Junimeek" target="_blank"><i class="fa fa-wikipedia-w"></i></a>
+            </div>
+            <div class="saya-footer-group">
+               <span>Copyright 2025 Junimeek</span><br/>
+               <span>All right reserved</span>
+            </div>
+            <div class="saya-footer-group">
+               <span>Powered by SayakaUI</span>
+            </div>
+        </footer>
     </body>
 </html>

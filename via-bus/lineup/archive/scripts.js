@@ -11,13 +11,13 @@ function ToggleDropdown(id)
 
     if (dropdownState.className == "fa fa-chevron-down") {
         dropdownState.className = "fa fa-chevron-up";
-        dropdownContent.className = "dropdownExpanded";
-        bgColor.className = "arrowBGEnabled";
+        dropdownContent.className = "dropdown-expanded";
+        bgColor.className = "arrow-bg-enabled";
     }
     else {
         dropdownState.className = "fa fa-chevron-down";
-        dropdownContent.className = "dropdownCollapsed";
-        bgColor.className = "arrowBGDisabled";
+        dropdownContent.className = "dropdown-collapsed";
+        bgColor.className = "arrow-bg-disabled";
     }
 }
 

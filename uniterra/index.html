@@ -6,87 +6,72 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Juniper's UniTerra Experience</title>
         <link rel="stylesheet" href="./style.css">
-        <link rel="stylesheet" href="../resources/navBar.css">
-        <link rel="stylesheet" href="../resources/fonts/font-style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="icon" href="./favicon.ico" type="image/vnd.microsoft.icon">
         <script src="./scripts.js"></script>
+        <script src="../resources/sayaka/miki.js"></script>
     </head>
     
-    <body>
-        <div id="pdfViewer" class="pdfViewerDisabled" onclick="DisableDocumentViewer()">
+    <body class="saya-lower-bg">
+        <div id="miki-viewer" class="miki-disabled" onclick="DisableMiki()">
             <a href="javascript:void(0);" title="Close document viewer">
-                <div class="pdfViewerCloseButton">
+                <div class="miki-button-close">
                     <i class="fa fa-window-close"></i>
                 </div>
             </a>
             <a href="javascript:void(0);" title="Open document in new tab">
-                <div class="pdfViewerMaxButton" onclick="OpenNewTab()">
+                <div class="miki-button-maximize" onclick="OpenMikiEmbedInNewTab()">
                     <i class="fa fa-window-maximize"></i>
                 </div>
             </a>
 
-            <div class="documentPreviewWindow">
-                <img class="documentPreviewContent" id="pdfViewerFrame" src="../resources/pdfViewerPlaceholder.html">
+            <div class="miki-window miki-windowtype-image">
+                <img class="miki-frame" id="miki-frame" src="../resources/sayaka/miki-loadscreen.html">
             </div>
         </div>
 
-        <nav class="navBar">
-            <ul>
-                <li><a href="https://junimeek.net/"><i class="fa fa-home"></i> Home</a></li>
-                <li>
-                    <div class="navDropdown">
-                        <button>
-                            <a>Site Categories <i class="fa fa-chevron-down"></i></a>
-                        </button>
-                        <div class="dropdownContent">
-                            <a href="https://junimeek.net/via-bus/" target="_parent" class="navBar-via">VIA Information</a>
-                            <a href="https://junimeek.net/sakemitech/" target="_parent" class="navBar-sakemi">SakemiTech</a>
-                            <a href="https://junimeek.net/uniterra/" target="_parent" class="navBar-uniterra">UniTerra</a>
-                        </div>
-                    </div>
-                </li>
-                <li><a href="https://junimeek.net/about"><i class="fa fa-info-circle"></i> About</a></li>
-                <li><a href="https://junimeek.net/contact"><i class="fa fa-envelope"></i> Contact</a></li>
-            </ul>
+        <nav class="saya-navbar" style="font-family: 'Scene Pro';">
+            <div class="saya-navbar-container">
+                <script src="../resources/sayaka/sayaka-navbar-loader.js" onload="LoadNavBar(3)"></script>
+            </div>
         </nav>
 
-        <div class="mainBody">
-            <h1>UniTerra</h1>
-            <p style="text-align: center;">
-                <em style="text-align: center;">Where Builders Unite</em>
+        <div class="saya-body">
+            <h1 class="saya-h1">UniTerra</h1>
+            <p class="saya-short-paragraph">
+                <em>Where Builders Unite</em>
             </p>
             <hr/>
 
-            <p class="mainParagraph">
+            <p class="saya-paragraph">
                 UniTerra is a creative country-building and city-building Minecraft server where people can create countries and cities.
                 You can check out the server using the following server IP: <b>142.4.216.95</b>
             </p>
-            <p class="mainParagraph">
+            <p class="saya-paragraph">
                 Visit the official UniTerra website <a href="https://uniterra-server.weebly.com/">here</a>.
             </p>
 
             <hr/>
 
-            <h2>My Role at UniTerra</h2>
+            <h2 class="saya-h2">My Role at UniTerra</h2>
 
-            <p class="mainParagraph">
+            <p class="saya-paragraph">
                 I specialize in the construction of highway infrastructure and mass transit planning.
                 Additionally, I am the mayor of <a href="https://uniterra.fandom.com/wiki/Glacia">Glacia Town</a>, a small town in the country of <a href="https://uniterra.fandom.com/wiki/Apetria">Apetria</a>.
             </p>
 
             <hr/>
 
-            <h2>My Builds</h2>
-            <p class="mainParagraph">
+            <h2 class="saya-h2">My Builds</h2>
+            <p class="saya-paragraph">
                 Below is the list of major builds that I have created in UniTerra.
                 Currently, I have two major completed builds, both in Apetria: Apetria Highway 6, and Heimo International Airport.
             </p>
 
-            <div class="scrollableTable">
-                <table class="normalTable" cellpadding="5" bordercolor="#c0c0c0">
+            <div class="saya-scrollable-element">
+                <table class="saya-table saya-tablewidth-900" cellpadding="5" bordercolor="#c0c0c0">
                     <tbody>
-                        <tr class="tableHeader">
+                        <tr class="saya-table-header">
                             <th width="10%" colspan="2"><a>Country</a></th>
                             <th width="20%"><a>Build</a></th>
                             <th width="40%"><a>Description</a></th>
@@ -95,45 +80,45 @@
                         <tr>
                             <td class="flagColumn">
                                 <a title="Apetria" target="_blank" href="https://uniterra.fandom.com/wiki/Apetria">
-                                    <img class="countryFlag" src="https://static.wikia.nocookie.net/one-minecraft/images/d/d8/Flag_of_Apetria.png/revision/latest/scale-to-width-down/128">
+                                    <img class="countryFlag" src="../resources/uniterra/Apetria.webp">
                                 </a>
                             </td>
                             <td>Apetria</td>
                             <td>Apetria Highway 6</td>
                             <td class="descColumn">A highway that connects <a href="https://uniterra.fandom.com/wiki/Heimo" target="_blank">Heimo</a> to Heimo International Airport and Glacia Town</td>
                             <td class="imageColumn">
-                                <a href="javascript:void(0);" onclick="EnableDocumentViewer('a6.jpg')">
-                                    <img class="screenshot" src="./screenshots/a6.jpg">
+                                <a href="javascript:void(0);" onclick="GetScreenshot('a6.jpg')">
+                                    <img class="screenshot" src="./thumbs/a6.webp">
                                 </a>
                             </td>
                         </tr>
                         <tr>
                             <td>
                                 <a title="Apetria" target="_blank" href="https://uniterra.fandom.com/wiki/Apetria">
-                                    <img class="countryFlag" src="https://static.wikia.nocookie.net/one-minecraft/images/d/d8/Flag_of_Apetria.png/revision/latest/scale-to-width-down/128">
+                                    <img class="countryFlag" src="../resources/uniterra/Apetria.webp">
                                 </a>
                             </td>
                             <td>Apetria</td>
                             <td><a target="_blank" href="https://uniterra.fandom.com/wiki/Heimo_International_Airport">Heimo International Airport</a></td>
-                            <td>
+                            <td class="descColumn">
                                 One of the largest airports in the server. Singlehandedly built by me, it current only has one passenger terminal (Terminal A)
                                 with 41 gates that accomodate small aircraft.
                             </td>
                             <td>
-                                <a href="javascript:void(0);" onclick="EnableDocumentViewer('hmo-terma.jpg')">
-                                    <img class="screenshot" src="./screenshots/hmo-terma.jpg">
+                                <a href="javascript:void(0);" onclick="GetScreenshot('hmo-terma.jpg')">
+                                    <img class="screenshot" src="./thumbs/hmo-terma.webp">
                                 </a>
                             </td>
                         </tr>
                         <tr>
                             <td>
                                 <a title="Leedonia" target="_blank" href="https://uniterra.fandom.com/wiki/Leedonia">
-                                    <img class="countryFlag" src="https://static.wikia.nocookie.net/one-minecraft/images/d/da/Flag_of_Leedonia.jpg/revision/latest/scale-to-width-down/128">
+                                    <img class="countryFlag" src="../resources/uniterra/Leedonia.webp">
                                 </a>
                             </td>
                             <td>Leedonia</td>
                             <td>Regal University</td>
-                            <td>
+                            <td class="descColumn">
                                 Currently in the planning stage.
                                 A university in <a target="_blank" href="https://uniterra.fandom.com/wiki/Nouvarcha">Nouvarcha, Leedonia</a>
                                 that will be built in collaberation with <a target="_blank" href="https://uniterra.fandom.com/wiki/User:Roadmaster2020">KingCrafterino</a>.
@@ -146,15 +131,15 @@
 
             <hr/>
 
-            <h2>My Assets</h2>
-            <p class="mainParagraph">
+            <h2 class="saya-h2">My Assets</h2>
+            <p class="saya-short-paragraph">
                 Along with being the mayor of Glacia Town, I own a few companies.
             </p>
 
-            <div class="scrollableTable">
-                <table class="normalTable" cellpadding="5" bordercolor="#c0c0c0">
+            <div class="saya-scrollable-element">
+                <table class="saya-table saya-tablewidth-900" cellpadding="5" bordercolor="#c0c0c0">
                     <tbody>
-                        <tr class="tableHeader">
+                        <tr class="saya-table-header">
                             <th width="10%" colspan="2"><a>Base Country</a></th>
                             <th width="20%"><a>Company</a></th>
                             <th width="40%"><a>Description</a></th>
@@ -163,7 +148,7 @@
                         <tr>
                             <td class="flagColumn">
                                 <a title="Apetria" target="_blank" href="https://uniterra.fandom.com/wiki/Apetria">
-                                    <img class="countryFlag" src="https://static.wikia.nocookie.net/one-minecraft/images/d/d8/Flag_of_Apetria.png/revision/latest/scale-to-width-down/128">
+                                    <img class="countryFlag" src="../resources/uniterra/Apetria.webp">
                                 </a>
                             </td>
                             <td>Apetria</td>
@@ -174,7 +159,7 @@
                         <tr>
                             <td class="flagColumn">
                                 <a title="Apetria" target="_blank" href="https://uniterra.fandom.com/wiki/Apetria">
-                                    <img class="countryFlag" src="https://static.wikia.nocookie.net/one-minecraft/images/d/d8/Flag_of_Apetria.png/revision/latest/scale-to-width-down/128">
+                                    <img class="countryFlag" src="../resources/uniterra/Apetria.webp">
                                 </a>
                             </td>
                             <td>Apetria</td>
@@ -185,19 +170,21 @@
                         <tr>
                             <td class="flagColumn">
                                 <a title="Leedonia" target="_blank" href="https://uniterra.fandom.com/wiki/Leedonia">
-                                    <img class="countryFlag" src="https://static.wikia.nocookie.net/one-minecraft/images/d/da/Flag_of_Leedonia.jpg/revision/latest/scale-to-width-down/128">
+                                    <img class="countryFlag" src="../resources/uniterra/Leedonia.webp">
                                 </a>
                             </td>
                             <td>Leedonia</td>
                             <td>Juniper International Construction Agency</td>
-                            <td class="descColumn">A multinational agency that can be contracted to build anything in a variety of countries.
-                                Specializes in infrastructure.</td>
+                            <td class="descColumn">A multinational agency that can be contracted to build anything in a variety of countries. Specializes in infrastructure.</td>
                             <td>2</td>
                         </tr>
                         <tr>
                             <td class="flagColumn">
                                 <a title="Leedonia" target="_blank" href="https://uniterra.fandom.com/wiki/Leedonia">
-                                    <img class="countryFlag" src="https://static.wikia.nocookie.net/one-minecraft/images/d/da/Flag_of_Leedonia.jpg/revision/latest/scale-to-width-down/128">
+                                    <img class="countryFlag" src="../resources/uniterra/Leedonia.webp">
+                                </a>
+                                <a title="Idalia" target="_blank" href="https://uniterra.fandom.com/wiki/Idalia">
+                                    <img class="countryFlag" src="../resources/uniterra/Idalia.webp">
                                 </a>
                             </td>
                             <td>Leedonia</td>
@@ -211,18 +198,18 @@
 
             <hr/>
 
-            <h2>Technical Information</h2>
-            <p class="mainParagraph">
+            <h2 class="saya-h2">Technical Information</h2>
+            <p class="saya-short-paragraph">
                 Everything below is mainly information that I use for my own purposes, but I figured it'd be fun to leave it all visible here.
             </p>
 
-            <h3>Glacia Census</h3>
+            <h3 class="saya-h3">Glacia Census</h3>
 
             <a name="glacia-census"></a>
 
-            <table class="normalTable" cellpadding="5" bordercolor="#c0c0c0">
+            <table class="saya-table saya-tablewidth-900" style="text-align: center;" cellpadding="5" bordercolor="#c0c0c0">
                 <tbody>
-                    <tr class="tableHeader">
+                    <tr class="saya-table-header">
                         <th width="70%"><a>Building</a></th>
                         <th><a>Beds</a></th>
                         <th><a>Master<br/>Beds</a></th>
@@ -277,5 +264,21 @@
             <br/>
             <br/>
         </div>
+
+        <footer class="saya-footer-container">
+            <div class="saya-footer-group" style="font-size: 20pt;">
+                <a href="https://youtube.com/@Junimeek" target="_blank"><i class="fa fa-youtube-play"></i></a>
+                <a href="https://github.com/Junimeek" target="_blank"><i class="fa fa-github"></i></a>
+                <a href="https://twitter.com/junimeek39" target="_blank"><i class="fa fa-twitter"></i></a>
+                <a href="https://en.wikipedia.org/wiki/User:Junimeek" target="_blank"><i class="fa fa-wikipedia-w"></i></a>
+            </div>
+            <div class="saya-footer-group">
+               <span>Copyright 2025 Junimeek</span><br/>
+               <span>All right reserved</span>
+            </div>
+            <div class="saya-footer-group">
+               <span>Powered by SayakaUI</span>
+            </div>
+        </footer>
     </body>
 </html>

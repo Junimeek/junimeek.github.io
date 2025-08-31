@@ -1,0 +1,99 @@
+.miki-button-close {
+    display: block;
+    position: fixed;
+    z-index: 40;
+    top: 16px;
+    right: 16px;
+    background-color: #ffffff44;
+    color: white;
+    padding-left: 4px;
+    padding-right: 4px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+.miki-button-close:hover {
+    border-color: aqua;
+    color: aqua;
+}
+
+.miki-button-close i {
+    color: inherit;
+    font-size: 24pt;
+}
+
+.miki-button-maximize {
+    display: block;
+    position: fixed;
+    z-index: 40;
+    top: calc(24pt + 30px);
+    right: 16px;
+    background-color: #ffffff44;
+    color: white;
+    padding-left: 4px;
+    padding-right: 4px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+.miki-button-maximize:hover {
+    border-color: aqua;
+    color: aqua;
+}
+
+.miki-button-maximize i {
+    color: inherit;
+    font-size: 24pt;
+}
+
+.miki-enabled {
+    display: block;
+    position: fixed;
+    background-color: #00000088;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 39;
+}
+
+.miki-disabled {
+    display: none;
+}
+
+.miki-window {
+    height: 100vh;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.miki-windowtype-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.miki-windowtype-pdf iframe {
+    height: 100vh;
+}
+
+.miki-frame {
+    width: 100%;
+    border-color: #92d0df;
+    border-style: solid;
+    border-width: 4px;
+}
+
+@media screen and (min-width: 900px) {
+    .miki-window {
+        width: 85vw;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .miki-window {
+        width: 100vw;
+    }
+}

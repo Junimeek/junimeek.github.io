@@ -6,72 +6,73 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>About Junimeek!</title>
         <link rel="stylesheet" href="./style.css">
-        <link rel="stylesheet" href="../resources/navBar.css">
-        <link rel="stylesheet" href="../resources/fonts/font-style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="icon" href="https://junimeek.net/resources/favicon.ico" type="image/vnd.microsoft.icon">
     </head>
 
-    <body>
-        <nav class="navBar">
-            <ul>
-                <li><a href="https://junimeek.net/"><i class="fa fa-home"></i> Home</a></li>
-                <li>
-                    <div class="navDropdown">
-                        <button>
-                            <a>Site Categories <i class="fa fa-chevron-down"></i></a>
-                        </button>
-                        <div class="dropdownContent">
-                            <a href="https://junimeek.net/via-bus/" target="_parent" class="navBar-via">VIA Information</a>
-                            <a href="https://junimeek.net/sakemitech/" target="_parent" class="navBar-sakemi">SakemiTech</a>
-                            <a href="https://junimeek.net/uniterra/" target="_parent" class="navBar-uniterra">UniTerra</a>
-                        </div>
-                    </div>
-                </li>
-                <li><a href="https://junimeek.net/about"><i class="fa fa-info-circle"></i> About</a></li>
-                <li><a href="https://junimeek.net/contact"><i class="fa fa-envelope"></i> Contact</a></li>
-            </ul>
+    <body class="saya-lower-bg">
+        <nav class="saya-navbar" style="font-family: 'Ammys Handwriting';">
+            <div class="saya-navbar-container">
+                <script src="../resources/sayaka/sayaka-navbar-loader.js" onload="LoadNavBar(4)"></script>
+            </div>
         </nav>
 
-        <div class="mainBody">
-            <h1>Some stuff about Juni</h1>
+        <div class="saya-body">
+            <h1 class="saya-h1">SayakaUI</h1>
+            <p class="saya-paragraph">
+                SayakaUI is the lightweight web engine that I use to run the majority of this website.
+                It is entirely developed in-house, with no plans to officially release it for general usage
+                since using it is not exactly the most user-friendly experience.
+            </p>
+            <p class="saya-paragraph">
+                SayakaUI is named after the fictional character Sayaka Miki from the anime series Puella Magi Madoka Magica.
+                I believe that Madoka Magica is the greatest show ever made, and I wanted to honor it when naming the engine.
+                My favorite character is actually Kyoko Sakura, however, a lot of my motivation for creating and maintaining
+                this site comes from one of my closest friends. His favorite character is Sayaka Miki; therefore,
+                I went with SayakaUI to honor both the show and one of my best friends.
+            </p>
+
             <hr/>
 
-            <p>
+            <h1 class="saya-h1">Some stuff about Juni</h1>
+            <hr/>
+
+            <p class="saya-short-paragraph">
                 Heya!
             </p>
-            <p>
+            <p class="saya-short-paragraph">
                 My self-given name is Juniper Meekuni, though I typically simply go by Juni.
                 I am a wannabe <a href="https://youtube.com/@Junimeek/videos" target="_blank">YouTuber</a> and
                 <a href="https://junimeek.net/sakemitech">game developer</a> (I have some knowledge in Unity C# development).
             </p>
-            <p>
+            <p class="saya-short-paragraph">
                 I'm not really sure what else to put here, so I'll just put down a bunch of things I like.
             </p>
 
             <hr/>
 
-            <h2>Interests</h2>
-            <p>
+            <h2 class="saya-h2">Interests</h2>
+            <p class="saya-paragraph">
                 A huge area of interest for me is public transportation, as I'm sure you may have guessed based on the fact
                 that I have an entire section of this website dedicated to San Antonio's transit agency, VIA Metropolitan Transit.
                 Unfortunately, I don't really get any oppertunities to ride the bus since my area isn't served by any bus routes
                 (the closest bus stop to me is over an hour of walking distance away). But whenever I do ride the bus somewhere, I tend to have fun.
             </p>
 
-            <h2>Other stuff I like</h2>
-            <p>
+            <h2 class="saya-h2">Other stuff I like</h2>
+            <p class="saya-paragraph">
                 <ul>
                     <li><b>Favorite games</b>: Minecraft, Cities: Skylines</li><br/>
                     <li><b>Favorite fictional character</b>: Natsuki (Doki Doki Literature Club)</li><br/>
-                    <li><b>Favorite show</b>: Puella Magi Madoka Magica</li>
+                    <li><b>Favorite show</b>: Puella Magi Madoka Magica</li><br/>
+                    <li><b>Favorite film</b>: Puella Magi Madoka Magica the Movie III: Rebellion</li>
                 </ul>
             </p>
 
             <hr/>
 
-            <h2>Hardware</h2>
-            <p>
+            <h2 class="saya-h2">Hardware</h2>
+            <p class="saya-short-paragraph">
                 This is the list of hardware I use for any of the random things I do.
                 <ul>
                     <li>ASUS Zenbook 14</li>
@@ -88,8 +89,8 @@
                 </ul>
             </p>
 
-            <h2>Software</h2>
-            <p>
+            <h2 class="saya-h2">Software</h2>
+            <p class="saya-short-paragraph">
                 This is the list of software I use for the huge amount of things that I do.
                 <ul>
                     <li><b>Image editing</b>: <a href="https://www.gimp.org/" target="_blank">GNU Image Manipulation Program</a></li><br/>
@@ -102,5 +103,21 @@
             <br/>
             <br/>
         </div>
+
+        <footer class="saya-footer-container">
+            <div class="saya-footer-group" style="font-size: 20pt;">
+                <a href="https://youtube.com/@Junimeek" target="_blank"><i class="fa fa-youtube-play"></i></a>
+                <a href="https://github.com/Junimeek" target="_blank"><i class="fa fa-github"></i></a>
+                <a href="https://twitter.com/junimeek39" target="_blank"><i class="fa fa-twitter"></i></a>
+                <a href="https://en.wikipedia.org/wiki/User:Junimeek" target="_blank"><i class="fa fa-wikipedia-w"></i></a>
+            </div>
+            <div class="saya-footer-group">
+               <span>Copyright 2025 Junimeek</span><br/>
+               <span>All right reserved</span>
+            </div>
+            <div class="saya-footer-group">
+               <span>Powered by SayakaUI</span>
+            </div>
+        </footer>
     </body>
 </html>

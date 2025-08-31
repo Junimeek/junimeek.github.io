@@ -6,49 +6,33 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>SakemiTech</title>
         <link rel="stylesheet" href="./style.css">
-        <link rel="stylesheet" href="../resources/navBar.css">
-        <link rel="stylesheet" href="../resources/fonts/font-style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="icon" href="https://junimeek.net/resources/favicon.ico" type="image/vnd.microsoft.icon">
-        </head>
+    </head>
     
-    <body>
-        <nav class="navBar">
-            <ul>
-                <li><a href="https://junimeek.net/"><i class="fa fa-home"></i> Home</a></li>
-                <li>
-                    <div class="navDropdown">
-                        <button>
-                            <a>Site Categories <i class="fa fa-chevron-down"></i></a>
-                        </button>
-                        <div class="dropdownContent">
-                            <a href="https://junimeek.net/via-bus/" target="_parent" class="navBar-via">VIA Information</a>
-                            <a href="https://junimeek.net/sakemitech/" target="_parent" class="navBar-sakemi">SakemiTech</a>
-                            <a href="https://junimeek.net/uniterra/" target="_parent" class="navBar-uniterra">UniTerra</a>
-                        </div>
-                    </div>
-                </li>
-                <li><a href="https://junimeek.net/about"><i class="fa fa-info-circle"></i> About</a></li>
-                <li><a href="https://junimeek.net/contact"><i class="fa fa-envelope"></i> Contact</a></li>
-            </ul>
+    <body class="saya-lower-bg">
+        <nav class="saya-navbar" style="font-family: 'Ammys Handwriting';">
+            <div class="saya-navbar-container">
+                <script src="../resources/sayaka/sayaka-navbar-loader.js" onload="LoadNavBar(2)"></script>
+            </div>
         </nav>
 
-        <div class="mainBody">
-            <p style="text-align: center;">
-                <img src="./sakemitech-logo.png" class="sakemiLogo"><br/>
+        <div class="saya-body">
+            <p class="saya-short-paragraph">
+                <img src="./sakemitech-logo.png" class="sakemi-logo"><br/>
                 (temporary logo)
             </p>
             <hr/>
-            <p>
+            <p class="saya-short-paragraph">
                 SakemiTech is a computer software development team consisting of exactly one person (me, hehe).
                 As of now, my publicly released works consist entirely of game mods.
             </p>
 
-            <p>
+            <p class="saya-short-paragraph">
                 Note that some older works have been released under the name "<b>JuniDev</b>".
             </p>
 
-            <p>
+            <p class="saya-short-paragraph">
                 i'll put a nice table here later, but for now we'll just have an unordered list of my works
             </p>
 
@@ -56,7 +40,23 @@
                 <li><a href="https://github.com/Junimeek/BaldiExtended" target="_blank">Baldi's Extended Schoolhouse</a></li>
                 <li><a href="https://github.com/Junimeek/MikuMondayRFE" target="_blank">Miku Monday</a> (old and outdated mod)</li>
             </ul>
-            
+            <br/>
         </div>
+
+        <footer class="saya-footer-container">
+            <div class="saya-footer-group" style="font-size: 20pt;">
+                <a href="https://youtube.com/@Junimeek" target="_blank"><i class="fa fa-youtube-play"></i></a>
+                <a href="https://github.com/Junimeek" target="_blank"><i class="fa fa-github"></i></a>
+                <a href="https://twitter.com/junimeek39" target="_blank"><i class="fa fa-twitter"></i></a>
+                <a href="https://en.wikipedia.org/wiki/User:Junimeek" target="_blank"><i class="fa fa-wikipedia-w"></i></a>
+            </div>
+            <div class="saya-footer-group">
+               <span>Copyright 2025 Junimeek</span><br/>
+               <span>All right reserved</span>
+            </div>
+            <div class="saya-footer-group">
+               <span>Powered by SayakaUI</span>
+            </div>
+        </footer>
     </body>
 </html>

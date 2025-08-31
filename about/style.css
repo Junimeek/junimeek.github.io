@@ -1,60 +1,17 @@
-* {
-    box-sizing: border-box;
-}
+@import url('../resources/sayaka/sayaka.css');
+@import url('../resources/sayaka/sayaka-navbar.css');
+@import url('../resources/fonts/font-style.css');
 
-.mainBody {
-    background-color: aliceblue;
-    padding: 10px 15px;
-    height: auto;
-}
-
-.notification {
-    background-color: #ffffff;
-    border-collapse: collapse;
-    margin-left: auto;
-    margin-right: auto;
-    width: 90%;
-    max-width: 700px;
-}
-
-@media screen and (min-width: 900px) {
-    body {
-        margin: 8px;
-    }
-}
-
-@media screen and (max-width: 900px) {
-    body {
-        margin: 0px;
-    }
-}
-
-h1 {
+.saya-h1 {
     font-family: 'Ammys Handwriting';
-    font-weight: bold;
-    text-align: center;
     color: #ab4eb9;
 }
 
-h2 {
-    font-weight: bold;
-    text-align: left;
+.saya-h2 {
+    font-family: 'Ammys Handwriting';
     color: #ab4eb9;
 }
 
-body {
-    font-family: Arial, Helvetica, sans-serif;
+.saya-lower-bg {
     background-image: linear-gradient(135deg, #f19dff, #ab4eb9);
-    font-size: 14pt;
-}
-
-.navBarFrame {
-    position: sticky;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    max-height: 66px;
-    padding: 0%;
-    border: none;
-    overflow: visible;
 }

@@ -1,29 +1,48 @@
 @font-face {
     font-family: 'Ammys Handwriting';
+    font-weight: normal;
     font-style: normal;
-    src: url("./sources/AmmysHandwriting.ttf") format("ttf");
+    src: url('./sources/AmmysHandwriting.ttf') format('ttf');
 }
 
 @font-face {
     font-family: 'Scene Pro';
+    font-weight: normal;
     font-style: normal;
-    src: url("./sources/SceneProRg.otf") format("otf");
+    src: url('./sources/SceneProRg.otf') format('otf');
 }
 
 @font-face {
     font-family: 'Scene Pro';
-    font-style: bold;
-    src: url("./sources/SceneProBold.otf") format("otf");
-}
-
-@font-face {
-    font-family: 'Scene Pro Black';
+    font-weight: bold;
     font-style: normal;
-    src: url("./sources/SceneProBlack.otf") format("otf");
+    src: url('./sources/SceneProBold.otf') format('otf');
 }
 
 @font-face {
     font-family: 'Scene Pro Black';
-    font-style: bold;
-    src: url("./sources/SceneProUltBlk.otf") format("otf");
+    font-weight: normal;
+    font-style: normal;
+    src: url('./sources/SceneProBlack.otf') format('otf');
+}
+
+@font-face {
+    font-family: 'Scene Pro Black';
+    font-weight: bold;
+    font-style: normal;
+    src: url('./sources/SceneProUltBlk.otf') format('otf');
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    font-weight: normal;
+    font-style: normal;
+    src: url("./sources/MontserratRegular.ttf") format("ttf");
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    font-weight: bold;
+    font-style: normal;
+    src: url("./sources/MontserratBold.ttf") format("ttf");
 }

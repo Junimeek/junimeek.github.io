@@ -1,49 +1,49 @@
-* {
-    box-sizing: border-box;
+@import url('../resources/sayaka/sayaka.css');
+@import url('../resources/sayaka/sayaka-navbar.css');
+@import url('../resources/sayaka/sayaka-flexbuttons.css');
+@import url('../resources/fonts/font-style.css');
+
+.saya-body {
+    font-family: 'Helvetica';
 }
 
-.mainBody {
-    background-color: aliceblue;
-    padding: 10px 15px;
-    height: calc(100vh - 66px);
+.bigbutton-lineup {
+    background-color: #411b43;
+    background-image: url("./thumb-lineup.jpg");
+    border-color: #411b43;
 }
 
-.hubTable {
-    border: 1;
-    background-color: #ffffff;
-    border-collapse: collapse;
-    margin-left: auto;
-    margin-right: auto;
+.bigbutton-betterbus {
+    background-color: #32737a;
+    background-image: url("./thumb-betterbus.jpg");
+    border-color: #32737a;
 }
 
-@media screen and (min-width: 800px) {
-    .hubTable {
-        width: 80%;
-        max-width: 900px;
-    }
-
-    body {
-        margin: 8px;
-    }
+.bigbutton-errors {
+    background-color: #bdae80;
+    border-color: #bdae80;
 }
 
-@media screen and (max-width: 800px) {
-    .hubTable {
-        width: 100%;
-    }
-
-    body {
-        margin: 0px;
-    }
+.bigbutton-history {
+    background-color: #804000;
 }
 
-.hubButton {
-    padding: 10px, 10px;
-    border: #c0c0c0;
-    cursor: pointer;
+.bigbutton-lineup:hover {
+    border-color: #f768ff;
 }
 
-body {
-    font-family: Arial, Helvetica, sans-serif;
+.bigbutton-betterbus:hover {
+    border-color: #67f0ff;
+}
+
+.bigbutton-errors:hover {
+    border-color: #ffecb3;
+}
+
+.saya-h1 {
+    font-family: 'Scene Pro Black';
+}
+
+.saya-lower-bg {
     background-image: linear-gradient(135deg, #da4c3f, #af3034);
 }

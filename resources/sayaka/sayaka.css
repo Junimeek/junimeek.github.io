@@ -1,0 +1,182 @@
+/*
+    This is the primary stylesheet for SayakaUI, the name of the common UI that is used across junimeek.net.
+    Additional SayakaUI stylesheets can be found in this same directory.
+    
+    Current version: 1.0.0
+
+    created by junimeek
+    special thanks to potatocommuter
+*/
+
+* {
+    box-sizing: border-box;
+}
+
+.saya-banner-header {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: fit-content;
+}
+
+.saya-banner-body {
+    padding: 10px 15px;
+}
+
+.saya-body {
+    background-color: aliceblue;
+    padding: 10px 15px;
+}
+
+.saya-notification {
+    background-color: #ffffff;
+    border-collapse: collapse;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.saya-notification-wide {
+    background-color: #ffffff;
+    border-collapse: collapse;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+.saya-paragraph {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: justify;
+}
+
+.saya-short-paragraph {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+@media screen and (min-width: 900px) {
+    .saya-paragraph {
+        max-width: 80%;
+        font-size: 16pt;
+        line-height: 22pt;
+    }
+
+    .saya-short-paragraph {
+        max-width: 80%;
+        font-size: 16pt;
+        line-height: 22pt;
+    }
+
+    .saya-notification {
+        width: 90%;
+        max-width: 700px;
+    }
+
+    .saya-desktop-exclusive-contents {
+        display: inline;
+    }
+
+    .saya-mobile-exclusive-contents {
+        display: none;
+    }
+
+    .saya-lower-bg {
+        margin: 8px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .saya-paragraph {
+        max-width: 100%;
+        font-size: 14pt;
+        line-height: 18pt;
+    }
+
+    .saya-short-paragraph {
+        max-width: 100%;
+        font-size: 14pt;
+        line-height: 18pt;
+    }
+
+    .saya-notification {
+        width: 100%;
+    }
+
+    .saya-desktop-exclusive-contents {
+        display: none;
+    }
+
+    .saya-mobile-exclusive-contents {
+        display: inline;
+    }
+
+    .saya-lower-bg {
+        margin: 0px;
+    }
+}
+
+.saya-scrollable-element {
+    overflow-x: auto;
+}
+
+.saya-h1 {
+    font-size: 32pt;
+    font-weight: bold;
+    text-align: center;
+}
+
+.saya-h2 {
+    font-size: 24pt;
+    font-weight: bold;
+    text-align: center;
+}
+
+.saya-h3 {
+    font-size: 20pt;
+    font-weight: bold;
+    text-align: center;
+}
+
+.saya-footer-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #92d0df;
+    min-height: 200px;
+    border-top-style: solid;
+    border-top-width: 5px;
+    border-top-color: #777777;
+}
+
+.saya-footer-group {
+    background-color: #e6c97700;
+    display: block;
+    margin: 14px;
+    width: 400px;
+    text-align: center;
+}
+
+.saya-footer-group span {
+    color: #123170;
+    font-family: 'Ammys Handwriting';
+    font-weight: bold;
+}
+
+.saya-footer-group i {
+    color: #123170;
+}
+
+.saya-footer-group i:hover {
+    color: #e6c977;
+}
+
+.saya-lower-bg {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14pt;
+}

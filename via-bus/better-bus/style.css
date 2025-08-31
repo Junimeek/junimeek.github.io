@@ -1,0 +1,84 @@
+@import url('../../resources/sayaka/sayaka.css');
+@import url('../../resources/sayaka/sayaka-navbar.css');
+@import url('../../resources/sayaka/sayaka-table.css');
+@import url('../../resources/sayaka/miki.css');
+@import url('../../resources/fonts/font-style.css');
+
+.saya-body {
+    font-family: 'Helvetica';
+}
+
+.saya-banner-header {
+    background-color: #32737a;
+    background-image: url('./banner-betterbus.jpg');
+}
+
+.saya-table i {
+    color: #da4346;
+    font-size: 16pt;
+    padding: 10px;
+}
+
+.saya-table i:hover {
+    color: #375c9f;
+}
+
+.saya-table li {
+    text-align: left;
+}
+
+.saya-table img {
+    width: 32px;
+    height: 32px;
+}
+
+.saya-table td {
+    font-size: 14pt;
+    text-align: center;
+}
+
+.big-number {
+    width: 50px !important;
+    height: 50px !important;
+}
+
+.text-20 {
+    color: #af3034;
+    font-family: 'Scene Pro';
+}
+
+.text-30 {
+    color: #375c9f;
+    font-family: 'Scene Pro';
+}
+
+.text-green {
+    color: #628125;
+    font-family: 'Scene Pro';
+}
+
+.text-silver {
+    color: #646c6e;
+    font-family: 'Scene Pro';
+}
+
+.text-link-service {
+    color: #54325f;
+    font-family: 'Scene Pro';
+}
+
+.text-changeheader {
+    font-family: 'Scene Pro';
+}
+
+.saya-h1 {
+    font-family: 'Scene Pro Black';
+}
+
+.saya-h2 {
+    font-family: 'Scene Pro Black';
+}
+
+.saya-lower-bg {
+    background-image: linear-gradient(135deg, #da4c3f, #af3034);
+}

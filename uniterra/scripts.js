@@ -1,44 +1,15 @@
-var linkDebugMode = true;
-var documentLink = "../resources/pdfViewerPlaceholder.html";
+let linkDebugMode = true;
 
-function EnableDocumentViewer(imageName)
+function GetScreenshot(imageName)
 {
-    /*
-    if (visualViewport.width < 900) {
-        window.open(GetImage(imageName));
-        return;
-    }
-    */
+    currentLoadLocation = 1;
 
-    let viewerFrame = document.getElementById("pdfViewerFrame");
-    viewerFrame.src = GetImage(imageName);
-
-    let viewer = document.getElementById("pdfViewer");
-    viewer.className = "pdfViewerEnabled";
-}
-
-function DisableDocumentViewer()
-{
-    let viewer = document.getElementById("pdfViewer");
-    viewer.className = "pdfViewerDisabled"
-
-    document.getElementById("pdfViewerFrame").src = "../resources/pdfViewerPlaceholder.html";
-    documentLink = "../resources/pdfViewerPlaceholder.html";
-}
-
-function OpenNewTab()
-{
-    window.open(documentLink);
-}
-
-function GetImage(imageName)
-{
-    documentLink = "https://junimeek.net/uniterra/screenshots/";
+    let imageLink = "https://junimeek.net/uniterra/screenshots/";
     if (linkDebugMode) {
-        documentLink = "./screenshots/";
+        imageLink = "./screenshots/";
     }
 
-    documentLink += imageName;
-
-    return documentLink;
+    imageLink += imageName;
+    embedPath = imageLink;
+    EnableMiki();
 }

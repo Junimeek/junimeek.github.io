@@ -6,115 +6,92 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>VIA Metropolitan Transit Information</title>
         <link rel="stylesheet" href="./style.css">
-        <link rel="stylesheet" href="../resources/navBar.css">
-        <link rel="stylesheet" href="../resources/fonts/font-style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="icon" href="./favicon.ico" type="image/vnd.microsoft.icon">
     </head>
     
-    <body>
-        <nav class="navBar">
-            <ul>
-                <li><a href="https://junimeek.net/"><i class="fa fa-home"></i> Home</a></li>
-                <li>
-                    <div class="navDropdown">
-                        <button>
-                            <a>Site Categories <i class="fa fa-chevron-down"></i></a>
-                        </button>
-                        <div class="dropdownContent">
-                            <a href="https://junimeek.net/via-bus/" target="_parent" class="navBar-via">VIA Information</a>
-                            <a href="https://junimeek.net/sakemitech/" target="_parent" class="navBar-sakemi">SakemiTech</a>
-                            <a href="https://junimeek.net/uniterra/" target="_parent" class="navBar-uniterra">UniTerra</a>
-                        </div>
-                    </div>
-                </li>
-                <li><a href="https://junimeek.net/about"><i class="fa fa-info-circle"></i> About</a></li>
-                <li><a href="https://junimeek.net/contact"><i class="fa fa-envelope"></i> Contact</a></li>
-            </ul>
+    <body class="saya-lower-bg">
+        <nav class="saya-navbar" style="font-family: 'Scene Pro';">
+            <div class="saya-navbar-container">
+                <script src="../resources/sayaka/sayaka-navbar-loader.js" onload="LoadNavBar(1)"></script>
+            </div>
         </nav>
 
-        <div class="mainBody">
-            <table border="0" width="100%" cellpadding="7" cellspacing="0">
+        <div class="saya-body">
+            <table class="saya-notification-wide" bordercolor="#c0c0c0">
                 <tbody>
                     <tr>
-                        <td bgcolor="#d22030" width="66" align="center">
-                            <img border="0" src="../resources/via/GrayViaLogo.png" width="60" height="60" alt="Via Logo">
+                        <td style="background-color: #d22030; width: 65px; text-align: center; padding: 0px;">
+                            <img src="../resources/via/GrayViaLogo.png" style="width: 60px; height: 60px;">
                         </td>
-                        <td bgcolor="#a0a1a3">
-                            <font color="#ffffff" style="font-weight: bold;">
-                                <a>DISCLAIMER</a>
-                            </font>
-                            <br/>
-                            <font color="#ffffff">
-                                 <a>This is an unofficial source of information for VIA Metropolitan Transit's bus services. By continuing to use this site, you acknowledge that this website, as well as the creator of this site (</a>
-                                 <a target="_blank" href="https://twitter.com/junimeek39"><strong>Junimeek</strong></a>
-                                 <a>), has no affiliation with VIA Metropolitan Transit. To view official information such as schedules, route detours, and service changes, visit</a>
-                                 <a href="https://viainfo.net" target="_blank"><strong>viainfo.net</strong></a>
-                                 <a>.</a>
-                            </font>
+                        <td style="background-color: #a0a1a3; padding: 4px;">
+                            <a style="text-align: left; font-weight: bold; color: white;"><u>DISCLAIMER:</u></a><br/>
+                            <a style="text-align: left; color: white;">
+                                This site is not affiliated with VIA Metropolitan Transit.
+                                To view official information such as schedules, route detours, and service changes,
+                                visit <a href="https://viainfo.net" target="_blank"><b>viainfo.net</b>
+                            </a>
                         </td>
                     </tr>
                 </tbody>
             </table>
 
-            <h1>VIA Metropolitan Transit Information Hub</h1>
+            <h1 class="saya-h1">VIA Metropolitan Transit Information Hub</h1>
             <hr/>
-            <p>
+            <p class="saya-paragraph">
                 This is the hub of general information about VIA that I have created. Click any of the links below to see whatever information you're looking for.
             </p>
-            
-            <table class="hubTable" cellpadding="5" bordercolor="#c0c0c0" border="4">
-                <tbody>
-                    <tr>
-                        <td align="center" height="60" width="100" bgcolor="#3e1c44">
-                            <font color="#ffffff">
-                                <a class="hubButton" style="color: #ffffff;" href="./lineup/index.html">Lineup</a>
-                            </font>
-                        </td>
-                        <td height="60">
-                            <a href="./lineup/index.html"><strong>Lineup Timetables</strong></a>
-                            <br/>
-                            A collection of timetables for routes 202–296.
-                        </td>
-                    </tr>
-                    <tr>
-                        <td align="center" height="60" width="100" bgcolor="#bdae80">
-                            <font color="#ffffff">
-                                <a class="hubButton" style="color: #ffffff;" href="./errors/index.html">Errors</a>
-                            </font>
-                        </td>
-                        <td height="60">
-                            <a href="./errors/index.html"><strong>Schedule Errors</strong></a>
-                            <br/>
-                            List of errors that I've been able to find on each timetable.
-                        </td>
-                    </tr>
-                    <tr>
-                        <td align="center" height="60" width="100" bgcolor="#804000">
-                            <font color="#ffffff">
-                                <a class="hubButton" style="color: #ffffff;">Route History</a>
-                            </font>
-                        </td>
-                        <td height="60">
-                            <a><b>Bus Route History (under construction)</b></a>
-                            <br/>
-                            The page where I attempt to organize how VIA's bus system has evolved since the Comprehensive Service Plan of 2003.
-                        </td>
-                    </tr>
-                    <tr>
-                        <td align="center" height="60" width="100" bgcolor="#33737a">
-                            <font color="#ffffff">
-                                <a class="hubButton" style="color: #ffffff;">Better Bus</a>
-                            </font>
-                        </td>
-                        <td height="60">
-                            <a><strong>Better Bus Plan (under construction)</strong></a>
-                            <br/>
-                            An analysis of Better Bus.
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+
+            <div class="saya-flexbutton-container">
+                <div class="saya-flexbutton-buttonarea">
+                    <a href="./lineup/index.html" style="text-decoration: none;">
+                        <div class="saya-flexbutton-bigbutton bigbutton-lineup">
+                            <h1>Lineup Timetables</h1>
+                            <p>
+                                A collection of timetables for routes 202–296
+                            </p>
+                        </div>
+                    </a>
+                </div>
+                <div class="saya-flexbutton-buttonarea">
+                    <a href="./better-bus/index.html" style="text-decoration: none;">
+                        <div class="saya-flexbutton-bigbutton bigbutton-betterbus">
+                            <h1>VIA Better Bus</h1>
+                            <p>
+                                An analysis of Better Bus
+                            </p>
+                        </div>
+                    </a>
+                </div>
+                <div class="saya-flexbutton-buttonarea">
+                    <a href="./errors/index.html" style="text-decoration: none;">
+                        <div class="saya-flexbutton-bigbutton bigbutton-errors">
+                            <h1>Schedule Errors</h1>
+                            <p>
+                                List of errors that I've been able to find on each timetable
+                            </p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div style="display: none;">Bus Route History (under construction): The page where I attempt to organize how VIA's bus system has evolved since the Comprehensive Service Plan of 2003.</div>
         </div>
+
+        <footer class="saya-footer-container">
+            <div class="saya-footer-group" style="font-size: 20pt;">
+                <a href="https://youtube.com/@Junimeek" target="_blank"><i class="fa fa-youtube-play"></i></a>
+                <a href="https://github.com/Junimeek" target="_blank"><i class="fa fa-github"></i></a>
+                <a href="https://twitter.com/junimeek39" target="_blank"><i class="fa fa-twitter"></i></a>
+                <a href="https://en.wikipedia.org/wiki/User:Junimeek" target="_blank"><i class="fa fa-wikipedia-w"></i></a>
+            </div>
+            <div class="saya-footer-group">
+               <span>Copyright 2025 Junimeek</span><br/>
+               <span>All right reserved</span>
+            </div>
+            <div class="saya-footer-group">
+               <span>Powered by SayakaUI</span>
+            </div>
+        </footer>
     </body>
 </html>
