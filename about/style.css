@@ -3,12 +3,12 @@
 @import url('../resources/fonts/font-style.css');
 
 .saya-h1 {
-    font-family: 'Ammys Handwriting';
+    font-family: 'Ammys Handwriting', Arial, sans-serif;
     color: #ab4eb9;
 }
 
 .saya-h2 {
-    font-family: 'Ammys Handwriting';
+    font-family: 'Ammys Handwriting', Arial, sans-serif;
     color: #ab4eb9;
 }
 

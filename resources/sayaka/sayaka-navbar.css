@@ -41,6 +41,18 @@
     border-left-width: 2px;
 }
 
+.saya-navbar-font-ammy {
+    font-family: 'Ammys Handwriting', Arial, sans-serif;
+}
+
+.saya-navbar-font-scene {
+    font-family: 'Scene Pro', Arial, sans-serif;
+}
+
+.saya-navbar-font-montserrat {
+    font-family: 'Montserrat', Arial, sans-serif;
+}
+
 .saya-navbar-underline-home {
     border-bottom-color: #92d0df;
 }

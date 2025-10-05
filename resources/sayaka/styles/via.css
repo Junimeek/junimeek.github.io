@@ -1,0 +1,75 @@
+.saya-body {
+    font-family: Arial, sans-serif;
+}
+
+.saya-lower-bg {
+    background-image: linear-gradient(135deg, #da4c3f, #af3034);
+}
+
+.saya-table li {
+    text-align: left;
+}
+
+.saya-table td {
+    text-align: center;
+}
+
+.saya-table-header span {
+    font-family: 'Scene Pro Black', Helvetica, sans-serif;
+    font-weight: normal;
+}
+
+.saya-h1 {
+    font-family: 'Scene Pro Black', Helvetica, sans-serif;
+}
+
+.saya-h2 {
+    font-family: 'Scene Pro', Helvetica, sans-serif;
+}
+
+.via-bustext {
+    font-family: 'Scene Pro', Helvetica, sans-serif;
+}
+
+.via-busfreq-20 {
+    color: #af3034;
+}
+
+.via-busfreq-30 {
+    color: #375c9f;
+}
+
+.via-busfreq-60 {
+    color: #6e9dbb;
+}
+
+.via-busfreq-90 {
+    color: #bdae80;
+}
+
+.via-busfreq-grad-2060 {
+    color: linear-gradient(90deg, #af3034, #375c9f);
+}
+
+.via-busfreq-rapidgreen {
+    color: #628125;
+}
+
+.via-busfreq-rapidsilver {
+    color: #646c6e;
+}
+
+.via-busfreq-link {
+    color: #54325f;
+}
+
+.via-routename-text {
+    font-family: 'Scene Pro', Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 14pt;
+}
+
+.via-big-number {
+    width: 50px !important;
+    height: 50px !important;
+}

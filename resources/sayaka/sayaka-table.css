@@ -1,5 +1,6 @@
 .saya-table {
     background-color: #ffffff;
+    border: 3px solid #c0c0c0;
     border-collapse: collapse;
     margin-left: auto;
     margin-right: auto;
@@ -12,7 +13,11 @@
 }
 
 .saya-table tr:hover {
-    background-color: #eefbff;
+    background-color: #83ebeb30;
+}
+
+.saya-table td {
+    padding: 3px;
 }
 
 .saya-table b {
@@ -62,8 +67,6 @@
     height: 30px !important;
 }
 
-.saya-table-header a {
+.saya-table-header span {
     color: #ffffff;
-    font-family: 'Scene Pro Black';
-    font-weight: normal;
 }

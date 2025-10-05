@@ -70,7 +70,7 @@
 }
 
 .header h1 {
-    font-family: 'Ammys Handwriting';
+    font-family: 'Ammys Handwriting', Arial, sans-serif;
     font-weight: bold;
     color: #f19dff;
     text-align: center;
@@ -91,21 +91,21 @@ hr {
 
 .saya-flexbutton-buttonarea h1 {
     color: #ffffff;
-    font-family: 'Scene Pro Black';
+    font-family: 'Scene Pro', Arial, sans-serif;
     font-size: 20pt;
     text-align: center;
 }
 
 .saya-flexbutton-buttonarea p {
     color: #ffffff;
-    font-family: 'Scene Pro';
+    font-family: 'Scene Pro', Arial, sans-serif;
     font-size: 16pt;
     text-align: center;
 }
 
 .footerText {
     color: #d186dc;
-    font-family: 'Ammys Handwriting';
+    font-family: 'Ammys Handwriting', Arial, sans-serif;
     font-size: 14pt;
     font-weight: bold;
     text-align: center;
@@ -128,4 +128,9 @@ body {
     background-clip: border-box;
     background-attachment: fixed;
     margin: 0px;
+}
+
+.saya-notification-wide {
+    font-family: Arial, sans-serif;
+    font-size: 14pt;
 }

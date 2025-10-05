@@ -4,575 +4,765 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>VIA Schedule Errors</title>
+        <title>VIA Timetable Errors</title>
         <link rel="stylesheet" href="./style.css">
-        <link rel="stylesheet" href="../../resources/sayaka/sayaka-navbar.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="icon" href="../favicon.ico" type="image/vnd.microsoft.icon">
         <script src="./scripts.js"></script>
+        <script src="../../resources/sayaka/miki.js"></script>
     </head>
     
-    <body>
-        <nav class="saya-navbar">
+    <body class="saya-lower-bg">
+        <div id="miki-viewer" class="miki-disabled" onclick="DisableMiki()">
+            <a href="javascript:void(0);" title="Close document viewer">
+                <div class="miki-button-close">
+                    <i class="fa fa-window-close"></i>
+                </div>
+            </a>
+            <a href="javascript:void(0);" title="Open document in new tab">
+                <div class="miki-button-maximize" onclick="OpenMikiEmbedInNewTab()">
+                    <i class="fa fa-window-maximize"></i>
+                </div>
+            </a>
+
+            <div class="miki-window miki-windowtype-pdf">
+                <iframe class="miki-frame" id="miki-frame" src="../../resources/sayaka/miki-loadscreen.html"></iframe>
+            </div>
+        </div>
+
+        <nav class="saya-navbar saya-navbar-font-scene">
             <div class="saya-navbar-container">
-                <div class="saya-navbar-item">
-                    <a href="https://junimeek.net/"><i class="fa fa-home"></i> Home</a>
-                </div>
-                <div class="saya-navbar-item saya-navbar-leftborder saya-navbar-underline-via">
-                    <div class="saya-navbar-dropdown-container">
-                        <div class="saya-navbar-dropdown-button">
-                            <a>Site Categories <i class="fa fa-chevron-down"></i></a>
-                        </div>
-                        <div class="saya-navbar-dropdown-content-large">
-                            <a href="https://junimeek.net/via-bus/" target="_parent" class="saya-navbar-highlight-via">VIA Information</a>
-                            <a href="https://junimeek.net/sakemitech/" target="_parent" class="saya-navbar-highlight-sakemi">SakemiTech</a>
-                            <a href="https://junimeek.net/uniterra/" target="_parent" class="saya-navbar-highlight-uniterra">UniTerra</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="saya-navbar-item saya-navbar-leftborder">
-                    <a href="https://junimeek.net/about"><i class="fa fa-info-circle"></i> About</a>
-                </div>
-                <div class="saya-navbar-item saya-navbar-leftborder">
-                    <a href="https://junimeek.net/contact"><i class="fa fa-envelope"></i> Contact</a>
-                </div>
-                <div class="saya-navbar-filler saya-navbar-leftborder"></div>
-                <div class="saya-navbar-item saya-navbar-leftborder saya-navbar-button-menu">
-                    <a href="javascript:void(0);" id="button-nav-menu">Menu <i class="fa fa-bars"></i></a>
-                </div>
+                <script src="../../resources/sayaka/sayaka-navbar-loader.js" onload="LoadNavBar(1)"></script>
             </div>
         </nav>
-        
-        <div class="mainBody">
-            <h1>VIA Pocket Schedule Errors</h1>
-            <hr/>
 
-            <p>
-                <b style="color: red;">Notice: </b>
-                This page is quite outdated by now; some new errors have popped up, and other things have been fixed.
-                This will be updated sometime later, probably late September.
-            </p>
-
-            <hr/>
-            
-            <p>
-                Some of the official VIA schedules have errors. The vast majority of them are minor visual errors
-                and inconsistencies (most of which won't be listed here), but some errors convey inaccurate information.
-                So, I have created this list of errors that you may want to be aware of below.
-            </p>
-            <p>
-                Clicking the links will open the latest version of each schedule on VIA's website.
-            </p>
-            
-            <table class="errorsTable" cellpadding="5" bordercolor="#c0c0c0" border="4">
+        <div class="saya-banner-header"><div class="saya-banner-body">
+            <table class="saya-notification-wide">
                 <tbody>
-                    <tr class="tableHeader">
-                        <td align="center" height="30px" width="6%">
-                            <font color="#ffffff">
-                                <a>Route</a>
-                            </font>
-                        </td>
-                        <td width="20%">
-                            <font color="#ffffff">
-                                <a>Route Name</a>
-                            </font>
-                        </td>
-                        <td width="70%">
-                            <font color="#ffffff">
-                                <a>Error List <sup>‡</sup></a>
-                            </font>
-                        </td>
-                    </tr>
                     <tr>
-                        <td class="routeFrequent" align="center" height="40">
-                            <a class="routeNum"><b>4</b></a>
-                        </td>
-                        <td>
-                            <a href="javascript:void(0)" onclick="GetTimetableLink(4)"><b>San Pedro Frequent</b></a>
-                        </td>
-                        <td>
-                            <li>The late-night lineup times for <b>Navarro & Augusta</b> (outbound, point G) are incorrect
-                                 on the weekday, Saturday, and Sunday timetables; the actual times are 10:32pm, 11:32pm, and 12:32am.</li><br/>
-                            <li><b>Twain Middle School</b> is now the <b>Mark Twain Dual Language Academy</b></li>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="routeStandard30" align="center" height="40">
-                            <a class="routeNum"><b>17</b></a>
-                        </td>
-                        <td>
-                            <a href="javascript:void(0)" onclick="GetTimetableLink(17)"><b>IH-35 Express</b></a>
-                        </td>
-                        <td>
-                            <li>There is a missing TG note at <b>Commerce & Presa</b>'s weekday arrival time at 4:39am (inbound, point B).</li>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="routeFrequent" align="center" height="40">
-                            <a class="routeNum"><b>20</b></a>
-                        </td>
-                        <td>
-                            <a href="javascript:void(0)" onclick="GetTimetableLink(20)"><b>New Braunfels Frequent</b></a>
-                        </td>
-                        <td>
-                            <li><b>Connell Middle School</b> is now <b>Hot Wells Middle School</b></li>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="routeStandard60" align="center" height="40">
-                            <a class="routeNum"><b>22</b></a>
-                        </td>
-                        <td>
-                            <a href="javascript:void(0)" onclick="GetTimetableLink(22)"><b>Hays</b></a>
-                        </td>
-                        <td>
-                            <li>The late-night lineup times are completely absent on the weekday timetable. For arrival times, see 222 below.</li>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="routeStandard30" align="center" height="40">
-                            <a class="routeNum"><b>24</b></a>
-                        </td>
-                        <td>
-                            <a href="javascript:void(0)" onclick="GetTimetableLink(24)"><b>East Houston</b></a>
-                        </td>
-                        <td>
-                            <li><b>Wheatly Middle School</b> is now the <b>Young Men's Leadership Academy at Wheatley</b></li><br/>
-                            <li><b>River Walk RV Park</b> is now the <b>Mission City RV Park</b></li>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="routeStandard30" align="center" height="40">
-                            <a class="routeNum"><b>26</b></a>
-                        </td>
-                        <td>
-                            <a href="javascript:void(0)" onclick="GetTimetableLink(26)"><b>Martin Luther King</b></a>
-                        </td>
-                        <td>
-                            <li><b>St. Gerald High School</b> is now the <b>St. Gerald Education & Athletic Center</b></li><br/>
-                            <li><b>Claver Street</b> is mislabeled as <b>Amanda Street</b></li><br/>
-                            <li><b>King Middle School</b> is now the <b>M. L. King Academy</b></li>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="routeFrequent" align="center" height="40">
-                            <a class="routeNum"><b>28</b></a>
-                        </td>
-                        <td>
-                            <a href="javascript:void(0)" onclick="GetTimetableLink(28)"><b>Porter Frequent</b></a>
-                        </td>
-                        <td>
-                            <li>There is a copy-paste accident at the bottom of the weekday timetable. The very last row of times
-                                for the late-night lineup should be ignored.</li>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="routeStandard60" align="center" height="40">
-                            <a class="routeNum"><b>32</b></a>
-                        </td>
-                        <td>
-                            <a href="javascript:void(0)" onclick="GetTimetableLink(32)"><b>Steves</b></a>
-                        </td>
-                        <td>
-                            <li>The bus does not travel on <b>Elgin Avenue</b> as the map suggests; 
-                                it travels on the parallel <b>Anita Street</b> instead</li><br/>
-                            <li>Loop 410 is mislabeled as Loop 1604.</li>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="routeStandard60" align="center" height="40">
-                            <a class="routeNum"><b>36</b></a>
-                        </td>
-                        <td>
-                            <a href="javascript:void(0)" onclick="GetTimetableLink(36)"><b>South Presa</b></a>
-                        </td>
-                        <td>
-                            <li><b>New Braunfels State Hospital</b> is now the <b>San Antonio State Hospital</b></li><br/>
-                            <li><b>Connell Middle School</b> is now <b>Hot Wells Middle School</b></li>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="routeStandard60" align="center" height="40">
-                            <a class="routeNum"><b>43</b></a>
-                        </td>
-                        <td>
-                            <a href="javascript:void(0)" onclick="GetTimetableLink(43)"><b>South Flores</b></a>
-                        </td>
-                        <td>
-                            <li>The compass is slightly misaligned; the actual map is rotated ever-so-slightly more counterclockwise than the compass is.</li><br/>
-                            <li>E Durango Blvd is now <b>Cesar Chavez</b>.</li><br/>
-                            <li>Point A is slightly misplaced; <b>Pleasanton & Gillette</b> is actually east of the
-                                intersection it is placed at.
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="routeStandard30" align="center" height="40">
-                            <a class="routeNum"><b>44</b></a>
-                        </td>
-                        <td>
-                            <a href="javascript:void(0)" onclick="GetTimetableLink(44)"><b>Pleasanton</b></a>
-                        </td>
-                        <td>
-                            <li>The compass is slightly misaligned; the actual map is rotated ever-so-slightly more counterclockwise than the compass is.</li>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="routeStandard60" align="center" height="40">
-                            <a class="routeNum"><b>62</b></a>
-                        </td>
-                        <td>
-                            <a href="javascript:void(0)" onclick="GetTimetableLink(62)"><b>Kirk</b></a>
-                        </td>
-                        <td>
-                            <li><b>San Fernando Cemetaries</b> is shown to be north of Roselawn Avenue instead of south.</li><br/>
-                            <li><b>Lowell Middle School</b> is now the <b>Kelly Academy</b></li>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="routeStandard60" align="center" height="40">
-                            <a class="routeNum"><b>66</b></a>
-                        </td>
-                        <td>
-                            <a href="javascript:void(0)" onclick="GetTimetableLink(66)"><b>Ceralvo</b></a>
-                        </td>
-                        <td>
-                            <li>The compass is slightly misaligned; the actual map is rotated slightly more counterclockwise than the compass is.</li><br/>
-                            <li><b>Alazan-Apache Courts</b> is shown to be northeast of Guadalupe Street instead of southwest.</li>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="routeStandard60" align="center" height="40">
-                            <a class="routeNum"><b>67</b></a>
-                        </td>
-                        <td>
-                            <a href="javascript:void(0)" onclick="GetTimetableLink(67)"><b>Laredo</b></a>
-                        </td>
-                        <td>
-                            <li><b>Cooper Middle School</b> is now <b>Cooper Academy at Navarro</b></li>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="routeFrequent" align="center" height="40">
-                            <a class="routeNum"><b>75</b></a>
-                        </td>
-                        <td>
-                            <a href="javascript:void(0)" onclick="GetTimetableLink(75)"><b>West Commerce Frequent</b></a>
-                        </td>
-                        <td>
-                            <li><b>Wrenn Middle School</b> no longer exists</li>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="routeFrequent" align="center" height="40">
-                            <a class="routeNum"><b>76</b></a>
-                        </td>
-                        <td>
-                            <a href="javascript:void(0)" onclick="GetTimetableLink(76)"><b>West Commerce Skip</b></a>
-                        </td>
-                        <td>
-                            <li><b>Wrenn Middle School</b> no longer exists</li>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="routeStandard60" align="center" height="40">
-                            <a class="routeNum"><b>79</b></a>
-                        </td>
-                        <td>
-                            <a href="javascript:void(0)" onclick="GetTimetableLink(79)"><b>Ruiz</b></a>
-                        </td>
-                        <td>
-                            <li>Point D is slightly misplaced; <b>Pecan & Navarro</b> is actually at the intersection directly south of point E.</li><br/>
-                            <li><b>University Downtown Health Center</b> is now the <b>University Health Robert B. Green Campus</b>.</li>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="routeFrequent" align="center" height="40">
-                            <a class="routeNum"><b>82</b></a>
-                        </td>
-                        <td>
-                            <a href="javascript:void(0)" onclick="GetTimetableLink(82)"><b>Culebra Frequent</b></a>
-                        </td>
-                        <td>
-                            <li><b>Truman Middle School</b> no longer exists</li><br/>
-                            <li>There is an erroneous TG note on the Northbound side at 1:04am on the weekday timetable.</li>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="routeFrequent" align="center" height="40">
-                            <a class="routeNum"><b>88</b></a>
-                        </td>
-                        <td>
-                            <a href="javascript:void(0)" onclick="GetTimetableLink(88)"><b>Bandera Frequent</b></a>
-                        </td>
-                        <td>
-                            <li><b>Irving Middle School</b> is now the <b>Irving Dual Language Academy</b></li>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="routeStandard60" align="center" height="40">
-                            <a class="routeNum"><b>89</b></a>
-                        </td>
-                        <td>
-                            <a href="javascript:void(0)" onclick="GetTimetableLink(89)"><b>Poplar</b></a>
-                        </td>
-                        <td>
-                            <li><b>Irving Middle School</b> is now the <b>Irving Dual Language Academy</b></li><br/>
-                            <li><b>Woodlawn Lake Park</b> is shown to be west of NW 24th Street instead of east.</li>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="routeStandard30" align="center" height="40">
-                            <a class="routeNum"><b>93</b></a>
-                        </td>
-                        <td>
-                            <a href="javascript:void(0)" onclick="GetTimetableLink(93)"><b>IH-10 Crossroads / Roadrunner Express</b></a>
-                        </td>
-                        <td>
-                            <li>The FG notes at <b>The Rim</b>'s weekday departure times at 6:16am and 8:16am (inbound, point A) are mislabeled as TG.</li><br/>
-                            <li>Because of the route color change that happened due to the August 2024 rebrand, the directional arrows are now extremely difficult to see.
-                                A copy of the schedule with the old colors can be found <a href="./Schedule093CSP.pdf" target="_blank"><b>here</b></a>.
-                                Note that this should be used as a visual reference only, as the timetable is now outdated.
-                            </li>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="routeFrequent" align="center" height="40">
-                            <a class="routeNum"><b>96</b></a>
-                        </td>
-                        <td>
-                            <a href="javascript:void(0)" onclick="GetTimetableLink(96)"><b>Vance Jackson Frequent</b></a>
-                        </td>
-                        <td>
-                            <li><b>Cody Branch Library</b> is shown to be north of Vance Jackson instead of south.</li>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="routeLineup" align="center" height="40">
-                            <a class="routeNum"><b>202</b></a>
-                        </td>
-                        <td>
-                            <a href="javascript:void(0)" onclick="GetTimetableLink(202)"><b>Blanco Lineup</b></a>
-                        </td>
-                        <td>
-                            <li>Although the timepoint at <b>West Avenue & Jackson-Keller</b> exists on the 651 timetable (point A), there are no times listed.
-                             The arrival times for this timepoint would be 10:58pm, 11:58pm, and 12:58am.</li><br/>
-                            <li>Although the timepoint at <b>St. Mary's & Pecan</b> exists on the 2 timetable (point I), there are no times listed.
-                             The arrival times for this timepoint would be 11:24pm and 12:24am.</li>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="routeLineup" align="center" height="40">
-                            <a class="routeNum"><b>204</b></a>
-                        </td>
-                        <td>
-                            <a href="javascript:void(0)" onclick="GetTimetableLink(204)"><b>San Pedro / McCullough Lineup</b></a>
-                        </td>
-                        <td>
-                            <li>The late-night lineup times for <b>Navarro & Augusta</b> (outbound, point G) are incorrect
-                                 on the weekday, Saturday, and Sunday timetables; the actual times are 10:32pm, 11:32pm, and 12:32am.</li><br/>
-                            <li>The map references a nonexistent timepoint at <b>St. Mary's & Martin</b>. The arrival
-                             times for this timepoint would be 11:22pm and 12:22am.</li>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="routeLineup" align="center" height="40">
-                            <a class="routeNum"><b>209</b></a>
-                        </td>
-                        <td>
-                            <a href="javascript:void(0)" onclick="GetTimetableLink(209)"><b>Broadway / Nacogdoches Lineup</b></a>
-                        </td>
-                        <td>
-                            <li>The timepoint at <b>Broadway & Josephine</b> (point F) is mislabeled as being at <b>Broadway & Grayson</b>.</li>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="routeLineup" align="center" height="40">
-                            <a class="routeNum"><b>222</b></a>
-                        </td>
-                        <td>
-                            <a href="javascript:void(0)" onclick="GetTimetableLink(222)"><b>Hays / East Houston Lineup</b></a>
-                        </td>
-                        <td>
-                            <li>The map references a nonexistent timepoint at <b>W. W. White & Gembler</b>. The arrival
-                             times for this timepoint would be 10:44pm, 11:44pm, and 12:44am.</li><br/>
-                            <li>The lineup times are completely absent on the 22 timetable. The departure times from each timepoint are as follows:</li>
-                            <p align="center">
-                                <a href="./222Eastbound.pdf" target="_blank">
-                                    <img class="imgHover" src="./022MissingTimes.png" border="2">
-                                </a>
-                            </p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="routeLineup" align="center" height="40">
-                            <a class="routeNum"><b>225</b></a>
-                        </td>
-                        <td>
-                            <a href="javascript:void(0)" onclick="GetTimetableLink(225)"><b>East Commerce / Martin Luther King Lineup</b></a>
-                        </td>
-                        <td>
-                            <li>The map references a nonexistent timepoint at <b>Houston & W. W. White Rd</b>. The arrival
-                             times for this timepoint would be 10:47pm, 11:47pm, and 12:47am.</li><br/>
-                            <li>There is a missing timepoint at <b>Cesar Chavez & Alamo</b> (point D on the 26 schedule).
-                             The arrival times for this timepoint would be 11:09pm, 12:09am, and 1:09am.</li>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="routeLineup" align="center" height="40">
-                            <a class="routeNum"><b>232</b></a>
-                        </td>
-                        <td>
-                            <a href="javascript:void(0)" onclick="GetTimetableLink(232)"><b>Steves / South St. Mary's Lineup</b></a>
-                        </td>
-                        <td>
-                            <li>The map references a nonexistent timepoint at <b>Denver & Hackberry</b>. The arrival
-                             times for this timepoint would be 10:45pm, 11:45pm, and 12:45am.</li><br/>
-                            <li>The map references a nonexistent timepoint at <b>S.E. Military Drive & Goliad</b>. The arrival
-                             times for this timepoint would be 11:02pm, 12:02am, and 1:02am.</li><br/>
-                            <li>The map references a nonexistent timepoint at <b>New Braunfels & Fair Avenue</b>. The arrival
-                             times for this timepoint would be 11:11pm, 12:11am, and 1:11am.</li>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="routeLineup" align="center" height="40">
-                            <a class="routeNum"><b>243</b></a>
-                        </td>
-                        <td>
-                            <a href="javascript:void(0)" onclick="GetTimetableLink(243)"><b>South Flores / Pleasanton Lineup</b></a>
-                        </td>
-                        <td>
-                            <li>The map references a nonexistent timepoint at <b>Flores & Dolorosa</b>. The outbound arrival
-                             times for this timepoint would be 10:33pm, 11:33pm, and 12:33am, and the inbound arrival times
-                             would be 11:17pm, 12:17am, and TG 1:17am.</li>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="routeLineup" align="center" height="40">
-                            <a class="routeNum"><b>246</b></a>
-                        </td>
-                        <td>
-                            <a href="javascript:void(0)" onclick="GetTimetableLink(246)"><b>Commercial Lineup</b></a>
-                        </td>
-                        <td>
-                            <li>The map references a nonexistent timepoint at <b>Madla Transit Center</b>. The arrival
-                             times for this timepoint would be 11:09pm, 12:09am, and 1:09am. Note that this one likely
-                             happened because of the retirement of Route 48 in 2020.</li>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="routeLineup" align="center" height="40">
-                            <a class="routeNum"><b>251</b></a>
-                        </td>
-                        <td>
-                            <a href="javascript:void(0)" onclick="GetTimetableLink(251)"><b>Nogalitos / Kirk Lineup</b></a>
-                        </td>
-                        <td>
-                            <li>The map references a nonexistent timepoint at <b>S.W. Military Drive & Barlite</b>. The arrival
-                             times for this timepoint would be 10:52pm, 11:52pm, and 12:52am.</li><br/>
-                            <li>The map references a nonexistent timepoint at <b>S. Flores & Dolorosa</b>. The arrival
-                             times for this timepoint would be 11:21pm, 12:21am, and TG 1:21am.</li>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="routeLineup" align="center" height="40">
-                            <a class="routeNum"><b>268</b></a>
-                        </td>
-                        <td>
-                            <a href="javascript:void(0)" onclick="GetTimetableLink(268)"><b>Guadalupe / Ceralvo Lineup</b></a>
-                        </td>
-                        <td>
-                            <li>The map references a nonexistent timepoint at <b>Castroville & S.W. 36th Street</b>. The arrival
-                             times for this timepoint would be 10:54pm, 11:54pm, and 12:54am.</li><br/>
-                            <li>The map references a nonexistent timepoint at <b>Buena Vista & Colorado</b>. The arrival
-                             times for this timepoint would be 11:13pm, 12:13am, and 1:13am.</li><br/>
-                            <li>Although the timepoint at <b>Centro Plaza</b> exists for both directions on the 66 and 68 timetables (point E in both cases),
-                                there are no times listed for the inbound direction (66). The arrival times for this timepoint would be 11:16pm, 12:16am, and 1:16am.</li>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="routeLineup" align="center" height="40">
-                            <a class="routeNum"><b>276</b></a>
-                        </td>
-                        <td>
-                            <a href="javascript:void(0)" onclick="GetTimetableLink(276)"><b>West Commerce / Kel-Lac Transit Center Lineup</b></a>
-                        </td>
-                        <td>
-                            <li>The map references a nonexistent timepoint at <b>Commerce & Colorado</b>. The arrival
-                             times for this timepoint would be 10:39pm, 11:39pm, and 12:39am.</li>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="routeLineup" align="center" height="40">
-                            <a class="routeNum"><b>282</b></a>
-                        </td>
-                        <td>
-                            <a href="javascript:void(0)" onclick="GetTimetableLink(282)"><b>Culebra Lineup</b></a>
-                        </td>
-                        <td>
-                            <li>The map is wrong near Loop 410; the bus travels on <b>Grandstand Drive</b> and <b>Fairgrounds Parkway</b>, just like the daytime 82 does.</li>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="routeLineup" align="center" height="40">
-                            <a class="routeNum"><b>288</b></a>
-                        </td>
-                        <td>
-                            <a href="javascript:void(0)" onclick="GetTimetableLink(288)"><b>Bandera / Evers Lineup</b></a>
-                        </td>
-                        <td>
-                            <li>The map references a nonexistent timepoint at <b>Bandera & Loop 410</b>. The arrival
-                             times for this timepoint would be 10:56pm, 11:56pm, and 12:56am. Additionally, the departure
-                             times for this timepoint would be 10:59pm, 11:59pm, and 12:59am.</li>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="routeLineup" align="center" height="40">
-                            <a class="routeNum"><b>289</b></a>
-                        </td>
-                        <td>
-                            <a href="javascript:void(0)" onclick="GetTimetableLink(289)"><b>Poplar / Woodlawn Lineup</b></a>
-                        </td>
-                        <td>
-                            <li>There is an extra erroneous timepoint at <b>Martin & Frio</b>.</li><br/>
-                            <li>Although the timepoint at <b>Ingram & Callaghan</b> exists on the 90 timetable (point B), there are no times listed.
-                                 The arrival times for this timepoint would be 11:05pm, 12:05am, and 1:05am.</li>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="routeLineup" align="center" height="40">
-                            <a class="routeNum"><b>296</b></a>
-                        </td>
-                        <td>
-                            <a href="javascript:void(0)" onclick="GetTimetableLink(296)"><b>Vance Jackson / West Avenue Lineup</b></a>
-                        </td>
-                        <td>
-                            <li>The map references a nonexistent timepoint at <b>West Avenue & Basse</b>. The arrival
-                             times for this timepoint would be 11:03pm, 12:03am, and 1:03am.</li>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="routeStandard60" align="center" height="40">
-                            <a class="routeNum"><b>648</b></a>
-                        </td>
-                        <td>
-                            <a href="javascript:void(0)" onclick="GetTimetableLink(648)"><b>North Star / Stone Oak</b></a>
-                        </td>
-                        <td>
-                            <li>The transfer with Route 3 that is listed at <b>Bitters & Heimer</b> no longer exists</li>
+                        <td style="background-color: #d22030; width: 65px; text-align: center; padding: 0px;">
+                            <img src="../../resources/via/GrayViaLogo.png" style="width: 60px; height: 60px;">
+                        </td>
+                        <td style="background-color: #a0a1a3; padding: 4px;">
+                            <a style="text-align: left; font-weight: bold; color: white;"><u>DISCLAIMER:</u></a><br/>
+                            <span style="text-align: left; color: white;">
+                                This site is not affiliated with VIA Metropolitan Transit.
+                                To view official information such as schedules, route detours, and service changes, visit <a href="https://viainfo.net" target="_blank"><b>viainfo.net</b></a>.
+                            </span>
                         </td>
                     </tr>
                 </tbody>
             </table>
-            
-            <p>
-                ‡
-                 <em>
-                    Sometimes, the words outbound and inbound will be used in this table. <b>Outbound</b>
-                     and <b>inbound</b> refer to the order of timepoints in the official schedules.
-                     For example, Route 32 has timepoints labeled as A thru G, where the A→F direction is 
-                     considered to be inbound, and the G→A direction is considered to be outbound.
-                </em>
+
+            <h1 class="saya-h1" style="color: white;">VIA Pocket Schedule Errors</h1>
+            <p class="saya-short-paragraph" style="color: white;">
+                <em>This page was last updated on October 4, 2025</em>
             </p>
+            <hr/>
+
+            <p class="saya-paragraph" style="color: white;">
+                Some of the official VIA schedules have errors.
+                The vast majority of them are minor visual errors and inconsistencies (most of which won't be listed here),
+                but some errors convey inaccurate information. So, I have created this list of errors
+                that you may want to be aware of below.
+            </p>
+
+            <hr/>
+            <div style="text-align: right;">
+                <span style="color: white; text-align: right;"><em>Photo by Junimeek</em></span>
+            </div>
+        </div></div>
+
+        <div class="saya-body">
+            <noscript>
+                <p class="saya-short-paragraph">
+                    <a style="color: red;"><b>JavaScript is disabled in your browser settings.
+                        JavaScript must be enabled to view the route profiles.</b></a>
+                </p>
+                <hr/>
+            </noscript>
+
+            <h2 class="saya-h2">Current Errors</h2>
+
+            <p class="saya-short-paragraph">
+                This list is incomplete and only contains errors from routes <b class="via-bustext via-busfreq-20">2</b>–<b class="via-bustext via-busfreq-20">552</b>.
+            </p>
+            
+            <div class="saya-scrollable-element">
+            <table class="saya-table saya-tablewidth-1300">
+                <tbody>
+                    <tr class="saya-table-header">
+                        <th width="5%"><span>Route Number</span></th>
+                        <th width="20%"><span>Route Name</span></th>
+                        <th width="70%" style="min-width: 380px;"><span>Errors</span></th>
+                        <th width="5%"><span>Schedule</span></th>
+                    </tr>
+                    <tr>
+                        <td><img class="via-big-number" src="../../resources/via/route-icons/004.webp"></td>
+                        <td><b>San Pedro Frequent</b></td>
+                        <td>
+                            <ul>
+                                <li>The late-night lineup times for <b>Navarro & Augusta</b> (outbound <img class="timepoint" src="../../resources/via/small-timepoints/g.webp" alt="Point G">) are incorrect on the weekday, Saturday, and Sunday timetables
+                                    <ul>
+                                        <li>The actual departure times are 10:32pm, 11:32pm, and 12:32am</li>
+                                    </ul>
+                                </li><br/>
+                                <li><b>Twain Middle School</b> is now the <b>Mark Twain Dual Language Academy</b></li>
+                            </ul>
+                        </td>
+                        <td><a href="javascript:void(0)" onclick="GetTimetableLink(4)"><i class="fa fa-download"></i></a></td>
+                    </tr>
+                    <tr>
+                        <td><img class="via-big-number" src="../../resources/via/route-icons/008.webp"></td>
+                        <td><b>North St. Mary's</b></td>
+                        <td>
+                            <ul>
+                                <li>A transfer with <b class="via-bustext via-busfreq-20">Route 10 Nacogdoches Skip</b> is missing at <b>Hildebrand & Broadway</b></li>
+                            </ul>
+                        </td>
+                        <td><a href="javascript:void(0)" onclick="GetTimetableLink(8)"><i class="fa fa-download"></i></a></td>
+                    </tr>
+                    <tr>
+                        <td><img class="via-big-number" src="../../resources/via/route-icons/010.webp"></td>
+                        <td><b>Nacogdoches Skip</b></td>
+                        <td>
+                            <ul>
+                                <li>The list of stops that aren't skipped is completely missing. The list of stops that the bus stops at along Broadway are as follows:
+                                    <ul>
+                                        <li>Broadway & 4th (southbound only)</li>
+                                        <li>Broadway & Jones</li>
+                                        <li>Broadway & Casa Blanca</li>
+                                        <li>Broadway & Grayson</li>
+                                        <li>Broadway & Josephine</li>
+                                        <li>Broadway & Army</li>
+                                        <li>Broadway & Mulberry</li>
+                                        <li>Broadway & Funston Pl.</li>
+                                        <li>Broadway & Pershing / Tuleta</li>
+                                        <li>Broadway & Perry Ct.</li>
+                                        <li>Broadway & Katherine Ct.</li>
+                                        <li>Broadway & Terrell / Patterson</li>
+                                        <li>Broadway & Austin Highway</li>
+                                        <li>Broadway & Ogden</li>
+                                        <li>Broadway & Wildrose / Inslee</li>
+                                        <li>Broadway & Fair Oaks Pl.</li>
+                                        <li>Broadway & Nacogdoches</li>
+                                    </ul>
+                                </li><br/>
+                                <li>The timepoint at <b>Broadway & Grayson</b> (outbound <img class="timepoint" src="../../resources/via/small-timepoints/e.webp" alt="Point E">) is mislabeled as Broadway & Josephine
+                            </ul>
+                        </td>
+                        <td><a href="javascript:void(0)" onclick="GetTimetableLink(10)"><i class="fa fa-download"></i></a></td>
+                    </tr>
+                    <tr>
+                        <td><img class="via-big-number" src="../../resources/via/route-icons/017.webp"></td>
+                        <td><b>IH-35 Express</b></td>
+                        <td>
+                            <ul>
+                                <li>There is a missing TG note at <b>Commerce & Presa</b>'s weekday arrival time at <b>4:39am</b> (inbound <img class="timepoint" src="../../resources/via/small-timepoints/b.webp" alt="Point B">) are incorrect on the weekday, Saturday, and Sunday timetables</li>
+                            </ul>
+                        </td>
+                        <td><a href="javascript:void(0)" onclick="GetTimetableLink(17)"><i class="fa fa-download"></i></a></td>
+                    </tr>
+                    <tr>
+                        <td><img class="via-big-number" src="../../resources/via/route-icons/020.webp"></td>
+                        <td><b>New Braunfels Frequent</b></td>
+                        <td>
+                            <ul>
+                                <li><b>Connell Middle School</b> is now <b>Hot Wells Middle School</b></li>
+                            </ul>
+                        </td>
+                        <td><a href="javascript:void(0)" onclick="GetTimetableLink(20)"><i class="fa fa-download"></i></a></td>
+                    </tr>
+                    <tr>
+                        <td><img class="via-big-number" src="../../resources/via/route-icons/024.webp"></td>
+                        <td><b>East Houston</b></td>
+                        <td>
+                            <ul>
+                                <li><b>Wheatly Middle School</b> is now the <b>Young Men's Leadership Academy at Wheatley</b></li><br/>
+                                <li><b>River Walk RV Park</b> is now the <b>Mission City RV Park</b></li>
+                            </ul>
+                        </td>
+                        <td><a href="javascript:void(0)" onclick="GetTimetableLink(24)"><i class="fa fa-download"></i></a></td>
+                    </tr>
+                    <tr>
+                        <td><img class="via-big-number" src="../../resources/via/route-icons/026.webp"></td>
+                        <td><b>Martin Luther King</b></td>
+                        <td>
+                            <ul>
+                                <li><b>St. Gerald High School</b> is now the <b>St. Gerald Education & Athletic Center</b></li><br/>
+                                <li><b>Claver Street</b> is mislabeled as <b>Amanda Street</b></li><br/>
+                                <li><b>King Middle School</b> is now the <b>M. L. King Academy</b></li>
+                            </ul>
+                        </td>
+                        <td><a href="javascript:void(0)" onclick="GetTimetableLink(26)"><i class="fa fa-download"></i></a></td>
+                    </tr>
+                    <tr>
+                        <td><img class="via-big-number" src="../../resources/via/route-icons/028.webp"></td>
+                        <td><b>Porter Frequent</b></td>
+                        <td>
+                            <ul>
+                                <li>There is a copy-paste accident at the bottom of the weekday timetable. The very last row of times for the late-night lineup should be ignored.</li>
+                            </ul>
+                        </td>
+                        <td><a href="javascript:void(0)" onclick="GetTimetableLink(28)"><i class="fa fa-download"></i></a></td>
+                    </tr>
+                    <tr>
+                        <td><img class="via-big-number" src="../../resources/via/route-icons/030.webp"></td>
+                        <td><b>Rigsby</b></td>
+                        <td>
+                            <ul>
+                                <li>The line east of Foster Meadows for the H-E-B Distribution Center service branch is colored incorrectly (it should be <span class="via-bustext via-busfreq-90"><b>tan</b></span>)</li>
+                            </ul>
+                        </td>
+                        <td><a href="javascript:void(0)" onclick="GetTimetableLink(30)"><i class="fa fa-download"></i></a></td>
+                    </tr>
+                    <tr>
+                        <td><img class="via-big-number" src="../../resources/via/route-icons/032.webp"></td>
+                        <td><b>Steves</b></td>
+                        <td>
+                            <ul>
+                                <li>The bus does not travel on <b>Elgin Avenue</b> as the map suggests; it travels on the parallel <b>Anita Street</b> instead</li><br/>
+                                <li>Loop 410 is mislabeled as Loop 1604</li>
+                            </ul>
+                        </td>
+                        <td><a href="javascript:void(0)" onclick="GetTimetableLink(32)"><i class="fa fa-download"></i></a></td>
+                    </tr>
+                    <tr>
+                        <td><img class="via-big-number" src="../../resources/via/route-icons/036.webp"></td>
+                        <td><b>South Presa</b></td>
+                        <td>
+                            <ul>
+                                <li><b>New Braunfels State Hospital</b> is now the <b>San Antonio State Hospital</b></li><br/>
+                                <li><b>Connell Middle School</b> is now <b>Hot Wells Middle School</b></li>
+                            </ul>
+                        </td>
+                        <td><a href="javascript:void(0)" onclick="GetTimetableLink(36)"><i class="fa fa-download"></i></a></td>
+                    </tr>
+                    <tr>
+                        <td><img class="via-big-number" src="../../resources/via/route-icons/043.webp"></td>
+                        <td><b>South Flores</b></td>
+                        <td>
+                            <ul>
+                                <li>The compass is slightly misaligned; the actual map is rotated ever-so-slightly more counterclockwise than the compass is</li><br/>
+                                <li>E Durango Blvd is now <b>Cesar Chavez</b></li><br/>
+                                <li><img class="timepoint" src="../../resources/via/small-timepoints/a.webp" alt="Point A"> is slightly misplaced; <b>Pleasanton & Gillette</b> is actually east of the intersection it is placed at</li>
+                            </ul>
+                        </td>
+                        <td><a href="javascript:void(0)" onclick="GetTimetableLink(43)"><i class="fa fa-download"></i></a></td>
+                    </tr>
+                    <tr>
+                        <td><img class="via-big-number" src="../../resources/via/route-icons/044.webp"></td>
+                        <td><b>Pleasanton</b></td>
+                        <td>
+                            <ul>
+                                <li>The compass is slightly misaligned; the actual map is rotated ever-so-slightly more counterclockwise than the compass is</li>
+                            </ul>
+                        </td>
+                        <td><a href="javascript:void(0)" onclick="GetTimetableLink(44)"><i class="fa fa-download"></i></a></td>
+                    </tr>
+                    <tr>
+                        <td><img class="via-big-number" src="../../resources/via/route-icons/062.webp"></td>
+                        <td><b>Kirk</b></td>
+                        <td>
+                            <ul>
+                                <li><b>San Fernando Cemetaries</b> is shown to be north of Roselawn Avenue instead of south</li><br/>
+                                <li><b>Lowell Middle School</b> is now the <b>Kelly Academy</b></li>
+                            </ul>
+                        </td>
+                        <td><a href="javascript:void(0)" onclick="GetTimetableLink(62)"><i class="fa fa-download"></i></a></td>
+                    </tr>
+                    <tr>
+                        <td><img class="via-big-number" src="../../resources/via/route-icons/066.webp"></td>
+                        <td><b>Ceralvo</b></td>
+                        <td>
+                            <ul>
+                                <li>The compass is slightly misaligned; the actual map is rotated slightly more counterclockwise than the compass is</li><br/>
+                                <li><b>Alazan-Apache Courts</b> is shown to be northeast of Guadalupe Street instead of southwest</li>
+                            </ul>
+                        </td>
+                        <td><a href="javascript:void(0)" onclick="GetTimetableLink(66)"><i class="fa fa-download"></i></a></td>
+                    </tr>
+                    <tr>
+                        <td><img class="via-big-number" src="../../resources/via/route-icons/067.webp"></td>
+                        <td><b>Laredo</b></td>
+                        <td>
+                            <ul>
+                                <li><b>Cooper Middle School</b> is now the <b>Cooper Academy at Navarro</b></li>
+                            </ul>
+                        </td>
+                        <td><a href="javascript:void(0)" onclick="GetTimetableLink(67)"><i class="fa fa-download"></i></a></td>
+                    </tr>
+                    <tr>
+                        <td><img class="via-big-number" src="../../resources/via/route-icons/075.webp"></td>
+                        <td><b>West Commerce Frequent</b></td>
+                        <td>
+                            <ul>
+                                <li><b>Wrenn Middle School</b> no longer exists</li>
+                            </ul>
+                        </td>
+                        <td><a href="javascript:void(0)" onclick="GetTimetableLink(75)"><i class="fa fa-download"></i></a></td>
+                    </tr>
+                    <tr>
+                        <td><img class="via-big-number" src="../../resources/via/route-icons/076.webp"></td>
+                        <td><b>West Commerce Skip</b></td>
+                        <td>
+                            <ul>
+                                <li><b>Wrenn Middle School</b> no longer exists</li>
+                            </ul>
+                        </td>
+                        <td><a href="javascript:void(0)" onclick="GetTimetableLink(76)"><i class="fa fa-download"></i></a></td>
+                    </tr>
+                    <tr>
+                        <td><img class="via-big-number" src="../../resources/via/route-icons/077.webp"></td>
+                        <td><b>Martin</b></td>
+                        <td>
+                            <ul>
+                                <li>The late-night lineup times are incorrect on the weekday, Saturday, and Sunday timetables
+                                    <ul>
+                                        <li>The actual departure times for <img class="timepoint" src="../../resources/via/small-timepoints/d.webp" alt="Point D"> are 10:33pm, 11:33pm, and 12:33am</li>
+                                        <li>The actual departure times for <img class="timepoint" src="../../resources/via/small-timepoints/c.webp" alt="Point C"> are 10:38pm, 11:38pm, and 12:38am</li>
+                                        <li>The actual departure times for <img class="timepoint" src="../../resources/via/small-timepoints/b.webp" alt="Point B"> are 10:43pm, 11:43pm, and 12:43am</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </td>
+                        <td><a href="javascript:void(0)" onclick="GetTimetableLink(77)"><i class="fa fa-download"></i></a></td>
+                    </tr>
+                    <tr>
+                        <td><img class="via-big-number" src="../../resources/via/route-icons/079.webp"></td>
+                        <td><b>Ruiz</b></td>
+                        <td>
+                            <ul>
+                                <li><img class="timepoint" src="../../resources/via/small-timepoints/d.webp" alt="Point D"> is slightly misplaced; <b>Pecan & Navarro</b> is actually at the intersection directly south of <img class="timepoint" src="../../resources/via/small-timepoints/e.webp" alt="Point E"></li><br/>
+                                <li><b>University Downtown Health Center</b> is now the <b>University Health Robert B. Green Campus</b></li><br/>
+                                <li>The late-night lineup times are incorrect on the weekday, Saturday, and Sunday timetables
+                                    <ul>
+                                        <li>The actual departure times for <img class="timepoint" src="../../resources/via/small-timepoints/b.webp" alt="Point B"> are 10:48pm, 11:48pm, and 12:48am</li>
+                                        <li>The actual departure times for <img class="timepoint" src="../../resources/via/small-timepoints/c.webp" alt="Point C"> are 10:53pm, 11:53pm, and 12:53am</li>
+                                        <li>The actual departure times for <img class="timepoint" src="../../resources/via/small-timepoints/d.webp" alt="Point D"> are 11:00pm, 12:00am, and 1:00am</li>
+                                        <li>The actual departure times for <img class="timepoint" src="../../resources/via/small-timepoints/e.webp" alt="Point E"> are 11:03pm, 12:03am, and 1:03am</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </td>
+                        <td><a href="javascript:void(0)" onclick="GetTimetableLink(79)"><i class="fa fa-download"></i></a></td>
+                    </tr>
+                    <tr>
+                        <td><img class="via-big-number" src="../../resources/via/route-icons/082.webp"></td>
+                        <td><b>Culebra Frequent</b></td>
+                        <td>
+                            <ul>
+                                <li><b>Truman Middle School</b> no longer exists</li><br/>
+                                <li>There is an erroneous TG note on the Northbound side at 1:04am on the weekday timetable</li>
+                            </ul>
+                        </td>
+                        <td><a href="javascript:void(0)" onclick="GetTimetableLink(82)"><i class="fa fa-download"></i></a></td>
+                    </tr>
+                    <tr>
+                        <td><img class="via-big-number" src="../../resources/via/route-icons/088.webp"></td>
+                        <td><b>Bandera Frequent</b></td>
+                        <td>
+                            <ul>
+                                <li>A transfer with <span class="via-bustext via-busfreq-60"><b>Route 501 UTSA / Leon Valley</b></span> is missing at <b>Bandera & Poss</b> and <b>Evers & Huebner</b></li><br/>
+                                <li><b>Irving Middle School</b> is now the <b>Irving Dual Language Academy</b></li>
+                            </ul>
+                        </td>
+                        <td><a href="javascript:void(0)" onclick="GetTimetableLink(88)"><i class="fa fa-download"></i></a></td>
+                    </tr>
+                    <tr>
+                        <td><img class="via-big-number" src="../../resources/via/route-icons/089.webp"></td>
+                        <td><b>Poplar</b></td>
+                        <td>
+                            <ul>
+                                <li><b>Irving Middle School</b> is now the <b>Irving Dual Language Academy</b></li><br/>
+                                <li><b>Woodlawn Lake Park</b> is shown to be west of NW 24th Street instead of east</li>
+                            </ul>
+                        </td>
+                        <td><a href="javascript:void(0)" onclick="GetTimetableLink(89)"><i class="fa fa-download"></i></a></td>
+                    </tr>
+                    <tr>
+                        <td><img class="via-big-number" src="../../resources/via/route-icons/093.webp"></td>
+                        <td><b>IH-10 Crossroads / Roadrunner Express</b></td>
+                        <td>
+                            <ul>
+                                <li>The FG notes at <b>The Rim</b>'s weekday departure times at 6:16am and 8:16am (inbound, <img class="timepoint" src="../../resources/via/small-timepoints/a.webp" alt="Point A">) are mislabeled as TG</li><br/>
+                                <li>Because of the route color change that happened due to the August 2024 rebrand, the directional arrows in the Downtown inset are now extremely difficult to see.
+                                    A copy of the schedule with the old colors can be found <a href="https://junimeek.net/via-bus/errors/Schedule093CSP.pdf" target="_blank"><b>here</b></a>.
+                                    Note that this should be used as a visual aid only, as the timetable itself is now outdated.</li>
+                            </ul>
+                        </td>
+                        <td><a href="javascript:void(0)" onclick="GetTimetableLink(93)"><i class="fa fa-download"></i></a></td>
+                    </tr>
+                    <tr>
+                        <td><img class="via-big-number" src="../../resources/via/route-icons/096.webp"></td>
+                        <td><b>Vance Jackson Frequent</b></td>
+                        <td>
+                            <ul>
+                                <li><b>Cody Branch Library</b> is shown to be north of Vance Jackson instead of south</li>
+                            </ul>
+                        </td>
+                        <td><a href="javascript:void(0)" onclick="GetTimetableLink(96)"><i class="fa fa-download"></i></a></td>
+                    </tr>
+                    <tr>
+                        <td><img class="via-big-number" src="../../resources/via/route-icons/202.webp"></td>
+                        <td><b>Blanco Lineup</b></td>
+                        <td>
+                            <ul>
+                                <li>Although the timepoint at <b>West Avenue & Jackson-Keller</b> exists on the <span class="via-bustext via-busfreq-90"><b>651</b></span> timetable, there are no times listed
+                                    <ul>
+                                        <li>The arrival times for <img class="timepoint" src="../../resources/via/small-timepoints/a.webp" alt="Point A"> would be 10:58pm, 11:58pm, and 12:58am</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </td>
+                        <td><a href="javascript:void(0)" onclick="GetTimetableLink(202)"><i class="fa fa-download"></i></a></td>
+                    </tr>
+                    <tr>
+                        <td><img class="via-big-number" src="../../resources/via/route-icons/204.webp"></td>
+                        <td><b>San Pedro / McCullough Lineup</b></td>
+                        <td>
+                            <ul>
+                                <li>The late-night lineup times for <b>Navarro & Augusta</b> (outbound <img class="timepoint" src="../../resources/via/small-timepoints/g.webp" alt="Point G">) are incorrect on the weekday, Saturday, and Sunday timetables
+                                    <ul>
+                                        <li>The actual departure times are 10:32pm, 11:32pm, and 12:32am</li>
+                                    </ul>
+                                </li><br/>
+                                <li>The map references a nonexistent timepoint at <b>St. Mary's & Martin</b>
+                                    <ul>
+                                        <li>The actual arrival times are 11:22pm and 12:22am</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </td>
+                        <td><a href="javascript:void(0)" onclick="GetTimetableLink(204)"><i class="fa fa-download"></i></a></td>
+                    </tr>
+                    <tr>
+                        <td><img class="via-big-number" src="../../resources/via/route-icons/209.webp"></td>
+                        <td><b>Broadway / Nacogdoches Lineup</b></td>
+                        <td>
+                            <ul>
+                                <li>The map references three nonexistent timepoints. The arrival times would be as follows:
+                                    <ul>
+                                        <li><b>Broadway & Hildebrand</b>: 10:39pm, 11:39pm, and 12:39am</li>
+                                        <li><b>Broadway & Castano</b>: 10:42pm, 11:42pm, and 12:42am</li>
+                                        <li><b>Nacogdoches and Loop 410</b>: 10:50pm, 11:50pm, and 12:50am</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </td>
+                        <td><a href="javascript:void(0)" onclick="GetTimetableLink(209)"><i class="fa fa-download"></i></a></td>
+                    </tr>
+                    <tr>
+                        <td><img class="via-big-number" src="../../resources/via/route-icons/222.webp"></td>
+                        <td><b>Hays / East Houston Lineup</b></td>
+                        <td>
+                            <ul>
+                                <li>The map references a nonexistent timepoint at <b>W. W. White & Gembler</b>
+                                    <ul>
+                                        <li>The arrival times for this timepoint would be 10:44pm, 11:44pm, and 12:44am</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </td>
+                        <td><a href="javascript:void(0)" onclick="GetTimetableLink(222)"><i class="fa fa-download"></i></a></td>
+                    </tr>
+                    <tr>
+                        <td><img class="via-big-number" src="../../resources/via/route-icons/225.webp"></td>
+                        <td><b>East Commerce / Martin Luther King Lineup</b></td>
+                        <td>
+                            <ul>
+                                <li>The map references a nonexistent timepoint at <b>Houston & W. W. White Rd</b>
+                                    <ul>
+                                        <li>The arrival times for this timepoint would be 10:47pm, 11:47pm, and 12:47am</li>
+                                    </ul>
+                                </li><br/>
+                                <li>There is a missing timepoint at <b>Cesar Chavez & Alamo</b> (<img class="timepoint" src="../../resources/via/small-timepoints/d.webp" alt="Point D"> on the 26 timetable)
+                                    <ul>
+                                        <li>The arrival times for this timepoint would be 11:09pm, 12:09m, and 1:09am</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </td>
+                        <td><a href="javascript:void(0)" onclick="GetTimetableLink(225)"><i class="fa fa-download"></i></a></td>
+                    </tr>
+                    <tr>
+                        <td><img class="via-big-number" src="../../resources/via/route-icons/230.webp"></td>
+                        <td><b>Rigsby / Porter Lineup</b></td>
+                        <td>
+                            <ul>
+                                <li>The map references three nonexistent timepoints. The arrival times would be as follows:
+                                    <ul>
+                                        <li><b>Denver & Hackberry</b>: 10:41pm, 11:41pm, and 12:41am</li>
+                                        <li><b>Rigsby & Walters</b>: 10:46pm, 11:46pm, and 12:46am</li>
+                                        <li><b>Amanda & J Street</b>: 10:53pm, 11:53pm, and 12:53am</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </td>
+                        <td><a href="javascript:void(0)" onclick="GetTimetableLink(230)"><i class="fa fa-download"></i></a></td>
+                    </tr>
+                    <tr>
+                        <td><img class="via-big-number" src="../../resources/via/route-icons/232.webp"></td>
+                        <td><b>Steves / South St. Mary's Lineup</b></td>
+                        <td>
+                            <ul>
+                                <li>The map references three nonexistent timepoints. The arrival times would be as follows:
+                                    <ul>
+                                        <li><b>Denver & Hackberry</b>: 10:45pm, 11:45pm, and 12:45am</li>
+                                        <li><b>S.E. Military Drive & Goliad</b>: 11:02pm, 12:02am, and 1:02am</li>
+                                        <li><b>New Braunfels & Fair Avenue</b>: 11:11pm, 12:11am, and 1:11am</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </td>
+                        <td><a href="javascript:void(0)" onclick="GetTimetableLink(232)"><i class="fa fa-download"></i></a></td>
+                    </tr>
+                    <tr>
+                        <td><img class="via-big-number" src="../../resources/via/route-icons/243.webp"></td>
+                        <td><b>South Flores / Pleasanton Lineup</b></td>
+                        <td>
+                            <ul>
+                                <li>The map references a nonexistent timepoint at <b>Flores & Dolorosa</b>. The arrival times are as follows:
+                                    <ul>
+                                        <li><b>Outbound</b>: 10:33pm, 11:33pm, and 12:33am</li>
+                                        <li><b>Inbound</b>: 11:17pm, 12:17am, and TG 1:17am</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </td>
+                        <td><a href="javascript:void(0)" onclick="GetTimetableLink(243)"><i class="fa fa-download"></i></a></td>
+                    </tr>
+                    <tr>
+                        <td><img class="via-big-number" src="../../resources/via/route-icons/246.webp"></td>
+                        <td><b>Commercial Lineup</b></td>
+                        <td>
+                            <ul>
+                                <li>The map references a nonexistent timepoint at <b>Madla Transit Center</b>
+                                    <ul>
+                                        <li>The arrival times for this timepoint would be 11:09pm, 12:09am, and 1:09am</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </td>
+                        <td><a href="javascript:void(0)" onclick="GetTimetableLink(246)"><i class="fa fa-download"></i></a></td>
+                    </tr>
+                    <tr>
+                        <td><img class="via-big-number" src="../../resources/via/route-icons/251.webp"></td>
+                        <td><b>Nogalitos / Kirk Lineup</b></td>
+                        <td>
+                            <ul>
+                                <li>The map references a nonexistent timepoint at <b>S.W. Military Drive & Barlite</b>
+                                    <ul>
+                                        <li>The arrival times for this timepoint would be 10:52pm, 11:52pm, and 12:52am</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </td>
+                        <td><a href="javascript:void(0)" onclick="GetTimetableLink(251)"><i class="fa fa-download"></i></a></td>
+                    </tr>
+                    <tr>
+                        <td><img class="via-big-number" src="../../resources/via/route-icons/268.webp"></td>
+                        <td><b>Guadalupe / Ceralvo Lineup</b></td>
+                        <td>
+                            <ul>
+                                <li>The map references two nonexistent timepoints. The arrival times would be as follows:
+                                    <ul>
+                                        <li><b>Castroville & S.W. 36th Street</b>: 10:54pm, 11:54pm, and 12:54am</li>
+                                        <li><b>Buena Vista & Colorado</b>: 11:13pm, 12:13am, and 1:13am</li>
+                                    </ul><br/>
+                                    <li>Although the timepoint at <b>Centro Plaza</b> exists on the <span class="via-bustext via-busfreq-20"><b>68</b></span> and <span class="via-bustext via-busfreq-60"><b>66</b></span> timetables
+                                        (<img class="timepoint" src="../../resources/via/small-timepoints/E.webp" alt="Point E"> in both cases), there are no times listed for the inbound direction (<span class="via-bustext via-busfreq-60"><b>66</b></span>)
+                                    <ul>
+                                        <li>The arrival times for inbound <img class="timepoint" src="../../resources/via/small-timepoints/e.webp" alt="Point E"> would be 11:16pm, 12:16am, and 1:16am</li>
+                                    </ul>
+                                </li>
+                                </li>
+                            </ul>
+                        </td>
+                        <td><a href="javascript:void(0)" onclick="GetTimetableLink(268)"><i class="fa fa-download"></i></a></td>
+                    </tr>
+                    <tr>
+                        <td><img class="via-big-number" src="../../resources/via/route-icons/276.webp"></td>
+                        <td><b>West Commerce / Kel-Lac Transit Center Lineup Skip</b></td>
+                        <td>
+                            <ul>
+                                <li>The map references a nonexistent timepoint at <b>Commerce & Colorado</b>
+                                    <ul>
+                                        <li>The arrival times for this timepoint would be 10:39pm, 11:39pm, and 12:39am</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </td>
+                        <td><a href="javascript:void(0)" onclick="GetTimetableLink(276)"><i class="fa fa-download"></i></a></td>
+                    </tr>
+                    <tr>
+                        <td><img class="via-big-number" src="../../resources/via/route-icons/282.webp"></td>
+                        <td><b>Culebra Lineup</b></td>
+                        <td>
+                            <ul>
+                                <li>The map is wrong near Loop 410; the bus travels on Grandstand Drive and Fairgrounds Parkway, just like the daytime <span class="via-bustext via-busfreq-20"><b>82</b></span> does</li>
+                            </ul>
+                        </td>
+                        <td><a href="javascript:void(0)" onclick="GetTimetableLink(282)"><i class="fa fa-download"></i></a></td>
+                    </tr>
+                    <tr>
+                        <td><img class="via-big-number" src="../../resources/via/route-icons/289.webp"></td>
+                        <td><b>Poplar / Woodlawn Lineup</b></td>
+                        <td>
+                            <ul>
+                                <li>The map references five nonexistent timepoints. The arrival times would be as follows:
+                                    <ul>
+                                        <li><b>Martin & Frio</b>: 10:39pm, 11:39pm, and 12:39am</li>
+                                        <li><b>Ingram & Callaghan</b>: 11:05pm, 12:05am, and 1:05am</li>
+                                        <li><b>Freeman & Broadview</b>: 11:08pm, 12:08am, and 1:08am</li>
+                                        <li><b>Woodlawn & 36th</b>: 11:10pm, 12:10am, and 1:10am</li>
+                                        <li><b>Woodlawn & Zarzamora</b>: 11:16pm, 12:16am, and 1:16am</li>
+                                        <li><b>Main & San Pedro</b>: 11:24pm and 12:24am</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </td>
+                        <td><a href="javascript:void(0)" onclick="GetTimetableLink(289)"><i class="fa fa-download"></i></a></td>
+                    </tr>
+                    <tr>
+                        <td><img class="via-big-number" src="../../resources/via/route-icons/296.webp"></td>
+                        <td><b>Vance Jackson / West Avenue Lineup</b></td>
+                        <td>
+                            <ul>
+                                <li>The map references a nonexistent timepoint at <b>West Avenue & Basse</b>
+                                    <ul>
+                                        <li>The arrival times for this timepoint would be 11:03pm, 12:03am, and 1:03am</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </td>
+                        <td><a href="javascript:void(0)" onclick="GetTimetableLink(296)"><i class="fa fa-download"></i></a></td>
+                    </tr>
+                    <tr>
+                        <td><img class="via-big-number" src="../../resources/via/route-icons/502.webp"></td>
+                        <td><b>Thousand Oaks / Converse</b></td>
+                        <td>
+                            <ul>
+                                <li><b>Wind Burn Trail</b> is unlabeled (between Topperwein and Kitty Hawk)</li>
+                            </ul>
+                        </td>
+                        <td><a href="javascript:void(0)" onclick="GetTimetableLink(502)"><i class="fa fa-download"></i></a></td>
+                    </tr>
+                    <tr>
+                        <td><img class="via-big-number" src="../../resources/via/route-icons/505.webp"></td>
+                        <td><b>Basse</b></td>
+                        <td>
+                            <ul>
+                                <li>A transfer with <b class="via-bustext via-busfreq-20">Route 10 Nacogdoches Skip</b> is missing at <b>Broadway & Castano</b> and <b>Broadway & Basse</b></li><br/>
+                                <li><b>Rackspace</b> is now the <b>Windcrest International Business Park</b></li>
+                            </ul>
+                        </td>
+                        <td><a href="javascript:void(0)" onclick="GetTimetableLink(505)"><i class="fa fa-download"></i></a></td>
+                    </tr>
+                    <tr>
+                        <td><img class="via-big-number" src="../../resources/via/route-icons/515.webp"></td>
+                        <td><b>Southcross</b></td>
+                        <td>
+                            <ul>
+                                <li>A transfer with <b class="via-bustext via-busfreq-20">Route 552 Loop 410 / W. W. White Skip</b> is missing at <b>Southcross & W. W. White</b></li>
+                            </ul>
+                        </td>
+                        <td><a href="javascript:void(0)" onclick="GetTimetableLink(515)"><i class="fa fa-download"></i></a></td>
+                    </tr>
+                    <tr>
+                        <td><img class="via-big-number" src="../../resources/via/route-icons/522.webp"></td>
+                        <td><b>Babcock</b></td>
+                        <td>
+                            <ul>
+                                <li><b>Mann Middle School</b> is now the <b>Young Women's Leadership Academy</b></li>
+                            </ul>
+                        </td>
+                        <td><a href="javascript:void(0)" onclick="GetTimetableLink(522)"><i class="fa fa-download"></i></a></td>
+                    </tr>
+                    <tr>
+                        <td><img class="via-big-number" src="../../resources/via/route-icons/524.webp"></td>
+                        <td><b>General McMullen Frequent</b></td>
+                        <td>
+                            <ul>
+                                <li><b>Cortez Branch Library</b> is shown to be east of Palo Alto Road instead of west</li><br/>
+                                <li><b>Brentwood Middle School</b> is now the <b>Brentwood STEAM School of Innovation</b></li><br/>
+                                <li><b>Gus Garcia Middle School</b> is now the <b>Gus Garcia University School</b></li>
+                            </ul>
+                        </td>
+                        <td><a href="javascript:void(0)" onclick="GetTimetableLink(524)"><i class="fa fa-download"></i></a></td>
+                    </tr>
+                </tbody>
+            </table>
+            </div>
+            <hr/>
+
+            <h2 class="saya-h2">Corrected Errors</h2>
+
+            <p class="saya-short-paragraph">
+                This is the list of errors that have been corrected in the time since i started tracking them in early June 2025.
+            </p>
+
+            <div class="saya-scrollable-element">
+            <table class="saya-table saya-tablewidth-1300">
+                <tbody>
+                    <tr class="saya-table-header">
+                        <th width="5%"><span>Route Number</span></th>
+                        <th width="20%"><span>Route Name</span></th>
+                        <th width="60%" style="min-width: 380px;"><span>Errors</span></th>
+                        <th width="20%"><span>Date<br/>Corrected</span></th>
+                        <th width="5%"><span>Schedule</span></th>
+                    </tr>
+                    <tr>
+                        <td><img class="via-big-number" src="../../resources/via/route-icons/010.webp"></td>
+                        <td><b>Nacogdoches Skip</b></td>
+                        <td>
+                            <ul>
+                                <li>The broken line overlay is drawn incorrectly; going outbound, it should stop at <img class="timepoint" src="../../resources/via/small-timepoints/c.webp" alt="Point C">.</li>
+                            </ul>
+                        </td>
+                        <td>September 2025</td>
+                        <td><a href="javascript:void(0)" onclick="GetOldTimetableLink(2)"><i class="fa fa-download"></i></a></td>
+                    </tr>
+                    <tr>
+                        <td><img class="via-big-number" src="../../resources/via/route-icons/022.webp"></td>
+                        <td><b>Hays</b></td>
+                        <td>
+                            <ul>
+                                <li>The late-night lineup times are completely absent on the weekday timetable</li>
+                            </ul>
+                        </td>
+                        <td>8-18-2025</td>
+                        <td><a href="javascript:void(0)" onclick="GetOldTimetableLink(1)"><i class="fa fa-download"></i></a></td>
+                    </tr>
+                    <tr>
+                        <td><img class="via-big-number" src="../../resources/via/route-icons/209.webp"></td>
+                        <td><b>Broadway / Nacogdoches Lineup</b></td>
+                        <td>
+                            <ul>
+                                <li>The timepoint at <img class="timepoint" src="../../resources/via/small-timepoints/f.webp" alt="Point F"> <b>Broadway & Josephine</b> is mislabeled as being at <b>Broadway & Grayson</b></li>
+                            </ul>
+                        </td>
+                        <td>8-18-2025</td>
+                        <td><a href="javascript:void(0)" onclick="GetTimetableLink(209)"><i class="fa fa-download"></i></a></td>
+                    </tr>
+                    <tr>
+                        <td><img class="via-big-number" src="../../resources/via/route-icons/222.webp"></td>
+                        <td><b>Hays / East Houston Lineup</b></td>
+                        <td>
+                            <ul>
+                                <li>The lineup times are completely absent on the daytime 22 timetable</li>
+                            </ul>
+                        </td>
+                        <td>8-18-2025</td>
+                        <td><a href="javascript:void(0)" onclick="GetTimetableLink(222)"><i class="fa fa-download"></i></a></td>
+                    </tr>
+                </tbody>
+            </table>
+            </div>
+
+            <br/>
+            <br/>
+            <br/>
         </div>
 
         <footer class="saya-footer-container">
@@ -587,7 +777,7 @@
                <span>All right reserved</span>
             </div>
             <div class="saya-footer-group">
-               <span>This page is not powered by SayakaUI</span>
+               <span>Powered by SayakaUI</span>
             </div>
         </footer>
     </body>

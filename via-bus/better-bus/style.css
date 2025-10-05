@@ -1,12 +1,9 @@
+@import url('../../resources/sayaka/styles/via.css');
 @import url('../../resources/sayaka/sayaka.css');
 @import url('../../resources/sayaka/sayaka-navbar.css');
 @import url('../../resources/sayaka/sayaka-table.css');
 @import url('../../resources/sayaka/miki.css');
 @import url('../../resources/fonts/font-style.css');
-
-.saya-body {
-    font-family: 'Helvetica';
-}
 
 .saya-banner-header {
     background-color: #32737a;
@@ -14,17 +11,13 @@
 }
 
 .saya-table i {
-    color: #da4346;
+    color: #03757b;
     font-size: 16pt;
     padding: 10px;
 }
 
 .saya-table i:hover {
-    color: #375c9f;
-}
-
-.saya-table li {
-    text-align: left;
+    color: #931b22;
 }
 
 .saya-table img {
@@ -34,51 +27,55 @@
 
 .saya-table td {
     font-size: 14pt;
+}
+
+.timeline-table {
+    background-color: #ffffff;
+    border: 3px solid #c0c0c0;
+    border-collapse: collapse;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 2px;
+}
+
+.timeline-table tr {
+    border-bottom: 2px dashed #c0c0c0;
+    height: 70px;
+}
+
+.timeline-table tr:hover {
+    background-color: #83ebeb30;
+}
+
+.timeline-table b {
+    font-size: 14pt;
+}
+
+.timeline-table-header {
+    padding: 10px, 10px;
+    border: #c0c0c0;
+    background-color: #a0a0a0 !important;
+    height: 30px !important;
+}
+
+.timeline-table-header span {
+    color: #ffffff;
+}
+
+.timeline-table li {
+    text-align: left;
+}
+
+.timeline-table td {
     text-align: center;
 }
 
-.big-number {
-    width: 50px !important;
-    height: 50px !important;
+.timeline-table-header span {
+    font-family: 'Scene Pro Black', Helvetica, sans-serif;
+    font-weight: normal;
 }
 
-.text-20 {
-    color: #af3034;
-    font-family: 'Scene Pro';
-}
-
-.text-30 {
-    color: #375c9f;
-    font-family: 'Scene Pro';
-}
-
-.text-green {
-    color: #628125;
-    font-family: 'Scene Pro';
-}
-
-.text-silver {
-    color: #646c6e;
-    font-family: 'Scene Pro';
-}
-
-.text-link-service {
-    color: #54325f;
-    font-family: 'Scene Pro';
-}
-
-.text-changeheader {
-    font-family: 'Scene Pro';
-}
-
-.saya-h1 {
-    font-family: 'Scene Pro Black';
-}
-
-.saya-h2 {
-    font-family: 'Scene Pro Black';
-}
-
-.saya-lower-bg {
-    background-image: linear-gradient(135deg, #da4c3f, #af3034);
+.timeline-table img {
+    width: 40px !important;
+    height: 40px !important;
 }

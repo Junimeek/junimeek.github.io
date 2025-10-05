@@ -1,48 +1,96 @@
+/* Ammy's Handwriting */
+
 @font-face {
     font-family: 'Ammys Handwriting';
     font-weight: normal;
     font-style: normal;
-    src: url('./sources/AmmysHandwriting.ttf') format('ttf');
+    src: url('./sources/AmmysHandwriting.ttf') format('truetype');
+}
+
+/* Scene Pro */
+
+@font-face {
+    font-family: 'Scene Pro';
+    font-weight: lighter;
+    font-style: normal;
+    src: url('./sources/SceneProLight.otf') format('opentype');
 }
 
 @font-face {
     font-family: 'Scene Pro';
     font-weight: normal;
     font-style: normal;
-    src: url('./sources/SceneProRg.otf') format('otf');
+    src: url('./sources/SceneProRg.otf') format('opentype');
 }
 
 @font-face {
     font-family: 'Scene Pro';
     font-weight: bold;
     font-style: normal;
-    src: url('./sources/SceneProBold.otf') format('otf');
+    src: url('./sources/SceneProBold.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Scene Pro';
+    font-weight: lighter;
+    font-style: italic;
+    src: url('./sources/SceneProLightIt.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Scene Pro';
+    font-weight: normal;
+    font-style: italic;
+    src: url('./sources/SceneProRgIt.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Scene Pro';
+    font-weight: bold;
+    font-style: italic;
+    src: url('./sources/SceneProBdIt.otf') format('opentype');
 }
 
 @font-face {
     font-family: 'Scene Pro Black';
     font-weight: normal;
     font-style: normal;
-    src: url('./sources/SceneProBlack.otf') format('otf');
+    src: url('./sources/SceneProBlack.otf') format('opentype');
 }
 
 @font-face {
     font-family: 'Scene Pro Black';
     font-weight: bold;
     font-style: normal;
-    src: url('./sources/SceneProUltBlk.otf') format('otf');
+    src: url('./sources/SceneProUltBlk.otf') format('opentype');
 }
+
+@font-face {
+    font-family: 'Scene Pro Black';
+    font-weight: normal;
+    font-style: italic;
+    src: url('./sources/SceneProBlkIt.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Scene Pro Black';
+    font-weight: bold;
+    font-style: italic;
+    src: url('./sources/SceneProUltBlkIt.otf') format('opentype');
+}
+
+/* Montserrat */
 
 @font-face {
     font-family: 'Montserrat';
     font-weight: normal;
     font-style: normal;
-    src: url("./sources/MontserratRegular.ttf") format("ttf");
+    src: url("./sources/MontserratRegular.ttf") format("truetype");
 }
 
 @font-face {
     font-family: 'Montserrat';
     font-weight: bold;
     font-style: normal;
-    src: url("./sources/MontserratBold.ttf") format("ttf");
+    src: url("./sources/MontserratBold.ttf") format("truetype");
 }

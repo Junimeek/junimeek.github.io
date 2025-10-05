@@ -2,7 +2,7 @@
     This is the primary stylesheet for SayakaUI, the name of the common UI that is used across junimeek.net.
     Additional SayakaUI stylesheets can be found in this same directory.
     
-    Current version: 1.0.0
+    Current version: 1.0.1
 
     created by junimeek
     special thanks to potatocommuter
@@ -31,6 +31,7 @@
 
 .saya-notification {
     background-color: #ffffff;
+    border: 3px solid #c0c0c0;
     border-collapse: collapse;
     margin-left: auto;
     margin-right: auto;
@@ -38,6 +39,7 @@
 
 .saya-notification-wide {
     background-color: #ffffff;
+    border: 3px solid #c0c0c0;
     border-collapse: collapse;
     margin-left: auto;
     margin-right: auto;
@@ -164,7 +166,7 @@
 
 .saya-footer-group span {
     color: #123170;
-    font-family: 'Ammys Handwriting';
+    font-family: 'Ammys Handwriting', Arial, sans-serif;
     font-weight: bold;
 }
 
@@ -177,6 +179,6 @@
 }
 
 .saya-lower-bg {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Arial, sans-serif;
     font-size: 14pt;
 }

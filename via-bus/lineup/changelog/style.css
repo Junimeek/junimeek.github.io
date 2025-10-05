@@ -1,11 +1,8 @@
+@import url('../../../resources/sayaka/styles/via.css');
 @import url('../../../resources/sayaka/sayaka.css');
 @import url('../../../resources/sayaka/sayaka-navbar.css');
 @import url('../../../resources/sayaka/sayaka-table.css');
 @import url('../../../resources/fonts/font-style.css');
-
-.saya-table b {
-    font-family: 'Scene Pro Black';
-}
 
 .saya-table i {
     color: #da4346;
@@ -17,33 +14,10 @@
     color: #375c9f;
 }
 
-.saya-table img {
-    width: 50px;
-    height: 50px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.saya-table li {
-    font-size: 14pt;
-}
-
-.big-number {
-    text-align: center;
-}
-
-.changesTable a {
+.saya-table td {
     text-align: left;
 }
 
-.saya-h1 {
-    font-family: 'Scene Pro Black';
-}
-
-.saya-h2 {
-    font-family: 'Scene Pro Black';
-}
-
-.saya-lower-bg {
-    background-image: linear-gradient(135deg, #da4c3f, #af3034);
+.saya-table .centered-content {
+    text-align: center;
 }

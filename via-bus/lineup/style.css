@@ -1,12 +1,9 @@
+@import url('../../resources/sayaka/styles/via.css');
 @import url('../../resources/sayaka/sayaka.css');
 @import url('../../resources/sayaka/sayaka-navbar.css');
 @import url('../../resources/sayaka/sayaka-table.css');
 @import url('../../resources/sayaka/miki.css');
 @import url('../../resources/fonts/font-style.css');
-
-.saya-body {
-    font-family: 'Helvetica';
-}
 
 .saya-banner-header {
     background-color: #411b43;
@@ -14,7 +11,6 @@
 }
 
 .saya-table b {
-    font-family: 'Scene Pro Black';
     font-weight: normal;
 }
 
@@ -38,9 +34,8 @@
     text-align: center;
 }
 
-.big-number {
-    width: 50px !important;
-    height: 50px !important;
+.via-routename-text {
+    color: #431a46;
 }
 
 .description-container {
@@ -110,16 +105,4 @@
 
 .disabled-table {
     display: none;
-}
-
-.saya-h1 {
-    font-family: 'Scene Pro Black';
-}
-
-.saya-h2 {
-    font-family: 'Scene Pro Black';
-}
-
-.saya-lower-bg {
-    background-image: linear-gradient(135deg, #da4c3f, #af3034);
 }
