@@ -148,8 +148,53 @@ function GetTimetableLink(route)
         case 524:
             scheduleLink += "2024/07/Schedule524.pdf";
             break;
+        case 602:
+            scheduleLink += "2025/07/Schedule602.pdf";
+            break;
+        case 603:
+            scheduleLink += "2025/07/Schedule603.pdf";
+            break;
+        case 609:
+            scheduleLink += "2025/07/Schedule609.pdf";
+            break;
+        case 610:
+            scheduleLink += "2025/07/Schedule610.pdf";
+            break;
+        case 611:
+            scheduleLink += "2025/01/Schedule611.pdf";
+            break;
+        case 612:
+            scheduleLink += "2024/08/Schedule612.pdf";
+            break;
+        case 614:
+            scheduleLink += "2024/08/Schedule614.pdf";
+            break;
+        case 615:
+            scheduleLink += "2025/01/Schedule615.pdf";
+            break;
+        case 616:
+            scheduleLink += "2024/08/Schedule616.pdf";
+            break;
+        case 617:
+            scheduleLink += "2024/08/Schedule617.pdf";
+            break;
+        case 618:
+            scheduleLink += "2025/07/Schedule618.pdf";
+            break;
+        case 619:
+            scheduleLink += "2025/07/Schedule619.pdf";
+            break;
+        case 620:
+            scheduleLink += "2024/07/Schedule620.pdf";
+            break;
+        case 632:
+            scheduleLink += "2024/08/Schedule632.pdf";
+            break;
+        case 647:
+            scheduleLink += "2024/08/Schedule647.pdf";
+            break;
         case 648:
-            scheduleLink += "2024/08/Schedule648.pdf";
+            scheduleLink += "2025/07/Schedule648.pdf";
             break;
         default:
             scheduleLink = "";
