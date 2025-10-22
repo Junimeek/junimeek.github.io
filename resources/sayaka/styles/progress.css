@@ -1,0 +1,87 @@
+.saya-body {
+    font-family: Arial, sans-serif;
+}
+
+.saya-lower-bg {
+    background-image: linear-gradient(135deg, #ab3684, #5f0b43);
+}
+
+.saya-table {
+    text-align: center;
+}
+
+.saya-h1 {
+    font-family: Arial, sans-serif;
+}
+
+.saya-h2 {
+    font-family: Arial, sans-serif;
+}
+
+.saya-h3 {
+    font-family: Arial, sans-serif;
+}
+
+code {
+    background-color: #d8d8d8;
+    font-size: 90%;
+    padding: 2px;
+    border-radius: 4px;
+}
+
+.progresspage-progresscontainer {
+    max-width: 900px;
+    width: 100%;
+    height: fit-content;
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+    border: 3px solid #e6c977;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+}
+
+.progresspage-progressbar-fill {
+    max-width: 100%;
+    height: fit-content;
+    background-color: #367cab;
+    text-align: right;
+}
+
+.progresspage-progressbar-nofill {
+    max-width: 100%;
+    height: fit-content;
+    background-color: white;
+    text-align: left;
+}
+
+.progresspage-progresscontent {
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.progresspage-progresspercentage-inner {
+    color: white;
+    font-size: 18pt;
+    font-family: 'Scene Pro Black', Arial, sans-serif;
+    font-weight: normal;
+}
+
+.progresspage-progresspercentage-outer {
+    color: black;
+    font-size: 18pt;
+    font-family: 'Scene Pro Black', Arial, sans-serif;
+    font-weight: normal;
+}
+
+.progresspage-progresspercentage-invis {
+    color: #00000000;
+    font-size: 18pt;
+    font-family: 'Scene Pro Black', Arial, sans-serif;
+    font-weight: normal;
+}
