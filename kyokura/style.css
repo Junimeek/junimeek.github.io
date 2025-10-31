@@ -4,29 +4,27 @@
 @import url('../resources/sayaka/sayaka-flexbuttons.css');
 @import url('../resources/fonts/font-style.css');
 
-.sakemi-logo {
+.kyoko-logo {
     width: 100%;
     height: 100%;
-    max-width: 600px;
-    max-height: 136px;
+    max-width: 500px;
 }
 
 .bigbutton-baldiextended {
     background-color: #388b1d;
-    background-image: url("./thumb-lineup.jpg");
+    background-image: url("./thumb-baldiextended.webp");
     border-color: #388b1d;
 }
 
 .bigbutton-neuromm {
-    background-color: #411b43;
-    background-image: url("./thumb-lineup.jpg");
-    border-color: #411b43;
+    background-color: #b07177;
+    background-image: url("./thumb-neuro.webp");
+    border-color: #b07177;
 }
 
 .bigbutton-mikumonday {
-    background-color: #411b43;
-    background-image: url("./thumb-lineup.jpg");
-    border-color: #411b43;
+    background-color: #4ba7c8;
+    border-color: #4ba7c8;
 }
 
 .bigbutton-baldiextended:hover {
@@ -34,9 +32,9 @@
 }
 
 .bigbutton-neuromm:hover {
-    border-color: #f768ff;
+    border-color: #ffd0d5;
 }
 
 .bigbutton-mikumonday:hover {
-    border-color: #f768ff;
+    border-color: #d73677;
 }

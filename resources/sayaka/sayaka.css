@@ -2,7 +2,7 @@
     This is the primary stylesheet for SayakaUI, the name of the common UI that is used across junimeek.net.
     Additional SayakaUI stylesheets can be found in this same directory.
     
-    Current version: 1.0.1
+    Current version: 1.0.2
 
     created by junimeek
     special thanks to potatocommuter
@@ -86,6 +86,10 @@
 
     .saya-lower-bg {
         margin: 8px;
+    }
+
+    .saya-nomargin {
+        margin: 0px !important;
     }
 }
 

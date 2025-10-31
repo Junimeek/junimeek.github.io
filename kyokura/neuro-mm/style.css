@@ -1,0 +1,67 @@
+@import url('../../resources/sayaka/styles/kyokura.css');
+@import url('../../resources/sayaka/sayaka.css');
+@import url('../../resources/sayaka/sayaka-table.css');
+@import url('../../resources/sayaka/sayaka-navbar.css');
+@import url('../../resources/sayaka/sayaka-flexbuttons.css');
+@import url('../../resources/fonts/font-style.css');
+
+.saya-lower-bg {
+    background-color: #fbead4;
+}
+
+.saya-table {
+    text-align: center;
+}
+
+.saya-h1 {
+    font-weight: normal;
+}
+
+.saya-h2 {
+    font-weight: normal;
+}
+
+.saya-h3 {
+    font-weight: normal;
+}
+
+.song-jacket {
+    max-width: 70px;
+    height: 100%;
+}
+
+.youtube-embed {
+    width: 100%;
+    max-width: 850px;
+    height: 405px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.bigbutton-dmm {
+    background-color: #463a46;
+    border-color: #463a46;
+}
+
+.bigbutton-dma {
+    background-color: #109dd3;
+    border-color: #109dd3;
+}
+
+.bigbutton-github {
+    background-color: #080a3e;
+    border-color: #080a3e;
+}
+
+.bigbutton-dmm:hover {
+    border-color: #74ff33;
+}
+
+.bigbutton-dma:hover {
+    border-color: #12f0ff;
+}
+
+.bigbutton-github:hover {
+    border-color: #879ce5;
+}

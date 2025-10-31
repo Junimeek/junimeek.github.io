@@ -21,7 +21,7 @@ function LoadNavBar(underlineType)
     document.writeln('</div>');
     document.writeln('<div class="saya-navbar-dropdown-content-large">');
     document.writeln('<a href="https://junimeek.net/via-bus/" target="_parent" class="saya-navbar-highlight-via">VIA Information</a>');
-    document.writeln('<a href="https://junimeek.net/sakemitech/" target="_parent" class="saya-navbar-highlight-sakemi">SakemiTech</a>');
+    document.writeln('<a href="https://junimeek.net/kyokura/" target="_parent" class="saya-navbar-highlight-sakemi">Kyokura</a>');
     document.writeln('<a href="https://junimeek.net/uniterra/" target="_parent" class="saya-navbar-highlight-uniterra">UniTerra</a>');
     document.writeln('</div>');
     document.writeln('</div>');

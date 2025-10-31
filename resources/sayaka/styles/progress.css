@@ -36,17 +36,45 @@ code {
     background-color: white;
     margin-left: auto;
     margin-right: auto;
-    border: 3px solid #e6c977;
+    border-width: 3px;
+    border-style: solid;
     display: flex;
     flex-wrap: nowrap;
     flex-direction: row;
 }
 
+.progresspage-bordercolor-gold {
+    border-color: #e6c977;
+}
+
+.progresspage-bordercolor-neuro {
+    border-color: #381f29;
+}
+
+.progresspage-bordercolor-baldi {
+    border-color: red;
+}
+
 .progresspage-progressbar-fill {
     max-width: 100%;
     height: fit-content;
-    background-color: #367cab;
     text-align: right;
+}
+
+.progresspage-fillcolor-blue {
+    background-color: #367cab;
+}
+
+.progresspage-fillcolor-neuro {
+    background-color: #ef92bd;
+}
+
+.progresspage-fillcolor-youtube {
+    background-color: #ea333d;
+}
+
+.progresspage-fillcolor-baldi {
+    background-color: #17a912;
 }
 
 .progresspage-progressbar-nofill {

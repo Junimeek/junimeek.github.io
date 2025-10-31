@@ -42,9 +42,9 @@
     background-size: contain;
 }
 
-.bigbutton-sakemi {
-    background-color: #f19dff99;
-    background-image: url("./resources/sakemi-tree.webp");
+.bigbutton-kyokura {
+    background-color: #71333499;
+    background-image: url("./resources/kyoko-spear.webp");
     background-size: contain;
 }
 
@@ -65,9 +65,9 @@
     border-color: #eb747d;
 }
 
-.bigbutton-sakemi:hover {
-    background-color: #fad9ff99;
-    border-color: #f19dff;
+.bigbutton-kyokura:hover {
+    background-color: #bc5a7199;
+    border-color: #bc5a71;
 }
 
 .bigbutton-uniterra:hover {

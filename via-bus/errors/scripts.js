@@ -85,6 +85,9 @@ function GetTimetableLink(route)
         case 96:
             scheduleLink += "2025/01/Schedule096.pdf";
             break;
+        case 102:
+            scheduleLink += "2025/04/Schedule102-Primo.pdf";
+            break;
         case 202:
             scheduleLink += "2024/10/LineUp-0924_Rt202.pdf";
             break;
