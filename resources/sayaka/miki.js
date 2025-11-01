@@ -9,7 +9,7 @@ const loadScreenLocation = {
 function EnableMiki()
 {
     if (visualViewport.width < 900) {
-        OpenEmbedInNewTab();
+        OpenMikiEmbedInNewTab();
         return;
     }
 
