@@ -6,19 +6,19 @@
 
 .bigbutton-lineup {
     background-color: #411b43;
-    background-image: url("./thumb-lineup.jpg");
+    background-image: url("./thumb-lineup.webp");
     border-color: #411b43;
 }
 
 .bigbutton-betterbus {
     background-color: #32737a;
-    background-image: url("./thumb-betterbus.jpg");
+    background-image: url("./thumb-betterbus.webp");
     border-color: #32737a;
 }
 
 .bigbutton-errors {
     background-color: #bdae80;
-    background-image: url("./thumb-errors.jpg");
+    background-image: url("./thumb-errors.webp");
     border-color: #bdae80;
 }
 

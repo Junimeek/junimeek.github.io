@@ -1,0 +1,10 @@
+{
+    "name": "Nacogdoches Skip",
+    "implementation": 5,
+    "route-data":[
+        {
+            "type": "date",
+            "date": "August 18, 2025"
+        }
+    ]
+}

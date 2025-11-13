@@ -24,6 +24,18 @@
     font-size: 14pt;
 }
 
+.saya-table li {
+    margin-bottom: 1em;
+}
+
+.saya-table li li {
+    margin-bottom: 0.5em;
+}
+
+.saya-tablewidth-max {
+    width: 100%;
+}
+
 @media screen and (min-width: 900px) {
     .saya-tablewidth-600 {
         width: 80%;

@@ -103,6 +103,14 @@
     background-color: #8bb47b !important;
 }
 
+.saya-navbar-highlight-juni:hover {
+    background-color: #f19dff !important;
+}
+
+.saya-navbar-highlight-sayaka:hover {
+    background-color: #71c1cb !important;
+}
+
 .saya-navbar-dropdown-container {
     display: block;
 }

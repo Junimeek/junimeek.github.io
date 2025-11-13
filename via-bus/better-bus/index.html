@@ -12,7 +12,7 @@
         <script src="../../resources/sayaka/miki.js"></script>
     </head>
     
-    <body class="saya-lower-bg">
+    <body class="saya-lower-bg" onload="InitializePage()">
         <div id="miki-viewer" class="miki-disabled" onclick="DisableMiki()">
             <a href="javascript:void(0);" title="Close document viewer">
                 <div class="miki-button-close">
@@ -27,6 +27,31 @@
 
             <div class="miki-window miki-windowtype-pdf">
                 <iframe class="miki-frame" id="miki-frame" src="../../resources/sayaka/miki-loadscreen.html"></iframe>
+            </div>
+        </div>
+
+        <div id="popup-viewer" class="miki-disabled">
+            <div class="popup-background" onclick="CloseRoutePopup()"></div>
+            <div class="popup-window">
+                <div class="popup-taskbar">
+                    <a href="javascript:void(0);" onclick="BacktrackMemory()" title="Back">
+                        <div class="popup-button-back">
+                            <i class="fa fa-angle-double-left"></i>
+                        </div>
+                    </a>
+                    <span class="popup-memorypath" id="popup-path">
+                        10 <i class="fa fa-caret-right"></i> 17
+                    </span>
+                    <a href="javascript:void(0);" onclick="LoadRoutePopup(649)" title="Close document viewer">649</a>
+                    <a href="javascript:void(0);" onclick="CloseRoutePopup()" title="Close document viewer">
+                        <div class="popup-button-close">
+                            <i class="fa fa-window-close"></i>
+                        </div>
+                    </a>
+                </div>
+                <div class="popup-framecontainer">
+                    <iframe class="popup-frame" id="popup-frame" src="./popups/9.html"></iframe>
+                </div>
             </div>
         </div>
 
@@ -99,35 +124,40 @@
             <table class="saya-table saya-tablewidth-600">
                 <tbody>
                     <tr>
-                        <td width="20%" style="background-color: #e6883b;"><a href="#section-proposed" style="color: white;"><b>Current Proposed Changes</b></a></td>
+                        <td colspan="2" width="20%" style="background-color: #e6883b;"><a href="#section-proposed" style="color: white;"><b>Current Proposed Changes</b></a></td>
                         <td style="text-align: left;"><span>The list of changes that are proposed to go into effect for the next batch of service changes. Currently, the next set of service changes will happen on <b>January 12, 2026</b>.</span></td>
                     </tr>
                     <tr>
-                        <td width="20%" style="background-color: #863a8f;"><a href="#section-summary" style="color: white;"><b>Summary</b></a></td>
+                        <td colspan="2" width="20%" style="background-color: #863a8f;"><a href="#section-summary" style="color: white;"><b>Summary</b></a></td>
                         <td style="text-align: left;"><span>Some quick facts about Better Bus.</span></td>
                     </tr>
                     <tr>
-                        <td width="20%" style="background-color: #d22030;"><a href="#section-radial" style="color: white;"><b>Radial Routes</b></a></td>
+                        <td width="5px" style="background-color: #9fd6d3;"></td>
+                        <td width="20%" style="background-color: #d22030;"><a href="#section-routes" onclick="SwitchRoutePage(1)" style="color: white;"><b>Radial Routes</b></a></td>
                         <td style="text-align: left;"><span>Routes 2–97.<br/>These routes provide service to and from Downtown.</span></td>
                     </tr>
                     <tr>
-                        <td style="background-color: #383a72;"><a href="#section-primo" style="color: white;"><b>Prímo Routes</b></a></td>
+                        <td style="background-color: #9fd6d3;"></td>
+                        <td style="background-color: #383a72;"><a href="#section-routes" onclick="SwitchRoutePage(2)" style="color: white;"><b>Prímo Routes</b></a></td>
                         <td style="text-align: left;"><span>Routes 100, 102, and 103.<br/>These routes provide high-frequency service on heavy ridership cooridors.</span></td>
                     </tr>
                     <tr>
-                        <td style="background-color: #6e9ebb;"><a href="#section-crosstown" style="color: white;"><b>Crosstown Routes</b></a></td>
+                        <td style="background-color: #9fd6d3;"></td>
+                        <td style="background-color: #6e9ebb;"><a href="#section-routes" onclick="SwitchRoutePage(3)" style="color: white;"><b>Crosstown Routes</b></a></td>
                         <td style="text-align: left;"><span>Routes 501–552.<br/>These routes provide service on major corridors outside of Downtown.</span></td>
                     </tr>
                     <tr>
-                        <td style="background-color: #bfad81;"><a href="#section-circulator" style="color: white;"><b>Circulator Routes</b></a></td>
+                        <td style="background-color: #9fd6d3;"></td>
+                        <td style="background-color: #bfad81;"><a href="#section-routes" onclick="SwitchRoutePage(4)" style="color: white;"><b>Circulator Routes</b></a></td>
                         <td style="text-align: left;"><span>Routes 602–697.<br/>These routes provide local service within neighborhoods or on shorter arterial routes.</span></td>
                     </tr>
                     <tr>
-                        <td style="background-color: #618225;"><a href="#section-brt" style="color: white;"><b>VIA Rapid Routes</b></a></td>
+                        <td style="background-color: #9fd6d3;"></td>
+                        <td style="background-color: #618225;"><a href="#section-routes" onclick="SwitchRoutePage(5)" style="color: white;"><b>VIA Rapid Routes</b></a></td>
                         <td style="text-align: left;"><span>These are high-frequency Bus Rapid Transit lines set to launch in 2027.</span></td>
                     </tr>
                     <tr>
-                        <td style="background-color: #32737a;"><a href="#section-timeline" style="color: white;"><b>Timeline of Events</b></a></td>
+                        <td colspan="2" style="background-color: #32737a;"><a href="#section-timeline" style="color: white;"><b>Timeline of Events</b></a></td>
                         <td style="text-align: left;"><span>A log of the implementation of Better Bus</span></td>
                     </tr>
                 </tbody>
@@ -137,31 +167,6 @@
 
             <a name="section-proposed"></a>
             <h2 class="saya-h2">Current Proposed Changes</h2>
-            <p class="saya-short-paragraph">
-                These are changes that are proposed to go into effect on <b>November 3, 2025.</b>
-            </p>
-            
-            <div class="saya-scrollable-element">
-            <table class="saya-table saya-tablewidth-900">
-                <tbody>
-                    <tr class="saya-table-header">
-                        <th width="5%"><span>Route Number</span></th>
-                        <th width="20%"><span>Route Name</span></th>
-                        <th width="75%" style="min-width: 380px;"><span>Route Changes</span></th>
-                    </tr>
-                    <tr>
-                        <td><img class="via-big-number" src="../../resources/via/route-icons/link-southeast.webp"></td>
-                        <td><b>VIA Link Southeast</b></td>
-                        <td>
-                            <ul>
-                                <li>Add new VIA Link zone to operate from <span class="via-bustext via-busfreq-link">5:00am–11:00pm</span> to serve Brooks Transit Center, China Grove, Lakeside, and Sandy Oaks</li>
-                            </ul>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-            </div>
-            <br/>
 
             <p class="saya-short-paragraph">
                 These are changes that are proposed to go into effect on <b>January 12, 2026.</b>
@@ -194,6 +199,15 @@
                         </td>
                     </tr>
                     <tr>
+                        <td><img class="via-big-number" src="../../resources/via/route-icons/020.webp"></td>
+                        <td><b>New Braunfels Frequent</b></td>
+                        <td>
+                            <ul>
+                                <li>Extend service hours to 12:30am</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
                         <td><img class="via-big-number" src="../../resources/via/route-icons/022.webp"></td>
                         <td><b>Hays</b></td>
                         <td>
@@ -207,18 +221,9 @@
                         <td><b>East Commerce Frequent</b></td>
                         <td>
                             <ul>
-                                <li>Discontinue service to Royal View</li>
-                            </ul>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><img class="via-big-number" src="../../resources/via/route-icons/030.webp"></td>
-                        <td><b>Rigsby</b></td>
-                        <td>
-                            <ul>
-                                <li>Discontinue service to Lakeside and truncate eastern terminus to the Walmart at <b>Loop 410 & Rigsby</b>
+                                <li>Discontinue service to Royal View
                                     <ul>
-                                        <li>Lakeside will be served by <span class="via-bustext via-busfreq-link"><b>VIA Link Southeast</b></span></li>
+                                        <li>Lakeside will be served by <b class="via-bustext via-busfreq-link">VIA Link Southeast</b></li>
                                     </ul>
                                 </li>
                             </ul>
@@ -229,9 +234,9 @@
                         <td><b>South Flores</b></td>
                         <td>
                             <ul>
-                                <li>Increase frequency to <span class="via-bustext via-busfreq-30">30 minutes</span></li><br/>
-                                <li>Extend service hours to 12:30am</li><br/>
-                                <li>Extend southern terminus to <b>Commercial & Gillette</b></li>
+                                <li>Increase frequency to <span class="via-bustext via-busfreq-30">30 minutes</span></li>
+                                <li>Extend service hours to 12:30am</li>
+                                <li>Extend southern terminus to <b>Commercial & Gillette</b>
                             </ul>
                         </td>
                     </tr>
@@ -240,7 +245,7 @@
                         <td><b>Pleasanton</b></td>
                         <td>
                             <ul>
-                                <li>Extend service hours to 12:30am</li><br/>
+                                <li>Extend service hours to 12:30am</li>
                                 <li>Extend southern terminus to <b>Texas A&M University-San Antonio</b></li>
                             </ul>
                         </td>
@@ -250,14 +255,24 @@
                         <td><b>US-90 Express</b></td>
                         <td>
                             <ul>
-                                <li>Increase frequency to <span class="via-bustext via-busfreq-30">30 minutes</span></li><br/>
+                                <li>Increase frequency to <span class="via-bustext via-busfreq-30">30 minutes</span></li>
                                 <li>Discontinue service on Military Drive West and Richland Hills Drive
                                     <ul>
-                                        <li>Richland Hills Drive will be served by <span class="via-bustext via-busfreq-30"><b>Route 612 Kel-Lac / Westlakes / Ingram</b></span></li>
+                                        <li>Richland Hills Drive will be served by <b class="via-bustext via-busfreq-30">Route 612 Kel-Lac / Westlakes / Ingram</b></li>
                                     </ul>
-                                </li><br/>
-                                <li>Discontinue service on Ellison Drive and to SeaWorld San Antonio Main Entrance</li><br/>
+                                </li>
+                                <li>Discontinue service on Ellison Drive and to SeaWorld San Antonio Main Entrance</li>
                                 <li>Extend western terminus to <b>Alamo Ranch</b></li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><img class="via-big-number" src="../../resources/via/route-icons/068.webp"></td>
+                        <td><b>Guadalupe Frequent</b></td>
+                        <td>
+                            <ul>
+                                <li>Extend service hours to 12:30am</li>
+                                <li>Increase weekend frequency to <span class="via-bustext via-busfreq-20">15 minutes</span></li>
                             </ul>
                         </td>
                     </tr>
@@ -266,7 +281,7 @@
                         <td><b>IH-10 Crossroads / Roadrunner Express</b></td>
                         <td>
                             <ul>
-                                <li>Increase frequency to <span class="via-bustext via-busfreq-20">15 minutes</span> during weekday rush hours</li><br/>
+                                <li>Increase frequency to <span class="via-bustext via-busfreq-20">15 minutes</span> during weekday rush hours</li>
                                 <li>Realign westbound section through Downtown to <b>Commerce</b></li>
                             </ul>
                         </td>
@@ -276,7 +291,7 @@
                         <td><b>Vance Jackson Frequent</b></td>
                         <td>
                             <ul>
-                                <li>Extend service hours to 12:30am</li><br/>
+                                <li>Extend service hours to 12:30am</li>
                                 <li>Extend northern terminus to <b>UTSA Main Campus</b> via Hausman Road and Babcock Road</li>
                             </ul>
                         </td>
@@ -295,8 +310,8 @@
                         <td><b>Prímo Fredericksburg Road</b></td>
                         <td>
                             <ul>
-                                <li>Increase weekday frequency to <span class="via-bustext via-busfreq-20">12 minutes</span></li><br/>
-                                <li>Increase late-night weekday frequency to <span class="via-bustext via-busfreq-30">30 minutes</span></li><br/>
+                                <li>Increase weekday frequency to <span class="via-bustext via-busfreq-20">12 minutes</span></li>
+                                <li>Increase late-night weekday frequency to <span class="via-bustext via-busfreq-30">30 minutes</span></li>
                                 <li>Realign westbound section through Downtown to <b>Commerce</b></li>
                             </ul>
                         </td>
@@ -306,6 +321,16 @@
                         <td><b>Prímo Military</b></td>
                         <td>
                             <ul>
+                                <li>Increase late-night weekday frequency to <span class="via-bustext via-busfreq-30">30 minutes</span></li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><img class="via-big-number" src="../../resources/via/route-icons/103.webp"></td>
+                        <td><b>Prímo Zarzamora</b></td>
+                        <td>
+                            <ul>
+                                <li>Increase early morning weekday frequency (4:00am–6:00am) to <span class="via-bustext via-busfreq-20">12 minutes</span></li>
                                 <li>Increase late-night weekday frequency to <span class="via-bustext via-busfreq-30">30 minutes</span></li>
                             </ul>
                         </td>
@@ -368,7 +393,7 @@
                         <td><b>Wurzbach Frequent</b></td>
                         <td>
                             <ul>
-                                <li>Increase weekend frequency to <span class="via-bustext via-busfreq-20">20 minutes</span></li><br/>
+                                <li>Increase weekend frequency to <span class="via-bustext via-busfreq-20">20 minutes</span></li>
                                 <li>Extend service hours to 12:30am</li>
                             </ul>
                         </td>
@@ -378,7 +403,7 @@
                         <td><b>Medical Center / UTSA</b></td>
                         <td>
                             <ul>
-                                <li>Increase frequency to <span class="via-bustext via-busfreq-30">30 minutes</span></li><br/>
+                                <li>Increase frequency to <span class="via-bustext via-busfreq-30">30 minutes</span></li>
                                 <li>Realign section between De Zavala Road and UTSA to <b>Vance Jackson Road</b> and <b>La Cantera Parkway</b>
                                     <ul>
                                         <li>Service on De Zavala Road will be moved to <b class="via-bustext via-busfreq-20">Route 96 Vance Jackson Frequent</b></li>
@@ -401,8 +426,8 @@
                         <td><b>Valley-Hi / Rainbow Hills / Kel-Lac</b></td>
                         <td>
                             <ul>
-                                <li>Increase weekday frequency to <span class="via-bustext via-busfreq-30">30 minutes</span></li><br/>
-                                <li><a href="#route611">Realign entire route</a></li>
+                                <li>Increase weekday frequency to <span class="via-bustext via-busfreq-30">30 minutes</span></li>
+                                <li>Realign entire route to serve <b>Rainbow Hills</b> and <b>Hidden Cove</b></li>
                             </ul>
                         </td>
                     </tr>
@@ -411,7 +436,7 @@
                         <td><b>Kel-Lac / Westlakes / Ingram</b></td>
                         <td>
                             <ul>
-                                <li>Increase weekday frequency to <span class="via-bustext via-busfreq-30">30 minutes</span></li><br/>
+                                <li>Increase weekday frequency to <span class="via-bustext via-busfreq-30">30 minutes</span></li>
                                 <li>Extend northern terminus to Ingram Transit Center via Waters Edge Drive, Ingram Road, Richland Hills Drive, and the Loop 410 access road</li>
                             </ul>
                         </td>
@@ -447,8 +472,8 @@
                         <td><b>Kel-Lac / Port San Antonio / Valley-Hi</b></td>
                         <td>
                             <ul>
-                                <li>Increase weekday frequency to <span class="via-bustext via-busfreq-30">30 minutes</span></li><br/>
-                                <li><a href="#route619">Realign entire route</a></li>
+                                <li>Increase weekday frequency to <span class="via-bustext via-busfreq-30">30 minutes</span></li>
+                                <li>Realign entire route to serve <b>University Southwest Family Health Center</b>, <b>Port San Antonio</b>, <b>Briggs Medical Office Park</b>, and the Walmart at <b>Valley-Hi</b></li>
                             </ul>
                         </td>
                     </tr>
@@ -480,7 +505,7 @@
             <h2 class="saya-h2">Summary</h2>
             
             <div class="saya-scrollable-element">
-            <table class="saya-table saya-tablewidth-600">
+            <table class="saya-table saya-tablewidth-600 summary-table">
                 <tbody>
                     <tr>
                         <td width="10%" style="background-color: #149f2b;"><span style="color: white;"><b>New routes</b></span></td>
@@ -564,8 +589,75 @@
 
             <hr/>
 
+            <a name="section-routes"></a>
+            <p class="saya-short-paragraph">
+                Use the buttons below to navigate between different route types.
+            </p>
+
+            <ul class="pageselector">
+                <li><a class="" href="javascript:void(0);" onclick="SwitchRoutePage(-2)">&laquo;</a></li>
+                <li><a id="routeselector-1" class="" href="javascript:void(0);" onclick="SwitchRoutePage(1)">Radial</a></li>
+                <li><a id="routeselector-2" class="" href="javascript:void(0);" onclick="SwitchRoutePage(2)">Prímo</a></li>
+                <li><a id="routeselector-3" class="" href="javascript:void(0);" onclick="SwitchRoutePage(3)">Crosstown</a></li>
+                <li><a id="routeselector-4" class="" href="javascript:void(0);" onclick="SwitchRoutePage(4)">Circulator</a></li>
+                <li><a id="routeselector-5" class="" href="javascript:void(0);" onclick="SwitchRoutePage(5)">VIA Rapid</a></li>
+                <li><a class="" href="javascript:void(0);" onclick="SwitchRoutePage(-1)">&raquo;</a></li>
+            </ul>
+
+            <div id="routesection-radial" class="routegroup-disabled">
             <a name="section-radial"></a>
             <h2 class="saya-h2">Radial Routes (2–97)</h2>
+            <p class="saya-short-paragraph">
+                Select a route to see the proposed changes.
+            </p>
+            <div class="routeselector">
+                <a href="#route002"><img src="../../resources/via/route-icons/002.webp" loading="lazy"></a>
+                <a href="#route003"><img src="../../resources/via/route-icons/003.webp" loading="lazy"></a>
+                <a href="#route003"><img src="../../resources/via/route-icons/004.webp" loading="lazy"></a>
+                <a href="#route005"><img src="../../resources/via/route-icons/005.webp" loading="lazy"></a>
+                <a href="#route007"><img src="../../resources/via/route-icons/007.webp" loading="lazy"></a>
+                <a href="#route008"><img src="../../resources/via/route-icons/008.webp" loading="lazy"></a>
+                <a href="#route009"><img src="../../resources/via/route-icons/009.webp" loading="lazy"></a>
+                <a href="#route010"><img src="../../resources/via/route-icons/010.webp" loading="lazy"></a>
+                <a href="#route014"><img src="../../resources/via/route-icons/014.webp" loading="lazy"></a>
+                <a href="#route017"><img src="../../resources/via/route-icons/017.webp" loading="lazy"></a>
+                <a href="#route020"><img src="../../resources/via/route-icons/020.webp" loading="lazy"></a>
+                <a href="#route021"><img src="../../resources/via/route-icons/021.webp" loading="lazy"></a>
+                <a href="#route022"><img src="../../resources/via/route-icons/022.webp" loading="lazy"></a>
+                <a href="#route024"><img src="../../resources/via/route-icons/024.webp" loading="lazy"></a>
+                <a href="#route025"><img src="../../resources/via/route-icons/025.webp" loading="lazy"></a>
+                <a href="#route026"><img src="../../resources/via/route-icons/026.webp" loading="lazy"></a>
+                <a href="#route028"><img src="../../resources/via/route-icons/028.webp" loading="lazy"></a>
+                <a href="#route030"><img src="../../resources/via/route-icons/030.webp" loading="lazy"></a>
+                <a href="#route032"><img src="../../resources/via/route-icons/032.webp" loading="lazy"></a>
+                <a href="#route034"><img src="../../resources/via/route-icons/034.webp" loading="lazy"></a>
+                <a href="#route036"><img src="../../resources/via/route-icons/036.webp" loading="lazy"></a>
+                <a href="#route042"><img src="../../resources/via/route-icons/042.webp" loading="lazy"></a>
+                <a href="#route043"><img src="../../resources/via/route-icons/043.webp" loading="lazy"></a>
+                <a href="#route044"><img src="../../resources/via/route-icons/044.webp" loading="lazy"></a>
+                <a href="#route046"><img src="../../resources/via/route-icons/046.webp" loading="lazy"></a>
+                <a href="#route051"><img src="../../resources/via/route-icons/051.webp" loading="lazy"></a>
+                <a href="#route062"><img src="../../resources/via/route-icons/062.webp" loading="lazy"></a>
+                <a href="#route064"><img src="../../resources/via/route-icons/064.webp" loading="lazy"></a>
+                <a href="#route066"><img src="../../resources/via/route-icons/066.webp" loading="lazy"></a>
+                <a href="#route067"><img src="../../resources/via/route-icons/067.webp" loading="lazy"></a>
+                <a href="#route068"><img src="../../resources/via/route-icons/068.webp" loading="lazy"></a>
+                <a href="#route075"><img src="../../resources/via/route-icons/075.webp" loading="lazy"></a>
+                <a href="#route075"><img src="../../resources/via/route-icons/076.webp" loading="lazy"></a>
+                <a href="#route077"><img src="../../resources/via/route-icons/077.webp" loading="lazy"></a>
+                <a href="#route078"><img src="../../resources/via/future-icons/078.webp" loading="lazy"></a>
+                <a href="#route077"><img src="../../resources/via/route-icons/079.webp" loading="lazy"></a>
+                <a href="#route082"><img src="../../resources/via/route-icons/082.webp" loading="lazy"></a>
+                <a href="#route087"><img src="../../resources/via/future-icons/087.webp" loading="lazy"></a>
+                <a href="#route088"><img src="../../resources/via/route-icons/088.webp" loading="lazy"></a>
+                <a href="#route089"><img src="../../resources/via/route-icons/089.webp" loading="lazy"></a>
+                <a href="#route090"><img src="../../resources/via/route-icons/090.webp" loading="lazy"></a>
+                <a href="#route092"><img src="../../resources/via/future-icons/092.webp" loading="lazy"></a>
+                <a href="#route093"><img src="../../resources/via/route-icons/093.webp" loading="lazy"></a>
+                <a href="#route095"><img src="../../resources/via/route-icons/095.webp" loading="lazy"></a>
+                <a href="#route096"><img src="../../resources/via/route-icons/096.webp" loading="lazy"></a>
+                <a href="#route097"><img src="../../resources/via/route-icons/097.webp" loading="lazy"></a>
+            </div>
             
             <div class="saya-scrollable-element">
             <table class="saya-table saya-tablewidth-1300">
@@ -579,16 +671,18 @@
                     </tr>
                     <tr>
                         <td><img src="./status-x.webp"></td>
-                        <td><a name="route002"><img class="via-big-number" src="../../resources/via/route-icons/002.webp"></a></td>
+                        <td><img class="via-big-number" src="../../resources/via/route-icons/002.webp" loading="lazy"></td>
                         <td><b>Blanco / Martin Frequent</b></td>
                         <td>
+                            <a name="route002"></a>
                             <ul>
+                                <li>Extend service hours to 12:30am</li>
                                 <li>Truncate northern terminus at <b>Sir Winstston & Parliament</b>
                                     <ul>
-                                        <li>North Blanco road will be served by <a href="#route649" class="via-bustext via-busfreq-30"><b>Route 649 North Blanco</b></a></li>
+                                        <li>North Blanco road will be served by <a href="#route649" onclick="SwitchRoutePage(4)" class="via-bustext via-busfreq-30"><b>Route 649 North Blanco</b></a></li>
                                     </ul>
-                                </li><br/>
-                                <li>Reroute to serve <b>Centro Plaza</b></li><br/>
+                                </li>
+                                <li>Realign to serve <b>Centro Plaza</b> via Frio Street</li>
                                 <li>Move southern terminus to <b>Zarzamora & Buena Vista</b></li>
                             </ul>
                         </td>
@@ -596,13 +690,14 @@
                     </tr>
                     <tr>
                         <td><img src="./status-x.webp"></td>
-                        <td><img class="via-big-number" src="../../resources/via/route-icons/003.webp"><br/><img class="via-big-number" src="../../resources/via/route-icons/004.webp"></td>
+                        <td><img class="via-big-number" src="../../resources/via/route-icons/003.webp" loading="lazy"><br/><img class="via-big-number" src="../../resources/via/route-icons/004.webp"></td>
                         <td><b>San Pedro Skip,<br/>San Pedro Frequent</b></td>
                         <td>
+                            <a name="route003"></a>
                             <ul>
                                 <li>Eliminate routes
                                     <ul>
-                                        <li>San Pedro Avenue will served by <a class="via-bustext via-busfreq-rapidgreen" href="#section-brt"><b>ART Green Line</b></a></li>
+                                        <li>San Pedro Avenue will served by <a class="via-bustext via-busfreq-rapidgreen" href="#section-brt" onclick="SwitchRoutePage(5)"><b>ART Green Line</b></a></li>
                                     </ul>
                                 </li>
                             </ul>
@@ -611,30 +706,35 @@
                     </tr>
                     <tr>
                         <td><img src="./status-x.webp"></td>
-                        <td><img class="via-big-number" src="../../resources/via/future-icons/005.webp"></td>
+                        <td><img class="via-big-number" src="../../resources/via/future-icons/005.webp" loading="lazy"></td>
                         <td><b>McCullough</b></td>
                         <td>
+                            <a name="route005"></a>
                             <ul>
-                                <li>Increase frequency to <span class="via-bustext via-busfreq-30">30 minutes</span></li><br/>
+                                <li>Extend service hours to 12:30am</li>
+                                <li>Increase frequency to <span class="via-bustext via-busfreq-30">30 minutes</span></li>
                                 <li>Truncate northern terminus to <b>North Star Transit Center</b>
                                     <ul>
-                                        <li>SAT will be served by <a class="via-bustext via-busfreq-rapidgreen" href="#section-brt"><b>ART Green Line</b></a></li>
+                                        <li>San Antonio International Airport will be served by <a class="via-bustext via-busfreq-rapidgreen" href="#section-brt" onclick="SwitchRoutePage(5)"><b>ART Green Line</b></a></li>
                                     </ul>
                                 </li>
                             </ul>
                         </td>
-                        <td></td>
+                        <td><a href="javascript:void(0)" onclick="GetRouteProfile(5)"><i class="fa fa-download"></i></a></td>
                     </tr>
                     <tr>
                         <td><img src="./status-x.webp"></td>
-                        <td><img class="via-big-number" src="../../resources/via/route-icons/007.webp"></td>
+                        <td><img class="via-big-number" src="../../resources/via/route-icons/007.webp" loading="lazy"></td>
                         <td><b>US-281 Express</b></td>
                         <td>
+                            <a name="route007"></a>
                             <ul>
-                                <li>Add weekend service</li><br/>
+                                <li>Extend service hours to 11:00pm</li>
+                                <li>Add weekend service</li>
                                 <li>Truncate southern terminus at <b>Navarro & Villita</b>
                                     <ul>
-                                        <li>Brooks Transit Center will be served by <a href="#route092" class="via-bustext via-busfreq-30"><b>Route 92 Brooks/Medical Center Express</b></a> during rush hours, and <a class="via-bustext via-busfreq-rapidgreen" href="#section-brt"><b>ART Green Line</b></a> all other times</li>
+                                        <li>Brooks Transit Center will be served by <a href="#route092" class="via-bustext via-busfreq-30"><b>Route 92 Brooks/Medical Center Express</b></a> during rush hours,
+                                            and <a class="via-bustext via-busfreq-rapidgreen" href="#section-brt" onclick="SwitchRoutePage(5)"><b>ART Green Line</b></a> all other times</li>
                                     </ul>
                                 </li>
                             </ul>
@@ -643,101 +743,122 @@
                     </tr>
                     <tr>
                         <td><img src="./status-x.webp"></td>
-                        <td><a name="route008"><img class="via-big-number" src="../../resources/via/route-icons/008.webp"></a></td>
+                        <td><img class="via-big-number" src="../../resources/via/route-icons/008.webp" loading="lazy"></td>
                         <td><b>North St. Mary's / Perrin Beitel</b></td>
                         <td>
+                            <a name="route008"></a>
                             <ul>
-                                <li>Reroute northern portion to serve Austin Highway, Perrin Beitel, and Naco Pass
+                                <li>Extend service hours to 12:30am</li>
+                                <li>Increase weekend frequency to <span class="via-bustext via-busfreq-30">30 minutes</span></li>
+                                <li>Realign northern portion to serve Austin Highway, Perrin Beitel, and Naco Pass
                                     <ul>
-                                        <li>Rittiman Road and Park Village will be served by <a href="#route532" class="via-bustext via-busfreq-30"><b>Route 532 Rittiman / Walzem</b></a></li>
+                                        <li>Rittiman Road and Park Village will be served by <a href="#route532" onclick="SwitchRoutePage(3)" class="via-bustext via-busfreq-30"><b>Route 532 Rittiman / Walzem</b></a></li>
                                     </ul>
                                 </li>
                             </ul>
                         </td>
-                        <td></td>
+                        <td><a href="javascript:void(0)" onclick="GetRouteProfile(8)"><i class="fa fa-download"></i></a></td>
                     </tr>
                     <tr>
                         <td><img src="./status-check.webp"></td>
-                        <td><img class="via-big-number" src="../../resources/via/route-icons/009.webp"></td>
+                        <td><img class="via-big-number" src="../../resources/via/route-icons/009.webp" loading="lazy"></td>
                         <td><b>Broadway</b></td>
                         <td>
+                            <a name="route009"></a>
                             <b class="via-bustext"><u>Implemented on August 18, 2025</u></b>
                             <ul>
-                                <li>Reduce frequency to <span class="via-bustext via-busfreq-30">30 minutes</span></li><br/>
-                                <li>Move service on Nacogdoches Road to <span class="via-bustext via-busfreq-20"><b>Route 10 Nacogdoches Skip</b></span></li>
+                                <li>Reduced frequency to <span class="via-bustext via-busfreq-30">30 minutes</span></li>
+                                <li>Moved service on Nacogdoches Road to <a href="#route010" class="via-bustext via-busfreq-20"><b>Route 10 Nacogdoches Skip</b></a></li>
                             </ul>
                         </td>
                         <td><a href="javascript:void(0)" onclick="GetRouteProfile(9)"><i class="fa fa-download"></i></a></td>
                     </tr>
                     <tr>
                         <td><img src="./status-check.webp"></td>
-                        <td><img class="via-big-number" src="../../resources/via/route-icons/010.webp"></td>
+                        <td><img class="via-big-number" src="../../resources/via/route-icons/010.webp" loading="lazy"></td>
                         <td><b>Nacogdoches Skip</b></td>
                         <td>
+                            <a name="route010"></a>
                             <b class="via-bustext"><u>Implemented on August 18, 2025</u></b>
                             <ul>
-                                <li>Add new skip route with <a class="via-bustext via-busfreq-20">15 minute</a> frequency to connect <b>Centro Plaza</b> to <b>Naco Pass</b> via Broadway and Nacogdoches Road</li>
+                                <li>Added new skip route with <a class="via-bustext via-busfreq-20">15 minute</a> frequency to connect <b>Naco Pass</b> to <b>Centro Plaza</b> via Nacogdoches Road and Broadway</li>
                             </ul>
                         </td>
                         <td><a href="javascript:void(0)" onclick="GetRouteProfile(10)"><i class="fa fa-download"></i></a></td>
                     </tr>
                     <tr>
                         <td><img src="./status-x.webp"></td>
-                        <td><img class="via-big-number" src="../../resources/via/route-icons/014.webp"></td>
+                        <td><img class="via-big-number" src="../../resources/via/route-icons/014.webp" loading="lazy"></td>
                         <td><b>Perrin Beitel Skip</b></td>
                         <td>
+                            <a name="route014"></a>
+                            <b class="via-bustext"><u>Implemented on April 14, 2025</u></b>
+                            <ul>
+                                <li>Moved southern terminus to <b>Centro Plaza</b></li>
+                            </ul>
+                            <hr>
+                            <b class="via-bustext"><u>Not yet implemented</u></b>
                             <ul>
                                 <li>Eliminate route
                                     <ul>
-                                        <li>Austin Highway and Perrin Beitel Road will be served by <span class="via-bustext via-busfreq-30"><b>Route 8 North St. Mary's / Perrin Beitel</b></span></li>
-                                        <li>Broadway will be served by <span class="via-bustext via-busfreq-30"><b>Route 9 Broadway</b></span> and <span class="via-bustext via-busfreq-20"><b>Route 10 Nacogdoches Skip</b></span></li>
+                                        <li>Austin Highway and Perrin Beitel Road will be served by <a href="#route008" class="via-bustext via-busfreq-30"><b>Route 8 North St. Mary's / Perrin Beitel</b></a></li>
+                                        <li>Broadway will be served by <a href="#route009" class="via-bustext via-busfreq-30"><b>Route 9 Broadway</b></a> and <a href="#route010" class="via-bustext via-busfreq-20"><b>Route 10 Nacogdoches Skip</b></a></li>
                                     </ul>
                                 </li>
                             </ul>
                         </td>
-                        <td></td>
+                        <td><a href="javascript:void(0)" onclick="GetRouteProfile(8)"><i class="fa fa-download"></i></a></td>
                     </tr>
                     <tr>
                         <td><img src="./status-x.webp"></td>
-                        <td><img class="via-big-number" src="../../resources/via/route-icons/017.webp"></td>
+                        <td><img class="via-big-number" src="../../resources/via/route-icons/017.webp" loading="lazy"></td>
                         <td><b>IH-35 Express</b></td>
                         <td>
+                            <a name="route017"></a>
                             <ul>
+                                <li>Extend service hours to 12:30am</li>
                                 <li>Extend northern terminus to <b>Rolling Oaks Mall</b></li>
                             </ul>
                         </td>
                         <td><a href="javascript:void(0)" onclick="GetRouteProfile(17)"><i class="fa fa-download"></i></a></td>
                     </tr>
                     <tr>
-                        <td><img src="./status-check.webp"></td>
-                        <td><img class="via-big-number" src="../../resources/via/route-icons/020.webp"></td>
+                        <td><img src="./status-partial.webp"></td>
+                        <td><img class="via-big-number" src="../../resources/via/route-icons/020.webp" loading="lazy"></td>
                         <td><b>New Braunfels Frequent</b></td>
                         <td>
+                            <a name="route020"></a>
                             <b class="via-bustext"><u>Implemented on April 14, 2025</u></b>
                             <ul>
-                                <li>Increase weekend frequency to <span class="via-bustext via-busfreq-20">15 minutes</span></li>
+                                <li>Increased weekend frequency to <span class="via-bustext via-busfreq-20">15 minutes</span></li>
+                            </ul>
+                            <hr>
+                            <b class="via-bustext"><u>Not yet implemented</u></b>
+                            <ul>
+                                <li>Extend service hours to 12:30am</li>
                             </ul>
                         </td>
                         <td><a href="javascript:void(0)" onclick="GetRouteProfile(20)"><i class="fa fa-download"></i></a></td>
                     </tr>
                     <tr>
                         <td><img src="./status-partial.webp"></td>
-                        <td><img class="via-big-number" src="../../resources/via/future-icons/021.webp"></td>
+                        <td><img class="via-big-number" src="../../resources/via/future-icons/021.webp" loading="lazy"></td>
                         <td><b>Kirby / Ventura Frequent</b></td>
                         <td>
+                            <a name="route021"></a>
                             <b class="via-bustext"><u>Implemented on August 18, 2025</u></b>
                             <ul>
-                                <li>Increase frequency to <span class="via-bustext via-busfreq-30">30 minutes</span></li><br/>
-                                <li>Truncate eastern terminus to <b>FM 78 & Crestway</b>
+                                <li>Increased weekday frequency to <span class="via-bustext via-busfreq-30">30 minutes</span></li>
+                                <li>Truncated eastern terminus to <b>FM 78 & Crestway</b>
                                     <ul>
-                                        <li>Converse will be served by <a class="via-bustext via-busfreq-30" href="#route502"><b>Route 502 Thousand Oaks / Converse</b></a></li>
+                                        <li>Service in Converse moved to <a class="via-bustext via-busfreq-30" href="#route502" onclick="SwitchRoutePage(3)"><b>Route 502 Thousand Oaks / Converse</b></a></li>
                                     </ul>
                                 </li>
                             </ul>
-                            <hr/>
+                            <hr>
                             <b class="via-bustext"><u>Not yet implemented</u></b>
                             <ul>
-                                <li>Increase frequency to <span class="via-bustext via-busfreq-20">20 minutes</span></li><br/>
+                                <li>Increase frequency to <span class="via-bustext via-busfreq-20">20 minutes</span></li>
                                 <li>Move eastern terminus to <b>Randolph Air Force Base Commissioner Building</b></li>
                             </ul>
                         </td>
@@ -745,13 +866,14 @@
                     </tr>
                     <tr>
                         <td><img src="./status-x.webp"></td>
-                        <td><img class="via-big-number" src="../../resources/via/route-icons/022.webp"></td>
+                        <td><img class="via-big-number" src="../../resources/via/route-icons/022.webp" loading="lazy"></td>
                         <td><b>Hays</b></td>
                         <td>
+                            <a name="route022"></a>
                             <ul>
                                 <li>Eliminate route
                                     <ul>
-                                        <li>Nolan Street and Hays Street will be served by <span class="via-bustext via-busfreq-30"><b>Route 24 Gembler / Ashby</b></span></li>
+                                        <li>Nolan Street and Hays Street will be served by <a class="via-bustext via-busfreq-30" href="#route024"><b>Route 24 Gembler / Ashby</b></a></li>
                                     </ul>
                                 </li>
                             </ul>
@@ -760,13 +882,15 @@
                     </tr>
                     <tr>
                         <td><img src="./status-x.webp"></td>
-                        <td><img class="via-big-number" src="../../resources/via/route-icons/024.webp"></td>
-                        <td><b>Gembler / Ashby</b></td>
+                        <td><img class="via-big-number" src="../../resources/via/route-icons/024.webp" loading="lazy"></td>
+                        <td><b>East Houston</b></td>
                         <td>
+                            <a name="route024"></a>
                             <ul>
-                                <li>Realign route to serve <b>Nolan Street</b> and <b>Hays Street</b>
+                                <li>Extend service hours to 12:30am</li>
+                                <li>Realign route to <b>Nolan Street</b> and <b>Hays Street</b>
                                     <ul>
-                                        <li>East Houston between Walters Street and Martin Street will be served by <a class="via-bustext via-busfreq-rapidsilver" href="#section-brt"><b>ART Silver Line</b></a></li>
+                                        <li>East Houston between Walters Street and Martin Street will be served by <a class="via-bustext via-busfreq-rapidsilver" href="#section-brt" onclick="SwitchRoutePage(5)"><b>ART Silver Line</b></a></li>
                                     </ul>
                                 </li>
                             </ul>
@@ -775,13 +899,14 @@
                     </tr>
                     <tr>
                         <td><img src="./status-x.webp"></td>
-                        <td><img class="via-big-number" src="../../resources/via/route-icons/025.webp"></td>
+                        <td><img class="via-big-number" src="../../resources/via/route-icons/025.webp" loading="lazy"></td>
                         <td><b>East Commerce Frequent</b></td>
                         <td>
+                            <a name="route025"></a>
                             <ul>
                                 <li>Eliminate route
                                     <ul>
-                                        <li>East Commerce will be served by <a class="via-bustext via-busfreq-20" href="#route525"><b>Route 525 East Commerce / Ceralvo Frequent</b></a></li>
+                                        <li>East Commerce will be served by <a class="via-bustext via-busfreq-20" href="#route525" onclick="SwitchRoutePage(3)"><b>Route 525 East Commerce / Ceralvo Frequent</b></a></li>
                                     </ul>
                                 </li>
                             </ul>
@@ -790,13 +915,15 @@
                     </tr>
                     <tr>
                         <td><img src="./status-x.webp"></td>
-                        <td><img class="via-big-number" src="../../resources/via/route-icons/026.webp"></td>
+                        <td><img class="via-big-number" src="../../resources/via/route-icons/026.webp" loading="lazy"></td>
                         <td><b>Martin Luther King</b></td>
                         <td>
+                            <a name="route026"></a>
                             <ul>
-                                <li>Realign route to serve <b>Rice Road</b>
+                                <li>Extend service hours to 12:30am</li>
+                                <li>Realign route to <b>Rice Road</b>
                                     <ul>
-                                        <li>Martin Luther King east of Interstate 10 will be served by <a class="via-bustext via-busfreq-20" href="#route525"><b>Route 525 Commerce / Ceralvo Frequent</b></a></li>
+                                        <li>Martin Luther King east of Interstate 10 will be served by <a class="via-bustext via-busfreq-20" href="#route525" onclick="SwitchRoutePage(3)"><b>Route 525 Commerce / Ceralvo Frequent</b></a></li>
                                     </ul>
                                 </li>
                             </ul>
@@ -805,14 +932,15 @@
                     </tr>
                     <tr>
                         <td><img src="./status-x.webp"></td>
-                        <td><img class="via-big-number" src="../../resources/via/route-icons/028.webp"></td>
+                        <td><img class="via-big-number" src="../../resources/via/route-icons/028.webp" loading="lazy"></td>
                         <td><b>Porter Frequent</b></td>
                         <td>
+                            <a name="route028"></a>
                             <ul>
-                                <li>Truncate northern terminus to <b>Ellis Alley Park & Ride</b></li><br/>
+                                <li>Truncate northern terminus to <b>Ellis Alley Park & Ride</b></li>
                                 <li>Realign route to serve <b>Highland Hills</b> and <b>Brooks Transit Center</b>
                                     <ul>
-                                        <li>Rice Road will be served by <span class="via-bustext via-busfreq-30"><b>Route 26 Martin Luther King</b></span></li>
+                                        <li>Rice Road will be served by <a class="via-bustext via-busfreq-30" href="#route026"><b>Route 26 Martin Luther King</b></a></li>
                                     </ul>
                                 </li>
                             </ul>
@@ -821,18 +949,26 @@
                     </tr>
                     <tr>
                         <td><img src="./status-partial.webp"></td>
-                        <td><img class="via-big-number" src="../../resources/via/route-icons/030.webp"></td>
+                        <td><img class="via-big-number" src="../../resources/via/route-icons/030.webp" loading="lazy"></td>
                         <td><b>Rigsby</b></td>
                         <td>
+                            <a name="route030"></a>
+                            <b class="via-bustext"><u>Implemented on August 19, 2024</u></b>
+                            <ul>
+                                <li>Increased frequency to <span class="via-bustext via-busfreq-30">30 minutes</span> during during weekday rush hours</li>
+                            </ul>
+                            <hr>
                             <b class="via-bustext"><u>Implemented on August 18, 2025</u></b>
                             <ul>
-                                <li>Increase frequency to <span class="via-bustext via-busfreq-30">30 minutes</span></li>
+                                <li>Increased base weekday frequency to <span class="via-bustext via-busfreq-30">30 minutes</span></li>
                             </ul>
-                            <hr/>
+                            <hr>
                             <b class="via-bustext"><u>Not yet implemented</u></b>
                             <ul>
-                                <li>Extend western terminus to <b>Madison Square Park</b></li><br/>
-                                <li>Realign section on Cesar Chavez Blvd to serve the current <span class="via-bustext via-busfreq-60"><b>Route 32 Steves</b></span></li><br/>
+                                <li>Increase weekend frequency to <span class="via-bustext via-busfreq-30">30 minutes</span></li>
+                                <li>Extend service hours to 12:30am</li>
+                                <li>Extend western terminus to <b>Madison Square Park</b></li>
+                                <li>Realign section on Hackberry and Cesar Chavez Blvd to Florida / Carolina Street, Labor Street, Barrera Street, and Alamo Street</li>
                                 <li>Truncate eastern terminus to the Walmart at <b>Rigsby & Loop 410</b>
                                     <ul>
                                         <li>The area east of Loop 410 will be served by <span class="via-bustext via-busfreq-link"><b>VIA Link Eastside</b></span></li>
@@ -844,15 +980,16 @@
                     </tr>
                     <tr>
                         <td><img src="./status-x.webp"></td>
-                        <td><img class="via-big-number" src="../../resources/via/route-icons/032.webp"></td>
+                        <td><img class="via-big-number" src="../../resources/via/route-icons/032.webp" loading="lazy"></td>
                         <td><b>Steves</b></td>
                         <td>
+                            <a name="route032"></a>
                             <ul>
                                 <li>Eliminate route
                                     <ul>
-                                        <li>The section within downtown will be served by <span class="via-bustext via-busfreq-30"><b>Route 30 Rigsby</b></span></li>
-                                        <li>The section east of Clark Avenue will be served by <a class="via-bustext via-busfreq-30" href="#route547"><b>Route 547 Fort Sam Houston / Walters</b></a> and <span class="via-bustext via-busfreq-20"><b>Route 28 Porter Frequent</b></span></li>
-                                        <li>Brookside will be served by <a class="via-bustext via-busfreq-30" href="#route634"><b>Route 634 Goliad</b></a></li>
+                                        <li>The section within downtown will be served by <a class="via-bustext via-busfreq-30" href="route030"><b>Route 30 Rigsby</b></a></li>
+                                        <li>The section east of Clark Avenue will be served by <a class="via-bustext via-busfreq-30" href="#route547" onclick="SwitchRoutePage(3)"><b>Route 547 Fort Sam Houston / Walters</b></a> and <a class="via-bustext via-busfreq-20" href="#route028"><b>Route 28 Porter Frequent</b></a></li>
+                                        <li>Brookside will be served by <a class="via-bustext via-busfreq-30" href="#route634" onclick="SwitchRoutePage(4)"><b>Route 634 Goliad</b></a></li>
                                     </ul>
                                 </li>
                             </ul>
@@ -861,14 +998,15 @@
                     </tr>
                     <tr>
                         <td><img src="./status-x.webp"></td>
-                        <td><img class="via-big-number" src="../../resources/via/route-icons/034.webp"></td>
+                        <td><img class="via-big-number" src="../../resources/via/route-icons/034.webp" loading="lazy"></td>
                         <td><b>South St. Mary's Frequent</b></td>
                         <td>
+                            <a name="route034"></a>
                             <ul>
                                 <li>Eliminate route
                                     <ul>
-                                        <li>Downtown and South St. Mary's Street will be served by <a class="via-bustext via-busfreq-rapidgreen" href="#section-brt"><b>ART Green Line</b></a></li>
-                                        <li>McCreless Marketplace, Goliad Road, and Brooks Transit Center will be served by <a class="via-bustext via-busfreq-30" href="#route634"><b>Route 634 Goliad</b></a></li>
+                                        <li>Downtown and South St. Mary's Street will be served by <a class="via-bustext via-busfreq-rapidgreen" href="#section-brt" onclick="SwitchRoutePage(5)"><b>ART Green Line</b></a></li>
+                                        <li>McCreless Marketplace, Goliad Road, and Brooks Transit Center will be served by <a class="via-bustext via-busfreq-30" href="#route634" onclick="SwitchRoutePage(4)"><b>Route 634 Goliad</b></a></li>
                                     </ul>
                                 </li>
                             </ul>
@@ -877,13 +1015,14 @@
                     </tr>
                     <tr>
                         <td><img src="./status-x.webp"></td>
-                        <td><img class="via-big-number" src="../../resources/via/route-icons/036.webp"></td>
+                        <td><img class="via-big-number" src="../../resources/via/route-icons/036.webp" loading="lazy"></td>
                         <td><b>South Presa</b></td>
                         <td>
+                            <a name="route036"></a>
                             <ul>
                                 <li>Eliminate route
                                     <ul>
-                                        <li>South Presa between Eads and Brooks Transit Center will be served by <a class="via-bustext via-busfreq-30" href="#route636"><b>Route 636 Presa</b></a></li>
+                                        <li>South Presa between Eads and Brooks Transit Center will be served by <a class="via-bustext via-busfreq-30" href="#route636" onclick="SwitchRoutePage(4)"><b>Route 636 Presa</b></a></li>
                                     </ul>
                                 </li>
                             </ul>
@@ -892,14 +1031,15 @@
                     </tr>
                     <tr>
                         <td><img src="./status-x.webp"></td>
-                        <td><img class="via-big-number" src="../../resources/via/route-icons/042.webp"></td>
+                        <td><img class="via-big-number" src="../../resources/via/route-icons/042.webp" loading="lazy"></td>
                         <td><b>Roosevelt</b></td>
                         <td>
+                            <a name="route042"></a>
                             <ul>
                                 <li>Eliminate route
                                     <ul>
-                                        <li>Downtown will be served by <a class="via-bustext via-busfreq-rapidgreen" href="#section-brt"><b>ART Green Line</b></a></li>
-                                        <li>Roosevelt between Steves and Mission Del Lago will be served by <a class="via-bustext via-busfreq-30" href="#route642"><b>Route 642 Roosevelt</b></a></li>
+                                        <li>Downtown will be served by <a class="via-bustext via-busfreq-rapidgreen" href="#section-brt" onclick="SwitchRoutePage(5)"><b>ART Green Line</b></a></li>
+                                        <li>Roosevelt between Steves and Mission Del Lago will be served by <a class="via-bustext via-busfreq-30" href="#route642" onclick="SwitchRoutePage(4)"><b>Route 642 Roosevelt</b></a></li>
                                     </ul>
                                 </li>
                             </ul>
@@ -908,12 +1048,14 @@
                     </tr>
                     <tr>
                         <td><img src="./status-x.webp"></td>
-                        <td><img class="via-big-number" src="../../resources/via/future-icons/043.webp"></td>
+                        <td><img class="via-big-number" src="../../resources/via/future-icons/043.webp" loading="lazy"></td>
                         <td><b>South Flores</b></td>
                         <td>
+                            <a name="route043"></a>
                             <ul>
-                                <li>Increase frequency to <span class="via-bustext via-busfreq-30">30 minutes</span></li><br/>
-                                <li>Realign section on South Flores between Downtown and Theo Avenue to serve <b>Probandt</b></li><br/>
+                                <li>Increase frequency to <span class="via-bustext via-busfreq-30">30 minutes</span></li>
+                                <li>Extend service span to 12:30am</li>
+                                <li>Realign section on South Flores between Downtown and Theo Avenue to serve <b>Probandt</b></li>
                                 <li>Extend southern terminus to <b>Commercial & Gillette</b></li>
                             </ul>
                         </td>
@@ -921,16 +1063,19 @@
                     </tr>
                     <tr>
                         <td><img src="./status-partial.webp"></td>
-                        <td><img class="via-big-number" src="../../resources/via/route-icons/044.webp"></td>
+                        <td><img class="via-big-number" src="../../resources/via/route-icons/044.webp" loading="lazy"></td>
                         <td><b>Pleasanton</b></td>
                         <td>
+                            <a name="route044"></a>
                             <b class="via-bustext"><u>Implemented on April 14, 2025</u></b>
                             <ul>
-                                <li>Increase frequency to <span class="via-bustext via-busfreq-30">30 minutes</span></li>
+                                <li>Increased frequency to <span class="via-bustext via-busfreq-30">30 minutes</span></li>
+                                <li>Moved northern terminus to <b>Centro Plaza</b> via Cesar Chavez Blvd and Frio</li>
                             </ul>
-                            <hr/>
+                            <hr>
                             <b class="via-bustext"><u>Not yet implemented</u></b>
                             <ul>
+                                <li>Extend service span to 12:30am</li>
                                 <li>Extend southern terminus to <b>Texas A&M University-San Antonio</b></li>
                             </ul>
                         </td>
@@ -938,14 +1083,15 @@
                     </tr>
                     <tr>
                         <td><img src="./status-x.webp"></td>
-                        <td><img class="via-big-number" src="../../resources/via/route-icons/046.webp"></td>
+                        <td><img class="via-big-number" src="../../resources/via/route-icons/046.webp" loading="lazy"></td>
                         <td><b>Commercial</b></td>
                         <td>
+                            <a name="route046"></a>
                             <ul>
                                 <li>Eliminate route
                                     <ul>
-                                        <li>Probandt will be served by <span class="via-bustext via-busfreq-30"><b>Route 43 South Flores</b></span></li>
-                                        <li>Section south of Steves will be served by <a class="via-bustext via-busfreq-30" href="#route646"><b>Route 646 Commercial</b></a></li>
+                                        <li>Probandt will be served by <a class="via-bustext via-busfreq-30" href="#route043"><b>Route 43 South Flores</b></a></li>
+                                        <li>Section south of Steves will be served by <a class="via-bustext via-busfreq-30" href="#route646" onclick="SwitchRoutePage(4)"><b>Route 646 Commercial</b></a></li>
                                     </ul>
                                 </li>
                             </ul>
@@ -954,19 +1100,21 @@
                     </tr>
                     <tr>
                         <td><img src="./status-partial.webp"></td>
-                        <td><img class="via-big-number" src="../../resources/via/route-icons/051.webp"></td>
+                        <td><img class="via-big-number" src="../../resources/via/route-icons/051.webp" loading="lazy"></td>
                         <td><b>Nogalitos</b></td>
                         <td>
+                            <a name="route051"></a>
                             <b class="via-bustext"><u>Implemented on August 18, 2025</u></b>
                             <ul>
-                                <li>Increase frequency to <span class="via-bustext via-busfreq-30">30 minutes</span></li>
+                                <li>Increased frequency to <span class="via-bustext via-busfreq-30">30 minutes</span></li>
                             </ul>
                             <hr/>
                             <b class="via-bustext"><u>Not yet implemented</u></b>
                             <ul>
+                                <li>Extend service span to 12:30am</li>
                                 <li>Realign route in Downtown to serve Centro Plaza</b>
                                     <ul>
-                                        <li>South Alamo Street will be served by <span class="via-bustext via-busfreq-30"><b>Route 43 South Flores</b></span></li>
+                                        <li>South Alamo Street will be served by <a class="via-bustext via-busfreq-30" href="#route043"><b>Route 43 South Flores</b></a></li>
                                     </ul>
                                 </li>
                             </ul>
@@ -975,12 +1123,14 @@
                     </tr>
                     <tr>
                         <td><img src="./status-x.webp"></td>
-                        <td><img class="via-big-number" src="../../resources/via/future-icons/062.webp"></td>
+                        <td><img class="via-big-number" src="../../resources/via/future-icons/062.webp" loading="lazy"></td>
                         <td><b>Kirk</b></td>
                         <td>
+                            <a name="route062"></a>
                             <ul>
-                                <li>Increase frequency to <span class="via-bustext via-busfreq-30">30 minutes</span></li><br/>
-                                <li>Realign northern section to Colorado Street, bypassing Centro Plaza and serving Madison Square Park
+                                <li>Increase frequency to <span class="via-bustext via-busfreq-30">30 minutes</span></li>
+                                <li>Extend service span to 12:30am</li>
+                                <li>Realign northern section to Colorado Street to bypass Centro Plaza and serve Madison Square Park
                                     <ul>
                                         <li>Centro Plaza will be served by <a class="via-bustext via-busfreq-20" href="#route068"><b>Route 68 Guadalupe Frequent</b></a></li>
                                     </ul>
@@ -991,42 +1141,44 @@
                     </tr>
                     <tr>
                         <td><img src="./status-x.webp"></td>
-                        <td><img class="via-big-number" src="../../resources/via/future-icons/064.webp"></td>
+                        <td><img class="via-big-number" src="../../resources/via/future-icons/064.webp" loading="lazy"></td>
                         <td><b>US-90 Express</b></td>
                         <td>
+                            <a name="route064"></a>
                             <ul>
-                                <li>Increase frequency to <span class="via-bustext via-busfreq-30">30 minutes</span></li><br/>
-                                <li>Move eastern terminus to <b>Ellis Alley Park & Ride</b>
-                                    <ul>
-                                        <li>Realign Downtown section to <b>McCullough Avenue</b>
-                                        <li>Market Street will be served by <a class="via-bustext via-busfreq-rapidsilver" href="#section-brt"><b>ART Silver Line</b></a></li>
-                                    </ul>
-                                </li><br/>
-                                <li>Discontinue service on Military Drive West and Richland Hills Drive
-                                    <ul>
-                                        <li>Richland Hills Drive will be served by <a class="via-bustext via-busfreq-30" href="#route612"><b>Route 612 Kel-Lac / Westlakes / Ingram</b></a></li>
-                                    </ul>
-                                </li><br/>
+                                <li>Increase frequency to <span class="via-bustext via-busfreq-30">30 minutes</span></li>
+                                <li>Extend western terminus to <b>Alamo Ranch</b></li>
                                 <li>Discontinue service on Ellison Drive and to SeaWorld San Antonio Main Entrance
                                     <ul>
-                                        <li>Ellison Drive will be served by <a class="via-bustext via-busfreq-30" href="#route618"><b>Route 618 Ingram / Westover Hills / Kel-Lac</b></a></li>
+                                        <li>Ellison Drive will be served by <a class="via-bustext via-busfreq-30" href="#route618" onclick="SwitchRoutePage(4)"><b>Route 618 Ingram / Westover Hills / Kel-Lac</b></a></li>
                                         <li>SeaWorld San Antonio will be served by <span class="via-bustext via-busfreq-link"><b>VIA Link Tezel</b></span></li>
                                     </ul>
-                                </li><br/>
-                                <li>Extend western terminus to <b>Alamo Ranch</b></li>
+                                </li>
+                                <li>Discontinue service on Military Drive West and Richland Hills Drive
+                                    <ul>
+                                        <li>Richland Hills Drive will be served by <a class="via-bustext via-busfreq-30" href="#route612" onclick="SwitchRoutePage(4)"><b>Route 612 Kel-Lac / Westlakes / Ingram</b></a></li>
+                                    </ul>
+                                </li>
+                                <li>Move eastern terminus to <b>Ellis Alley Park & Ride</b>
+                                    <ul>
+                                        <li>Realign Downtown section from Market Street to <b>McCullough Avenue</b>
+                                        <li>Market Street will be served by <a class="via-bustext via-busfreq-rapidsilver" href="#section-brt" onclick="SwitchRoutePage(5)"><b>ART Silver Line</b></a></li>
+                                    </ul>
+                                </li>
                             </ul>
                         </td>
                         <td><a href="javascript:void(0)" onclick="GetRouteProfile(64)"><i class="fa fa-download"></i></a></td>
                     </tr>
                     <tr>
                         <td><img src="./status-x.webp"></td>
-                        <td><img class="via-big-number" src="../../resources/via/route-icons/066.webp"></td>
+                        <td><img class="via-big-number" src="../../resources/via/route-icons/066.webp" loading="lazy"></td>
                         <td><b>Ceralvo</b></td>
                         <td>
+                            <a name="route066"></a>
                             <ul>
                                 <li>Eliminate route
                                     <ul>
-                                        <li>Ceralvo Street will be served by <a class="via-bustext via-busfreq-20" href="#route525"><b>Route 525 East Commerce / Ceralvo Frequent</b></a></li>
+                                        <li>Ceralvo Street will be served by <a class="via-bustext via-busfreq-20" href="#route525" onclick="SwitchRoutePage(3)"><b>Route 525 East Commerce / Ceralvo Frequent</b></a></li>
                                     </ul>
                                 </li>
                             </ul>
@@ -1035,37 +1187,41 @@
                     </tr>
                     <tr>
                         <td><img src="./status-x.webp"></td>
-                        <td><img class="via-big-number" src="../../resources/via/future-icons/067.webp"></td>
+                        <td><img class="via-big-number" src="../../resources/via/future-icons/067.webp" loading="lazy"></td>
                         <td><b>Laredo</b></td>
                         <td>
+                            <a name="route067"></a>
                             <ul>
-                                <li>Increase frequency to <span class="via-bustext via-busfreq-30">30 minutes</span></li><br/>
-                                <li>Move eastern terminus to <b>Centro Plaza</b> via Brazos Street</li><br/>
+                                <li>Increase frequency to <span class="via-bustext via-busfreq-30">30 minutes</span></li>
                                 <li>Extend western terminus to <b>University Southwest Family Health Center</b> via El Past Street and 36th Street</li>
+                                <li>Move eastern terminus to <b>Centro Plaza</b> via Brazos Street</li>
                             </ul>
                         </td>
                         <td><a href="javascript:void(0)" onclick="GetRouteProfile(67)"><i class="fa fa-download"></i></a></td>
                     </tr>
                     <tr>
                         <td><img src="./status-x.webp"></td>
-                        <td><img class="via-big-number" src="../../resources/via/route-icons/068.webp"></td>
-                        <td><a name="route068"><b>Guadalupe Frequent</b></a></td>
+                        <td><img class="via-big-number" src="../../resources/via/route-icons/068.webp" loading="lazy"></td>
+                        <td><b>Guadalupe Frequent</b></td>
                         <td>
+                            <a name="route068"></a>
                             <ul>
                                 <li>Increase weekend frequency to <span class="via-bustext via-busfreq-20">15 minutes</span></li>
+                                <li>Extend service hours to 12:30am</li>
                             </ul>
                         </td>
                         <td><a href="javascript:void(0)" onclick="GetRouteProfile(68)"><i class="fa fa-download"></i></a></td>
                     </tr>
                     <tr>
                         <td><img src="./status-x.webp"></td>
-                        <td><img class="via-big-number" src="../../resources/via/route-icons/075.webp"><br/><img class="via-big-number" src="../../resources/via/route-icons/076.webp"></td>
+                        <td><img class="via-big-number" src="../../resources/via/route-icons/075.webp" loading="lazy"><br/><img class="via-big-number" src="../../resources/via/route-icons/076.webp"></td>
                         <td><b>West Commerce Frequent,<br/>West Commerce Skip</b></td>
                         <td>
+                            <a name="route075"></a>
                             <ul>
                                 <li>Eliminate routes
                                     <ul>
-                                        <li>West Commerce will served by <a class="via-bustext via-busfreq-rapidsilver" href="#section-brt"><b>ART Silver Line</b></a></li>
+                                        <li>West Commerce will served by <a class="via-bustext via-busfreq-rapidsilver" href="#section-brt" onclick="SwitchRoutePage(5)"><b>ART Silver Line</b></a></li>
                                     </ul>
                                 </li>
                             </ul>
@@ -1074,13 +1230,14 @@
                     </tr>
                     <tr>
                         <td><img src="./status-x.webp"></td>
-                        <td><img class="via-big-number" src="../../resources/via/route-icons/077.webp"><br/><img class="via-big-number" src="../../resources/via/route-icons/079.webp"></td>
-                        <td><b>Martin,<br/>Ruiz</b></td>
+                        <td><img class="via-big-number" src="../../resources/via/route-icons/077.webp" loading="lazy"><br/><img class="via-big-number" src="../../resources/via/route-icons/079.webp"></td>
+                        <td><b>Martin,<br>Ruiz</b></td>
                         <td>
+                            <a name="route077"></a>
                             <ul>
                                 <li>Eliminate routes
                                     <ul>
-                                        <li>Routes will be combined and replaced with <span class="via-bustext via-busfreq-30"><b>Route 78 Ruiz</b></span></li>
+                                        <li>Routes will be combined and replaced with <a class="via-bustext via-busfreq-30" href="#route078"><b>Route 78 Ruiz</b></a></li>
                                         <li>Martin Street will be served by <a class="via-bustext via-busfreq-20" href="#route002"><b>Route 2 Blanco</b></a></li>
                                     </ul>
                                 </li>
@@ -1090,9 +1247,10 @@
                     </tr>
                     <tr>
                         <td><img src="./status-x.webp"></td>
-                        <td><img class="via-big-number" src="../../resources/via/future-icons/078.webp"></td>
+                        <td><img class="via-big-number" src="../../resources/via/future-icons/078.webp" loading="lazy"></td>
                         <td><b>Ruiz</b></td>
                         <td>
+                            <a name="route078"></a>
                             <ul>
                                 <li>Add new route with <span class="via-bustext via-busfreq-30">30 minute</span> frequency to connect <b>Travis Park</b> to the <b>Southwest Research Institute</b> via Ruiz Street, NW 19th Street, Martin Street, NW 24th Street, Rivas Street, Inez Avenue, Aurora Avenue, West Commerce, and Callaghan</li>
                             </ul>
@@ -1101,10 +1259,12 @@
                     </tr>
                     <tr>
                         <td><img src="./status-x.webp"></td>
-                        <td><img class="via-big-number" src="../../resources/via/route-icons/082.webp"></td>
+                        <td><img class="via-big-number" src="../../resources/via/route-icons/082.webp" loading="lazy"></td>
                         <td><b>Culebra Frequent</b></td>
                         <td>
+                            <a name="route082"></a>
                             <ul>
+                                <li>Extend service hours to 12:30am</li>
                                 <li>Move southern terminus to <b>Navarro & Villita</b> via Flores Street</li>
                             </ul>
                         </td>
@@ -1112,9 +1272,10 @@
                     </tr>
                     <tr>
                         <td><img src="./status-x.webp"></td>
-                        <td><img class="via-big-number" src="../../resources/via/future-icons/087.webp"></td>
+                        <td><img class="via-big-number" src="../../resources/via/future-icons/087.webp" loading="lazy"></td>
                         <td><b>Bandera / Poplar</b></td>
                         <td>
+                            <a name="route087"></a>
                             <ul>
                                 <li>Add new route with <span class="via-bustext via-busfreq-30">30 minute</span> frequency to connect <b>Centro Plaza</b> to <b>Mainland</b> via Poplar Street, NW 24h Street, Bandera Road, and Evers Road</li>
                             </ul>
@@ -1123,13 +1284,14 @@
                     </tr>
                     <tr>
                         <td><img src="./status-x.webp"></td>
-                        <td><img class="via-big-number" src="../../resources/via/future-icons/088.webp"></td>
+                        <td><img class="via-big-number" src="../../resources/via/future-icons/088.webp" loading="lazy"></td>
                         <td><b>Bandera Skip</b></td>
                         <td>
+                            <a name="route088"></a>
                             <ul>
-                                <li>Move service on Evers Road to <span class="via-bustext via-busfreq-30"><b>Route 87 Poplar / Bandera</b></span></li><br/>
-                                <li>Change service type to Skip Service</li><br/>
-                                <li>Limited stop service at:
+                                <li>Extend service hours to 12:30am</li>
+                                <li>Move service on Evers Road to <a class="via-bustext via-busfreq-30" href="#route087"><b>Route 87 Poplar / Bandera</b></a></li>
+                                <li>Change service type to Skip Service, with limited-stop service at:
                                     <ul>
                                         <li>Pecan & St. Mary's</li>
                                         <li>Pecan & Navarro</li>
@@ -1155,15 +1317,17 @@
                     </tr>
                     <tr>
                         <td><img src="./status-x.webp"></td>
-                        <td><img class="via-big-number" src="../../resources/via/future-icons/089.webp"></td>
+                        <td><img class="via-big-number" src="../../resources/via/future-icons/089.webp" loading="lazy"></td>
                         <td><b>Woodlawn</b></td>
                         <td>
+                            <a name="route089"></a>
                             <ul>
-                                <li>Increase frequency to <span class="via-bustext via-busfreq-30">30 minutes</span></li><br/>
-                                <li>Move eastern terminus to <b>Madison Square Park</b></li><br/>
+                                <li>Increase frequency to <span class="via-bustext via-busfreq-30">30 minutes</span></li>
+                                <li>Extend service hours to 12:30am</li>
+                                <li>Move eastern terminus to <b>Madison Square Park</b></li>
                                 <li>Realign section between Camino Santa Maria and Downtown to <b>Fredericksburg Road</b> and <b>Woodlawn Avenue</b>
                                     <ul>
-                                        <li>Service on Poplar will be moved to <span class="via-bustext via-busfreq-30"><b>Route 87 Poplar / Bandera</b></span></li>
+                                        <li>Service on Poplar will be moved to <a class="via-bustext via-busfreq-30" href="#route087"><b>Route 87 Poplar / Bandera</b></a></li>
                                     </ul>
                                 </li>
                             </ul>
@@ -1172,19 +1336,26 @@
                     </tr>
                     <tr>
                         <td><img src="./status-partial.webp"></td>
-                        <td><img class="via-big-number" src="../../resources/via/route-icons/090.webp"></td>
+                        <td><img class="via-big-number" src="../../resources/via/route-icons/090.webp" loading="lazy"></td>
                         <td><b>Woodlawn</b></td>
                         <td>
+                            <a name="route090"></a>
+                            <b class="via-bustext"><u>Implemented on August 19, 2024</u></b>
+                            <ul>
+                                <li>Increased frequency to <span class="via-bustext via-busfreq-30">30 minutes</span> during weekday rush hours</li>
+                            </ul>
+                            <hr>
                             <b class="via-bustext"><u>Implemented on August 18, 2025</u></b>
                             <ul>
-                                <li>Increase frequency to <span class="via-bustext via-busfreq-30">30 minutes</span></li>
+                                <li>Increased base weekday frequency to <span class="via-bustext via-busfreq-30">30 minutes</span></li>
                             </ul>
-                            <hr/>
+                            <hr>
                             <b class="via-bustext"><u>Not yet implemented</u></b>
                             <ul>
+                                <li>Increase weekend frequency to <span class="via-bustext via-busfreq-30">30 minutes</span></li>
                                 <li>Realign route to reach Downtown via <b>Josephine Street</b> and <b>Broadway</b>
                                     <ul>
-                                        <li>Service on Main Avenue will be moved to route <span class="via-bustext via-busfreq-30"><b>Route 95 Fredericksburg</b></span> and <span class="via-bustext via-busfreq-20"><b>Route 96 Vance Jackson Frequent</b></span></li>
+                                        <li>Service on Main Avenue will be moved to route <a class="via-bustext via-busfreq-30" href="#route095"><b>Route 95 Fredericksburg</b></a> and <a class="via-bustext via-busfreq-20" href="#route096"><b>Route 96 Vance Jackson Frequent</b></a></li>
                                     </ul>
                                 </li>
                             </ul>
@@ -1193,9 +1364,10 @@
                     </tr>
                     <tr>
                         <td><img src="./status-x.webp"></td>
-                        <td><img class="via-big-number" src="../../resources/via/future-icons/092.webp"></td>
-                        <td><a name="route092"><b>Brooks / Medical Center Express</b></a></td>
+                        <td><img class="via-big-number" src="../../resources/via/future-icons/092.webp" loading="lazy"></td>
+                        <td><b>Brooks / Medical Center Express</b></td>
                         <td>
+                            <a name="route092"></a>
                             <ul>
                                 <li>Add new express route to operate during rush hours on weekdays only with a <span class="via-bustext via-busfreq-30">30 minute</span> frequency
                                     <ul>
@@ -1210,33 +1382,35 @@
                     </tr>
                     <tr>
                         <td><img src="./status-x.webp"></td>
-                        <td><img class="via-big-number" src="../../resources/via/route-icons/093.webp"></td>
+                        <td><img class="via-big-number" src="../../resources/via/route-icons/093.webp" loading="lazy"></td>
                         <td><b>IH-10 / Roadrunner Express</b></td>
                         <td>
+                            <a name="route093"></a>
                             <ul>
                                 <li>Truncate northern terminus at <b>UTSA Main Campus</b>
                                     <ul>
-                                        <li>La Cantera Parkway and The Rim will be served by <a class="via-bustext via-busfreq-30" href="#route603"><b>Route 603 Medical Center / UTSA</b></a> and <a class="via-bustext via-busfreq-30" href="#route697"><b>Route 697 Military Highway</b></a></li>
+                                        <li>La Cantera Parkway and The Rim will be served by <a class="via-bustext via-busfreq-30" href="#route603" onclick="SwitchRoutePage(4)"><b>Route 603 Medical Center / UTSA</b></a> and <a class="via-bustext via-busfreq-30" href="#route697" onclick="SwitchRoutePage(4)"><b>Route 697 Military Highway</b></a></li>
                                         <li>Six Flags Fiesta Texas will be served by <span class="via-bustext via-busfreq-link"><b>VIA Link Mainland</b></span></li>
                                         <li>Northbound trips will continue to La Cantera and The Rim on weekends only</li>
                                     </ul>
-                                </li><br/>
-                                <li>Service on Martin Street will be discontinued</li><br/>
-                                <li>Southern terminus will be extended to <b>Ellis Alley Park & Ride</b></li>
+                                </li>
+                                <li>Service on Martin Street will be discontinued</li>
+                                <li>Extend southern terminus to <b>Ellis Alley Park & Ride</b></li>
                             </ul>
                         </td>
                         <td><a href="javascript:void(0)" onclick="GetRouteProfile(93)"><i class="fa fa-download"></i></a></td>
                     </tr>
                     <tr>
                         <td><img src="./status-x.webp"></td>
-                        <td><img class="via-big-number" src="../../resources/via/future-icons/095.webp"></td>
+                        <td><img class="via-big-number" src="../../resources/via/future-icons/095.webp" loading="lazy"></td>
                         <td><b>Fredericksburg</b></td>
                         <td>
+                            <a name="route095"></a>
                             <ul>
-                                <li>Reduce frequency to <a class="via-bustext via-busfreq-30">30 minutes</a></li><br/>
+                                <li>Reduce frequency to <span class="via-bustext via-busfreq-30">30 minutes</span></li>
                                 <li>Realign segment on San Pedro Avenue will to <b>Main Avenue</b>
                                     <ul>
-                                        <li>Service on San Pedro Avenue will be moved to <a class="via-bustext via-busfreq-rapidgreen" href="#section-brt"><b>ART Green Line</b></a></li>
+                                        <li>Service on San Pedro Avenue will be moved to <a class="via-bustext via-busfreq-rapidgreen" href="#section-brt" onclick="SwitchRoutePage(5)"><b>ART Green Line</b></a></li>
                                     </ul>
                                 </li>
                             </ul>
@@ -1245,20 +1419,22 @@
                     </tr>
                     <tr>
                         <td><img src="./status-x.webp"></td>
-                        <td><img class="via-big-number" src="../../resources/via/route-icons/096.webp"></td>
-                        <td><a name="route096"><b>Vance Jackson Frequent</b></a></td>
+                        <td><img class="via-big-number" src="../../resources/via/route-icons/096.webp" loading="lazy"></td>
+                        <td><b>Vance Jackson Frequent</b></td>
                         <td>
+                            <a name="route096"></a>
                             <ul>
+                                <li>Extend service hours to 12:30am</li>
                                 <li>Realign segment on San Pedro Avenue will to <b>Main Avenue</b>
                                     <ul>
-                                        <li>Service on San Pedro Avenue will be moved to <a class="via-bustext via-busfreq-rapidgreen" href="#section-brt"><b>ART Green Line</b></a></li>
+                                        <li>Service on San Pedro Avenue will be moved to <a class="via-bustext via-busfreq-rapidgreen" href="#section-brt" onclick="SwitchRoutePage(5)"><b>ART Green Line</b></a></li>
                                     </ul>
-                                </li><br/>
+                                </li>
                                 <li>Section between Huebner Road and Silicon Road will be realigned to <b>Vance Jackson</b>
                                     <ul>
-                                        <li>Service on Network Drive will be moved to <a class="via-bustext via-busfreq-30" href="#route509"><b>Route 509 Hildebrand / Babcock</b></a></li>
+                                        <li>Service on Network Drive will be moved to <a class="via-bustext via-busfreq-30" href="#route509" onclick="SwitchRoutePage(3)"><b>Route 509 Hildebrand / Babcock</b></a></li>
                                     </ul>
-                                </li><br/>
+                                </li>
                                 <li>Extend northern terminus to <b>UTSA Main Campus</b> via Hausman Road and Babcock Road</li>
                             </ul>
                         </td>
@@ -1266,14 +1442,15 @@
                     </tr>
                     <tr>
                         <td><img src="./status-x.webp"></td>
-                        <td><img class="via-big-number" src="../../resources/via/route-icons/097.webp"></td>
+                        <td><img class="via-big-number" src="../../resources/via/route-icons/097.webp" loading="lazy"></td>
                         <td><b>West Avenue</b></td>
                         <td>
+                            <a name="route097"></a>
                             <ul>
                                 <li>Eliminate route
                                     <ul>
-                                        <li>West Avenue will be served by <a class="via-bustext via-busfreq-30" href="#route514"><b>Route 514 Jackson Keller / West 24th</b></a></li>
-                                        <li>NW Military Highway will be served by <a class="via-bustext via-busfreq-30" href="#route697"><b>Route 697 Military Highway</b></a></li>
+                                        <li>West Avenue will be served by <a class="via-bustext via-busfreq-30" href="#route514" onclick="SwitchRoutePage(3)"><b>Route 514 Jackson Keller / West 24th</b></a></li>
+                                        <li>NW Military Highway will be served by <a class="via-bustext via-busfreq-30" href="#route697" onclick="SwitchRoutePage(4)"><b>Route 697 Military Highway</b></a></li>
                                     </ul>
                                 </li>
                             </ul>
@@ -1283,11 +1460,21 @@
                 </tbody>
             </table>
             </div>
+            </div>
 
-            <hr/>
 
+            <div id="routesection-primo" class="routegroup-disabled">
             <a name="section-primo"></a>
             <h2 class="saya-h2">Prímo Routes (100–103)</h2>
+
+            <p class="saya-short-paragraph">
+                Select a route to see the proposed changes.
+            </p>
+            <div class="routeselector">
+                <a href="#route100"><img src="../../resources/via/route-icons/100.webp" loading="lazy"></a>
+                <a href="#route102"><img src="../../resources/via/route-icons/102.webp" loading="lazy"></a>
+                <a href="#route103"><img src="../../resources/via/route-icons/103.webp" loading="lazy"></a>
+            </div>
 
             <div class="saya-scrollable-element">
             <table class="saya-table saya-tablewidth-1300">
@@ -1301,11 +1488,12 @@
                     </tr>
                     <tr>
                         <td><img src="./status-x.webp"></td>
-                        <td><img class="via-big-number" src="../../resources/via/route-icons/100.webp"></td>
+                        <td><img class="via-big-number" src="../../resources/via/route-icons/100.webp" loading="lazy"></td>
                         <td><b>Prímo Fredericksburg Road</b></td>
                         <td>
+                            <a name="route100"></a>
                             <ul>
-                                <li>Increase frequency to <span class="via-bustext via-busfreq-20">12 minutes</span></li><br/>
+                                <li>Increase frequency to <span class="via-bustext via-busfreq-20">12 minutes</span></li>
                                 <li>Discontinue service on Martin Street</li>
                             </ul>
                         </td>
@@ -1313,21 +1501,28 @@
                     </tr>
                     <tr>
                         <td><img src="./status-noweekend.webp"></td>
-                        <td><img class="via-big-number" src="../../resources/via/route-icons/102.webp"></td>
-                        <td><a name="route102"><b>Prímo Military</b></a></td>
+                        <td><img class="via-big-number" src="../../resources/via/route-icons/102.webp" loading="lazy"></td>
+                        <td><b>Prímo Military</b></td>
                         <td>
+                            <a name="route102"></a>
                             <b class="via-bustext"><u>Implemented on April 14, 2025</u></b>
                             <ul>
-                                <li>Increase weekday frequency to <span class="via-bustext via-busfreq-20">12 minutes</span></li>
+                                <li>Increased weekday frequency to <span class="via-bustext via-busfreq-20">12 minutes</span></li>
+                            </ul>
+                            <hr>
+                            <b class="via-bustext"><u>Not yet implemented</u></b>
+                            <ul>
+                                <li>Increase weekend frequency to <span class="via-bustext via-busfreq-20">12 minutes</span></li>
                             </ul>
                         </td>
                         <td><a href="javascript:void(0)" onclick="GetRouteProfile(102)"><i class="fa fa-download"></i></a></td>
                     </tr>
                     <tr>
                         <td><img src="./status-x.webp"></td>
-                        <td><img class="via-big-number" src="../../resources/via/route-icons/103.webp"></td>
+                        <td><img class="via-big-number" src="../../resources/via/route-icons/103.webp" loading="lazy"></td>
                         <td><b>Prímo Zarzamora</b></td>
                         <td>
+                            <a name="route103"></a>
                             <ul>
                                 <li>Reduce frequency to <span class="via-bustext via-busfreq-20">15 minutes</span></li>
                             </ul>
@@ -1337,10 +1532,34 @@
                 </tbody>
             </table>
             </div>
+            </div>
 
-            <hr/>
+
+            <div id="routesection-crosstown" class="routegroup-disabled">
             <a name="section-crosstown"></a>
             <h2 class="saya-h2">Crosstown Routes (501–522)</h2>
+
+            <p class="saya-short-paragraph">
+                Select a route to see the proposed changes.
+            </p>
+            <div class="routeselector">
+                <a href="#route501"><img src="../../resources/via/route-icons/501.webp" loading="lazy"></a>
+                <a href="#route502"><img src="../../resources/via/route-icons/502.webp" loading="lazy"></a>
+                <a href="#route503"><img src="../../resources/via/route-icons/503.webp" loading="lazy"></a>
+                <a href="#route505"><img src="../../resources/via/route-icons/505.webp" loading="lazy"></a>
+                <a href="#route507"><img src="../../resources/via/future-icons/507.webp" loading="lazy"></a>
+                <a href="#route509"><img src="../../resources/via/route-icons/509.webp" loading="lazy"></a>
+                <a href="#route514"><img src="../../resources/via/future-icons/514.webp" loading="lazy"></a>
+                <a href="#route515"><img src="../../resources/via/route-icons/515.webp" loading="lazy"></a>
+                <a href="#route522"><img src="../../resources/via/route-icons/522.webp" loading="lazy"></a>
+                <a href="#route524"><img src="../../resources/via/route-icons/524.webp" loading="lazy"></a>
+                <a href="#route525"><img src="../../resources/via/future-icons/525.webp" loading="lazy"></a>
+                <a href="#route532"><img src="../../resources/via/future-icons/532.webp" loading="lazy"></a>
+                <a href="#route534"><img src="../../resources/via/route-icons/534.webp" loading="lazy"></a>
+                <a href="#route544"><img src="../../resources/via/future-icons/544.webp" loading="lazy"></a>
+                <a href="#route547"><img src="../../resources/via/future-icons/547.webp" loading="lazy"></a>
+                <a href="#route552"><img src="../../resources/via/route-icons/552.webp" loading="lazy"></a>
+            </div>
 
             <div class="saya-scrollable-element">
             <table class="saya-table saya-tablewidth-1300">
@@ -1354,13 +1573,14 @@
                     </tr>
                     <tr>
                         <td><img src="./status-x.webp"></td>
-                        <td><img class="via-big-number" src="../../resources/via/route-icons/501.webp"></td>
+                        <td><img class="via-big-number" src="../../resources/via/route-icons/501.webp" loading="lazy"></td>
                         <td><b>UTSA / Leon Valley</b></td>
                         <td>
+                            <a name="route501"></a>
                             <ul>
                                 <li>Eliminate route
                                     <ul>
-                                        <li>Huebner Road will be served by <a class="via-bustext via-busfreq-30" href="#route609"><b>Route 609 Medical Center / Ingram / Kel-Lac</b></a></li>
+                                        <li>Huebner Road will be served by <a class="via-bustext via-busfreq-30" href="#route609" onclick="SwitchRoutePage(4)"><b>Route 609 Medical Center / Ingram / Kel-Lac</b></a></li>
                                     </ul>
                                 </li>
                             </ul>
@@ -1369,24 +1589,31 @@
                     </tr>
                     <tr>
                         <td><img src="./status-noweekend.webp"></td>
-                        <td><a name="route502"><img class="via-big-number" src="../../resources/via/route-icons/502.webp"></a></td>
+                        <td><img class="via-big-number" src="../../resources/via/route-icons/502.webp" loading="lazy"></td>
                         <td><b>Thousand Oaks / Converse</b></td>
                         <td>
+                            <a name="route502"></a>
                             <b class="via-bustext"><u>Implemented on August 18, 2025</u></b>
                             <ul>
-                                <li>Extend western terminus to <b>FM 78 & Crestway</b> via Randolph Blvd, O'Connor Road, New World Drive, Kitty Hawk, Wind Burn Trail, Topperwein, Seguin Road, FM 1516, and Crestway</li>
+                                <li>Extended western terminus to <b>FM 78 & Crestway</b> via Randolph Blvd, O'Connor Road, New World Drive, Kitty Hawk, Wind Burn Trail, Topperwein, Seguin Road, FM 1516, and Crestway</li>
+                            </ul>
+                            <hr>
+                            <b class="via-bustext"><u>Not yet implemented</u></b>
+                            <ul>
+                                <li>Increase weekend frequency to <span class="via-bustext via-busfreq-30">30 minutes</span></li>
                             </ul>
                         </td>
                         <td><a href="javascript:void(0)" onclick="GetRouteProfile(502)"><i class="fa fa-download"></i></a></td>
                     </tr>
                     <tr>
                         <td><img src="./status-x.webp"></td>
-                        <td><img class="via-big-number" src="../../resources/via/future-icons/503.webp"></td>
-                        <td><a name="route503"><b>Huebner</b></a></td>
+                        <td><img class="via-big-number" src="../../resources/via/future-icons/503.webp" loading="lazy"></td>
+                        <td><b>Huebner</b></td>
                         <td>
+                            <a name="route503"></a>
                             <ul>
-                                <li>Increase frequency to <span class="via-bustext via-busfreq-30">30 minutes</span></li><br/>
-                                <li>Section between Loop 1604 and Sonterra Blvd will be realigned to <b>Huebner Road</b></li><br/>
+                                <li>Increase frequency to <span class="via-bustext via-busfreq-30">30 minutes</span></li>
+                                <li>Section between Loop 1604 and Sonterra Blvd will be realigned to <b>Huebner Road</b></li>
                                 <li>Move northern terminus to the Walmart at <b>US-281 & Loop 1604</b> via Sonterra Blvd
                                     <ul>
                                         <li>Stone Oak Parkway and Stone Oak Park & Ride will be served by <a class="via-bustext via-busfreq-link"><b>VIA Link Stone Oak</b></a></li>
@@ -1398,9 +1625,10 @@
                     </tr>
                     <tr>
                         <td><img src="./status-x.webp"></td>
-                        <td><img class="via-big-number" src="../../resources/via/future-icons/505.webp"></td>
+                        <td><img class="via-big-number" src="../../resources/via/future-icons/505.webp" loading="lazy"></td>
                         <td><b>Basse</b></td>
                         <td>
+                            <a name="route505"></a>
                             <ul>
                                 <li>Increase frequency to <span class="via-bustext via-busfreq-30">30 minutes</span></li>
                             </ul>
@@ -1409,13 +1637,14 @@
                     </tr>
                     <tr>
                         <td><img src="./status-x.webp"></td>
-                        <td><img class="via-big-number" src="../../resources/via/future-icons/507.webp"></td>
+                        <td><img class="via-big-number" src="../../resources/via/future-icons/507.webp" loading="lazy"></td>
                         <td><b>Stone Oak / Medical Center Express</b></td>
                         <td>
+                            <a name="route507"></a>
                             <ul>
-                                <li>Add new express route with <span class="via-bustext via-busfreq-30">30 minute</span> frequency to connect <b>Stone Oak Park & Ride</b>, <b>San Antonio International Airport</b>, and <b>South Texas Medical Center Transit Center</b> via US-281 and Loop 410</li>
+                                <li>Add new express route with <span class="via-bustext via-busfreq-30">30 minute</span> frequency to connect <b>Stone Oak Park & Ride</b>, <b>San Antonio International Airport</b>, and <b>South Texas Medical Center Transit Center</b> via US-281 and Loop 410
                                     <ul>
-                                        <li>The segment between SAT and the Medical Center will not operate on weekends</li>
+                                        <li>The segment between the Airport and the Medical Center will not operate on weekends</li>
                                     </ul>
                                 </li>
                             </ul>
@@ -1424,20 +1653,21 @@
                     </tr>
                     <tr>
                         <td><img src="./status-x.webp"></td>
-                        <td><img class="via-big-number" src="../../resources/via/future-icons/509.webp"></td>
-                        <td><a name="route509"><b>Hildebrand / Babcock</b></a></td>
+                        <td><img class="via-big-number" src="../../resources/via/future-icons/509.webp" loading="lazy"></td>
+                        <td><b>Hildebrand / Babcock</b></td>
                         <td>
+                            <a name="route509"></a>
                             <ul>
-                                <li>Add Sunday service</li><br/>
-                                <li>Increase frequency to <span class="via-bustext via-busfreq-30">30 minutes</span></li><br/>
-                                <li>Truncate eastern terminus to <b>Northeast Baptist Hospital</b></li><br/>
+                                <li>Add Sunday service</li>
+                                <li>Increase frequency to <span class="via-bustext via-busfreq-30">30 minutes</span></li>
+                                <li>Truncate eastern terminus to <b>Northeast Baptist Hospital</b></li>
                                 <li>Realign entire route east of Fredericksburg Road
                                     <ul>
                                         <li>Discontinue service to Monticello Park, Donaldson Terrace, and Inspiration Hills</li>
                                         <li>Route will travel to University Heights Business Park via <b>Babcock Road</b> and <b>Network Drive</b></li>
                                         <li>Will serve the <b>Medical Center Transit Center</b></li>
                                     </ul>
-                                </li><br/>
+                                </li>
                                 <li>Move western terminus to <b>Silicon & De Zavala</b></li>
                             </ul>
                         </td>
@@ -1445,9 +1675,10 @@
                     </tr>
                     <tr>
                         <td><img src="./status-x.webp"></td>
-                        <td><img class="via-big-number" src="../../resources/via/future-icons/514.webp"></td>
-                        <td><a name="route514"><b>Jackson Keller / West 24th</b></a></td>
+                        <td><img class="via-big-number" src="../../resources/via/future-icons/514.webp" loading="lazy"></td>
+                        <td><b>Jackson Keller / West 24th</b></td>
                         <td>
+                            <a name="route514"></a>
                             <ul>
                                 <li>Add new route with <span class="via-bustext via-busfreq-30">30 minute</span> frequency to connect <b>Las Palmas Shopping Center</b> to <b>North Star Transit Center</b> via NW 24th Street, West Avenue, and Jackson Keller Road</li>
                             </ul>
@@ -1456,16 +1687,17 @@
                     </tr>
                     <tr>
                         <td><img src="./status-x.webp"></td>
-                        <td><img class="via-big-number" src="../../resources/via/route-icons/515.webp"></td>
+                        <td><img class="via-big-number" src="../../resources/via/route-icons/515.webp" loading="lazy"></td>
                         <td><b>Southcross</b></td>
                         <td>
+                            <a name="route515"></a>
                             <ul>
                                 <li>Move western terminus to <b>Madla Transit Center</b> via Somerset and SW Military Drive
                                     <ul>
                                         <li>Discontinue service on New Laredo Highway</li>
-                                        <li>Southcross between Quintana Road and Somerset will be served by <a class="via-bustext via-busfreq-30" href="#route619"><b>Route 619 Kel-Lac / Port San Antonio / Valley-Hi</b></a></li>
+                                        <li>Southcross between Quintana Road and Somerset will be served by <a class="via-bustext via-busfreq-30" href="#route619" onclick="SwitchRoutePage(4)"><b>Route 619 Kel-Lac / Port San Antonio / Valley-Hi</b></a></li>
                                     </ul>
-                                </li><br/>
+                                </li>
                                 <li>Move eastern terminus to the Walmart at <b>Rigsby & Loop 410</b> via WW White Road and Tillie Drive
                                     <ul>
                                         <li>Discontinue service on New Laredo Highway</li>
@@ -1478,14 +1710,15 @@
                     </tr>
                     <tr>
                         <td><img src="./status-x.webp"></td>
-                        <td><img class="via-big-number" src="../../resources/via/route-icons/522.webp"></td>
+                        <td><img class="via-big-number" src="../../resources/via/route-icons/522.webp" loading="lazy"></td>
                         <td><b>Babcock</b></td>
                         <td>
+                            <a name="route522"></a>
                             <ul>
                                 <li>Eliminate route
                                     <ul>
-                                        <li>NW 24th Street will be served by <span class="via-bustext via-busfreq-30"><b>Route 514 Jackson Keller / West 24th</b></span></li>
-                                        <li>Babcock Road will be served by <span class="via-bustext via-busfreq-30"><b>Route 509 Hildebrand / Babcock</b></span></li>
+                                        <li>NW 24th Street will be served by <a class="via-bustext via-busfreq-30" href="#route514"><b>Route 514 Jackson Keller / West 24th</b></a></li>
+                                        <li>Babcock Road will be served by <a class="via-bustext via-busfreq-30" href="#route509"><b>Route 509 Hildebrand / Babcock</b></a></li>
                                     </ul>
                                 </li>
                             </ul>
@@ -1494,20 +1727,23 @@
                     </tr>
                     <tr>
                         <td><img src="./status-x.webp"></td>
-                        <td><img class="via-big-number" src="../../resources/via/route-icons/524.webp"></td>
+                        <td><img class="via-big-number" src="../../resources/via/route-icons/524.webp" loading="lazy"></td>
                         <td><b>General McMullen Frequent</b></td>
                         <td>
+                            <a name="route524"></a>
                             <ul>
-                                <li>Southern terminus extended to <b>Madla Transit Center</b></li>
+                                <li>Extend service hours to 12:30am</li>
+                                <li>Extend southern terminus to <b>Madla Transit Center</b></li>
                             </ul>
                         </td>
                         <td><a href="javascript:void(0)" onclick="GetRouteProfile(524)"><i class="fa fa-download"></i></a></td>
                     </tr>
                     <tr>
                         <td><img src="./status-x.webp"></td>
-                        <td><img class="via-big-number" src="../../resources/via/future-icons/525.webp"></td>
-                        <td><a name="route525"><b>East Commerce / Ceralvo Frequent</b></a></td>
+                        <td><img class="via-big-number" src="../../resources/via/future-icons/525.webp" loading="lazy"></td>
+                        <td><b>East Commerce / Ceralvo Frequent</b></td>
                         <td>
+                            <a name="route525"></a>
                             <ul>
                                 <li>Add new route with <span class="via-bustext via-busfreq-20">20 minute</span> frequency to connect <b>University Southwest Family Health Center</b> to the Walmart at <b>Rigsby & Loop 410</b> via Ceralvo Street, South Alamo Street, Cesar Chavez Blvd, East Commerce, Martin Luther King Drive, and WW White Road</li>
                             </ul>
@@ -1516,9 +1752,10 @@
                     </tr>
                     <tr>
                         <td><img src="./status-x.webp"></td>
-                        <td><img class="via-big-number" src="../../resources/via/future-icons/532.webp"></td>
-                        <td><a name="route532"><b>Rittiman / Walzem</b></a></td>
+                        <td><img class="via-big-number" src="../../resources/via/future-icons/532.webp" loading="lazy"></td>
+                        <td><b>Rittiman / Walzem</b></td>
                         <td>
+                            <a name="route532"></a>
                             <ul>
                                 <li>Add new route with <span class="via-bustext via-busfreq-30">30 minute</span> frequency to connect <b>North Star Transit Center</b> to <b>FM 78 & Crestway</b> via Jones Maltsberger, Treeline Park, New Braunfels Avenue, Rittiman Road, Park Village, Walzem Road, and Ventura</li>
                             </ul>
@@ -1527,21 +1764,29 @@
                     </tr>
                     <tr>
                         <td><img src="./status-noweekend.webp"></td>
-                        <td><img class="via-big-number" src="../../resources/via/route-icons/534.webp"></td>
+                        <td><img class="via-big-number" src="../../resources/via/route-icons/534.webp" loading="lazy"></td>
                         <td><b>Wurzbach Frequent</b></td>
                         <td>
+                            <a name="route534"></a>
                             <b class="via-bustext"><u>Implemented on August 23, 2021</u></b>
                             <ul>
                                 <li>Increased weekday frequency to <span class="via-bustext via-busfreq-20">20 minutes</span></li>
+                            </ul>
+                            <hr>
+                            <b class="via-bustext"><u>Not yet implemented</u></b>
+                            <ul>
+                                <li>Extend service hours to 12:30am</li>
+                                <li>Increase weekend frequency to <span class="via-bustext via-busfreq-20">20 minutes</span></li>
                             </ul>
                         </td>
                         <td><a href="javascript:void(0)" onclick="GetRouteProfile(534)"><i class="fa fa-download"></i></a></td>
                     </tr>
                     <tr>
                         <td><img src="./status-x.webp"></td>
-                        <td><img class="via-big-number" src="../../resources/via/future-icons/544.webp"></td>
+                        <td><img class="via-big-number" src="../../resources/via/future-icons/544.webp" loading="lazy"></td>
                         <td><b>Hillcrest / Port San Antonio</b></td>
                         <td>
+                            <a name="route544"></a>
                             <ul>
                                 <li>Add new route with <span class="via-bustext via-busfreq-30">30 minute</span> frequency to connect <b>Crossroads Park & Ride</b> to <b>Port San Antonio</b> via Hillcrest Drive, NW 36th Street, West Commerce, Acme Road, and Castroville Road</li>
                             </ul>
@@ -1550,9 +1795,10 @@
                     </tr>
                     <tr>
                         <td><img src="./status-x.webp"></td>
-                        <td><img class="via-big-number" src="../../resources/via/future-icons/547.webp"></td>
-                        <td><a name="route547"><b>Fort Sam Houston / Walters</b></a></td>
+                        <td><img class="via-big-number" src="../../resources/via/future-icons/547.webp" loading="lazy"></td>
+                        <td><b>Fort Sam Houston / Walters</b></td>
                         <td>
+                            <a name="route547"></a>
                             <ul>
                                 <li>Add new route with <span class="via-bustext via-busfreq-30">30 minute</span> frequency to connect <b>Fort Sam Houston</b> to <b>McCreless Marketplace</b> via Harry Wurzbach, Austin Highway, Broadway, Carson Street, Walters Street, Dollarhide Avenue, and Southcross</li>
                             </ul>
@@ -1561,9 +1807,10 @@
                     </tr>
                     <tr>
                         <td><img src="./status-x.webp"></td>
-                        <td><img class="via-big-number" src="../../resources/via/route-icons/552.webp"></td>
+                        <td><img class="via-big-number" src="../../resources/via/route-icons/552.webp" loading="lazy"></td>
                         <td><b>Loop 410 / WW White Skip</b></td>
                         <td>
+                            <a name="route552"></a>
                             <ul>
                                 <li>Add a stop at <b>Eastside Transit Center</b></li>
                             </ul>
@@ -1573,10 +1820,44 @@
                 </tbody>
             </table>
             </div>
+            </div>
 
-            <hr/>
+
+            <div id="routesection-circulator" class="routegroup-disabled">
             <a name="section-circulator"></a>
             <h2 class="saya-h2">Circulator Routes (602–697)</h2>
+
+            <p class="saya-short-paragraph">
+                Select a route to see the proposed changes.
+            </p>
+            <div class="routeselector">
+                <a href="#route602"><img src="../../resources/via/route-icons/602.webp" loading="lazy"></a>
+                <a href="#route603"><img src="../../resources/via/route-icons/603.webp" loading="lazy"></a>
+                <a href="#route604"><img src="../../resources/via/route-icons/604.webp" loading="lazy"></a>
+                <a href="#route607"><img src="../../resources/via/route-icons/607.webp" loading="lazy"></a>
+                <a href="#route609"><img src="../../resources/via/route-icons/609.webp" loading="lazy"></a>
+                <a href="#route610"><img src="../../resources/via/route-icons/610.webp" loading="lazy"></a>
+                <a href="#route611"><img src="../../resources/via/route-icons/611.webp" loading="lazy"></a>
+                <a href="#route612"><img src="../../resources/via/route-icons/612.webp" loading="lazy"></a>
+                <a href="#route613"><img src="../../resources/via/route-icons/613.webp" loading="lazy"></a>
+                <a href="#route614"><img src="../../resources/via/route-icons/614.webp" loading="lazy"></a>
+                <a href="#route615"><img src="../../resources/via/route-icons/615.webp" loading="lazy"></a>
+                <a href="#route616"><img src="../../resources/via/route-icons/616.webp" loading="lazy"></a>
+                <a href="#route617"><img src="../../resources/via/route-icons/617.webp" loading="lazy"></a>
+                <a href="#route618"><img src="../../resources/via/route-icons/618.webp" loading="lazy"></a>
+                <a href="#route619"><img src="../../resources/via/route-icons/619.webp" loading="lazy"></a>
+                <a href="#route620"><img src="../../resources/via/route-icons/620.webp" loading="lazy"></a>
+                <a href="#route632"><img src="../../resources/via/route-icons/632.webp" loading="lazy"></a>
+                <a href="#route634"><img src="../../resources/via/future-icons/634.webp" loading="lazy"></a>
+                <a href="#route636"><img src="../../resources/via/future-icons/636.webp" loading="lazy"></a>
+                <a href="#route642"><img src="../../resources/via/future-icons/642.webp" loading="lazy"></a>
+                <a href="#route646"><img src="../../resources/via/future-icons/646.webp" loading="lazy"></a>
+                <a href="#route647"><img src="../../resources/via/route-icons/647.webp" loading="lazy"></a>
+                <a href="#route648"><img src="../../resources/via/route-icons/648.webp" loading="lazy"></a>
+                <a href="#route649"><img src="../../resources/via/future-icons/649.webp" loading="lazy"></a>
+                <a href="#route651"><img src="../../resources/via/route-icons/651.webp" loading="lazy"></a>
+                <a href="#route697"><img src="../../resources/via/future-icons/697.webp" loading="lazy"></a>
+            </div>
 
             <div class="saya-scrollable-element">
             <table class="saya-table saya-tablewidth-1300">
@@ -1590,13 +1871,14 @@
                     </tr>
                     <tr>
                         <td><img src="./status-x.webp"></td>
-                        <td><img class="via-big-number" src="../../resources/via/route-icons/602.webp"></td>
+                        <td><img class="via-big-number" src="../../resources/via/route-icons/602.webp" loading="lazy"></td>
                         <td><b>Blossom Center / Medical Center</b></td>
                         <td>
+                            <a name="route602"></a>
                             <ul>
-                                <li>Move northern terminus to <b>Jones Maltsberger & Blue Crest</b>
+                                <li>Move northern terminus to <b>Jones Maltsberger & Blue Crest</b> via West Avenue and Bitters
                                     <ul>
-                                        <li>North Star Transit Center will be served by <a class="via-bustext via-busfreq-30" href="#route502"><b>Route 502 Thousand Oaks / Converse</b></a></li>
+                                        <li>North Star Transit Center will be served by <a class="via-bustext via-busfreq-30" href="#route502" onclick="SwitchRoutePage(3)"><b>Route 502 Thousand Oaks / Converse</b></a></li>
                                     </ul>
                                 </li>
                             </ul>
@@ -1605,14 +1887,15 @@
                     </tr>
                     <tr>
                         <td><img src="./status-x.webp"></td>
-                        <td><img class="via-big-number" src="../../resources/via/future-icons/603.webp"></td>
-                        <td><a name="route603"><b>Medical Center / UTSA</b></a></td>
+                        <td><img class="via-big-number" src="../../resources/via/future-icons/603.webp" loading="lazy"></td>
+                        <td><b>Medical Center / UTSA</b></td>
                         <td>
+                            <a name="route603"></a>
                             <ul>
-                                <li>Increase frequency to <span class="via-bustext via-busfreq-30">30 minutes</span></li><br/>
+                                <li>Increase frequency to <span class="via-bustext via-busfreq-30">30 minutes</span></li>
                                 <li>Realign section between De Zavala Road and UTSA to <b>Vance Jackson Road</b> and <b>La Cantera Parkway</b>
                                     <ul>
-                                        <li>Service on De Zavala Road will be moved to <a class="via-bustext via-busfreq-20" href="#route096"><b>Route 96 Vance Jackson Frequent</b></a></li>
+                                        <li>Service on De Zavala Road will be moved to <a class="via-bustext via-busfreq-20" href="#route096" onclick="SwitchRoutePage(1)"><b>Route 96 Vance Jackson Frequent</b></a></li>
                                     </ul>
                                 </li>
                             </ul>
@@ -1621,12 +1904,13 @@
                     </tr>
                     <tr>
                         <td><img src="./status-x.webp"></td>
-                        <td><img class="via-big-number" src="../../resources/via/future-icons/604.webp"></td>
+                        <td><img class="via-big-number" src="../../resources/via/future-icons/604.webp" loading="lazy"></td>
                         <td><b>University Heights / Medical Center / Crossroads</b></td>
                         <td>
+                            <a name="route604"></a>
                             <ul>
-                                <li>Increase frequency to <span class="via-bustext via-busfreq-30">30 minutes</span></li><br/>
-                                <li>Realign section between Hamilton Wolfe and Medical Drive to <b>Hamilton Wolfe</b>, <b>Wurzbach Road</b>, and <b>Medical Drive</b></li><br/>
+                                <li>Increase frequency to <span class="via-bustext via-busfreq-30">30 minutes</span></li>
+                                <li>Realign section between Hamilton Wolfe and Medical Drive to <b>Hamilton Wolfe</b>, <b>Wurzbach Road</b>, and <b>Medical Drive</b></li>
                                 <li>Extend southern terminus to <b>Crossroads Park & Ride</b> via Wurzbach Road, Evers Road, the Walmart at Glen Ridge Road, Callaghan Road, and Fredericksburg</li>
                             </ul>
                         </td>
@@ -1634,9 +1918,10 @@
                     </tr>
                     <tr>
                         <td><img src="./status-x.webp"></td>
-                        <td><img class="via-big-number" src="../../resources/via/route-icons/607.webp"></td>
+                        <td><img class="via-big-number" src="../../resources/via/route-icons/607.webp" loading="lazy"></td>
                         <td><b>Medical Center / Ingram</b></td>
                         <td>
+                            <a name="route607"></a>
                             <ul>
                                 <li>Eliminate route</li>
                             </ul>
@@ -1645,35 +1930,42 @@
                     </tr>
                     <tr>
                         <td><img src="./status-noweekend.webp"></td>
-                        <td><img class="via-big-number" src="../../resources/via/route-icons/609.webp"></td>
-                        <td><a name="route609"><b>Medical Center / Ingram / Kel-Lac</b></a></td>
+                        <td><img class="via-big-number" src="../../resources/via/route-icons/609.webp" loading="lazy"></td>
+                        <td><b>Medical Center / Ingram / Kel-Lac</b></td>
                         <td>
+                            <a name="route609"></a>
                             <b class="via-bustext"><u>Implemented on August 18, 2025</u></b>
                             <ul>
-                                <li>Increase weekday frequency to <span class="via-bustext via-busfreq-30">30 minutes</span></li><br/>
-                                <li>Realign section between Eckhert Road and Bandera Road to <b>Huebner Road</b>
+                                <li>Increased weekday frequency to <span class="via-bustext via-busfreq-30">30 minutes</span></li>
+                                <li>Realigned section between Eckhert Road and Bandera Road to <b>Huebner Road</b>
                                     <ul>
                                         <li>Eckhert Road will be served by <span class="via-bustext via-busfreq-link"><b>VIA Link Mainland</b></span></li>
                                     </ul>
-                                </li><br/>
-                                <li>Extend southern terminus to <b>Kel-Lac Transit Center</b> via Potranco Road, Hunt Lane, Ingram Road, Lakeside Parkway, Cable Ranch Road, and Horal Street</li>
+                                </li>
+                                <li>Extended southern terminus to <b>Kel-Lac Transit Center</b> via Potranco Road, Hunt Lane, Ingram Road, Lakeside Parkway, Cable Ranch Road, and Horal Street</li>
+                            </ul>
+                            <hr>
+                            <b class="via-bustext"><u>Not yet implemented</u></b>
+                            <ul>
+                                <li>Increase weekend frequency to <span class="via-bustext via-busfreq-30">30 minutes</span></li>
                             </ul>
                         </td>
                         <td><a href="javascript:void(0)" onclick="GetRouteProfile(609)"><i class="fa fa-download"></i></a></td>
                     </tr>
                     <tr>
                         <td><img src="./status-x.webp"></td>
-                        <td><img class="via-big-number" src="../../resources/via/future-icons/610.webp"></td>
+                        <td><img class="via-big-number" src="../../resources/via/future-icons/610.webp" loading="lazy"></td>
                         <td><b>Ingram / Northwest Vista College</b></td>
                         <td>
+                            <a name="route610"></a>
                             <ul>
-                                <li>Increase frequency to <span class="via-bustext via-busfreq-30">30 minutes</span></li><br/>
+                                <li>Increase frequency to <span class="via-bustext via-busfreq-30">30 minutes</span></li>
                                 <li>Discontinue service on Timber Trace and Timberwilde Street
                                     <ul>
                                         <li>Will be served by <span class="via-bustext via-busfreq-link"><b>VIA Link Tezel</b></span></li>
                                     </ul>
-                                </li><br/>
-                                <li>Discontinue service on Timber Path between Cliffbrier Drive and Les Harrison Drive</li><br/>
+                                </li>
+                                <li>Discontinue service on Timber Path between Cliffbrier Drive and Les Harrison Drive</li>
                                 <li>Extend western terminus to <b>Northwest Vista College</b> via Rogers Road and Wiseman Blvd</li>
                             </ul>
                         </td>
@@ -1681,16 +1973,17 @@
                     </tr>
                     <tr>
                         <td><img src="./status-x.webp"></td>
-                        <td><img class="via-big-number" src="../../resources/via/future-icons/611.webp"></td>
-                        <td><a name="route611"><b>Valley-Hi / Rainbow Hills / Kel-Lac</b></a></td>
+                        <td><img class="via-big-number" src="../../resources/via/future-icons/611.webp" loading="lazy"></td>
+                        <td><b>Valley-Hi / Rainbow Hills / Kel-Lac</b></td>
                         <td>
+                            <a name="route611"></a>
                             <ul>
-                                <li>Increase frequency to <span class="via-bustext via-busfreq-30">30 minutes</span></li><br/>
-                                <li>Entire route realigned
+                                <li>Increase frequency to <span class="via-bustext via-busfreq-30">30 minutes</span></li>
+                                <li>Realign entire route
                                     <ul>
                                         <li>Southern terminus at Creek Bend & Sweet Maiden</li>
                                         <li>Travels to <b>Kel-Lac Transit Center</b> via Five Palms Drive, Ray Ellison Blvd, Crooked Trail, Lake Vista, Hunt Lane, Marbach Road, and Rainbow Hills</li>
-                                        <li>Springvale Drive, Sun Valley Drive, and Morning Valley Street will be served by <span class="via-bustext via-busfreq-30"><b>Route 616 Sky Harbor / Kel-Lac</b></span></li>
+                                        <li>Springvale Drive, Sun Valley Drive, and Morning Valley Street will be served by <a class="via-bustext via-busfreq-30" href="#route616"><b>Route 616 Sky Harbor / Kel-Lac</b></a></li>
                                     </ul>
                                 </li>
                             </ul>
@@ -1699,26 +1992,28 @@
                     </tr>
                     <tr>
                         <td><img src="./status-x.webp"></td>
-                        <td><a name="route612"><img class="via-big-number" src="../../resources/via/future-icons/612.webp"></a></td>
+                        <td><img class="via-big-number" src="../../resources/via/future-icons/612.webp" loading="lazy"></td>
                         <td><b>Kel-Lac / Westlakes / Ingram</b></td>
                         <td>
+                            <a name="route612"></a>
                             <ul>
-                                <li>Increase frequency to <span class="via-bustext via-busfreq-30">30 minutes</span></li><br/>
-                                <li>Northern terminus extended to <b>Ingram Transit Center</b> via Waters Edge Drive, Ingram Road, Richland Hills Drive, and the Loop 410 access road</li>
+                                <li>Increase frequency to <span class="via-bustext via-busfreq-30">30 minutes</span></li>
+                                <li>Extend northern terminus to <b>Ingram Transit Center</b> via Waters Edge Drive, Ingram Road, Richland Hills Drive, and the Loop 410 access road</li>
                             </ul>
                         </td>
                         <td><a href="javascript:void(0)" onclick="GetRouteProfile(612)"><i class="fa fa-download"></i></a></td>
                     </tr>
                     <tr>
                         <td><img src="./status-check.webp"></td>
-                        <td><img class="via-big-number" src="../../resources/via/route-icons/613.webp"></td>
+                        <td><img class="via-big-number" src="../../resources/via/route-icons/613.webp" loading="lazy"></td>
                         <td><b>Heritage Northwest / Kel-Lac</b></td>
                         <td>
+                            <a name="route613"></a>
                             <b class="via-bustext"><u>Implemented on August 18, 2025</u></b>
                             <ul>
-                                <li>Eliminate route
+                                <li>Eliminated route
                                     <ul>
-                                        <li>Heritage Northwest will be served by <span class="via-bustext via-busfreq-30"><b>Route 618 Ingram / Westover Hills / Kel-Lac</b></span></li>
+                                        <li>Heritage Northwest will be served by <a class="via-bustext via-busfreq-30" href="#route618"><b>Route 618 Ingram / Westover Hills / Kel-Lac</b></a></li>
                                     </ul>
                                 </li>
                             </ul>
@@ -1727,13 +2022,14 @@
                     </tr>
                     <tr>
                         <td><img src="./status-x.webp"></td>
-                        <td><img class="via-big-number" src="../../resources/via/route-icons/614.webp"></td>
+                        <td><img class="via-big-number" src="../../resources/via/route-icons/614.webp" loading="lazy"></td>
                         <td><b>Hidden Cove / Kel-Lac</b></td>
                         <td>
+                            <a name="route614"></a>
                             <ul>
                                 <li>Eliminate route
                                     <ul>
-                                        <li>Hidden Cove will be served by <span class="via-bustext via-busfreq-30"><b>Route 611 Valley-Hi / Rainbow Hills / Kel-Lac</b></span></li>
+                                        <li>Hidden Cove will be served by <a class="via-bustext via-busfreq-30" href="#route611"><b>Route 611 Valley-Hi / Rainbow Hills / Kel-Lac</b></a></li>
                                     </ul>
                                 </li>
                             </ul>
@@ -1742,11 +2038,12 @@
                     </tr>
                     <tr>
                         <td><img src="./status-x.webp"></td>
-                        <td><img class="via-big-number" src="../../resources/via/future-icons/615.webp"></td>
+                        <td><img class="via-big-number" src="../../resources/via/future-icons/615.webp" loading="lazy"></td>
                         <td><b>Kel-Lac / Heritage Park</b></td>
                         <td>
+                            <a name="route615"></a>
                             <ul>
-                                <li>Increase frequency to <span class="via-bustext via-busfreq-30">30 minutes</span></li><br/>
+                                <li>Increase frequency to <span class="via-bustext via-busfreq-30">30 minutes</span></li>
                                 <li>Discontinue service on Adams Hill Drive</li>
                             </ul>
                         </td>
@@ -1754,16 +2051,17 @@
                     </tr>
                     <tr>
                         <td><img src="./status-x.webp"></td>
-                        <td><img class="via-big-number" src="../../resources/via/future-icons/616.webp"></td>
+                        <td><img class="via-big-number" src="../../resources/via/future-icons/616.webp" loading="lazy"></td>
                         <td><b>Sky Harbor / Kel-Lac</b></td>
                         <td>
+                            <a name="route616"></a>
                             <ul>
-                                <li>Increase frequency to <span class="via-bustext via-busfreq-30">30 minutes</span></li><br/>
-                                <li>Service on Palm Valley Drive and Apple Valley Drive will be discontinued
+                                <li>Increase frequency to <span class="via-bustext via-busfreq-30">30 minutes</span></li>
+                                <li>Discontinue service on Palm Valley Drive and Apple Valley Drive
                                     <ul>
                                         <li>Route will be realigned to <b>Sun Valley Drive</b> between Medina Base Road and Ray Ellison Blvd</li>
                                     </ul>
-                                </li><br/>
+                                </li>
                                 <li>Weekend service to Traders Village will be discontinued</li>
                             </ul>
                         </td>
@@ -1771,13 +2069,14 @@
                     </tr>
                     <tr>
                         <td><img src="./status-x.webp"></td>
-                        <td><img class="via-big-number" src="../../resources/via/route-icons/617.webp"></td>
+                        <td><img class="via-big-number" src="../../resources/via/route-icons/617.webp" loading="lazy"></td>
                         <td><b>Kel-Lac / Rainbow Hills</b></td>
                         <td>
+                            <a name="route617"></a>
                             <ul>
                                 <li>Eliminate route
                                     <ul>
-                                        <li>Rainbow Hills will be served by <span class="via-bustext via-busfreq-30"><b>Route 611 Valley-Hi / Rainbow Hills / Kel-Lac</b></span></li>
+                                        <li>Rainbow Hills will be served by <a class="via-bustext via-busfreq-30" href="#route611"><b>Route 611 Valley-Hi / Rainbow Hills / Kel-Lac</b></a></li>
                                     </ul>
                                 </li>
                             </ul>
@@ -1786,35 +2085,42 @@
                     </tr>
                     <tr>
                         <td><img src="./status-noweekend.webp"></td>
-                        <td><img class="via-big-number" src="../../resources/via/route-icons/618.webp"></td>
-                        <td><a name="route618"><b>Ingram / Westover Hills / Kel-Lac</b></a></td>
+                        <td><img class="via-big-number" src="../../resources/via/route-icons/618.webp" loading="lazy"></td>
+                        <td><b>Ingram / Westover Hills / Kel-Lac</b></td>
                         <td>
+                            <a name="route618"></a>
                             <b class="via-bustext"><u>Implemented on August 18, 2025</u></b>
                             <ul>
-                                <li>Increase weekday frequency to <span class="via-bustext via-busfreq-30">30 minutes</span></li><br/>
-                                <li>Realign entire route southwest of Military Drive West & Richland Hills Drive
+                                <li>Increased weekday frequency to <span class="via-bustext via-busfreq-30">30 minutes</span></li>
+                                <li>Realigned entire route southwest of Military Drive West & Richland Hills Drive
                                     <ul>
                                         <li>Travels to <b>Kel-Lac Transit Center</b> via Hunt Lane, Westover Hills Blvd, Ellison Drive, Heritage Northwest, Marbach Road, and West Military Drive</li>
-                                        <li>Westlakes will be served by <span class="via-bustext via-busfreq-30"><b>Route 609 Medical Center / Ingram / Kel-Lac</b></span> and <span class="via-bustext via-busfreq-30"><b>Route 612 Kel-Lac / Westlakes / Ingram</b></span></li>
+                                        <li>Westlakes will be served by <a class="via-bustext via-busfreq-30" href="#route609"><b>Route 609 Medical Center / Ingram / Kel-Lac</b></a> and <a class="via-bustext via-busfreq-30" href="#route612"><b>Route 612 Kel-Lac / Westlakes / Ingram</b></a></li>
                                     </ul>
                                 </li>
+                            </ul>
+                            <hr>
+                            <b class="via-bustext"><u>Not yet implemented</u></b>
+                            <ul>
+                                <li>Increase weekend frequency to <span class="via-bustext via-busfreq-30">30 minutes</span></li>
                             </ul>
                         </td>
                         <td><a href="javascript:void(0)" onclick="GetRouteProfile(618)"><i class="fa fa-download"></i></a></td>
                     </tr>
                     <tr>
                         <td><img src="./status-x.webp"></td>
-                        <td><img class="via-big-number" src="../../resources/via/future-icons/619.webp"></td>
-                        <td><a name="route619"><b>Kel-Lac / Port San Antonio / Valley-Hi</b></a></td>
+                        <td><img class="via-big-number" src="../../resources/via/future-icons/619.webp" loading="lazy"></td>
+                        <td><b>Kel-Lac / Port San Antonio / Valley-Hi</b></td>
                         <td>
+                            <a name="route619"></a>
                             <ul>
-                                <li>Increase frequency to <span class="via-bustext via-busfreq-30">30 minutes</span></li><br/>
+                                <li>Increase frequency to <span class="via-bustext via-busfreq-30">30 minutes</span></li>
                                 <li>Realign entire route
                                     <ul>
                                         <li>Travels to the Walmart at <b>Loop 410 & Ray Ellison Blvd</b> via Highway 90, SW 36th Street, General Hundell Drive, Quintana Road, Southcross, Somerset, SW Military Drive, Old Pearsall Road, Medina Base Road, and Sun Valley Drive</li>
                                     </ul>
-                                </li><br/>
-                                <li>SW Military Drive will be served by <a class="via-bustext via-busfreq-20" href="#route102"><b>Route 102 Prímo Military</b></a></li><br/>
+                                </li>
+                                <li>SW Military Drive will be served by <a class="via-bustext via-busfreq-20" href="#route102" onclick="SwitchRoutePage(2)"><b>Route 102 Prímo Military</b></a></li>
                                 <li>Rainbow Hills will be served by <a class="via-bustext via-busfreq-30" href="#route611"><b>Route 611 Valley-Hi / Rainbow Hills / Kel-Lac</b></a></li>
                             </ul>
                         </td>
@@ -1822,9 +2128,10 @@
                     </tr>
                     <tr>
                         <td><img src="./status-x.webp"></td>
-                        <td><img class="via-big-number" src="../../resources/via/future-icons/620.webp"></td>
+                        <td><img class="via-big-number" src="../../resources/via/future-icons/620.webp" loading="lazy"></td>
                         <td><b>Ingram / Northwest Vista College</b></td>
                         <td>
+                            <a name="route620"></a>
                             <ul>
                                 <li>Increase frequency to <span class="via-bustext via-busfreq-30">30 minutes</span></li>
                             </ul>
@@ -1833,13 +2140,14 @@
                     </tr>
                     <tr>
                         <td><img src="./status-x.webp"></td>
-                        <td><img class="via-big-number" src="../../resources/via/route-icons/632.webp"></td>
-                        <td><b>Randoloh / Ventura</b></a></td>
+                        <td><img class="via-big-number" src="../../resources/via/route-icons/632.webp" loading="lazy"></td>
+                        <td><b>Randolph / Ventura</b></a></td>
                         <td>
+                            <a name="route632"></a>
                             <ul>
                                 <li>Eliminate route
                                     <ul>
-                                        <li>Entire route will be served by <a class="via-bustext via-busfreq-30" href="#route532"><b>Route 532 Rittiman / Walzem</b></a></li></li>
+                                        <li>Entire route will be served by <a class="via-bustext via-busfreq-30" href="#route532" onclick="SwitchRoutePage(3)"><b>Route 532 Rittiman / Walzem</b></a></li>
                                     </ul>
                                 </li>
                             </ul>
@@ -1848,9 +2156,10 @@
                     </tr>
                     <tr>
                         <td><img src="./status-x.webp"></td>
-                        <td><img class="via-big-number" src="../../resources/via/future-icons/634.webp"></td>
-                        <td><a name="route634"><b>Goliad</b></a></td>
+                        <td><img class="via-big-number" src="../../resources/via/future-icons/634.webp" loading="lazy"></td>
+                        <td><b>Goliad</b></td>
                         <td>
+                            <a name="route634"></a>
                             <ul>
                                 <li>Add new route with <span class="via-bustext via-busfreq-30">30 minute</span> frequency to connect <b>Bexar Juvenile Detention Center</b> to <b>Brooks Transit Center</b> and <b>Brookside</b> via Steves Avenue, New Braunfels Avenue, Goliad Road, and SE Military Drive</li>
                             </ul>
@@ -1859,9 +2168,10 @@
                     </tr>
                     <tr>
                         <td><img src="./status-x.webp"></td>
-                        <td><img class="via-big-number" src="../../resources/via/future-icons/636.webp"></td>
-                        <td><a name="route636"><b>Presa</b></a></td>
+                        <td><img class="via-big-number" src="../../resources/via/future-icons/636.webp" loading="lazy"></td>
+                        <td><b>Presa</b></td>
                         <td>
+                            <a name="route636"></a>
                             <ul>
                                 <li>Add new route with <span class="via-bustext via-busfreq-30">30 minute</span> frequency to connect <b>Bexar Juvenile Detention Center</b> to <b>Brooks Transit Center</b> via Roosevelt Avenue, Eads, South Presa, and Sidney Brooks Drive</li>
                             </ul>
@@ -1870,9 +2180,10 @@
                     </tr>
                     <tr>
                         <td><img src="./status-x.webp"></td>
-                        <td><img class="via-big-number" src="../../resources/via/future-icons/642.webp"></td>
-                        <td><a name="route642"><b>Roosevelt</b></a></td>
+                        <td><img class="via-big-number" src="../../resources/via/future-icons/642.webp" loading="lazy"></td>
+                        <td><b>Roosevelt</b></td>
                         <td>
+                            <a name="route642"></a>
                             <ul>
                                 <li>Add new route with <span class="via-bustext via-busfreq-30">30 minute</span> frequency to connect <b>Bexar Juvenile Detention Center</b> to <b>Mission Del Lago</b> via Roosevelt Avenue and Villa Coronado</li>
                             </ul>
@@ -1881,9 +2192,10 @@
                     </tr>
                     <tr>
                         <td><img src="./status-x.webp"></td>
-                        <td><img class="via-big-number" src="../../resources/via/future-icons/646.webp"></td>
-                        <td><a name="route646"><b>Commercial</b></a></td>
+                        <td><img class="via-big-number" src="../../resources/via/future-icons/646.webp" loading="lazy"></td>
+                        <td><b>Commercial</b></td>
                         <td>
+                            <a name="route646"></a>
                             <ul>
                                 <li>Add new route with <span class="via-bustext via-busfreq-30">30 minute</span> frequency to connect <b>Bexar Juvenile Detention Center</b> to <b>Madla Transit Center</b> and <b>Palo Alto College</b> via Theo/Malone Avenue, Collingsworth Avenue, Division Avenue, Orey Avenue, Flanders Avenue, Huron Street, Southcross, Commercial Avenue, SW Military Drive, Madla Transit Center, Hutchins Place, Gillette Blvd, and Lytle Avenue</li>
                             </ul>
@@ -1892,14 +2204,15 @@
                     </tr>
                     <tr>
                         <td><img src="./status-x.webp"></td>
-                        <td><img class="via-big-number" src="../../resources/via/route-icons/647.webp"></td>
+                        <td><img class="via-big-number" src="../../resources/via/route-icons/647.webp" loading="lazy"></td>
                         <td><b>North Star / Harry Wurzbach</b></td>
                         <td>
+                            <a name="route647"></a>
                             <ul>
                                 <li>Eliminate route
                                     <ul>
-                                        <li>Fort Sam Houston will be served by <a class="via-bustext via-busfreq-30" href="#route547"><b>Route 547 Fort Sam Houston / Walters</b></a></li>
-                                        <li>Sunset, Treeline Park, and Jones Maltsberger be served by <a class="via-bustext via-busfreq-30" href="#route532"><b>Route 532 Rittiman / Walzem</b></a></li>
+                                        <li>Fort Sam Houston will be served by <a class="via-bustext via-busfreq-30" href="#route547" onclick="SwitchRoutePage(3)"><b>Route 547 Fort Sam Houston / Walters</b></a></li>
+                                        <li>Sunset, Treeline Park, and Jones Maltsberger be served by <a class="via-bustext via-busfreq-30" href="#route532" onclick="SwitchRoutePage(3)"><b>Route 532 Rittiman / Walzem</b></a></li>
                                     </ul>
                                 </li>
                             </ul>
@@ -1908,14 +2221,15 @@
                     </tr>
                     <tr>
                         <td><img src="./status-x.webp"></td>
-                        <td><img class="via-big-number" src="../../resources/via/route-icons/648.webp"></td>
+                        <td><img class="via-big-number" src="../../resources/via/route-icons/648.webp" loading="lazy"></td>
                         <td><b>North Star / Stone Oak</b></td>
                         <td>
+                            <a name="route648"></a>
                             <ul>
                                 <li>Eliminate route
                                     <ul>
-                                        <li>Stonehue and North Central Baptist Hospital be served by <a class="via-bustext via-busfreq-30" href="#route503"><b>Route 503 Huebner Crosstown</b></a></li>
-                                        <li>Isom Road will be served by <a class="via-bustext via-busfreq-rapidgreen" href="#section-brt"><b>ART Green Line</b></a></li>
+                                        <li>Stonehue and North Central Baptist Hospital be served by <a class="via-bustext via-busfreq-30" href="#route503" onclick="SwitchRoutePage(3)"><b>Route 503 Huebner Crosstown</b></a></li>
+                                        <li>Isom Road will be served by <a class="via-bustext via-busfreq-rapidgreen" href="#section-brt" onclick="SwitchRoutePage(5)"><b>ART Green Line</b></a></li>
                                         <li>All areas north of Nakoma Drive will be served by <span class="via-bustext via-busfreq-link"><b>VIA Link Stone Oak</b></span></li>
                                     </ul>
                                 </li>
@@ -1925,9 +2239,10 @@
                     </tr>
                     <tr>
                         <td><img src="./status-x.webp"></td>
-                        <td><img class="via-big-number" src="../../resources/via/future-icons/649.webp"></td>
-                        <td><a name="route649"><b>North Blanco</b></a></td>
+                        <td><img class="via-big-number" src="../../resources/via/future-icons/649.webp" loading="lazy"></td>
+                        <td><b>North Blanco</b></td>
                         <td>
+                            <a name="route649"></a>
                             <ul>
                                 <li>Add new route with <span class="via-bustext via-busfreq-30">30 minute</span> frequency to connect <b>North Star Transit Center</b> to <b>Stone Oak Park & Ride</b> via Rector Drive, Blanco Road, Parliament Square, the Loop 1604 Access Road, the Walmart at Loop 1604 & US-281, and the US-281 Access Road</li>
                             </ul>
@@ -1936,13 +2251,14 @@
                     </tr>
                     <tr>
                         <td><img src="./status-x.webp"></td>
-                        <td><img class="via-big-number" src="../../resources/via/route-icons/651.webp"></td>
+                        <td><img class="via-big-number" src="../../resources/via/route-icons/651.webp" loading="lazy"></td>
                         <td><b>Deco District / Castle Hills</b></td>
                         <td>
+                            <a name="route651"></a>
                             <ul>
                                 <li>Eliminate route
                                     <ul>
-                                        <li>Jackson Keller Road will be served by <a class="via-bustext via-busfreq-30" href="#route514"><b>Route 514 Jackson Keller / West 24th</b></a></li>
+                                        <li>Jackson Keller Road will be served by <a class="via-bustext via-busfreq-30" href="#route514" onclick="SwitchRoutePage(3)"><b>Route 514 Jackson Keller / West 24th</b></a></li>
                                     </ul>
                                 </li>
                             </ul>
@@ -1951,9 +2267,10 @@
                     </tr>
                     <tr>
                         <td><img src="./status-x.webp"></td>
-                        <td><img class="via-big-number" src="../../resources/via/future-icons/697.webp"></td>
-                        <td><a name="route697"><b>Military Highway</b></a></td>
+                        <td><img class="via-big-number" src="../../resources/via/future-icons/697.webp" loading="lazy"></td>
+                        <td><b>Military Highway</b></td>
                         <td>
+                            <a name="route697"></a>
                             <ul>
                                 <li>Add new route with <span class="via-bustext via-busfreq-30">30 minute</span> frequency to connect <b>North Star Transit Center</b> to <b>UTSA Main Campus</b> via Rector Drive, West Avenue, NW Military Highway, the Loop 1604 Access Road, Vance Jackson, and La Cantera Parkway</li>
                             </ul>
@@ -1963,9 +2280,10 @@
                 </tbody>
             </table>
             </div>
+            </div>
 
-            <hr/>
 
+            <div id="routesection-brt" class="routegroup-disabled">
             <a name="section-brt"></a>
             <h2 class="saya-h2">VIA Rapid Routes</h2>
 
@@ -1992,13 +2310,13 @@
                     </tr>
                     <tr>
                         <td><img src="./status-x.webp"></td>
-                        <td><img class="via-big-number" src="../../resources/via/future-icons/brt-green.webp"></td>
+                        <td><a name="brt-green"></a><img class="via-big-number" src="../../resources/via/future-icons/brt-green.webp"></td>
                         <td><b>Green Line<br/>North-South ART</b></td>
                         <td>
                             <ul>
                                 <li>Add new route with <span class="via-bustext via-busfreq-20">10 minute</span> frequency to connect <b>San Antonio International Airport</b> to <b>Brooks Transit Center</b> via Isom Road, San Pedro Avenue, St. Mary's/Navarro, Steves Avenue, South Presa, Fair Avenue, and New Braunfels Avenue
                                     <ul>
-                                        <li>This line will initially begin service with the segment between <b>SAT</b> and <b>Roosevelt & Steves</b>. The segment between Steves Avenue and Brooks Transit Center will be completed at a later date.</li>
+                                        <li>This line will initially begin service with the segment between the <b>Airport</b> and <b>Roosevelt & Steves</b>. The segment between Steves Avenue and Brooks Transit Center will be completed at a later date.</li>
                                     </ul>
                                 </li>
                             </ul>
@@ -2023,6 +2341,7 @@
                 </tbody>
             </table>
             </div>
+            </div>
 
             <hr/>
             <a name="section-timeline"></a>
@@ -2040,42 +2359,134 @@
                         <td>April 12, 2024</td>
                         <td style="text-align: left;">N/A</td>
                         <td style="text-align: left;">
-                            VIA announces a redesigned system map that includes changes to all the routes' colors
+                            VIA announces a redesigned system map that includes changes to all the routes' colors.<a class="in-text-citation">1</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>July 22, 2024</td>
+                        <td style="text-align: left;">N/A</td>
+                        <td style="text-align: left;">
+                            The <b>Randolph Park & Ride</b> passenger waiting facility and a large portion of the parking lot close to be demolished and reconstructed.<a class="in-text-citation">2</a>
                         </td>
                     </tr>
                     <tr>
                         <td>August 19, 2024</td>
-                        <td style="text-align: left;">N/A</td>
                         <td style="text-align: left;">
-                            <b>August 2024 Service changes implemented</b>
-                            <ul>
-                                <li>Minor schedule changes</li>
-                            </ul>
+                            <img src="../../resources/via/past-icons/005.webp" loading="lazy">
+                            <img src="../../resources/via/route-icons/007.webp" loading="lazy">
+                            <img src="../../resources/via/past-icons/009.webp" loading="lazy">
+                            <img src="../../resources/via/route-icons/014.webp" loading="lazy">
+                            <img src="../../resources/via/past-icons/021.webp" loading="lazy">
+                            <img src="../../resources/via/route-icons/022.webp" loading="lazy">
+                            <img src="../../resources/via/route-icons/024.webp" loading="lazy">
+                            <img src="../../resources/via/past-icons/030.webp" loading="lazy">
+                            <img src="../../resources/via/route-icons/036.webp" loading="lazy">
+                            <img src="../../resources/via/past-icons/090.webp" loading="lazy">
+                            <img src="../../resources/via/route-icons/209.webp" loading="lazy">
+                            <img src="../../resources/via/route-icons/214.webp" loading="lazy">
+                            <img src="../../resources/via/route-icons/222.webp" loading="lazy">
+                            <img src="../../resources/via/route-icons/251.webp" loading="lazy">
+                            <img src="../../resources/via/route-icons/515.webp" loading="lazy">
+                            <img src="../../resources/via/route-icons/524.webp" loading="lazy">
+                            <img src="../../resources/via/route-icons/link-nacopass.webp" loading="lazy">
+                            <img src="../../resources/via/route-icons/link-randolph.webp" loading="lazy">
+                        </td>
+                        <td style="text-align: left;">
+                            <b>August 2024 Service changes implemented</b><a class="in-text-citation">3</a><a class="in-text-citation">4</a>
                             <ul>
                                 <li>New route colors and system map design launched
                                     <ul>
-                                        <li><b class="via-bustext via-busfreq-20">Frequent and Prímo service (every 15-20 minutes)</b></li>
+                                        <li><b class="via-bustext via-busfreq-20">Prímo service (every 12–15 minutes)</b></li>
+                                        <li><b class="via-bustext via-busfreq-20">Frequent service (every 15–20 minutes)</b></li>
                                         <li><b class="via-bustext via-busfreq-30">Standard service (every 30 minutes)</b></li>
-                                        <li><b class="via-bustext via-busfreq-60">Standard service (every 40-60 minutes)</b></li>
+                                        <li><b class="via-bustext via-busfreq-60">Standard service (every 40–60 minutes)</b></li>
                                         <li><b class="via-bustext via-busfreq-90">Standard service (every 90 minutes or rush hours only)</b></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <ul>
+                                <li>Alignment changes
+                                    <ul>
+                                        <li><span class="via-bustext"><b>Routes</b> <b class="via-busfreq-30">7</b>, <b class="via-busfreq-20">9</b>, <b class="via-busfreq-20">14</b>, <b class="via-busfreq-60">21</b>, <b class="via-busfreq-60">22</b>, <b class="via-busfreq-lineup">209</b>, <b class="via-busfreq-lineup">214</b></span>, and <b class="via-bustext via-busfreq-lineup">222</b>:
+                                            Realigned from Alamo Street to <b>Broadway</b></li>
+                                            <li><b class="via-bustext via-busfreq-30">Route 24</b>: Modified the alignment near Centro Plaza to turn right on <b>Houston Street</b> instead of Commerce</li>
+                                        <li><span class="via-bustext"><b>Routes</b> <b class="via-busfreq-lineup">251</b>, <b class="via-busfreq-30">515</b></span>, and <b class="via-bustext via-busfreq-20">524</b>:
+                                            Realigned from the Quintana Community to <b>Bynum Avenue / Quintana Road</b></li>
+                                        <li><b class="via-bustext via-busfreq-link">VIA Link Naco Pass</b> and <b class="via-bustext via-busfreq-link">VIA Link Randolph</b>: Added new satellite stop at <b>Northeast Lakeview College</b></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <ul>
+                                <li>Frequency changes
+                                    <ul>
+                                        <li><b class="via-bustext via-busfreq-60">Route 30:</b> Increased weekday frequency from <span class="via-bustext via-busfreq-60">60 minutes</span> to <span class="via-bustext via-busfreq-30">30 minutes</span> during rush hours</li>
+                                        <li><b class="via-bustext via-busfreq-60">Route 90:</b> Increased weekday frequency from <span class="via-bustext via-busfreq-60">60 minutes</span> to <span class="via-bustext via-busfreq-30">30 minutes</span> during rush hours</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <ul>
+                                <li>Pair realignments
+                                    <ul>
+                                        <li><b class="via-bustext via-busfreq-60">5</b> – <b class="via-bustext via-busfreq-60">36</b></li>
+                                        <li><b class="via-bustext via-busfreq-60">30</b> – <b class="via-bustext via-busfreq-60">90</b></li>
                                     </ul>
                                 </li>
                             </ul>
                         </td>
                     </tr>
                     <tr>
-                        <td>April 14, 2025</td>
+                        <td>September 2, 2024</td>
                         <td style="text-align: left;">
-                            <img src="../../resources/via/route-icons/014.webp">
-                            <img src="../../resources/via/route-icons/020.webp">
-                            <img src="../../resources/via/route-icons/026.webp">
-                            <img src="../../resources/via/route-icons/044.webp">
-                            <img src="../../resources/via/route-icons/066.webp">
-                            <img src="../../resources/via/route-icons/068.webp">
-                            <img src="../../resources/via/route-icons/102.webp">
+                            <img src="../../resources/via/route-icons/link-downtown.webp" loading="lazy">
                         </td>
                         <td style="text-align: left;">
-                            <b>April 2025 Service changes implemented</b>
+                            <b class="via-bustext via-busfreq-link">VIA Link Downtown</b> launches to serve Downtown San Antonio in addition to the fourty-three routes that already existed in the Downtown area.<a class="in-text-citation">5</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>September 24, 2024</td>
+                        <td style="text-align: left;">N/A</td>
+                        <td style="text-align: left;">
+                            The VIA Board unanimously approves a budget of $307.6 million for the 2025 Fiscal Year.<a class="in-text-citation">6</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>November 11, 2024</td>
+                        <td style="text-align: left;">N/A</td>
+                        <td style="text-align: left;">
+                            <b>Naco Pass</b> reopens after a two-year-long closure.<a class="in-text-citation">7</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>January 6, 2025</td>
+                        <td style="text-align: left;">N/A</td>
+                        <td style="text-align: left;">
+                            <b>January 2025 Service changes implemented</b><a class="in-text-citation">8</a>
+                            <ul>
+                                <li>Minor schedule adjustments</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>March 4, 2025</td>
+                        <td style="text-align: left;">N/A</td>
+                        <td style="text-align: left;">
+                            The VIA Board approves frequency adjustments on five routes to be implemented the following month.<a class="in-text-citation">9</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>April 14, 2025</td>
+                        <td style="text-align: left;">
+                            <img src="../../resources/via/route-icons/014.webp" loading="lazy">
+                            <img src="../../resources/via/route-icons/020.webp" loading="lazy">
+                            <img src="../../resources/via/route-icons/026.webp" loading="lazy">
+                            <img src="../../resources/via/route-icons/044.webp" loading="lazy">
+                            <img src="../../resources/via/route-icons/066.webp" loading="lazy">
+                            <img src="../../resources/via/route-icons/068.webp" loading="lazy">
+                            <img src="../../resources/via/route-icons/102.webp" loading="lazy">
+                        </td>
+                        <td style="text-align: left;">
+                            <b>April 2025 Service changes implemented</b><a class="in-text-citation">10</a>
                             <ul>
                                 <li>Alignment changes
                                     <ul>
@@ -2088,8 +2499,9 @@
                                 <li>Frequency changes
                                     <ul>
                                         <li><b class="via-bustext via-busfreq-20">Route 20:</b> Increased weekend frequency from <span class="via-bustext via-busfreq-20">20 minutes</span> to <span class="via-bustext via-busfreq-20">15 minutes</span></li>
-                                        <li><b class="via-bustext via-busfreq-30">Route 26:</b> Increased weekday frequency between <b>8pm–10pm</b> from <span class="via-bustext via-busfreq-60">60 minutes</span> to <span class="via-bustext via-busfreq-30">30 minutes</span></li>
-                                        <li><b class="via-bustext via-busfreq-30">Route 44:</b> Increased daily frequency from <span class="via-bustext via-busfreq-60">40 minutes</span> to <span class="via-bustext via-busfreq-30">30 minutes</span></li>
+                                        <li><b class="via-bustext via-busfreq-30">Route 26:</b> Increased weekday frequency between <b>8pm–10pm</b> from <span class="via-bustext via-busfreq-60">60 minutes</span> to <span class="via-bustext via-busfreq-30">30 minutes</span>,
+                                            and increased weekend frequency from <span class="via-bustext via-busfreq-60">40 minutes</span> to <span class="via-bustext via-busfreq-30">30 minutes</span></li>
+                                        <li><b class="via-bustext via-busfreq-30">Route 44:</b> Increased frequency from <span class="via-bustext via-busfreq-60">40 minutes</span> to <span class="via-bustext via-busfreq-30">30 minutes</span></li>
                                         <li><b class="via-bustext via-busfreq-20">Route 102:</b> Increased weekday frequency from <span class="via-bustext via-busfreq-20">15 minutes</span> to <span class="via-bustext via-busfreq-20">12 minutes</span></li>
                                     </ul>
                                 </li>
@@ -2109,45 +2521,59 @@
                         <td>April 22, 2025</td>
                         <td style="text-align: left;">N/A</td>
                         <td style="text-align: left;">
-                            The VIA Board of Trustees adopts <a href="https://platform.remix.com/project/fdccfbc7?latlng=29.47803,-98.54186,10.13" target="_blank">an updated Better Bus service map</a>
+                            The VIA Board of Trustees adopts <a href="https://platform.remix.com/project/fdccfbc7?latlng=29.47803,-98.54186,10.13" target="_blank">an updated Better Bus service map</a>.
                         </td>
                     </tr>
                     <tr>
-                        <td>July 13, 2025</td>
+                        <td>May 27, 2025</td>
+                        <td style="text-align: left;">N/A</td>
                         <td style="text-align: left;">
-                            <img src="../../resources/via/future-icons/brt-green.webp">
+                            The VIA Board unanimously approves the Better Bus Plan.<a class="in-text-citation">11</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>June 13, 2025</td>
+                        <td style="text-align: left;">
+                            <img src="../../resources/via/future-icons/brt-green.webp" loading="lazy">
                         </td>
                         <td style="text-align: left;">
-                            Construction of the <span class="via-bustext via-busfreq-rapidgreen">Rapid Green Line</span> officially begins
+                            Construction of the <span class="via-bustext via-busfreq-rapidgreen">Rapid Green Line</span> officially begins.<a class="in-text-citation">12</a>
                         </td>
                     </tr>
                     <tr>
                         <td>August 18, 2025</td>
                         <td style="text-align: left;">
-                            <img src="../../resources/via/route-icons/009.webp">
-                            <img src="../../resources/via/route-icons/010.webp">
-                            <img src="../../resources/via/route-icons/021.webp">
-                            <img src="../../resources/via/route-icons/022.webp">
-                            <img src="../../resources/via/route-icons/043.webp">
-                            <img src="../../resources/via/route-icons/030.webp">
-                            <img src="../../resources/via/route-icons/051.webp">
-                            <img src="../../resources/via/route-icons/090.webp">
-                            <img src="../../resources/via/route-icons/502.webp">
-                            <img src="../../resources/via/route-icons/607.webp">
-                            <img src="../../resources/via/route-icons/610.webp">
-                            <img src="../../resources/via/route-icons/609.webp">
-                            <img src="../../resources/via/route-icons/613.webp">
-                            <img src="../../resources/via/route-icons/618.webp">
-                            <img src="../../resources/via/route-icons/648.webp">
-                            <img src="../../resources/via/route-icons/link-nacopass.webp">
-                            <img src="../../resources/via/route-icons/link-mainland.webp">
+                            <img src="../../resources/via/route-icons/009.webp" loading="lazy">
+                            <img src="../../resources/via/route-icons/010.webp" loading="lazy">
+                            <img src="../../resources/via/route-icons/021.webp" loading="lazy">
+                            <img src="../../resources/via/route-icons/022.webp" loading="lazy">
+                            <img src="../../resources/via/route-icons/043.webp" loading="lazy">
+                            <img src="../../resources/via/route-icons/030.webp" loading="lazy">
+                            <img src="../../resources/via/route-icons/051.webp" loading="lazy">
+                            <img src="../../resources/via/route-icons/090.webp" loading="lazy">
+                            <img src="../../resources/via/route-icons/502.webp" loading="lazy">
+                            <img src="../../resources/via/route-icons/607.webp" loading="lazy">
+                            <img src="../../resources/via/route-icons/610.webp" loading="lazy">
+                            <img src="../../resources/via/route-icons/609.webp" loading="lazy">
+                            <img src="../../resources/via/route-icons/613.webp" loading="lazy">
+                            <img src="../../resources/via/route-icons/618.webp" loading="lazy">
+                            <img src="../../resources/via/route-icons/648.webp" loading="lazy">
+                            <img src="../../resources/via/route-icons/link-nacopass.webp" loading="lazy">
+                            <img src="../../resources/via/route-icons/link-mainland.webp" loading="lazy">
                         </td>
                         <td style="text-align: left;">
-                            <b>August 2025 Service changes implemented</b>
+                            <b>August 2025 Service changes implemented</b><a class="in-text-citation">13</a>
                             <ul>
                                 <li>New routes
                                     <ul>
                                         <li><b class="via-bustext via-busfreq-20">10 Nacogdoches Skip</b></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <ul>
+                                <li>Eliminated routes
+                                    <ul>
+                                        <li><b class="via-bustext via-busfreq-60">613 Heritage Northwest / Kel-Lac</b></li>
                                     </ul>
                                 </li>
                             </ul>
@@ -2161,7 +2587,7 @@
                                         <li><b class="via-bustext via-busfreq-30">Route 618:</b> Realigned route to serve <b>Westover Hills</b> and extended southern terminus to <b>Kel-Lac Transit Center</b></li>
                                         <li><b class="via-bustext via-busfreq-60">Route 648:</b> Added a stop at <b>Rough Oak & Quail Oak</b> that is served during peak hours only</li>
                                         <li><b class="via-bustext via-busfreq-link">VIA Link Naco Pass:</b> Added new satellite stop at <b>North East Transition Services</b></li>
-                                        <li><b class="via-bustext via-busfreq-link">VIA Link Mainland:</b> Extended service zone extended to serve the area surrounding <b>Eckhert Road</b></li>
+                                        <li><b class="via-bustext via-busfreq-link">VIA Link Mainland:</b> Extended service zone to serve the area surrounding <b>Eckhert Road</b></li>
                                     </ul>
                                 </li>
                             </ul>
@@ -2191,6 +2617,13 @@
                         </td>
                     </tr>
                     <tr>
+                        <td>September 26, 2025</td>
+                        <td style="text-align: left;">N/A</td>
+                        <td style="text-align: left;">
+                            The VIA Board unanimously approves a budget of $574.3 million for the 2026 Fiscal Year.<a class="in-text-citation">14</a>
+                        </td>
+                    </tr>
+                    <tr>
                         <td>October 3, 2025</td>
                         <td style="text-align: left;">N/A</td>
                         <td style="text-align: left;">
@@ -2201,13 +2634,59 @@
                         <td>October 6, 2025</td>
                         <td style="text-align: left;">N/A</td>
                         <td style="text-align: left;">
-                            The proposed service changes for January 12, 2026 is published, proposing 16 frequency boosts, 13 realignments, 2 span of service expansions, 5 route eliminations, 1 route extension elimination, and a new VIA Link zone.
+                            The proposed service changes for January 12, 2026 is published, proposing 16 frequency boosts, 13 realignments, 2 span of service expansions, 5 route eliminations, 1 route extension elimination, and a new VIA Link zone.<a class="in-text-citation">15</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>October 6, 2025</td>
+                        <td style="text-align: left;">N/A</td>
+                        <td style="text-align: left;">
+                            After nearly 16 months of construction, <b>Randolph Transit Center</b> opens its brand new passenger waiting facility and bus platforms.<a class="in-text-citation">16</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>November 3, 2025</td>
+                        <td style="text-align: left;">
+                            <img src="../../resources/via/route-icons/link-southeast.webp" loading="lazy">
+                        </td>
+                        <td style="text-align: left;">
+                            <b class="via-bustext via-busfreq-link">VIA Link Southeast</b> launches to serve Brooks Transit Center, China Grove, Lakeside, and Sandy Oaks.<a class="in-text-citation">17</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>November 7, 2025</td>
+                        <td style="text-align: left;">N/A</td>
+                        <td style="text-align: left;">
+                            Three additional proposals are made for the January 2026 service changes.<a class="in-text-citation">18</a>
                         </td>
                     </tr>
                 </tbody>
             </table>
             </div>
-                
+
+            <a name="citations"></a>
+            <h3 class="saya-h3 via-bustext">Citations</h3>
+            <ul class="saya-ul">
+                <li id="citation1"><a href="#tl-cite1">[1]</a>: <a href="https://www.viainfo.net/2024/04/12/mapsurvey2024" target="_blank">"VIA Wants Public Input on Map Redesign"</a>. <em>VIA Metropolitan Transit</em>. April 12, 2024. Retrieved November 4, 2025.</li>
+                <li id="citation2"><a href="#tl-cite2">[2]</a>: <a href="https://viainfo.net/randolph" target="_blank">"Randolph Transit Center Upgrades"</a>. <em>VIA Metropolitan Transit</em>. May 31, 2024. Retrieved November 4, 2025.</li>
+                <li id="citation3"><a href="#tl-cite3">[3]</a>: <a href="https://viainfo.net/newmaps" target="_blank">"New Maps"</a>. <em>VIA Metropolitan Transit</em>. Retrieved November 4, 2025.</li>
+                <li id="citation4"><a href="#tl-cite3">[4]</a>: <a href="https://web.archive.org/web/20241103120340/https://www.viainfo.net/servicechanges" target="_blank">"Service Changes - August 2024"</a>. <em>VIA Metropolitan Transit</em>. Archived from the original on November 3, 2024.</li>
+                <li id="citation5"><a href="#tl-cite5">[5]</a>: <a href="https://news4sanantonio.com/news/local/via-metropolitan-launches-new-on-demand-via-link-service-downtown-passenger-trips-connect" target="_blank">"VIA Metropolitan launches new on-demand VIA Link service Downtown"</a>. <em>News 4 San Antonio</em>. September 2, 2024. Retrieved November 13, 2025.</li>
+                <li id="citation6"><a href="#tl-cite6">[6]</a>: <a href="https://www.viainfo.net/2024/09/25/board_approves_fy25budget" target="_blank">"VIA Board Unanimously Adopts $307.6M Operating Budget"</a>. <em>VIA Metropolitan Transit</em>. September 25, 2024. Retrieved November 13, 2025.</li>
+                <li id="citation7"><a href="#tl-cite7">[7]</a>: <a href="https://www.viainfo.net/2024/11/06/naco_pass_reopening" target="_blank">"Naco Pass Mobility Hub is Back and It's Better"</a>. <em>VIA Metropolitan Transit</em>. November 6, 2024. Retrieved November 13, 2025.</li>
+                <li id="citation8"><a href="#tl-cite8">[8]</a>: <a href="https://web.archive.org/web/20250105190203/https://www.viainfo.net/ServiceChanges" target="_blank">"Service Changes"</a>. <em>VIA Metropolitan Transit</em>. Archived from the original on January 5, 2025.</li>
+                <li id="citation9"><a href="#tl-cite9">[9]</a>: <a href="https://www.viainfo.net/2025/03/05/approved_improvements" target="_blank">"VIA Board approves frequency improvements on key routes"</a>. <em>VIA Metropolitan Transit</em>. March 5, 2024. Retrieved November 13, 2025.</li>
+                <li id="citation10"><a href="#tl-cite10">[10]</a>: <a href="https://web.archive.org/web/20250528151121/https://www.viainfo.net/servicechanges" target="_blank">"Service Changes"</a>. <em>VIA Metropolitan Transit</em>. Archived from the original on May 28, 2025.</li>
+                <li id="citation11"><a href="#tl-cite11">[11]</a>: <a href="https://www.viainfo.net/2025/05/30/bbp_aug_2025" target="_blank">"VIA Board Approves Better Bus Plan to Enhance Service"</a>. <em>VIA Metropolitan Transit</em>. May 30, 2025. Retrieved November 13, 2025.</li>
+                <li id="citation12"><a href="#tl-cite12">[12]</a>: <a href="https://www.ksat.com/news/local/2025/06/13/via-to-break-ground-on-rapid-green-line" target="_blank">"VIA breaks ground on 10.35-mile Rapid Green Line"</a>. <em>KSAT 12</em>. June 13, 2025. Retrieved November 13, 2025.</li>
+                <li id="citation13"><a href="#tl-cite13">[13]</a>: <a href="https://web.archive.org/web/20250809141824/https://www.viainfo.net/servicechanges" target="_blank">"Service Changes"</a>. <em>VIA Metropolitan Transit</em>. Archived from the original on August 9, 2025.</li>
+                <li id="citation14"><a href="#tl-cite14">[14]</a>: <a href="https://www.viainfo.net/2025/09/26/fy26budget_approval" target="_blank">"VIA Board unanimously approves Fiscal Year 2026 Budget"</a>. <em>VIA Metropolitan Transit</em>. September 26, 2025. Retrieved November 13, 2025.</li>
+                <li id="citation15"><a href="#tl-cite15">[15]</a>: <a href="https://web.archive.org/web/20251007220745/https://www.viainfo.net/proposedchanges" target="_blank">"Proposed Service Changes"</a>. <em>VIA Metropolitan Transit</em>. Archived from the original on October 7, 2025.</li>
+                <li id="citation16"><a href="#tl-cite16">[16]</a>: <a href="https://www.viainfo.net/2025/10/28/randolph_reopen" target="_blank">"THE OLD IS NEW AT RANDOLPH TRANSIT CENTER"</a>. <em>VIA Metropolitan Transit</em>. October 28, 2025. Retrieved November 13, 2025.</li>
+                <li id="citation17"><a href="#tl-cite17">[17]</a>: <a href="https://www.ksat.com/news/local/2025/11/04/vias-rideshare-service-expands-to-bexar-countys-southeast-region" target="_blank">"VIA’s rideshare service expands to Bexar County’s Southeast region"</a>. <em>KSAT 12</em>. November 3, 2025. Retrieved November 13, 2025.</li>
+                <li id="citation18"><a href="#tl-cite18">[18]</a>: <a href="https://web.archive.org/web/20251113182854/https://www.viainfo.net/proposedchanges" target="_blank">"VIA Host Public Hearing on January 2026 Service Improvements"</a>. <em>VIA Metropolitan Transit</em>. Archived from the original on November 13, 2025.</li>
+            </ul>
+
             <br/>
             <br/>
             <br/>

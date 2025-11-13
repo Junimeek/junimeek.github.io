@@ -47,6 +47,10 @@
     color: #bdae80;
 }
 
+.via-busfreq-lineup {
+    color: #411b43;
+}
+
 .via-busfreq-grad-2060 {
     color: linear-gradient(90deg, #af3034, #375c9f);
 }

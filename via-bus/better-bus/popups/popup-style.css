@@ -1,0 +1,37 @@
+@import url('../../../resources/sayaka/sayaka.css');
+@import url('../../../resources/sayaka/sayaka-table.css');
+@import url('../../../resources/sayaka/styles/via.css');
+
+.saya-body {
+    font-family: Arial, sans-serif;
+    font-size: 14pt;
+    margin: 0px;
+}
+
+.saya-table img {
+    width: 32px;
+    height: 32px;
+}
+
+.popup-flexbox-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-flexbox-container img {
+    margin: 10px;
+    width: 56px;
+    height: 56px;
+}
+
+.saya-table td {
+    font-size: 14pt;
+}
+
+.popup-tablewidth {
+    width: 100%;
+    max-width: 900px;
+}

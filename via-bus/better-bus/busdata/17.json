@@ -1,0 +1,12 @@
+{
+    "name": "IH-35 Express",
+    "implementation": 0,
+    "description":[
+        {
+            "type": "terminus-extend",
+            "terminal": "northern",
+            "location": "Rolling Oaks Mall",
+            "additional-info": false
+        }
+    ]
+}

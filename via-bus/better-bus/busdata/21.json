@@ -1,0 +1,14 @@
+{
+    "name": "Kirby / Ventura Frequent",
+    "implementation": 2,
+    "description":[
+        {
+            "type": "date",
+            "date": "August 18, 2025"
+        },
+        {
+            "type": "html",
+            "html": ""
+        }
+    ]
+}

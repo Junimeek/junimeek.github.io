@@ -2,7 +2,7 @@
     This is the primary stylesheet for SayakaUI, the name of the common UI that is used across junimeek.net.
     Additional SayakaUI stylesheets can be found in this same directory.
     
-    Current version: 1.0.2
+    Current version: 1.0.3
 
     created by junimeek
     special thanks to potatocommuter
@@ -71,6 +71,11 @@
         line-height: 22pt;
     }
 
+    .saya-ul {
+        max-width: 80%;
+        font-size: 16pt;
+    }
+
     .saya-notification {
         width: 90%;
         max-width: 700px;
@@ -104,6 +109,11 @@
         max-width: 100%;
         font-size: 14pt;
         line-height: 18pt;
+    }
+
+    .saya-ul {
+        max-width: 100%;
+        font-size: 14pt;
     }
 
     .saya-notification {
@@ -143,6 +153,17 @@
     font-size: 20pt;
     font-weight: bold;
     text-align: center;
+}
+
+.saya-ul {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
+
+.saya-ul li {
+    margin-bottom: 0.5em;
 }
 
 .saya-footer-container {
