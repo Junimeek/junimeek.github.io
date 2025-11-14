@@ -8,16 +8,18 @@
         <link rel="stylesheet" href="./style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="icon" href="./favicon.ico" type="image/vnd.microsoft.icon">
+        <script src="./scripts.js"></script>
     </head>
     
-    <body class="saya-lower-bg">
+    <body class="saya-lower-bg" onload="RandomizeBanner()">
         <nav class="saya-navbar saya-navbar-font-scene">
             <div class="saya-navbar-container">
                 <script src="../resources/sayaka/sayaka-navbar-loader.js" onload="LoadNavBar(1)"></script>
             </div>
         </nav>
 
-        <div class="saya-body">
+        <div class="saya-banner-header" id="page-banner">
+            <div class="saya-banner-body">
             <table class="saya-notification-wide" bordercolor="#c0c0c0">
                 <tbody>
                     <tr>
@@ -36,17 +38,24 @@
                 </tbody>
             </table>
 
-            <h1 class="saya-h1">VIA Metropolitan Transit Information Hub</h1>
-            <hr/>
-            <p class="saya-paragraph">
+            <h1 class="saya-h1" style="color: white;">VIA Metropolitan Transit Information Hub</h1>
+            <p class="saya-paragraph" style="color: white;">
                 I spend an unreasonable amount of time researching and documenting information that I find about VIA.
                 In the spirit of allowing people who use the system to have as much information as they could possibly want, I have made my research public here.
             </p>
-            <p class="saya-paragraph">
+            <p class="saya-paragraph" style="color: white;">
                 Click any of the links below to see whatever information you're looking for.
                 Note that the solid gray buttons at the bottom aren't functional, and are simply there as placeholders/teasers for future content.
             </p>
+            
+            <hr>
+            <div style="text-align: right;" id="photo-credit">
+                <span style="color: white; text-align: right;"><em>Photo by Junimeek</em></span>
+            </div>
+        </div>
+        </div>
 
+        <div class="saya-body">
             <div class="saya-flexbutton-container">
                 <div class="saya-flexbutton-buttonarea">
                     <a href="./lineup/index.html" style="text-decoration: none;">

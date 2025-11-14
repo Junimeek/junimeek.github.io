@@ -1,3 +1,25 @@
+const bannerList = [
+    "north-star-xcelsior.jpg",
+    "randolph-tc.jpg",
+    "e-gillig.jpg",
+    "e-gillig-interior.jpg",
+    "naco-pass-gillig.jpg",
+    "via-link-car.jpg",
+    "utsa-nova.jpg",
+    "medical-center.jpg"
+];
+
+function RandomizeBanner()
+{
+    let banner = document.getElementById("page-banner");
+    let stylePath = "./banners/";
+
+    let randy = Math.floor((Math.random() * bannerList.length));
+    stylePath += bannerList[randy];
+
+    banner.style = "background-image: url('" + stylePath + "');";
+}
+
 function CalculateDividers(outbound, inbound)
 {
     let outboundNumbers = [0];

@@ -143,6 +143,8 @@ function HighlightCitation(citation)
 
 function SwitchRoutePage(newPage)
 {
+    document.getElementById("jump-footer").style = "display: flex;";
+
     for (let i = 0; i < routePages.length; i++) {
         routePages[i].className = "routegroup-disabled";
         routeSelectors[i].className = "";

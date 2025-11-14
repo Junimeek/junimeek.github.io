@@ -4,6 +4,10 @@
 @import url('../resources/sayaka/sayaka-flexbuttons.css');
 @import url('../resources/fonts/font-style.css');
 
+.saya-banner-header {
+    background-color: #d22030;
+}
+
 .bigbutton-lineup {
     background-color: #411b43;
     background-image: url("./thumb-lineup.webp");
