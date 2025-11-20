@@ -29,6 +29,17 @@
     font-size: 14pt;
 }
 
+.saya-table td b u {
+    color: #03757b;
+}
+
+.saya-table td hr {
+    height: 1.5px;
+    border-width: 0;
+    color: #03757b;
+    background-color: #03757b;
+}
+
 .summary-table li {
     margin-bottom: 0em;
 }
