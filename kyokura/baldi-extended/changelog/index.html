@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Baldi's Extended Schoolhouse - Kyokura</title>
+        <link rel="stylesheet" href="../style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="icon" href="../../favicon.ico" type="image/vnd.microsoft.icon">
+    </head>
+    
+    <body class="saya-lower-bg saya-nomargin">
+        <nav class="saya-navbar kyokura-font-comic">
+            <div class="saya-navbar-container">
+                <script src="../../../resources/sayaka/sayaka-navbar-loader.js" onload="LoadNavBar(2)"></script>
+            </div>
+        </nav>
+
+        <div class="kyokura-banner">
+            <img src="../banner.png" alt="Baldi's Extended Schoolhouse">
+        </div>
+
+        <div class="saya-body kyokura-maincontentarea">
+            <p class="kyosaya-paragraph">
+                <a href="../index.html" class="kyokura-font-comic">< Return to main page</a>
+            </p>
+            <h1 class="saya-h1 kyokura-font-comic">Baldi's Extended Changelog</h1>
+            <hr>
+            <p class="kyosaya-short-paragraph">
+                This is a more-or-less complete list of changes that I have made since the release of Beta 0.1 way back in March 2023.
+            </p>
+            <p class="kyosaya-short-paragraph">
+                Use the buttons below to skip to a specific version:
+            </p>
+            <div class="saya-flexbutton-container">
+                <div class="versionbutton-buttonarea">
+                    <a href="#v0.5.2" style="text-decoration: none;">
+                        <div class="saya-flexbutton-bigbutton versionbutton">
+                            <b class="kyokura-font-comic">0.5.2</b>
+                        </div>
+                    </a>
+                </div>
+                <div class="versionbutton-buttonarea">
+                    <a href="#v0.5.1" style="text-decoration: none;">
+                        <div class="saya-flexbutton-bigbutton versionbutton">
+                            <b class="kyokura-font-comic">0.5.1</b>
+                        </div>
+                    </a>
+                </div>
+                <div class="versionbutton-buttonarea">
+                    <a href="#v0.5.0a" style="text-decoration: none;">
+                        <div class="saya-flexbutton-bigbutton versionbutton">
+                            <b class="kyokura-font-comic">0.5.0a</b>
+                        </div>
+                    </a>
+                </div>
+                <div class="versionbutton-buttonarea">
+                    <a href="#v0.5.0" style="text-decoration: none;">
+                        <div class="saya-flexbutton-bigbutton bigredbutton">
+                            <b class="kyokura-font-comic">0.5*</b>
+                        </div>
+                    </a>
+                </div>
+                <div class="versionbutton-buttonarea">
+                    <a href="#v0.4.3" style="text-decoration: none;">
+                        <div class="saya-flexbutton-bigbutton bigredbutton">
+                            <b class="kyokura-font-comic">0.4.3*</b>
+                        </div>
+                    </a>
+                </div>
+                <div class="versionbutton-buttonarea">
+                    <a href="#v0.4.2" style="text-decoration: none;">
+                        <div class="saya-flexbutton-bigbutton bigredbutton">
+                            <b class="kyokura-font-comic">0.4.2*</b>
+                        </div>
+                    </a>
+                </div>
+                <div class="versionbutton-buttonarea">
+                    <a href="#v0.4.1" style="text-decoration: none;">
+                        <div class="saya-flexbutton-bigbutton bigredbutton">
+                            <b class="kyokura-font-comic">0.4.1*</b>
+                        </div>
+                    </a>
+                </div>
+                <div class="versionbutton-buttonarea">
+                    <a href="#v0.4.0" style="text-decoration: none;">
+                        <div class="saya-flexbutton-bigbutton bigredbutton">
+                            <b class="kyokura-font-comic">0.4*</b>
+                        </div>
+                    </a>
+                </div>
+                <div class="versionbutton-buttonarea">
+                    <a href="#v0.3.1" style="text-decoration: none;">
+                        <div class="saya-flexbutton-bigbutton bigredbutton">
+                            <b class="kyokura-font-comic">0.3.1*</b>
+                        </div>
+                    </a>
+                </div>
+                <div class="versionbutton-buttonarea">
+                    <a href="#v0.3.0" style="text-decoration: none;">
+                        <div class="saya-flexbutton-bigbutton bigredbutton">
+                            <b class="kyokura-font-comic">0.3*</b>
+                        </div>
+                    </a>
+                </div>
+                <div class="versionbutton-buttonarea">
+                    <a href="#v0.2.0" style="text-decoration: none;">
+                        <div class="saya-flexbutton-bigbutton bigredbutton">
+                            <b class="kyokura-font-comic">0.2*</b>
+                        </div>
+                    </a>
+                </div>
+                <div class="versionbutton-buttonarea">
+                    <a href="#v0.1.0" style="text-decoration: none;">
+                        <div class="saya-flexbutton-bigbutton bigredbutton">
+                            <b class="kyokura-font-comic">0.1*</b>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <p class="kyosaya-short-paragraph">
+                Versions marked with an asterisk (<span class="kyokura-font-comic" style="color: red;">*</span>) are versions that shipped with a security vulnerability that was discovered in Unity Engine in late 2025.
+                Play these old versions at your own risk.
+            </p>
+
+            <hr>
+            <a name="v0.5.2"></a>
+            <h2 class="saya-h2 kyokura-font-comic">Version 0.5.2</h2>
+            <p class="kyosaya-short-paragraph">
+                Release date: <code>November 2025</code>
+            </p>
+            <p class="kyosaya-paragraph">
+                This is a small update, but a very important one: <code>Version 0.6</code> will change how save files are structured, and this version will allow players to upgrade their save files to the system that <code>0.6</code> will be using.
+                While <code>0.6</code> will be able to detect old save files, it will not be able to detect the settings used in previous versions.
+            </p>
+            <h3 class="saya-h3 kyokura-font-comic">Miscellaneous changes</h3>
+            <div class="kyosaya-ul">
+                <ul>
+                    <li>Reorganized the layout of the launcher</li>
+                    <li>The new update message is now a banner at the top of the launcher's screen</li>
+                    <li>Changed the credits in the launcher and in-game credits menu to reflect <a href="https://pspleaffox.itch.io" target="_blank"><i class="fa fa-external-link"></i>PSPLeafFox's</a> username change</li>
+                </ul>
+            </div>
+            <h3 class="saya-h3 kyokura-font-comic">Bug fixes</h3>
+            <div class="kyosaya-ul">
+                <ul>
+                    <li>Fixed the flashlight not working at all. How I missed this one is beyond me.</li>
+                </ul>
+            </div>
+            <h3 class="saya-h3 kyokura-font-comic">Internal changes</h3>
+            <div class="kyosaya-ul">
+                <ul>
+                    <li>Removed Newtonsoft JSON, Fluid MIDI Player, and some unnecessary files that I left in in the StreamingAssets folder</li>
+                </ul>
+            </div>
+            <p class="kyosaya-short-paragraph">
+                <a href="https://github.com/Junimeek/BaldiExtended/releases/tag/beta-0.5.2"><i class="fa fa-external-link"></i> Download Beta 0.5.2</a>
+            </p>
+            <hr>
+
+            <a name="v0.5.1"></a>
+            <h2 class="saya-h2 kyokura-font-comic">Version 0.5.1</h2>
+            <p class="kyosaya-short-paragraph">
+                Release date: <code>October 28, 2025</code>
+            </p>
+            <p class="kyosaya-paragraph">
+                This is the update I spent a whole year on without putting in anything that tells you that I spent a year on it.
+            </p>
+            <h3 class="saya-h3 kyokura-font-comic">Gameplay changes</h3>
+            <div class="kyosaya-ul">
+                <ul>
+                    <li>The addition/subtraction problems when Difficult Math is enabled now have three digits</li>
+                    <li>You will now automatically equip a flashlight during the finale to improve navigation</li>
+                    <li>Changed the credits in the launcher and in-game credits menu to reflect <a href="https://pspleaffox.itch.io">PSPLeafFox's</a> username change</li>
+                </ul>
+            </div>
+            <h3 class="saya-h3 kyokura-font-comic">Miscellaneous changes</h3>
+            <div class="kyosaya-ul">
+                <ul>
+                    <li>Changed the developer name to Kyokura. Note that internally, "JuniDev" will continue to be what the company name is to ensure compatibility with existing save files.</li>
+                    <li>The notebook count display from BB+ has been added to this mod</li>
+                    <li>Items and money will now play a sound when being picked up</li>
+                    <li>You can now see the center UI hand icon during the Null bossfight</li>
+                    <li>Removed the bus that was in the Dark Mode challenge map. seriously why was it even there</li>
+                    <li>Added a few new posters</li>
+                    <li>Removed a few posters for personal reasons</li>
+                </ul>
+            </div>
+            <h3 class="saya-h3 kyokura-font-comic">Bug fixes</h3>
+            <div class="kyosaya-ul">
+                <ul>
+                    <li>The random ambience noises are now properly filtered through the SFX volume control</li>
+                    <li>The sprite bouncing effect on pickups (notebooks and items) is now consistent regardless of framerate</li>
+                    <li>Fixed a bug where the school colors would suddenly flip to red when reaching the second-to-last exit in safe mode</li>
+                    <li>Fixed an issue where some characters would not appear on the quick map</li>
+                    <li>Fixed an issue where you could see parts of the UI when looking out the window of the East Exit after defeating Null</li>
+                </ul>
+            </div>
+            <h3 class="saya-h3 kyokura-font-comic">Internal changes</h3>
+            <div class="kyosaya-ul">
+                <ul>
+                    <li>Updated the Unity Engine version to <code>2021.3.45f2</code> to address a security vulnerability that all applications built in Unity Engine 2017.1-onwards contain.
+                        Unity Technologies has advised all developers to update their Unity version asap. You can read more about it here:
+                        <a href="https://discussions.unity.com/t/unity-platform-protection-take-immediate-action-to-protect-your-games-and-apps/1688031" target="_blank"><i class="fa fa-external-link"></i>"Unity Platform Protection: Take Immediate Action to Protect Your Games and Apps"</a>
+                    </li>
+                    <li>Some variables are now set in the new <code>MasterController</code> gameobject. This was done to make modifying the scenes a little easier since some things would instantly break when making changes to the UI.</li>
+                </ul>
+            </div>
+            <p class="kyosaya-short-paragraph">
+                <a href="https://github.com/Junimeek/BaldiExtended/releases/tag/beta-0.5.1"><i class="fa fa-external-link"></i> Download Beta 0.5.1</a>
+            </p>
+            <hr>
+
+            <a name="v0.5.0a"></a>
+            <h2 class="saya-h2 kyokura-font-comic">Version 0.5.0a</h2>
+            <p class="kyosaya-short-paragraph">
+                Release date: <code>October 8, 2025</code>
+            </p>
+            <p class="kyosaya-paragraph">
+                This update doesn't add any new content since I'm still working on finding motivation to fix my spaghetti code, but this does have one extremely important change.
+            </p>
+            <h3 class="saya-h3 kyokura-font-comic">Internal changes</h3>
+            <div class="kyosaya-ul">
+                <ul>
+                    <li>Applied a patch that addresses a security vulnerability discovered in all games built in Unity Engine from 2017-onwards.</li>
+                </ul>
+            </div>
+            <p class="kyosaya-short-paragraph">
+                <a href="https://github.com/Junimeek/BaldiExtended/releases/tag/beta-0.5.0a"><i class="fa fa-external-link"></i> Download Beta 0.5.0a</a>
+            </p>
+            <hr>
+
+            <a name="v0.5.0"></a>
+            <h2 class="saya-h2 kyokura-font-comic">Version 0.5.0</h2>
+            <p class="kyosaya-short-paragraph">
+                Release date: <code>October 19, 2024</code>
+            </p>
+            <p class="kyosaya-paragraph">
+                Probably the most productive update so far tbh
+            </p>
+            <h3 class="saya-h3 kyokura-font-comic">Gameplay changes</h3>
+            <div class="kyosaya-ul">
+                <ul>
+                    <li><b>New mode</b>: Challenge mode!
+                        <ul>
+                            <li><b>New challenge</b>: Dark mode! Which is basically just BBCR's Null Style lmao</li> 
+                        </ul>
+                    </li>
+                    <li>You can now charge your stamina up to 300% if you're standing in an infinite stamina zone!</li>
+                    <li>The Baldicator will now queue its expressions for sight, next sound, and wandering. This is to ensure that you will still know what Baldi is doing while other animations are playing.</li>
+                    <li>The Baldicator has a different sprite for Sight now for improved visual clarity</li>
+                    <li>During the finale, once you're at just 1 exit remaining, the school will get darker as you get closer to the exit</li>
+                </ul>
+            </div>
+            <h3 class="saya-h3 kyokura-font-comic">Item changes</h3>
+            <div class="kyosaya-ul">
+                <ul>
+                    <li><b>New item</b>: the Dangerous Hammer! Smash through any window you can find to be able to go through it!
+                        <ul>
+                            <li>For now, this item is only available in the Dark Mode challenge.</li> 
+                        </ul>
+                    </li>
+                    <li>The duration of the Yellow Door Lock and Big'Ol Boots have been increased to 30 seconds</li>
+                    <li>The number of times a door treated with WD-NoSquee can be opened silently has been increased to 6 times</li>
+                    <li>A visual indicator has been added for doors treated with WD-NoSquee</li>
+                    <li>Eating a zesty bar will now play a sound</li>
+                </ul>
+            </div>
+            <h3 class="saya-h3 kyokura-font-comic">Miscellaneous changes</h3>
+            <div class="kyosaya-ul">
+                <ul>
+                    <li>There is a new category in the menu: Patches. Right now the only things that are there are selecting between your monitor's refresh rate or unlimited framerate, and fixing the noisy doors bug. More info about the latter is under the Bug Fixes category.</li>
+                    <li>The music during the finale has been altered</li>
+                    <li>There is a new sequence for the normal ending</li>
+                    <li>The visuals of the quick map have been changed</li>
+                    <li>Saving has been completely overhauled. You'll see a prompt upon launching the game the first time you open it. The game will have an indicator in the top left corner of the screen when saving is in progress.
+                        If you were playing an older version of the game, it should detect that old data and upgrade it to the new system.</li>
+                    <li>The Data Management menu actually works like a data management menu now
+                        <ul>
+                            <li>There are now a few more things that will be saved in your high scores: Your best time in Story Mode, and how many of each item you've used in each map</li>
+                        </ul>
+                    </li>
+                    <li>A Family Friendly option has been added. This only affects some minor schoolhouse decoration.</li>
+                </ul>
+            </div>
+            <h3 class="saya-h3 kyokura-font-comic">Bug fixes</h3>
+            <div class="kyosaya-ul">
+                <ul>
+                    <li>The bug where clicking on an open door or simply walking through open swinging doors causing Baldi to be alerted has been fixed.
+                        However, I acknowledge that some people may use this bug as part of their strategy. As such, if you prefer this bug being in the game, you can optionally disable this fix in the settings's Patches menu.</li>
+                    <li>Clicking on an open door that has been treated with WD-NoSquee will no longer cause it to decrement the number of times the door can be silently opened</li>
+                    <li>Fixed the bully not detecting any items on you if your first item slot happens to be empty</li>
+                    <li>The coin drop sound from the vending machines are now properly filtered through the SFX volume control</li>
+                </ul>
+            </div>
+            <p class="kyosaya-short-paragraph">
+                <a href="https://github.com/Junimeek/BaldiExtended/releases/tag/beta-0.5"><i class="fa fa-external-link"></i> Download Beta 0.5</a>
+            </p>
+            <hr>
+
+            <a name="v0.4.3"></a>
+            <h2 class="saya-h2 kyokura-font-comic">Version 0.4.3</h2>
+            <p class="kyosaya-short-paragraph">
+                Release date: <code>August 12, 2024</code>
+            </p>
+            <p class="kyosaya-paragraph">
+                Productivity at its least mediocre
+            </p>
+            <h3 class="saya-h3 kyokura-font-comic">Gameplay changes</h3>
+            <div class="kyosaya-ul">
+                <ul>
+                    <li>There's now a quick map! It can be toggled on and off by simply pressing Tab.
+                        <ul>
+                            <li>Upgrades for the map can be purchased in the Principal's office. There is a poster next to the map upgrade vending machine that will explain in further detail.</li>
+                        </ul>
+                    </li>
+                    <li>You can now carry an infinite amount of quarters! All quarters will automatically be added to your wallet.
+                        <ul>
+                            <li>To use a quarter, simply look at a vending machine and right click, and it will use any quarters you have collected.
+                                If your inventory is full, select the item you want to replace with whatever the vending machine will dispense, and it'll replace that item with the new item.</li>
+                        </ul>
+                    </li>
+                    <li>As a result of several new items being added (explained further below), there is now a significant change to the vending machines: They will now cost varying amounts of quarters depending on what item they give you.
+                        <ul>
+                            <li>Diet BSODA and Crystal Zesty Bars cost 1 quarter</li>
+                            <li>BSODA and Energy Bars cost 3 quarters</li>
+                            <li>Map Upgrades cost 1-4 quarters depending on how many you want to buy</li>
+                            <li>These changes do not apply to the Classic map; all items will continue to cost just 1 quarter as per usual.</li>
+                        </ul>
+                    </li>
+                    <li>Safe mode will now spawn a Ghost Baldi once you get a question wrong. Ghost Baldi will chase you just like normal Baldi, he just can't end your game.</li>
+                    <li>Added two faculty rooms to Juniper Hills</li>
+                    <li>Increased the number of exits in Classic Extended to 6</li>
+                    <li>Increased the number of exits in Juniper Hills to 5</li>
+                </ul>
+            </div>
+            <h3 class="saya-h3 kyokura-font-comic">Item changes</h3>
+            <div class="kyosaya-ul">
+                <ul>
+                    <li>Collecting an item while your inventory is full will no longer completely discard an item; instead, it will place the item where you collected the new item, just like in BBCR.</li>
+                    <li>The map you play will now determine the number of inventory slots you have to work with:
+                        <ul>
+                            <li>Classic: 3 slots</li>
+                            <li>Classic Extended: 5 slots</li>
+                            <li>Juniper Hills: 4 slots</li>
+                        </ul>
+                    </li>
+                    <li><b>FOUR new items!</b>
+                        <ul>
+                            <li><b>Diet BSODA</b>: It's just like regular BSODA, but it only lasts 3 seconds</li>
+                            <li><b>Crystal Flavored Zesty bar</b>: Increases your stamina by 70%</li>
+                            <li><b>Party Popper</b>: Start a party in the cafeteria, the gym, or in any classroom!
+                                It can be found in the Principal's office, and it will attract all characters. What fun! It will also be less effective the more notebooks you have (unless you're playing endless mode, where it'll always last for 85 seconds instead).
+                            </li>
+                            <li><b>Wallet</b>: The wallet is permanently attached to your inventory and holds coins.
+                                <ul>
+                                    <li>This does not apply to the original Classic map; quarters will still be put in your inventory like normal there</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>The effects of the Zesty Bar can now be stacked</li>
+                    <li>The Attendance Slip has been buffed slightly: the character you send to attendance will now stay there for the entire game, instead of for just 3 notebooks.</li>
+                    <li>The Alarm Clock has been changed to act like it does in BBCR: you can set the time after dropping it somewhere, and it'll make Baldi ignore ALL sounds with the exception of the Party Popper.</li>
+                    <li>Added a new quarter that will spawn in a random room</li>
+                    <li>Removed a few standing quarters from Juniper Hills due to there being an excessive amount of money on that map. You can now only find a maximum of $2.50 in Classic Extended, and $2.25 in Juniper Hills.</li>
+                </ul>
+            </div>
+            <h3 class="saya-h3 kyokura-font-comic">Miscellaneous changes</h3>
+            <div class="kyosaya-ul">
+                <ul>
+                    <li>Added a few meme posters in the halls</li>
+                    <li>Added a new loading screen</li>
+                    <li>The game will tell now you how many exits are remaining in the top left of the screen</li>
+                    <li>Added the rest of Baldi's jumpscare sounds introduced in BB+</li>
+                    <li>Baldi's AI has been slightly improved to keep him moving instead of constantly getting stuck in place for a few seconds</li>
+                    <li>The Baldicator's animation times are slightly quicker now</li>
+                    <li>Its a Bully will now actually go to detention if the Principal catches him. Don't worry, he won't steal anything from you while he's in there.</li>
+                </ul>
+            </div>
+            <h3 class="saya-h3 kyokura-font-comic">Bug fixes</h3>
+            <div class="kyosaya-ul">
+                <ul>
+                    <li>Fixed a bug where the player would not look at the Principal when sent to detention, or at Baldi when Arts and Crafters teleports you. This is actually a bug that has existed in the original game for forever, I just never found a fix for it until now.</li>
+                    <li>Fixed a bug where Arts and crafters would softlock the player in Classic Extended and Juniper Hills</li>
+                    <li>Fixed a bug where the characters would phase through a wall in Juniper Hills</li>
+                    <li>Fixed a bug where picking up an item would sometimes result in you collecting the wrong item</li>
+                    <li>Fixed a few bugs with the center item display</li>
+                    <li>Fixed an issue that would allow you to use vending machines on the opposite side of a wall</li>
+                    <li>The fog during the finale now renders correctly</li>
+                </ul>
+            </div>
+            <p class="kyosaya-short-paragraph">
+                <a href="https://github.com/Junimeek/BaldiExtended/releases/tag/beta-0.4.3"><i class="fa fa-external-link"></i> Download Beta 0.4.3</a>
+            </p>
+            <hr>
+
+            <a name="v0.4.2"></a>
+            <h2 class="saya-h2 kyokura-font-comic">Version 0.4.2</h2>
+            <p class="kyosaya-short-paragraph">
+                Release date: <code>July 15, 2024</code>
+            </p>
+            <p class="kyosaya-paragraph">
+                For some reason, I decided to skip playtesting <code>Version 0.4.1</code>, which lead to two huge issues that made that version almost unplayable.
+            </p>
+            <h3 class="saya-h3 kyokura-font-comic">Bug fixes</h3>
+            <div class="kyosaya-ul">
+                <ul>
+                    <li>Fixed an issue that made Juniper Hills completely impossible</li>
+                    <li>Mostly fixed a bug with Baldi's wandering AI that made him extremely unpredictable</li>
+                </ul>
+            </div>
+            <p class="kyosaya-short-paragraph">
+                <a href="https://github.com/Junimeek/BaldiExtended/releases/tag/beta-0.4.2"><i class="fa fa-external-link"></i> Download Beta 0.4.2</a>
+            </p>
+            <hr>
+
+            <a name="v0.4.1"></a>
+            <h2 class="saya-h2 kyokura-font-comic">Version 0.4.1</h2>
+            <p class="kyosaya-short-paragraph">
+                Release date: <code>July 15, 2024</code>
+            </p>
+            <p class="kyosaya-paragraph">
+                This version is extremely broken because of two major oversights (Juniper Hills is completely impossible, and Baldi is broken). If you play this version, just keep that in mind.
+            </p>
+            <h3 class="saya-h3 kyokura-font-comic">Gameplay changes</h3>
+            <div class="kyosaya-ul">
+                <ul>
+                    <li>Baldi's AI has changed slightly: he will remember more sounds that you make, so be careful where you go, he can follow you a lot easier now!</li>
+                    <li>When you open Gotta Sweep's door for the first time, he will immediately begin sweeping</li>
+                </ul>
+            </div>
+            <h3 class="saya-h3 kyokura-font-comic">Item changes</h3>
+            <div class="kyosaya-ul">
+                <ul>
+                    <li>Collecting an item while your inventory is full will no longer completely discard an item; instead, it will place the item where you collected the new item, just like in BBCR.</li>
+                    <li><b>New item</b>: The Attendance Slip!
+                        <ul>
+                            <li>The attendance slip will spawn in a random faculty room. It will send Playtime, 1st Prize, or Gotta Sweep home (at least, until the Principal notices. He WILL catch you, so use it wisely)!</li>
+                        </ul>
+                    </li>
+                    <li>The Speedy Sneakers have been nerfed, as they were EXTREMELY broken before: they will now break much faster.</li>
+                </ul>
+            </div>
+            <h3 class="saya-h3 kyokura-font-comic">Miscellaneous changes</h3>
+            <div class="kyosaya-ul">
+                <ul>
+                    <li>New Help menu! It explains the story, items, controls, and the Baldicator.</li>
+                    <li>Background music volume has been slightly decreased</li>
+                </ul>
+            </div>
+            <p class="kyosaya-short-paragraph">
+                <a href="https://github.com/Junimeek/BaldiExtended/releases/tag/beta-0.4.1"><i class="fa fa-external-link"></i> Download Beta 0.4.1</a>
+            </p>
+            <hr>
+
+            <a name="v0.4.0"></a>
+            <h2 class="saya-h2 kyokura-font-comic">Version 0.4</h2>
+            <p class="kyosaya-short-paragraph">
+                Release date: <code>July 9, 2024</code>
+            </p>
+            <p class="kyosaya-paragraph">
+                I did stuff
+            </p>
+            <h3 class="saya-h3 kyokura-font-comic">Gameplay changes</h3>
+            <div class="kyosaya-ul">
+                <ul>
+                    <li><b>Gameplay style options!</b>
+                        <ul>
+                            <li><b>Difficult Math</b>: Adds multiplication and division to the math game</li>
+                            <li><b>Safe Mode</b>: Baldi won't chase you, giving you a stress-free experience</li>
+                        </ul>
+                    </li>
+                    <li>The Principal will now only be able to see you when you can obviously see him.
+                        This is essentially just nerfing his x-ray vision that allowed him to see you through multiple sets of yellow doors.
+                    </li>
+                </ul>
+            </div>
+            <h3 class="saya-h3 kyokura-font-comic">Miscellaneous changes</h3>
+            <div class="kyosaya-ul">
+                <ul>
+                    <li>The game will now check for updates. In the launcher, you will be prompted to download an update if a new version is found.
+                        <ul>
+                            <li>The code I used for this is based on code created by Hamza Herbou, which can be found <a href="https://www.youtube.com/watch?v=z-H37N6Mjlk" target="_blank"><i class="fa fa-external-link"></i> here</a></li>
+                        </ul>
+                    </li>
+                    <li>Added settings for BGM, SFX, and Voice audio</li>
+                    <li>Added the ability to reset your data</li>
+                    <li>Added new icons that appear in the center of the screen when you can interact with something. For example, doors and picking up items will show a hand, having the quarter selected while looking at a vending machine will show a quarter, etc.</li>
+                    <li>There's two different versions of the same secret ending now: one for getting all questions wrong with safe mode turned on, and one without using safe mode.</li>
+                </ul>
+            </div>
+            <h3 class="saya-h3 kyokura-font-comic">Bug fixes</h3>
+            <div class="kyosaya-ul">
+                <ul>
+                    <li>Fixed an issue where Arts & Crafters would teleport you to the wrong place in Juniper Hills</li>
+                </ul>
+            </div>
+            <p class="kyosaya-short-paragraph">
+                <a href="https://github.com/Junimeek/BaldiExtended/releases/tag/beta-0.4.0"><i class="fa fa-external-link"></i> Download Beta 0.4</a>
+            </p>
+
+            <hr>
+            <a name="v0.3.1"></a>
+            <h2 class="saya-h2 kyokura-font-comic">Version 0.3.1</h2>
+            <p class="kyosaya-short-paragraph">
+                Release date: <code>May 16, 2023</code>
+            </p>
+            <p class="kyosaya-paragraph">
+                This was the first version that I officially released on GitHub. At least, I think. I'm not even sure.
+            </p>
+            <h3 class="saya-h3 kyokura-font-comic">Gameplay changes</h3>
+            <div class="kyosaya-ul">
+                <ul>
+                    <li><b>New map</b>: Juniper Hills!</li>
+                </ul>
+            </div>
+            <h3 class="saya-h3 kyokura-font-comic">Miscellaneous changes</h3>
+            <div class="kyosaya-ul">
+                <ul>
+                    <li>Added the extended math music theme from BBCR</li>
+                    <li>Bugfixes and tweaks</li>
+                </ul>
+            </div>
+            <p class="kyosaya-short-paragraph">
+                <a href="https://github.com/Junimeek/BaldiExtended/releases/tag/beta-0.3.1"><i class="fa fa-external-link"></i> Download Beta 0.3.1</a>
+            </p>
+
+            <hr>
+            <a name="v0.3.0"></a>
+            <h2 class="saya-h2 kyokura-font-comic">Version 0.3</h2>
+            <p class="kyosaya-short-paragraph">
+                Release date: <code>April 25, 2023</code>
+            </p>
+            <h3 class="saya-h3 kyokura-font-comic">Gameplay changes</h3>
+            <div class="kyosaya-ul">
+                <ul>
+                    <li>The Baldicator has been added</li>
+                    <li>New setting: Instant Reset</li>
+                    <li>Readded the original Classic map</li>
+                </ul>
+            </div>
+            <h3 class="saya-h3 kyokura-font-comic">Miscellaneous changes</h3>
+            <div class="kyosaya-ul">
+                <ul>
+                    <li>Modified the secret ending</li>
+                    <li>Bugfixes and tweaks</li>
+                </ul>
+            </div>
+            <p class="kyosaya-short-paragraph">
+                <a href="https://github.com/Junimeek/BaldiExtended/releases/tag/alpha-v0.3.0"><i class="fa fa-external-link"></i> Download Alpha 0.3</a>
+            </p>
+
+            <hr>
+            <a name="v0.2.0"></a>
+            <h2 class="saya-h2 kyokura-font-comic">Version 0.2</h2>
+            <p class="kyosaya-short-paragraph">
+                Release date: <code>April 13, 2023</code>
+            </p>
+            <h3 class="saya-h3 kyokura-font-comic">Item changes</h3>
+            <div class="kyosaya-ul">
+                <ul>
+                    <li><b>New item</b>: Speedy Sneakers! Use them when you need to make a quick getaway!</li>
+                </ul>
+            </div>
+            <h3 class="saya-h3 kyokura-font-comic">Miscellaneous changes</h3>
+            <div class="kyosaya-ul">
+                <ul>
+                    <li>The background music is now toggleable</li>
+                    <li>The window can now be resized properly</li>
+                    <li>Changed the title screen</li>
+                </ul>
+            </div>
+            <h3 class="saya-h3 kyokura-font-comic">Bug fixes</h3>
+            <div class="kyosaya-ul">
+                <ul>
+                    <li>Baldi now speeds up as he gets angrier again</li>
+                </ul>
+            </div>
+            <p class="kyosaya-short-paragraph">
+                <a href="https://github.com/Junimeek/BaldiExtended/releases/tag/alpha-v0.2.0"><i class="fa fa-external-link"></i> Download Alpha 0.2</a>
+            </p>
+
+            <hr>
+            <a name="v0.1.0"></a>
+            <h2 class="saya-h2 kyokura-font-comic">Version 0.1</h2>
+            <p class="kyosaya-short-paragraph">
+                Release date: <code>March 28, 2023</code>
+            </p>
+            <h3 class="saya-h3 kyokura-font-comic">Gameplay changes</h3>
+            <div class="kyosaya-ul">
+                <ul>
+                    <li>The map is BIG now.</li>
+                </ul>
+            </div>
+            <h3 class="saya-h3 kyokura-font-comic">Miscellaneous changes</h3>
+            <div class="kyosaya-ul">
+                <ul>
+                    <li>Added background music</li>
+                </ul>
+            </div>
+            <p class="kyosaya-short-paragraph">
+                <a href="https://github.com/Junimeek/BaldiExtended/releases/tag/alpha-v0.1.0"><i class="fa fa-external-link"></i> Download Alpha 0.1</a>
+            </p>
+
+            <br>
+            <br>
+            <br>
+        </div>
+
+        <footer class="saya-footer-container">
+            <div class="saya-footer-group" style="font-size: 20pt;">
+                <a href="https://youtube.com/@Junimeek" target="_blank"><i class="fa fa-youtube-play"></i></a>
+                <a href="https://github.com/Junimeek" target="_blank"><i class="fa fa-github"></i></a>
+                <a href="https://twitter.com/junimeek39" target="_blank"><i class="fa fa-twitter"></i></a>
+                <a href="https://en.wikipedia.org/wiki/User:Junimeek" target="_blank"><i class="fa fa-wikipedia-w"></i></a>
+            </div>
+            <div class="saya-footer-group">
+               <span>Copyright 2025 Junimeek</span><br/>
+               <span>All right reserved</span>
+            </div>
+            <div class="saya-footer-group">
+               <span>Powered by SayakaUI</span>
+            </div>
+        </footer>
+    </body>
+</html>
