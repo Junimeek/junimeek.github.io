@@ -11,8 +11,8 @@ Have any questions or issues? There are several ways to contact me down below:
 doesnt exist yet
 
 ## Social Media
-- **Discord username:** @junimeek
-- **Discord server:** [https://discord.gg/6FMZSGdha4](https://discord.gg/6FMZSGdha4)
+- **Discord username:** @junimeek39
+- **Discord server:** [https://discord.gg/6FMZSGdha4](https://discord.gg/eCGJ6rgdem)
 - **Twitter:** [@junimeek39](https://twitter.com/junimeek39)
 
 <em>This page is not powered by SayakaUI</em>
