@@ -133,26 +133,43 @@
             </p>
             <p class="kyosaya-paragraph">
                 This is a small update, but a very important one: <code>Version 0.6</code> will change how save files are structured, and this version will allow players to upgrade their save files to the system that <code>0.6</code> will be using.
-                While <code>0.6</code> will be able to detect old save files, it will not be able to detect the settings used in previous versions.
+                While <code>0.6</code> will be able to detect old save files, it will not be able to detect the settings used in previous versions, hence why this version will allow you to export your settings.
             </p>
+            <h3 class="saya-h3 kyokura-font-comic">Gameplay changes</h3>
+            <div class="kyosaya-ul">
+                <ul>
+                    <li>Gotta Sweep's hitbox is now disabled when using a Party Popper and while a party is active</li>
+                    <li>Decreased the maximum number of projectiles available at the same time in the Null boss battle from 4 to 3</li>
+                </ul>
+            </div>
             <h3 class="saya-h3 kyokura-font-comic">Miscellaneous changes</h3>
             <div class="kyosaya-ul">
                 <ul>
                     <li>Reorganized the layout of the launcher</li>
                     <li>The new update message is now a banner at the top of the launcher's screen</li>
                     <li>Changed the credits in the launcher and in-game credits menu to reflect <a href="https://pspleaffox.itch.io" target="_blank"><i class="fa fa-external-link"></i>PSPLeafFox's</a> username change</li>
+                    <li>Made it so double clicking the Quit button on the menu will force the game to close immediately</li>
+                    <li>The background music (ie, "Schoolhouse Trouble" and "Schoolhouse Escape (Free Run)") has now been replaced with a revolving ensemble of four songs</li>
+                    <li>The Null boss fight now has a health bar</li>
                 </ul>
             </div>
             <h3 class="saya-h3 kyokura-font-comic">Bug fixes</h3>
             <div class="kyosaya-ul">
                 <ul>
                     <li>Fixed the flashlight not working at all. How I missed this one is beyond me.</li>
+                    <li>Fixed the Crystal Zesty Bar not playing a sound when eating one</li>
+                    <li>Fixed a bug where the second exit would not play a sound in Safe Mode</li>
+                    <li>Fixed a bug where using the Party Popper within 13 seconds of reaching the first exit would cause the background music to stop working</li>
+                    <li>Fixed an issue where using the Party Popper would not stop the normal background music in endless mode</li>
+                    <li>Fixed an issue where projectiles in the Classic Dark challenge kept spawning on top of eachother</li>
+                    <li>Fixed a tiny issue where dancing Baldi's sprites were mirrored</li>
                 </ul>
             </div>
             <h3 class="saya-h3 kyokura-font-comic">Internal changes</h3>
             <div class="kyosaya-ul">
                 <ul>
                     <li>Removed Newtonsoft JSON, Fluid MIDI Player, and some unnecessary files that I left in in the StreamingAssets folder</li>
+                    <li>Moved some of the scripts for Dark Mode to a separate <code>ChallengeController</code> script</li>
                 </ul>
             </div>
             <p class="kyosaya-short-paragraph">
