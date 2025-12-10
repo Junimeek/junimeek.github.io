@@ -1,8 +1,8 @@
 {
     "version": [0,6,0],
-    "title": "Beta 0.6.1 is out!",
+    "title": "Beta 0.6 is out!",
     "icon": "images/update_0_6_0.jpg",
-    "buttonType": "update-link",
-    "infoButtonText": "Click here to download the update!",
-    "url": "https://github.com/Junimeek/BaldiExtended/releases/tag/beta-0.6.1"
+    "buttonType": "download-link",
+    "infoButtonText": "Click here to read important information before updating.",
+    "url": "https://github.com/Junimeek/BaldiExtended/releases/tag/beta-0.6.0"
 }
