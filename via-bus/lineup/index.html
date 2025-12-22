@@ -59,11 +59,31 @@
             <p class="saya-short-paragraph" style="color: white;">
                 <em>These schedules were last updated on August 16, 2025 to reflect the latest service changes on August 18, 2025</em>
             </p>
-            <p class="saya-short-paragraph" style="color: white;">
+            <p class="saya-short-paragraph" style="color: white; display: none;">
                 <a style="color: #ff9494;"><b><u>Updated schedule alert:</u></b></a>
-                If you downloaded the schedules for routes 209, 230, 277, or 289 before <b>August 16</b>, those schedules are now outdated.
-                Please download the latest versions of these schedules down below.
+                the schedule has arrived
             </p>
+            <table class="saya-notification">
+                <tbody>
+                    <tr>
+                        <td style="background-color: #09629a; width: 32px; text-align: center; padding: 0px;">
+                            <img src="../better-bus/status-nextchanges-full.webp" style="height: 32px">
+                        </td>
+                        <td style="background-color: #09629a; text-align: center; padding: 5px;">
+                            <b class="via-bustext" style="font-size: 16pt; color: white;">Updated schedule alert</b>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" style="background-color: #431a46; padding: 4px;">
+                            <p style="text-align: justify; color: white; margin: 2px;">
+                                The new schedules for the upcoming service changes on January 12, 2026 are now available!
+                                They can be downloaded on the <a href="./changelog/index.html" style="color: cyan;">changelog</a> page.
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
             <hr/>
 
             <div class="description-container">
@@ -77,7 +97,7 @@
                         daytime schedules as a convenient alternative to VIA's brochures.
                     </p>
                     <p class="description-paragraph" style="color: white;">
-                        When VIA <a target="_blank" href="https://viainfo.net/servicechanges" style="color: white;"><b>announces service changes</b></a> that
+                        When VIA <a target="_blank" href="https://viainfo.net/servicechanges" style="color: cyan;">announces service changes</a> that
                         affect lineup scheduling, new timetables will be uploaded here as fast as I can create them.
                     </p>
                 </div>
@@ -131,7 +151,7 @@
                     <img src="./SystemMapBG.webp" style="width: 100%; max-width: 900px;">
                 </a>
                 <p class="saya-short-paragraph">
-                    A high-quality PDF version of this map is coming soon™.
+                    A high-quality PDF version of this map is coming at some point in the future.
                 </p>
             </div>
 
@@ -193,6 +213,72 @@
                         <th>
                             <span>Base</span><br/><span class="saya-desktop-exclusive-contents">Routes</span><span class="saya-mobile-exclusive-contents">Rts.</span>
                         </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img class="via-big-number" src="../../resources/via/route-icons/010.webp">
+                        </td>
+                        <td>
+                            <u class="daytime-routetext via-busfreq-20">Nacogdoches Skip</u>
+                            <br/>
+                            Downtown, Alamo Heights, Naco Pass
+                        </td>
+                        <td colspan="2"></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img class="via-big-number" src="../../resources/via/route-icons/100.webp">
+                        </td>
+                        <td>
+                            <u class="daytime-routetext via-busfreq-20">Prímo Fredericksburg Road</u>
+                            <br/>
+                            Ellis Alley Park & Ride, Downtown, Centro Plaza, Medical Center
+                        </td>
+                        <td colspan="2"></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img class="via-big-number" src="../../resources/via/route-icons/102.webp">
+                        </td>
+                        <td>
+                            <u class="daytime-routetext via-busfreq-20">Prímo Military</u>
+                            <br/>
+                            Brooks Transit Center, South Park Mall, Lackland Air Force Base, Kel-Lac Transit Center
+                        </td>
+                        <td colspan="2"></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img class="via-big-number" src="../../resources/via/route-icons/103.webp">
+                        </td>
+                        <td>
+                            <u class="daytime-routetext via-busfreq-20">Prímo Zarzamora</u>
+                            <br/>
+                            Crossroads Park & Ride, Deco District, Basilica of the National Shrine of the Little Flower, Madla Transit Center
+                        </td>
+                        <td colspan="2"></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img class="via-big-number" src="../../resources/via/route-icons/503.webp">
+                        </td>
+                        <td>
+                            <u class="daytime-routetext via-busfreq-60">Huebner Crosstown</u>
+                            <br/>
+                            Medical Center, Stone Oak Park & Ride
+                        </td>
+                        <td colspan="2"></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img class="via-big-number" src="../../resources/via/route-icons/552.webp">
+                        </td>
+                        <td>
+                            <u class="daytime-routetext via-busfreq-20">Loop 410 / W.W. White Skip</u>
+                            <br>
+                            Kel-Lac Transit Center, Ingram Transit Center, Crossroads Park & Ride, North Star Transit Center, Randolph Transit Center, Brooks Transit Center
+                        </td>
+                        <td colspan="2"></td>
                     </tr>
                     <tr>
                         <td>
@@ -579,7 +665,7 @@
                                     </a>
                                 </td>
                                 <td>
-                                    <span class="via-routename-text"><span class="via-busfreq-20">Blanco</span></span>
+                                    <span class="via-routename-text"><span class="via-busfreq-20">Blanco</span> Lineup</span>
                                 </td>
                                 <td>
                                     <a href="javascript:void(0)" onclick="GetCurrentPrintableLineupTimetable(202)"><i class="fa fa-download"></i></a>
@@ -592,7 +678,7 @@
                                     </a>
                                 </td>
                                 <td>
-                                    <span class="via-routename-text"><span class="via-busfreq-20">San Pedro</span> / <span class="via-busfreq-60">McCullough</span></span>
+                                    <span class="via-routename-text"><span class="via-busfreq-20">San Pedro</span> / <span class="via-busfreq-60">McCullough</span> Lineup</span>
                                 </td>
                                 <td>
                                     <a href="javascript:void(0)" onclick="GetCurrentPrintableLineupTimetable(204)"><i class="fa fa-download"></i></a>
@@ -605,7 +691,7 @@
                                     </a>
                                 </td>
                                 <td>
-                                    <span class="via-routename-text"><span class="via-busfreq-30">Broadway</span> / Nacogdoches</span>
+                                    <span class="via-routename-text"><span class="via-busfreq-30">Broadway</span> / Nacogdoches Lineup</span>
                                 </td>
                                 <td>
                                     <a href="javascript:void(0)" onclick="GetCurrentPrintableLineupTimetable(209)"><i class="fa fa-download"></i></a>

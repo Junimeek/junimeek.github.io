@@ -38,6 +38,12 @@
     color: #431a46;
 }
 
+.daytime-routetext {
+    font-family: 'Scene Pro', Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 14pt;
+}
+
 .description-container {
     display: flex;
     flex-wrap: nowrap;

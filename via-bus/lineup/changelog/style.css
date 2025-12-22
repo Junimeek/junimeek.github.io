@@ -21,3 +21,70 @@
 .saya-table .centered-content {
     text-align: center;
 }
+
+.container-dl {
+    display: block;
+    width: max-content;
+    text-decoration: none;
+    padding: 4px;
+    justify-self: center;
+    color: black;
+}
+
+.container-dl:hover {
+    color: #af3034;
+}
+
+.button-dl {
+    border-radius: 6px;
+    border: 3px solid gray;
+    background-color: #faffcb;
+    color: inherit;
+    width: max-content;
+    padding: 2px;
+}
+
+.button-dl i {
+    padding: 3px;
+    color: inherit;
+}
+
+.routeselector {
+    width: 80%;
+    max-width: 1300px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-top: 0px;
+    padding-bottom: 20px;
+}
+
+.routeselector a {
+    text-decoration: none;
+    padding: 4px;
+}
+
+@media screen and (min-width: 900px) {
+    .routeselector img {
+        width: 60px;
+        height: 60px;
+    }
+
+    html {
+        scroll-padding-top: calc(54px + 20pt);
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .routeselector img {
+        width: 50px;
+        height: 50px;
+    }
+
+    html {
+        scroll-padding-top: calc(108px + 20pt);
+    }
+}
