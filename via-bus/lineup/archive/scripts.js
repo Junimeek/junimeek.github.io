@@ -39,6 +39,9 @@ function GetTimetableArchive(id)
     else if (id < 2600) {
         documentURL += List25(id);
     }
+    else if (id < 2700) {
+        documentURL += List26(id);
+    }
     else {
         throw("EVIL number detected!");
     }
@@ -339,5 +342,24 @@ function List25(id)
             return "2025/08/Printable/Printable296.pdf";
         case 2572:
             return "2025/08/Grayscale/Grayscale296.pdf";
+    }
+}
+
+function List26(id)
+{
+    switch(id)
+    {
+        case 2601:
+            return "2025/12/Schedule276.pdf";
+        case 2602:
+            return "2025/12/Printable/Printable276.pdf";
+        case 2603:
+            return "2025/12/Schedule282.pdf";
+        case 2604:
+            return "2025/12/Printable/Printable282.pdf";
+        case 2605:
+            return "2025/12/Schedule288.pdf";
+        case 2606:
+            return "2025/12/Printable/Printable288.pdf";
     }
 }
