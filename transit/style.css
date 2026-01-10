@@ -1,0 +1,107 @@
+@import url('../resources/sayaka/sayaka.css');
+@import url('../resources/sayaka/sayaka-navbar.css');
+@import url('../resources/sayaka/sayaka-flexbuttons.css');
+@import url('../resources/fonts/font-style.css');
+
+.saya-body {
+    background-color: #00000000;
+    padding: 10px 15px;
+    min-height: calc(100vh - 54px);
+    font-size: 20pt;
+}
+
+.header {
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+}
+
+@media screen and (min-width: 900px) {
+    .header {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .header {
+        width: 95%;
+    }
+}
+
+.bigbutton-via {
+    background-color: #d2203099;
+    background-image: url("../resources/via-swoosh-gray.webp");
+    background-position: right;
+    background-size: contain;
+}
+
+.bigbutton-via:hover {
+    background-color: #eb747d99;
+    border-color: #eb747d;
+}
+
+.header h1 {
+    font-family: 'Scene Pro', Arial, sans-serif;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+}
+
+hr {
+    height: 2px;
+    border-width: 0;
+    color: white;
+    background-color: white;
+}
+
+.header p {
+    font-family: 'Scene Pro';
+    color: white;
+    text-align: center;
+}
+
+.saya-flexbutton-buttonarea h1 {
+    color: #ffffff;
+    font-family: 'Scene Pro', Arial, sans-serif;
+    font-size: 20pt;
+    text-align: center;
+}
+
+.saya-flexbutton-buttonarea p {
+    color: #ffffff;
+    font-family: 'Scene Pro', Arial, sans-serif;
+    font-size: 16pt;
+    text-align: center;
+}
+
+.footerText {
+    color: white;
+    font-family: 'Ammys Handwriting', Arial, sans-serif;
+    font-size: 14pt;
+    font-weight: bold;
+    text-align: center;
+}
+
+.hyperlink {
+    color: aqua;
+}
+
+.twitter {
+    color: #4a99e9;
+}
+
+body {
+    background-image: url("./transitbg.jpg");
+    background-color: #82009e;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-clip: border-box;
+    background-attachment: fixed;
+    margin: 0px;
+}
+
+.saya-notification-wide {
+    font-family: Arial, sans-serif;
+    font-size: 14pt;
+}
