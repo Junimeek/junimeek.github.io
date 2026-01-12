@@ -48,11 +48,28 @@ function GetCurrentLineupTimetable(route)
     let suffix = TimetableSuffix(0);
 
     scheduleLink += timetablePath;
-    scheduleLink += route;
+    scheduleLink += GetRouteAsString(route);
     scheduleLink += suffix;
 
     embedPath = scheduleLink;
     EnableMiki();
+}
+
+function GetRouteAsString(route)
+{
+    let stringRoute = "";
+    
+    if (route < 10)
+        stringRoute = "00";
+    else if (route < 100)
+        stringRoute = "0";
+
+    stringRoute += route;
+
+    if (!(route > 199 && route < 300))
+        stringRoute += "-Night";
+
+    return stringRoute;
 }
 
 function GetCurrentPrintableLineupTimetable(route)
@@ -63,7 +80,7 @@ function GetCurrentPrintableLineupTimetable(route)
     }
 
     let timetablePath = GetTimetablePath(route);
-    timetablePath += "Printable/Printable";
+    timetablePath += PrintableRevisionCheck(route);
 
     let suffix = TimetableSuffix(0);
 
@@ -97,48 +114,65 @@ function GetTimetablePath(route)
 {
     switch(route)
     {
+        case 68:
+            return "2026/01/";
         case 202:
-            return "2025/08/";
+            return "2025/12/";
         case 204:
-            return "2025/08/";
+            return "2025/12/";
         case 209:
-            return "2025/08/";
+            return "2025/12/";
         case 214:
-            return "2025/08/";
+            return "2025/12/";
         case 222:
-            return "2025/08/";
+            return "2025/12/";
         case 225:
-            return "2025/08/";
+            return "2025/12/";
         case 230:
-            return "2025/08/";
+            return "2025/12/";
         case 232:
-            return "2025/08/";
+            return "2025/12/";
         case 242:
-            return "2025/08/";
+            return "2025/12/";
         case 243:
-            return "2025/08/";
+            return "2025/12/";
         case 246:
-            return "2025/08/";
+            return "2025/12/";
         case 251:
-            return "2025/08/";
+            return "2025/12/";
         case 268:
-            return "2025/08/";
+            return "2025/12/";
         case 275:
-            return "2025/08/";
+            return "2025/12/";
         case 276:
-            return "2025/08/";
+            return "2026/01/";
         case 277:
-            return "2025/08/";
+            return "2025/12/";
         case 282:
-            return "2025/08/";
+            return "2026/01/";
         case 288:
-            return "2025/08/";
+            return "2026/01/";
         case 289:
-            return "2025/08/";
+            return "2025/12/";
         case 296:
-            return "2025/08/";
+            return "2025/12/";
         default:
             throw "EVIL number!";
+    }
+}
+
+function PrintableRevisionCheck(route)
+{
+    switch(route)
+    {
+        case 276:
+            return "Printable";
+        case 282:
+            return "Printable";
+        case 288:
+            return "Printable";
+        default:
+            return "Printable/Printable";
     }
 }
 

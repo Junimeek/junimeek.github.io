@@ -38,7 +38,6 @@
 .kyosaya-paragraph {
     margin-left: auto;
     margin-right: auto;
-    text-align: justify;
 }
 
 .kyosaya-ul {
@@ -54,6 +53,11 @@
 .kyosaya-short-paragraph {
     margin-left: auto;
     margin-right: auto;
+}
+
+.kyosaya-tiny-paragraph {
+    margin-left: auto;
+    margin-right: auto;
     text-align: center;
 }
 
@@ -62,9 +66,17 @@
         max-width: 90%;
         font-size: 16pt;
         line-height: 22pt;
+        text-align: justify;
     }
 
     .kyosaya-short-paragraph {
+        max-width: 90%;
+        font-size: 16pt;
+        line-height: 22pt;
+        text-align: center;
+    }
+
+    .kyosaya-tiny-paragraph {
         max-width: 90%;
         font-size: 16pt;
         line-height: 22pt;
@@ -82,9 +94,17 @@
         max-width: 100%;
         font-size: 14pt;
         line-height: 18pt;
+        text-align: left;
     }
 
     .kyosaya-short-paragraph {
+        max-width: 100%;
+        font-size: 14pt;
+        line-height: 18pt;
+        text-align: left;
+    }
+
+    .kyosaya-tiny-paragraph {
         max-width: 100%;
         font-size: 14pt;
         line-height: 18pt;

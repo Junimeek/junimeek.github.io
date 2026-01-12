@@ -1,5 +1,3 @@
-var linkDebugMode = false;
-
 function ToggleDropdown(id)
 {
     let clickerName = "clicker" + id;
