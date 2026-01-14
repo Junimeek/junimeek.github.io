@@ -1,3 +1,5 @@
+let linkDebugMode = true;
+
 function GetTimetableLink(route)
 {
     let scheduleLink = "https://www.viainfo.net/wp-content/uploads/";
@@ -11,7 +13,7 @@ function GetTimetableLink(route)
             scheduleLink += "2024/07/Schedule008.pdf";
             break;
         case 10:
-            scheduleLink += "2025/07/Schedule010Rev.pdf";
+            scheduleLink += "2025/07/Schedule010.pdf";
             break;
         case 17:
             scheduleLink += "2025/01/Schedule017.pdf";
@@ -216,7 +218,10 @@ function GetOldTimetableLink(timetableID)
     let scheduleLink = "https://";
 
     if (IsDeadLink(timetableID)) {
-        scheduleLink += "junimeek.net/documents/via-timetable-archive/"
+        if (linkDebugMode)
+            scheduleLink = "../../documents/via-timetable-archive/";
+        else
+            scheduleLink += "junimeek.net/documents/via-timetable-archive/";
     }
     else {
         scheduleLink += "www.viainfo.net/wp-content/uploads/";
@@ -229,6 +234,9 @@ function GetOldTimetableLink(timetableID)
             break;
         case 2:
             scheduleLink += "2025/08/Schedule010.pdf";
+            break;
+        case 3:
+            scheduleLink += "2025/12/Schedule619.pdf";
             break;
         default:
             scheduleLink = "";
@@ -243,7 +251,7 @@ function GetOldTimetableLink(timetableID)
 }
 
 let deadIDs = [
-    2
+    2, 3
 ];
 
 function IsDeadLink(timetableID)
