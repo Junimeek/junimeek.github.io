@@ -1,4 +1,4 @@
-let linkDebugMode = true;
+let linkDebugMode = false;
 
 function GetTimetableLink(route)
 {
@@ -51,6 +51,9 @@ function GetTimetableLink(route)
         case 62:
             scheduleLink += "2024/07/Schedule062.pdf";
             break;
+        case 64:
+            scheduleLink += "2024/08/Schedule064.pdf";
+            break;
         case 66:
             scheduleLink += "2025/04/Schedule066.pdf";
             break;
@@ -80,6 +83,9 @@ function GetTimetableLink(route)
             break;
         case 89:
             scheduleLink += "2024/08/Schedule089.pdf";
+            break;
+        case 90:
+            scheduleLink += "2025/07/Schedule090.pdf";
             break;
         case 93:
             scheduleLink += "2025/01/Schedule093.pdf";
@@ -123,8 +129,14 @@ function GetTimetableLink(route)
         case 268:
             scheduleLink += "2024/10/LineUp-0924_Rt268.pdf";
             break;
+        case 275:
+            scheduleLink += "2024/10/LineUp-0924_Rt275.pdf";
+            break;
         case 276:
             scheduleLink += "2024/10/LineUp-0924_Rt276.pdf";
+            break;
+        case 277:
+            scheduleLink += "2024/10/LineUp-0924_Rt277.pdf";
             break;
         case 282:
             scheduleLink += "2024/10/LineUp-0924_Rt282.pdf";
@@ -201,6 +213,9 @@ function GetTimetableLink(route)
         case 648:
             scheduleLink += "2025/07/Schedule648.pdf";
             break;
+        case 801:
+            scheduleLink += "2024/10/VIA26_LineUpBrochure-for-JAN26-v3.pdf";
+            break;
         default:
             scheduleLink = "";
             break;
@@ -238,6 +253,51 @@ function GetOldTimetableLink(timetableID)
         case 3:
             scheduleLink += "2025/12/Schedule619.pdf";
             break;
+        case 4:
+            scheduleLink += "2025/08/Schedule030.pdf";
+            break;
+        case 5:
+            scheduleLink += "2025/08/Schedule043.pdf";
+            break;
+        case 6:
+            scheduleLink += "2024/08/Schedule612.pdf";
+            break;
+        case 7:
+            scheduleLink += "2024/08/Schedule088Rev.pdf";
+            break;
+        case 8:
+            scheduleLink += "2025/01/Schedule093.pdf";
+            break;
+        case 9:
+            scheduleLink += "2025/04/Schedule102-Primo.pdf";
+            break;
+        case 10:
+            scheduleLink += "2024/08/Schedule505.pdf";
+            break;
+        case 11:
+            scheduleLink += "2025/08/Schedule603.pdf";
+            break;
+        case 12:
+            scheduleLink += "2025/01/Schedule611.pdf";
+            break;
+        case 13:
+            scheduleLink += "2025/01/Schedule615.pdf";
+            break;
+        case 14:
+            scheduleLink += "2024/08/Schedule614.pdf";
+            break;
+        case 15:
+            scheduleLink += "2024/08/Schedule617.pdf";
+            break;
+        case 16:
+            scheduleLink += "2024/08/Schedule616.pdf";
+            break;
+        case 17:
+            scheduleLink += "2025/08/Schedule619.pdf";
+            break;
+        case 18:
+            scheduleLink += "2024/08/Schedule620.pdf";
+            break;
         default:
             scheduleLink = "";
             break;
@@ -251,7 +311,7 @@ function GetOldTimetableLink(timetableID)
 }
 
 let deadIDs = [
-    2, 3
+    2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 16, 17, 18
 ];
 
 function IsDeadLink(timetableID)

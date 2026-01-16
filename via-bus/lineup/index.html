@@ -57,16 +57,16 @@
 
             <h1 class="saya-h1" style="color: white;">VIA Lineup Timetables</h1>
             <p class="saya-short-paragraph" style="color: white; font-style: oblique;">
-                This page was last updated on January 14, 2026.
+                This page was last updated on January 15, 2026.
             </p>
             <p class="saya-short-paragraph" style="color: white; font-style: oblique;">
-                These schedules were last updated on January 7, 2026 to reflect the latest service changes on January 12, 2026
+                These schedules were last updated on January 15, 2026 to reflect the latest service changes on January 12, 2026
             </p>
             <p class="saya-short-paragraph" style="color: white; display: none;">
                 <a style="color: #ff9494;"><b><u>Updated schedule alert:</u></b></a>
                 the schedule has arrived
             </p>
-            <table class="saya-notification" style="display: none;">
+            <table class="saya-notification">
                 <tbody>
                     <tr>
                         <td style="background-color: #09629a; width: 32px; text-align: center; padding: 0px;">
@@ -79,8 +79,9 @@
                     <tr>
                         <td colspan="2" style="background-color: #431a46; padding: 4px;">
                             <p style="text-align: justify; color: white; margin: 2px;">
-                                The new schedules for the upcoming service changes on January 12, 2026 are now available!
-                                They can be downloaded on the <a href="./changelog/index.html" style="color: cyan;">changelog</a> page.
+                                If you downloaded the <b class="via-bustext">202</b> or <b class="via-bustext">225</b> schedules before <b>January 15, 2026</b>, those have received some corrections.
+                                In addition, a brand new timetable for <b class="via-bustext">Route 97</b>'s late-night service has been created.
+                                You can download the updated schedules below.
                             </p>
                         </td>
                     </tr>
@@ -163,25 +164,22 @@
 
             <hr>
             <h2 class="saya-h2">Digital Schedules</h2>
-            
+
             <table class="saya-table saya-tablewidth-900">
                 <tbody>
                     <tr class="saya-table-header">
                         <th width="10%">
                             <span>Route</span><span class="saya-desktop-exclusive-contents"><br/>Number</span>
                         </th>
-                        <th width="66%">
+                        <th width="80%">
                             <span>Route Name</span>
                         </th>
                         <th width="10%">
                             <span class="saya-desktop-exclusive-contents">Download</span><span class="saya-mobile-exclusive-contents">Down-<br/>load</span>
                         </th>
-                        <th>
-                            <span>Base</span><br/><span class="saya-desktop-exclusive-contents">Routes</span><span class="saya-mobile-exclusive-contents">Rts.</span>
-                        </th>
                     </tr>
                     <tr>
-                        <td colspan="4">
+                        <td colspan="3">
                             <u class="daytime-routetext via-busfreq-30">Daytime routes with late-night departures</u>
                             <div style="padding: 10px;">
                                 <img class="via-big-number" src="../../resources/via/route-icons/010.webp">
@@ -223,7 +221,42 @@
                         <td>
                             <a href="javascript:void(0)" onclick="GetCurrentLineupTimetable(68)"><i class="fa fa-download"></i></a>
                         </td>
-                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="javascript:void(0)" onclick="GetCurrentLineupTimetable(97)">
+                                <img class="via-big-number" src="../../resources/via/route-icons/097.webp">
+                            </a>
+                        </td>
+                        <td>
+                            <u class="daytime-routetext via-busfreq-30">West Avenue</u>
+                            <br/>
+                            Downtown, Deco District, Castle Hills
+                        </td>
+                        <td>
+                            <a href="javascript:void(0)" onclick="GetCurrentLineupTimetable(97)"><i class="fa fa-download"></i></a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <br>
+            
+            <table class="saya-table saya-tablewidth-900">
+                <tbody>
+                    <tr class="saya-table-header">
+                        <th width="10%">
+                            <span>Route</span><span class="saya-desktop-exclusive-contents"><br/>Number</span>
+                        </th>
+                        <th width="66%">
+                            <span>Route Name</span>
+                        </th>
+                        <th width="10%">
+                            <span class="saya-desktop-exclusive-contents">Download</span><span class="saya-mobile-exclusive-contents">Down-<br/>load</span>
+                        </th>
+                        <th>
+                            <span>Base</span><br/><span class="saya-desktop-exclusive-contents">Routes</span><span class="saya-mobile-exclusive-contents">Rts.</span>
+                        </th>
                     </tr>
                     <tr>
                         <td>
@@ -557,6 +590,19 @@
                             </tr>
                             <tr>
                                 <td>
+                                    <a href="javascript:void(0)" onclick="GetCurrentPrintableLineupTimetable(97)">
+                                        <img src="../../resources/via/route-icons/097.webp">
+                                    </a>
+                                </td>
+                                <td>
+                                    <span class="via-routename-text"><span class="via-busfreq-30">West Avenue</span></span>
+                                </td>
+                                <td>
+                                    <a href="javascript:void(0)" onclick="GetCurrentPrintableLineupTimetable(97)"><i class="fa fa-download"></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
                                     <a href="javascript:void(0)" onclick="GetCurrentPrintableLineupTimetable(202)">
                                         <img src="../../resources/via/route-icons/grad202.webp">
                                     </a>
@@ -773,7 +819,7 @@
             <h2 class="saya-h2">
                 Timetable archive
             </h2>
-            <p class="saya-short-paragraph">
+            <p class="saya-tiny-paragraph">
                 Old schedules are linked <a href="https://junimeek.net/via-bus/lineup/archive/">here</a>.
             </p>
                 
@@ -782,7 +828,7 @@
             <h2 class="saya-h2">
                 Timetable changelog
             </h2>
-            <p class="saya-short-paragraph">
+            <p class="saya-tiny-paragraph">
                 The list of changes made to these timetables is available <a href="https://junimeek.net/via-bus/lineup/changelog/">here</a>.
             </p>
                 

@@ -340,6 +340,10 @@ function List25(id)
             return "2025/08/Printable/Printable296.pdf";
         case 2572:
             return "2025/08/Grayscale/Grayscale296.pdf";
+        case 2573:
+            return "2025/12/2025_0818-LateNight-System-Map-for-web.pdf";
+        case 2574:
+            return "2025/12/2025_0818-LateNight-System-Map-printable.pdf";
     }
 }
 
@@ -359,5 +363,13 @@ function List26(id)
             return "2025/12/Schedule288.pdf";
         case 2606:
             return "2025/12/Printable/Printable288.pdf";
+        case 2607:
+            return "2025/12/Schedule202.pdf";
+        case 2608:
+            return "2025/12/Printable/Printable202.pdf";
+        case 2609:
+            return "2025/12/Schedule225.pdf";
+        case 2610:
+            return "2025/12/Printable/Printable225.pdf";
     }
 }

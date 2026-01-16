@@ -85,7 +85,10 @@ function GetCurrentPrintableLineupTimetable(route)
     let suffix = TimetableSuffix(0);
 
     scheduleLink += timetablePath;
-    scheduleLink += route;
+    if (route == 97)
+        scheduleLink += "097-Night";
+    else
+        scheduleLink += route;
     scheduleLink += suffix;
 
     window.open(scheduleLink);
@@ -116,8 +119,10 @@ function GetTimetablePath(route)
     {
         case 68:
             return "2026/01/";
+        case 97:
+            return "2026/01/";
         case 202:
-            return "2025/12/";
+            return "2026/01/";
         case 204:
             return "2025/12/";
         case 209:
@@ -127,7 +132,7 @@ function GetTimetablePath(route)
         case 222:
             return "2025/12/";
         case 225:
-            return "2025/12/";
+            return "2026/01/";
         case 230:
             return "2025/12/";
         case 232:
@@ -165,6 +170,12 @@ function PrintableRevisionCheck(route)
 {
     switch(route)
     {
+        case 97:
+            return "Printable";
+        case 202:
+            return "Printable";
+        case 225:
+            return "Printable";
         case 276:
             return "Printable";
         case 282:
