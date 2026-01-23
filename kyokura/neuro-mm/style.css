@@ -65,3 +65,134 @@
 .bigbutton-github:hover {
     border-color: #879ce5;
 }
+
+.songinfo-bigheader {
+    border-width: 2px;
+    border-radius: 12px;
+    border-color: #c0c0c0;
+    border-style: solid;
+    background-color: #ffffffee;
+    padding: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.songinfo-bigheader img {
+    margin: 5px;
+}
+
+.songinfo-table {
+    margin-bottom: 5px;
+    background-color: #ffffffee;
+}
+
+.songinfo-outercontainer {
+    border-width: 3px;
+    border-radius: 12px;
+    border-color: #c0c0c0;
+    border-style: solid;
+    padding: 5px;
+    margin-bottom: 1em;
+    background-position: center;
+    background-size: cover;
+    overflow-x: auto;
+}
+
+.songinfo-lifecontainer {
+    background-image: url('./background-life.png');
+}
+
+.songinfo-boomcontainer {
+    background-image: url('./background-boom.png');
+}
+
+.songinfo-container {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.difficulty-header {
+    padding: 10px, 10px;
+    border: #c0c0c0;
+    width: 10%;
+    height: 30px !important;
+}
+
+.difficulty-header span {
+    color: #ffffff;
+}
+
+.difficulty-info {
+    height: 2.5em !important;
+}
+
+.difficulty-info span {
+    text-align: center;
+}
+
+.difficulty-info td {
+    text-align: left;
+}
+
+.difficulty-info i {
+    font-size: 0.8em;
+}
+
+.songdata-info {
+    height: 2.5em !important;
+}
+
+.songdata-info span {
+    text-align: center;
+}
+
+.songdata-info td {
+    text-align: left;
+}
+
+@media screen and (min-width: 900px) {
+    .songinfo-container {
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+
+    .songinfo-table {
+        width: 95%;
+    }
+
+    .songinfo-bigheader {
+        width: fit-content;
+    }
+
+    .songinfo-flexgrow {
+        flex-grow: 2;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .songinfo-container {
+        flex-direction: column;
+        flex-wrap: wrap;
+        padding: 5px;
+        align-items: stretch;
+    }
+
+    .songinfo-table {
+        width: 100%;
+    }
+
+    .songinfo-bigheader {
+        width: calc(100% - 10px);
+    }
+
+    .songinfo-flexgrow {
+        flex-grow: 1;
+    }
+}
