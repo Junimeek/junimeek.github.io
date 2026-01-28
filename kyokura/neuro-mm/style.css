@@ -110,6 +110,10 @@
     background-image: url('./background-boom.png');
 }
 
+.songinfo-chinatowncontainer {
+    background-image: url('./background-chinatown.png');
+}
+
 .songinfo-container {
     display: flex;
     margin-left: auto;
