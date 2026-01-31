@@ -371,5 +371,9 @@ function List26(id)
             return "2025/12/Schedule225.pdf";
         case 2610:
             return "2025/12/Printable/Printable225.pdf";
+        case 2611:
+            return "2026/01/2026_0112-LateNight-System-Map-for-web.pdf";
+        case 2612:
+            return "2026/01/2026_0112-LateNight-System-Map-printable.pdf";
     }
 }
