@@ -3,7 +3,8 @@ let currentLoadLocation = 0;
 const loadScreenLocation = {
     level0: "./miki-loadscreen.html",
     level1: "../resources/sayaka/miki-loadscreen.html",
-    level2: "../../resources/sayaka/miki-loadscreen.html"
+    level2: "../../resources/sayaka/miki-loadscreen.html",
+    level3: "../../../resources/sayaka/miki-loadscreen.html"
 }
 
 function EnableMiki()
@@ -44,5 +45,7 @@ function GetLoadScreenLocation()
             return loadScreenLocation.level1;
         case 2:
             return loadScreenLocation.level2;
+        case 3:
+            return loadScreenLocation.level3;
     }
 }

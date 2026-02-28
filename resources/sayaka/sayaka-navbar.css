@@ -62,12 +62,12 @@
     border-bottom-color: #444444;
 }
 
-.saya-navbar-underline-via {
-    border-bottom-color: #eb747d;
+.saya-navbar-underline-transit {
+    border-bottom-color: #337ab7;
 }
 
-.saya-navbar-underline-sakemi {
-    border-bottom-color: #f19dff;
+.saya-navbar-underline-kyokura {
+    border-bottom-color: #b96679;
 }
 
 .saya-navbar-underline-uniterra {
@@ -92,12 +92,12 @@
     font-size: 12pt;
 }
 
-.saya-navbar-highlight-via:hover {
-    background-color: #eb747d !important;
+.saya-navbar-highlight-transit:hover {
+    background-color: #337ab7 !important;
 }
 
-.saya-navbar-highlight-sakemi:hover {
-    background-color: #f19dff !important;
+.saya-navbar-highlight-kyokura:hover {
+    background-color: #b96679 !important;
 }
 
 .saya-navbar-highlight-uniterra:hover {

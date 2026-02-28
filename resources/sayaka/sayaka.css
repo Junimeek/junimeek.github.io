@@ -2,10 +2,14 @@
     This is the primary stylesheet for SayakaUI, the name of the common UI that is used across junimeek.net.
     Additional SayakaUI stylesheets can be found in this same directory.
     
-    Current version: 1.0.4
+    Current version: 2.0
 
-    created by junimeek
-    special thanks to potatocommuter
+    created by:
+        Junimeek
+
+    special thanks:
+        potatocommuter
+        Project DIVA Modding 2nd discord server
 */
 
 * {
@@ -62,6 +66,14 @@
     text-align: center;
 }
 
+.saya-hr {
+    display: block;
+    width: 100%;
+    height: 1.5px;
+    border-style: none;
+    background-color: gray;
+}
+
 @media screen and (min-width: 900px) {
     .saya-paragraph {
         max-width: 80%;
@@ -83,8 +95,11 @@
         line-height: 22pt;
     }
 
+    .saya-hr {
+        width: 80%;
+    }
+
     .saya-ul {
-        max-width: 80%;
         font-size: 16pt;
     }
 
@@ -107,6 +122,10 @@
 
     .saya-nomargin {
         margin: 0px !important;
+    }
+
+    html {
+        scroll-padding-top: calc(54px + 20pt);
     }
 }
 
@@ -132,7 +151,6 @@
     }
 
     .saya-ul {
-        max-width: 100%;
         font-size: 14pt;
     }
 
@@ -150,6 +168,10 @@
 
     .saya-lower-bg {
         margin: 0px;
+    }
+
+    html {
+        scroll-padding-top: calc(108px + 20pt);
     }
 }
 
@@ -183,7 +205,6 @@ code {
 }
 
 .saya-ul {
-    width: 100%;
     margin-left: auto;
     margin-right: auto;
     text-align: left;

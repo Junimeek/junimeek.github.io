@@ -40,6 +40,28 @@
     border-color: #eb747d;
 }
 
+.bigbutton-lynx {
+    background-color: #bb298399;
+    background-position: right;
+    background-size: contain;
+}
+
+.bigbutton-lynx:hover {
+    background-color: #ddc8d999;
+    border-color: #d259a4;
+}
+
+.bigbutton-mta {
+    background-color: #0f61a999;
+    background-position: right;
+    background-size: contain;
+}
+
+.bigbutton-mta:hover {
+    background-color: #6ea8db99;
+    border-color: #337ab7;
+}
+
 .header h1 {
     font-family: 'Scene Pro', Arial, sans-serif;
     font-weight: bold;

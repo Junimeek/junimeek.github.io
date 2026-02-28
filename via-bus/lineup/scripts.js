@@ -1,38 +1,5 @@
 let linkDebugMode = false;
 
-function Initialize()
-{
-    let printableTableState = document.getElementById("printed-table-state"); 
-
-    // Hides the printable schedules list by default on narrower screens
-    if (visualViewport.width < 900) {
-        printableTableState.innerHTML = "visible";
-    }
-    else {
-        printableTableState.innerHTML = "hidden";
-    }
-
-    TogglePrintableTables();
-}
-
-function TogglePrintableTables()
-{
-    let tableState = document.getElementById("printed-table-state");
-    let button = document.getElementById("table-revealer");
-    let realTable = document.getElementById("theTableOfInvisibility");
-
-    if (tableState.innerHTML == "visible") {
-        button.innerHTML = "show";
-        tableState.innerHTML = "hidden";
-        realTable.className = "disabled-table";
-    }
-    else if (tableState.innerHTML == "hidden") {
-        button.innerHTML = "hide";
-        tableState.innerHTML = "visible";
-        realTable.className = "printable-container";
-    }
-}
-
 function GetCurrentLineupTimetable(route)
 {
     currentLoadLocation = 2;

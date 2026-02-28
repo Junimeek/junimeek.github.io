@@ -8,8 +8,55 @@
 }
 
 .saya-table tr {
-    border-bottom: 2px dashed #c0c0c0;
-    height: 70px;
+    border-bottom: 2px solid #c0c0c0;
+}
+
+.saya-table.saya-table-color-via {
+    border-color: #af3034;
+}
+
+.saya-table.saya-table-color-via tr {
+    border-color: #af3034;
+}
+
+.saya-table.saya-table-color-betterbus {
+    border-color: #03757b;
+}
+
+.saya-table.saya-table-color-betterbus tr {
+    border-color: #03757b;
+}
+
+.saya-table.saya-table-color-uniterra {
+    border-color: #4b7937;
+}
+
+.saya-table.saya-table-color-uniterra tr {
+    border-color: #4b7937;
+}
+
+.saya-table.saya-table-color-mta {
+    border-color: #0f61a9;
+}
+
+.saya-table.saya-table-color-mta tr {
+    border-color: #0f61a9;
+}
+
+.saya-table.saya-table-color-lynx {
+    border-color: #ba2982;
+}
+
+.saya-table.saya-table-color-lynx tr {
+    border-color: #ba2982;
+}
+
+.saya-tableheight-2_5 tr {
+    height: 2.5em;
+}
+
+.saya-tableheight-3 tr {
+    height: 3em;
 }
 
 .saya-table tr:hover {
@@ -32,51 +79,36 @@
     margin-bottom: 0.5em;
 }
 
-.saya-tablewidth-max {
-    width: 100%;
-}
-
-@media screen and (min-width: 900px) {
-    .saya-tablewidth-600 {
-        width: 80%;
-        max-width: 600px;
-    }
-
-    .saya-tablewidth-900 {
-        width: 80%;
-        max-width: 900px;
-    }
-
-    .saya-tablewidth-lineupprintable {
-        width: 90%;
-        max-width: 900px;
-    }
-
-    .saya-tablewidth-1300 {
-        width: 80%;
-        max-width: 1300px;
-    }
-}
-
-@media screen and (max-width: 900px) {
-    .saya-table {
-        width: 100%;
-    }
-}
-
-.saya-tablewidth-lineupprintable tr {
-    height: 40px;
-}
-
-.saya-tablewidth-archive tr {
-    height: 50px;
-}
-
 .saya-table-header {
     padding: 10px, 10px;
     border: #c0c0c0;
     background-color: #a0a0a0 !important;
     height: 30px !important;
+}
+
+.saya-table-color-betterbus.saya-table-header {
+    border-color: #03757b;
+    background-color: #03757b !important;
+}
+
+.saya-table-color-uniterra.saya-table-header {
+    border-color: #4b7937;
+    background-color: #4b7937 !important;
+}
+
+.saya-table-color-mta.saya-table-header {
+    border-color: #0f61a9;
+    background-color: #0f61a9 !important;
+}
+
+.saya-table-color-lynx.saya-table-header {
+    border-color: #ba2982;
+    background-color: #ba2982 !important;
+}
+
+.saya-table-color-via.saya-table-header {
+    border-color: #af3034;
+    background-color: #af3034 !important;
 }
 
 .saya-table-header span {

@@ -12,7 +12,7 @@
         <script src="../../resources/sayaka/miki.js"></script>
     </head>
     
-    <body class="saya-lower-bg" onload="Initialize()">
+    <body class="saya-lower-bg">
         <div id="miki-viewer" class="miki-disabled" onclick="DisableMiki()">
             <a href="javascript:void(0);" title="Close document viewer">
                 <div class="miki-button-close">
@@ -41,15 +41,30 @@
                 <tbody>
                     <tr>
                         <td style="background-color: #d22030; width: 65px; text-align: center; padding: 0px;">
-                            <img src="../../resources/via/GrayViaLogo.png" style="width: 60px; height: 60px;">
+                            <img src="../../resources/transit/via/GrayViaLogo.png" style="width: 60px; height: 60px;">
                         </td>
                         <td style="background-color: #a0a1a3; padding: 4px;">
-                            <a style="text-align: left; font-weight: bold; color: white;"><u>DISCLAIMER:</u></a><br/>
-                            <a style="text-align: left; color: white;">
+                            <span style="text-align: left; font-weight: bold; color: white;"><u>DISCLAIMER:</u></span><br/>
+                            <span style="text-align: left; color: white;">
                                 This site is not affiliated with VIA Metropolitan Transit.
                                 To view official information such as schedules, route detours, and service changes,
-                                visit <a href="https://viainfo.net" target="_blank"><b>viainfo.net</b>
-                            </a>
+                                visit <a href="https://viainfo.net" target="_blank"><b>viainfo.net</b></a>.
+                            </span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div style="height: 0.4em;"></div>
+            <table class="saya-notification-wide" bordercolor="#c0c0c0">
+                <tbody>
+                    <tr>
+                        <td style="background-color: #431a46; width: 10px; text-align: center; padding: 0px;"></td>
+                        <td style="background-color: #a0a1a3; padding: 4px;">
+                            <span style="text-align: left; font-weight: bold; color: white;"><u>Directory Change Notice</u></span><br/>
+                            <span style="text-align: left; color: white;">
+                                Starting on <b>May 4, 2026</b>, this page will no longer be hosted at this directory, <code style="color: black;">junimeek.net/via-bus/lineup</code>,
+                                and will be moved to <code style="color: black;">junimeek.net/transit/via/lineup</code>.
+                            </span>
                         </td>
                     </tr>
                 </tbody>
@@ -57,12 +72,12 @@
 
             <h1 class="saya-h1" style="color: white;">VIA Lineup Timetables</h1>
             <p class="saya-short-paragraph" style="color: white; font-style: oblique;">
-                This page was last updated on January 15, 2026.
+                This page was last updated on February 27, 2026.
             </p>
             <p class="saya-short-paragraph" style="color: white; font-style: oblique;">
                 These schedules were last updated on January 28, 2026 to reflect the latest service changes on January 12, 2026
             </p>
-            <table class="saya-notification">
+            <table class="saya-notification" style="display: none;">
                 <tbody>
                     <tr>
                         <td style="background-color: #09629a; width: 32px; text-align: center; padding: 0px;">
@@ -84,7 +99,7 @@
                 </tbody>
             </table>
 
-            <hr/>
+            <hr class="saya-hr" style="background-color: white;">
 
             <div class="description-container">
                 <div class="description-side">
@@ -107,7 +122,7 @@
                     </div>
                 </div>
             </div>
-            <hr/>
+            <hr class="saya-hr" style="background-color: white;">
             <div style="display: none;">
                 <table class="saya-notification-wide">
                     <tbody>
@@ -132,7 +147,7 @@
                     </tbody>
                 </table>
             </div>
-            <div style="text-align: right;">
+            <div class="saya-sf-wp80 saya-sf-centered" style="text-align: right;">
                 <span style="color: white; text-align: right;"><em>Diagram and photo by Junimeek</em></span>
             </div>
         </div></div>
@@ -158,12 +173,12 @@
                 </p>
             </div>
 
-            <hr>
+            <hr class="saya-hr">
             <h2 class="saya-h2">Digital Schedules</h2>
 
-            <table class="saya-table saya-tablewidth-900">
+            <table class="saya-table saya-table-color-via saya-sf-w900 saya-tableheight-70">
                 <tbody>
-                    <tr class="saya-table-header">
+                    <tr class="saya-table-header saya-table-color-via">
                         <th width="10%">
                             <span>Route</span><span class="saya-desktop-exclusive-contents"><br/>Number</span>
                         </th>
@@ -178,35 +193,35 @@
                         <td colspan="3">
                             <u class="daytime-routetext via-busfreq-30">Daytime routes with late-night departures</u>
                             <div style="padding: 10px;">
-                                <img class="via-big-number" src="../../resources/via/route-icons/010.webp">
-                                <img class="via-big-number" src="../../resources/via/route-icons/020.webp">
-                                <img class="via-big-number" src="../../resources/via/route-icons/043.webp">
-                                <img class="via-big-number" src="../../resources/via/route-icons/044.webp">
-                                <img class="via-big-number" src="../../resources/via/route-icons/068.webp">
-                                <img class="via-big-number" src="../../resources/via/route-icons/093.webp">
-                                <img class="via-big-number" src="../../resources/via/route-icons/096.webp">
-                                <img class="via-big-number" src="../../resources/via/route-icons/097.webp">
-                                <img class="via-big-number" src="../../resources/via/route-icons/100.webp">
-                                <img class="via-big-number" src="../../resources/via/route-icons/102.webp">
-                                <img class="via-big-number" src="../../resources/via/route-icons/103.webp">
-                                <img class="via-big-number" src="../../resources/via/route-icons/503.webp">
-                                <img class="via-big-number" src="../../resources/via/route-icons/509.webp">
-                                <img class="via-big-number" src="../../resources/via/route-icons/534.webp">
-                                <img class="via-big-number" src="../../resources/via/route-icons/552.webp">
-                                <img class="via-big-number" src="../../resources/via/route-icons/611.webp">
-                                <img class="via-big-number" src="../../resources/via/route-icons/612.webp">
-                                <img class="via-big-number" src="../../resources/via/route-icons/615.webp">
-                                <img class="via-big-number" src="../../resources/via/route-icons/616.webp">
-                                <img class="via-big-number" src="../../resources/via/route-icons/618.webp">
-                                <img class="via-big-number" src="../../resources/via/route-icons/619.webp">
-                                <img class="via-big-number" src="../../resources/via/route-icons/651.webp">
+                                <img class="via-big-number" src="../../resources/transit/via/route-icons/010.webp">
+                                <img class="via-big-number" src="../../resources/transit/via/route-icons/020.webp">
+                                <img class="via-big-number" src="../../resources/transit/via/route-icons/043.webp">
+                                <img class="via-big-number" src="../../resources/transit/via/route-icons/044.webp">
+                                <img class="via-big-number" src="../../resources/transit/via/route-icons/068.webp">
+                                <img class="via-big-number" src="../../resources/transit/via/route-icons/093.webp">
+                                <img class="via-big-number" src="../../resources/transit/via/route-icons/096.webp">
+                                <img class="via-big-number" src="../../resources/transit/via/route-icons/097.webp">
+                                <img class="via-big-number" src="../../resources/transit/via/route-icons/100.webp">
+                                <img class="via-big-number" src="../../resources/transit/via/route-icons/102.webp">
+                                <img class="via-big-number" src="../../resources/transit/via/route-icons/103.webp">
+                                <img class="via-big-number" src="../../resources/transit/via/route-icons/503.webp">
+                                <img class="via-big-number" src="../../resources/transit/via/route-icons/509.webp">
+                                <img class="via-big-number" src="../../resources/transit/via/route-icons/534.webp">
+                                <img class="via-big-number" src="../../resources/transit/via/route-icons/552.webp">
+                                <img class="via-big-number" src="../../resources/transit/via/route-icons/611.webp">
+                                <img class="via-big-number" src="../../resources/transit/via/route-icons/612.webp">
+                                <img class="via-big-number" src="../../resources/transit/via/route-icons/615.webp">
+                                <img class="via-big-number" src="../../resources/transit/via/route-icons/616.webp">
+                                <img class="via-big-number" src="../../resources/transit/via/route-icons/618.webp">
+                                <img class="via-big-number" src="../../resources/transit/via/route-icons/619.webp">
+                                <img class="via-big-number" src="../../resources/transit/via/route-icons/651.webp">
                             </div>
                         </td>
                     </tr>
                     <tr>
                         <td>
                             <a href="javascript:void(0)" onclick="GetCurrentLineupTimetable(68)">
-                                <img class="via-big-number" src="../../resources/via/route-icons/068.webp">
+                                <img class="via-big-number" src="../../resources/transit/via/route-icons/068.webp">
                             </a>
                         </td>
                         <td>
@@ -221,7 +236,7 @@
                     <tr>
                         <td>
                             <a href="javascript:void(0)" onclick="GetCurrentLineupTimetable(97)">
-                                <img class="via-big-number" src="../../resources/via/route-icons/097.webp">
+                                <img class="via-big-number" src="../../resources/transit/via/route-icons/097.webp">
                             </a>
                         </td>
                         <td>
@@ -238,9 +253,9 @@
 
             <br>
             
-            <table class="saya-table saya-tablewidth-900">
+            <table class="saya-table saya-table-color-via saya-sf-w900 saya-tableheight-70">
                 <tbody>
-                    <tr class="saya-table-header">
+                    <tr class="saya-table-header saya-table-color-via">
                         <th width="10%">
                             <span>Route</span><span class="saya-desktop-exclusive-contents"><br/>Number</span>
                         </th>
@@ -257,7 +272,7 @@
                     <tr>
                         <td>
                             <a href="javascript:void(0)" onclick="GetCurrentLineupTimetable(202)">
-                                <img class="via-big-number" src="../../resources/via/route-icons/202.webp">
+                                <img class="via-big-number" src="../../resources/transit/via/route-icons/202.webp">
                             </a>
                         </td>
                         <td>
@@ -268,12 +283,12 @@
                         <td>
                             <a href="javascript:void(0)" onclick="GetCurrentLineupTimetable(202)"><i class="fa fa-download"></i></a>
                         </td>
-                        <td><img src="../../resources/via/route-icons/002.webp"> <img src="../../resources/via/route-icons/651.webp"></td>
+                        <td><img src="../../resources/transit/via/route-icons/002.webp"> <img src="../../resources/transit/via/route-icons/651.webp"></td>
                     </tr>
                     <tr>
                         <td>
                             <a href="javascript:void(0)" onclick="GetCurrentLineupTimetable(204)">
-                                <img class="via-big-number" src="../../resources/via/route-icons/204.webp">
+                                <img class="via-big-number" src="../../resources/transit/via/route-icons/204.webp">
                             </a>
                         </td>
                         <td>
@@ -284,12 +299,12 @@
                         <td>
                             <a href="javascript:void(0)" onclick="GetCurrentLineupTimetable(204)"><i class="fa fa-download"></i></a>
                         </td>
-                        <td><img src="../../resources/via/route-icons/004.webp"> <img src="../../resources/via/route-icons/005.webp"></td>
+                        <td><img src="../../resources/transit/via/route-icons/004.webp"> <img src="../../resources/transit/via/route-icons/005.webp"></td>
                     </tr>
                     <tr>
                         <td>
                             <a href="javascript:void(0)" onclick="GetCurrentLineupTimetable(214)">
-                                <img class="via-big-number" src="../../resources/via/route-icons/214.webp">
+                                <img class="via-big-number" src="../../resources/transit/via/route-icons/214.webp">
                             </a>
                         </td>
                         <td>
@@ -300,12 +315,12 @@
                         <td>
                             <a href="javascript:void(0)" onclick="GetCurrentLineupTimetable(214)"><i class="fa fa-download"></i></a>
                         </td>
-                        <td><img src="../../resources/via/route-icons/014.webp"> <img src="../../resources/via/route-icons/017.webp"></td>
+                        <td><img src="../../resources/transit/via/route-icons/014.webp"> <img src="../../resources/transit/via/route-icons/017.webp"></td>
                     </tr>
                     <tr>
                         <td>
                             <a href="javascript:void(0)" onclick="GetCurrentLineupTimetable(222)">
-                                <img class="via-big-number" src="../../resources/via/route-icons/222.webp">
+                                <img class="via-big-number" src="../../resources/transit/via/route-icons/222.webp">
                             </a>
                         </td>
                         <td>
@@ -316,12 +331,12 @@
                         <td>
                             <a href="javascript:void(0)" onclick="GetCurrentLineupTimetable(222)"><i class="fa fa-download"></i></a>
                         </td>
-                        <td><img src="../../resources/via/route-icons/022.webp"> <img src="../../resources/via/route-icons/024.webp"></td>
+                        <td><img src="../../resources/transit/via/route-icons/022.webp"> <img src="../../resources/transit/via/route-icons/024.webp"></td>
                     </tr>
                     <tr>
                         <td>
                             <a href="javascript:void(0)" onclick="GetCurrentLineupTimetable(225)">
-                                <img class="via-big-number" src="../../resources/via/route-icons/225.webp">
+                                <img class="via-big-number" src="../../resources/transit/via/route-icons/225.webp">
                             </a>
                         </td>
                         <td>
@@ -332,12 +347,12 @@
                         <td>
                             <a href="javascript:void(0)" onclick="GetCurrentLineupTimetable(225)"><i class="fa fa-download"></i></a>
                         </td>
-                        <td><img src="../../resources/via/route-icons/025.webp"> <img src="../../resources/via/route-icons/026.webp"></td>
+                        <td><img src="../../resources/transit/via/route-icons/025.webp"> <img src="../../resources/transit/via/route-icons/026.webp"></td>
                     </tr>
                     <tr>
                         <td>
                             <a href="javascript:void(0)" onclick="GetCurrentLineupTimetable(230)">
-                                <img class="via-big-number" src="../../resources/via/route-icons/230.webp">
+                                <img class="via-big-number" src="../../resources/transit/via/route-icons/230.webp">
                             </a>
                         </td>
                         <td>
@@ -349,12 +364,12 @@
                         <td>
                             <a href="javascript:void(0)" onclick="GetCurrentLineupTimetable(230)"><i class="fa fa-download"></i></a>
                         </td>
-                        <td><img src="../../resources/via/route-icons/030.webp"> <img src="../../resources/via/route-icons/028.webp"></td>
+                        <td><img src="../../resources/transit/via/route-icons/030.webp"> <img src="../../resources/transit/via/route-icons/028.webp"></td>
                     </tr>
                     <tr>
                         <td>
                             <a href="javascript:void(0)" onclick="GetCurrentLineupTimetable(232)">
-                                <img class="via-big-number" src="../../resources/via/route-icons/232.webp">
+                                <img class="via-big-number" src="../../resources/transit/via/route-icons/232.webp">
                             </a>
                         </td>
                         <td>
@@ -365,12 +380,12 @@
                         <td>
                             <a href="javascript:void(0)" onclick="GetCurrentLineupTimetable(232)"><i class="fa fa-download"></i></a>
                         </td>
-                        <td><img src="../../resources/via/route-icons/032.webp"> <img src="../../resources/via/route-icons/034.webp"></td>
+                        <td><img src="../../resources/transit/via/route-icons/032.webp"> <img src="../../resources/transit/via/route-icons/034.webp"></td>
                     </tr>
                     <tr>
                         <td>
                             <a href="javascript:void(0)" onclick="GetCurrentLineupTimetable(242)">
-                                <img class="via-big-number" src="../../resources/via/route-icons/242.webp">
+                                <img class="via-big-number" src="../../resources/transit/via/route-icons/242.webp">
                             </a>
                         </td>
                         <td>
@@ -381,12 +396,12 @@
                         <td>
                             <a href="javascript:void(0)" onclick="GetCurrentLineupTimetable(242)"><i class="fa fa-download"></i></a>
                         </td>
-                        <td><img src="../../resources/via/route-icons/042.webp"> <img src="../../resources/via/route-icons/036.webp"></td>
+                        <td><img src="../../resources/transit/via/route-icons/042.webp"> <img src="../../resources/transit/via/route-icons/036.webp"></td>
                     </tr>
                     <tr>
                         <td>
                             <a href="javascript:void(0)" onclick="GetCurrentLineupTimetable(246)">
-                                <img class="via-big-number" src="../../resources/via/route-icons/246.webp">
+                                <img class="via-big-number" src="../../resources/transit/via/route-icons/246.webp">
                             </a>
                         </td>
                         <td>
@@ -399,12 +414,12 @@
                         <td>
                             <a href="javascript:void(0)" onclick="GetCurrentLineupTimetable(246)"><i class="fa fa-download"></i></a>
                         </td>
-                        <td><img src="../../resources/via/route-icons/046.webp"> <img src="../../resources/via/route-icons/048.webp"></td>
+                        <td><img src="../../resources/transit/via/route-icons/046.webp"> <img src="../../resources/transit/via/route-icons/048.webp"></td>
                     </tr>
                     <tr>
                         <td>
                             <a href="javascript:void(0)" onclick="GetCurrentLineupTimetable(251)">
-                                <img class="via-big-number" src="../../resources/via/route-icons/251.webp">
+                                <img class="via-big-number" src="../../resources/transit/via/route-icons/251.webp">
                             </a>
                         </td>
                         <td>
@@ -415,12 +430,12 @@
                         <td>
                             <a href="javascript:void(0)" onclick="GetCurrentLineupTimetable(251)"><i class="fa fa-download"></i></a>
                         </td>
-                        <td><img src="../../resources/via/route-icons/051.webp"> <img src="../../resources/via/route-icons/524.webp"> <img src="../../resources/via/route-icons/062.webp"></td>
+                        <td><img src="../../resources/transit/via/route-icons/051.webp"> <img src="../../resources/transit/via/route-icons/524.webp"> <img src="../../resources/transit/via/route-icons/062.webp"></td>
                     </tr>
                     <tr>
                         <td>
                             <a href="javascript:void(0)" onclick="GetCurrentLineupTimetable(268)">
-                                <img class="via-big-number" src="../../resources/via/route-icons/268.webp">
+                                <img class="via-big-number" src="../../resources/transit/via/route-icons/268.webp">
                             </a>
                         </td>
                         <td>
@@ -431,12 +446,12 @@
                         <td>
                             <a href="javascript:void(0)" onclick="GetCurrentLineupTimetable(268)"><i class="fa fa-download"></i></a>
                         </td>
-                        <td><img src="../../resources/via/route-icons/068.webp"> <img src="../../resources/via/route-icons/066.webp"></td>
+                        <td><img src="../../resources/transit/via/route-icons/068.webp"> <img src="../../resources/transit/via/route-icons/066.webp"></td>
                     </tr>
                     <tr>
                         <td>
                             <a href="javascript:void(0)" onclick="GetCurrentLineupTimetable(275)">
-                                <img class="via-big-number" src="../../resources/via/route-icons/275.webp">
+                                <img class="via-big-number" src="../../resources/transit/via/route-icons/275.webp">
                             </a>
                         </td>
                         <td>
@@ -447,12 +462,12 @@
                         <td>
                             <a href="javascript:void(0)" onclick="GetCurrentLineupTimetable(275)"><i class="fa fa-download"></i></a>
                         </td>
-                        <td><img src="../../resources/via/route-icons/075.webp"> <img src="../../resources/via/route-icons/067.webp"></td>
+                        <td><img src="../../resources/transit/via/route-icons/075.webp"> <img src="../../resources/transit/via/route-icons/067.webp"></td>
                     </tr>
                     <tr>
                         <td>
                             <a href="javascript:void(0)" onclick="GetCurrentLineupTimetable(276)">
-                                <img class="via-big-number" src="../../resources/via/route-icons/276.webp">
+                                <img class="via-big-number" src="../../resources/transit/via/route-icons/276.webp">
                             </a>
                         </td>
                         <td>
@@ -463,12 +478,12 @@
                         <td>
                             <a href="javascript:void(0)" onclick="GetCurrentLineupTimetable(276)"><i class="fa fa-download"></i></a>
                         </td>
-                        <td><img src="../../resources/via/route-icons/076.webp"> <img src="../../resources/via/route-icons/064.webp"></td>
+                        <td><img src="../../resources/transit/via/route-icons/076.webp"> <img src="../../resources/transit/via/route-icons/064.webp"></td>
                     </tr>
                     <tr>
                         <td>
                             <a href="javascript:void(0)" onclick="GetCurrentLineupTimetable(277)">
-                                <img class="via-big-number" src="../../resources/via/route-icons/277.webp">
+                                <img class="via-big-number" src="../../resources/transit/via/route-icons/277.webp">
                             </a>
                         </td>
                         <td>
@@ -480,12 +495,12 @@
                         <td>
                             <a href="javascript:void(0)" onclick="GetCurrentLineupTimetable(277)"><i class="fa fa-download"></i></a>
                         </td>
-                        <td><img src="../../resources/via/route-icons/077.webp"> <img src="../../resources/via/route-icons/079.webp"></td>
+                        <td><img src="../../resources/transit/via/route-icons/077.webp"> <img src="../../resources/transit/via/route-icons/079.webp"></td>
                     </tr>
                     <tr>
                         <td>
                             <a href="javascript:void(0)" onclick="GetCurrentLineupTimetable(282)">
-                                <img class="via-big-number" src="../../resources/via/route-icons/282.webp">
+                                <img class="via-big-number" src="../../resources/transit/via/route-icons/282.webp">
                             </a>
                         </td>
                         <td>
@@ -496,12 +511,12 @@
                         <td>
                             <a href="javascript:void(0)" onclick="GetCurrentLineupTimetable(282)"><i class="fa fa-download"></i></a>
                         </td>
-                        <td><img src="../../resources/via/route-icons/082.webp"></td>
+                        <td><img src="../../resources/transit/via/route-icons/082.webp"></td>
                     </tr>
                     <tr>
                         <td>
                             <a href="javascript:void(0)" onclick="GetCurrentLineupTimetable(288)">
-                                <img class="via-big-number" src="../../resources/via/route-icons/288.webp">
+                                <img class="via-big-number" src="../../resources/transit/via/route-icons/288.webp">
                             </a>
                         </td>
                         <td>
@@ -512,12 +527,12 @@
                         <td>
                             <a href="javascript:void(0)" onclick="GetCurrentLineupTimetable(288)"><i class="fa fa-download"></i></a>
                         </td>
-                        <td><img src="../../resources/via/route-icons/088.webp"></td>
+                        <td><img src="../../resources/transit/via/route-icons/088.webp"></td>
                     </tr>
                     <tr>
                         <td>
                             <a href="javascript:void(0)" onclick="GetCurrentLineupTimetable(289)">
-                                <img class="via-big-number" src="../../resources/via/route-icons/289.webp">
+                                <img class="via-big-number" src="../../resources/transit/via/route-icons/289.webp">
                             </a>
                         </td>
                         <td>
@@ -528,12 +543,12 @@
                         <td>
                             <a href="javascript:void(0)" onclick="GetCurrentLineupTimetable(289)"><i class="fa fa-download"></i></a>
                         </td>
-                        <td><img src="../../resources/via/route-icons/089.webp"> <img src="../../resources/via/route-icons/090.webp"></td>
+                        <td><img src="../../resources/transit/via/route-icons/089.webp"> <img src="../../resources/transit/via/route-icons/090.webp"></td>
                     </tr>
                 </tbody>
             </table>
 
-            <hr/>
+            <hr class="saya-hr">
             <h2 class="saya-h2">Printable Schedules</h2>
             <p class="saya-paragraph">
                 Would you like to have a physical copy of a particular schedule to bring with you while you're out and about?
@@ -553,27 +568,13 @@
                 This was done to ensure that the cover page is directly behind the map.
             </p>
 
-            <table class="saya-notification">
-                <tbody>
-                    <tr>
-                        <td width="15px" style="background-color: #add3a9;"></td>
-                        <td>
-                            <p style="text-align: center; font-weight: bold;">
-                                The printable schedule list is currently <a id="printed-table-state">hidden</a>.<br/>
-                                Click <a href="javascript:void(0)" onclick="TogglePrintableTables()">here</a> to <a id="table-revealer">show</a> the list.
-                            </p>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-
-            <div id="theTableOfInvisibility" class="printable-container">
-                <div class="printable-side">
-                    <h2 class="saya-h2">Color schedules</h2>
-                
-                    <table class="saya-table saya-tablewidth-lineupprintable">
+            <details class="saya-collapsible-section saya-sf-w1200 saya-sf-centered">
+                <summary>Color schedules</summary>
+                <br>
+                <div class="saya-scrollable-element">
+                    <table class="saya-table saya-table-color-via saya-sf-w600 saya-tableheight-70">
                         <tbody>
-                            <tr class="saya-table-header">
+                            <tr class="saya-table-header saya-table-color-via">
                                 <th width="10%">
                                     <span>Route<br/>Number</span>
                                 </th>
@@ -587,7 +588,7 @@
                             <tr>
                                 <td>
                                     <a href="javascript:void(0)" onclick="GetCurrentPrintableLineupTimetable(97)">
-                                        <img src="../../resources/via/route-icons/097.webp">
+                                        <img src="../../resources/transit/via/route-icons/097.webp">
                                     </a>
                                 </td>
                                 <td>
@@ -600,7 +601,7 @@
                             <tr>
                                 <td>
                                     <a href="javascript:void(0)" onclick="GetCurrentPrintableLineupTimetable(202)">
-                                        <img src="../../resources/via/route-icons/grad202.webp">
+                                        <img src="../../resources/transit/via/route-icons/grad202.webp">
                                     </a>
                                 </td>
                                 <td>
@@ -613,7 +614,7 @@
                             <tr>
                                 <td>
                                     <a href="javascript:void(0)" onclick="GetCurrentPrintableLineupTimetable(204)">
-                                        <img src="../../resources/via/route-icons/grad204.webp">
+                                        <img src="../../resources/transit/via/route-icons/grad204.webp">
                                     </a>
                                 </td>
                                 <td>
@@ -626,7 +627,7 @@
                             <tr>
                                 <td>
                                     <a href="javascript:void(0)" onclick="GetCurrentPrintableLineupTimetable(214)">
-                                        <img src="../../resources/via/route-icons/grad214.webp">
+                                        <img src="../../resources/transit/via/route-icons/grad214.webp">
                                     </a>
                                 </td>
                                 <td><span class="via-routename-text"><span class="via-busfreq-20">Austin Highway</span> / <span class="via-busfreq-30">Randolph Transit Center</span> Lineup Skip</span></td>
@@ -637,7 +638,7 @@
                             <tr>
                                 <td>
                                     <a href="javascript:void(0)" onclick="GetCurrentPrintableLineupTimetable(222)">
-                                        <img src="../../resources/via/route-icons/grad222.webp">
+                                        <img src="../../resources/transit/via/route-icons/grad222.webp">
                                     </a>
                                 </td>
                                 <td><span class="via-routename-text"><span class="via-busfreq-30">Hays</span> / <span class="via-busfreq-30">East Houston</span> Lineup</span></td>
@@ -648,7 +649,7 @@
                             <tr>
                                 <td>
                                     <a href="javascript:void(0)" onclick="GetCurrentPrintableLineupTimetable(225)">
-                                        <img src="../../resources/via/route-icons/grad225.webp">
+                                        <img src="../../resources/transit/via/route-icons/grad225.webp">
                                     </a>
                                 </td>
                                 <td><span class="via-routename-text"><span class="via-busfreq-20">East Commerce</span> / <span class="via-busfreq-30">Martin Luther King</span> Lineup</span></td>
@@ -659,7 +660,7 @@
                             <tr>
                                 <td>
                                     <a href="javascript:void(0)" onclick="GetCurrentPrintableLineupTimetable(230)">
-                                        <img src="../../resources/via/route-icons/grad230.webp">
+                                        <img src="../../resources/transit/via/route-icons/grad230.webp">
                                     </a>
                                 </td>
                                 <td><span class="via-routename-text"><span class="via-busfreq-30">Rigsby</span> / <span class="via-busfreq-20">Porter</span> Lineup</span></td>
@@ -670,7 +671,7 @@
                             <tr>
                                 <td>
                                     <a href="javascript:void(0)" onclick="GetCurrentPrintableLineupTimetable(232)">
-                                        <img src="../../resources/via/route-icons/grad232.webp">
+                                        <img src="../../resources/transit/via/route-icons/grad232.webp">
                                     </a>
                                 </td>
                                 <td><span class="via-routename-text"><span class="via-busfreq-60">Steves</span> / <span class="via-busfreq-20">South St. Mary's</span> Lineup</span></td>
@@ -681,7 +682,7 @@
                             <tr>
                                 <td>
                                     <a href="javascript:void(0)" onclick="GetCurrentPrintableLineupTimetable(242)">
-                                        <img src="../../resources/via/route-icons/grad242.webp">
+                                        <img src="../../resources/transit/via/route-icons/grad242.webp">
                                     </a>
                                 </td>
                                 <td><span class="via-routename-text"><span class="via-busfreq-60">Roosevelt</span> / <span class="via-busfreq-60">South Presa</span> Lineup</span></td>
@@ -692,7 +693,7 @@
                             <tr>
                                 <td>
                                     <a href="javascript:void(0)" onclick="GetCurrentPrintableLineupTimetable(246)">
-                                        <img src="../../resources/via/route-icons/grad246.webp">
+                                        <img src="../../resources/transit/via/route-icons/grad246.webp">
                                     </a>
                                 </td>
                                 <td><span class="via-routename-text"><span class="via-busfreq-60">Commercial</span> / <span class="via-busfreq-90">IH-35 South</span> Lineup</span></td>
@@ -703,7 +704,7 @@
                             <tr>
                                 <td>
                                     <a href="javascript:void(0)" onclick="GetCurrentPrintableLineupTimetable(251)">
-                                        <img src="../../resources/via/route-icons/grad251.webp">
+                                        <img src="../../resources/transit/via/route-icons/grad251.webp">
                                     </a>
                                 </td>
                                 <td><span class="via-routename-text"><span class="via-busfreq-30">Nogalitos</span> / <span class="via-busfreq-60">Kirk</span> Lineup</span></td>
@@ -714,7 +715,7 @@
                             <tr>
                                 <td>
                                     <a href="javascript:void(0)" onclick="GetCurrentPrintableLineupTimetable(268)">
-                                        <img src="../../resources/via/route-icons/grad268.webp">
+                                        <img src="../../resources/transit/via/route-icons/grad268.webp">
                                     </a>
                                 </td>
                                 <td><span class="via-routename-text"><span class="via-busfreq-20">Guadalupe</span> / <span class="via-busfreq-60">Ceralvo</span> Lineup</span></td>
@@ -725,7 +726,7 @@
                             <tr>
                                 <td>
                                     <a href="javascript:void(0)" onclick="GetCurrentPrintableLineupTimetable(275)">
-                                        <img src="../../resources/via/route-icons/grad275.webp">
+                                        <img src="../../resources/transit/via/route-icons/grad275.webp">
                                     </a>
                                 </td>
                                 <td><span class="via-routename-text"><span class="via-busfreq-20">West Commerce</span> / <span class="via-busfreq-60">Laredo</span> Lineup</span></td>
@@ -736,7 +737,7 @@
                             <tr>
                                 <td>
                                     <a href="javascript:void(0)" onclick="GetCurrentPrintableLineupTimetable(276)">
-                                        <img src="../../resources/via/route-icons/grad276.webp">
+                                        <img src="../../resources/transit/via/route-icons/grad276.webp">
                                     </a>
                                 </td>
                                 <td><span class="via-routename-text"><span class="via-busfreq-20">West Commerce</span> / <span class="via-busfreq-30">Kel-Lac Transit Center</span> Lineup Skip</span></td>
@@ -747,7 +748,7 @@
                             <tr>
                                 <td>
                                     <a href="javascript:void(0)" onclick="GetCurrentPrintableLineupTimetable(277)">
-                                        <img src="../../resources/via/route-icons/grad277.webp">
+                                        <img src="../../resources/transit/via/route-icons/grad277.webp">
                                     </a>
                                 </td>
                                 <td><span class="via-routename-text"><span class="via-busfreq-60">Martin</span> / <span class="via-busfreq-60">Ruiz</span> Lineup</span></td>
@@ -758,7 +759,7 @@
                             <tr>
                                 <td>
                                     <a href="javascript:void(0)" onclick="GetCurrentPrintableLineupTimetable(282)">
-                                        <img src="../../resources/via/route-icons/grad282.webp">
+                                        <img src="../../resources/transit/via/route-icons/grad282.webp">
                                     </a>
                                 </td>
                                 <td><span class="via-routename-text"><span class="via-busfreq-20">Culebra</span> Lineup</span></td>
@@ -769,7 +770,7 @@
                             <tr>
                                 <td>
                                     <a href="javascript:void(0)" onclick="GetCurrentPrintableLineupTimetable(288)">
-                                        <img src="../../resources/via/route-icons/grad288.webp">
+                                        <img src="../../resources/transit/via/route-icons/grad288.webp">
                                     </a>
                                 </td>
                                 <td><span class="via-routename-text"><span class="via-busfreq-20">Bandera</span> / <span class="via-busfreq-20">Evers</span> Lineup</span></td>
@@ -780,7 +781,7 @@
                             <tr>
                                 <td>
                                     <a href="javascript:void(0)" onclick="GetCurrentPrintableLineupTimetable(289)">
-                                        <img src="../../resources/via/route-icons/grad289.webp">
+                                        <img src="../../resources/transit/via/route-icons/grad289.webp">
                                     </a>
                                 </td>
                                 <td><span class="via-routename-text"><span class="via-busfreq-60">Poplar</span> / <span class="via-busfreq-30">Woodlawn</span> Lineup</span></td>
@@ -791,26 +792,25 @@
                         </tbody>
                     </table>
                 </div>
+            </details>
 
-                <div></div>
+            <br>
 
-                <div class="printable-side">
-                    <h2 class="saya-h2">Ink-saving schedules</h2>
-                    <p class="saya-paragraph">
-                        The black-and-white schedules have been discontinued as the color schedules will print just fine when using a printer that only prints in grayscale. These will be replaced by a new type of printable schedule: Ink-saving schedules.
-                    </p>
-                    <p class="saya-paragraph">
-                        Ink-saving schedules are exactly what they sound like: they're schedules that are created with the goal of using as little ink as possible
-                        (since after all, the main point of timetables is to provide information to riders, and not to be pretty).
-                    </p>
-                    <p class="saya-paragraph">
-                        These will be created at some point in the future; I just have a long backlog of other timetables that I am prioritizing over these.
-                    </p>
-                </div>
-            </div>
-            
-            <br/>
-            <hr/>
+            <details class="saya-collapsible-section saya-sf-w1200 saya-sf-centered">
+                <summary>Ink-saving schedules</summary>
+                <p class="saya-paragraph">
+                    The black-and-white schedules have been discontinued as the color schedules will print just fine when using a printer that only prints in grayscale. These will be replaced by a new type of printable schedule: Ink-saving schedules.
+                </p>
+                <p class="saya-paragraph">
+                    Ink-saving schedules are exactly what they sound like: they're schedules that are created with the goal of using as little ink as possible
+                    (since after all, the main point of timetables is to provide information to riders, and not to be pretty).
+                </p>
+                <p class="saya-paragraph">
+                    These will be created at some point in the future; I just have a long backlog of other timetables that I am prioritizing over these.
+                </p>
+            </details>
+            <br>
+            <hr class="saya-hr">
 
             <h2 class="saya-h2">
                 Timetable archive
@@ -819,7 +819,7 @@
                 Old schedules are linked <a href="https://junimeek.net/via-bus/lineup/archive/">here</a>.
             </p>
                 
-            <hr/>
+            <hr class="saya-hr">
 
             <h2 class="saya-h2">
                 Timetable changelog
@@ -828,13 +828,13 @@
                 The list of changes made to these timetables is available <a href="https://junimeek.net/via-bus/lineup/changelog/">here</a>.
             </p>
                 
-            <hr/>
+            <hr class="saya-hr">
 
             <h2 class="saya-h2">
                 Notes
             </h2>
             <a name="timetablenotes"></a>
-            <ul class="saya-ul">
+            <ul class="saya-ul saya-sf-wp80">
                 <li><b>[Note 1] <a href="#route246">^</a></b> : Although <b>Route 48 IH-35 South Express</b> ended service in 2020, the number continues to be referenced
                     in Route 46's note about the lineup service.
                 </li>

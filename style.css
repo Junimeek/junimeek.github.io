@@ -35,10 +35,10 @@
     }
 }
 
-.bigbutton-via {
-    background-color: #d2203099;
-    background-image: url("./resources/via-swoosh-gray.webp");
-    background-position: right;
+.bigbutton-transit {
+    background-color: #0f61a999;
+    background-image: url("./resources/gray-bus.webp");
+    background-position: center;
     background-size: contain;
 }
 
@@ -54,15 +54,15 @@
     background-size: contain;
 }
 
-.bigbutton-progress {
-    background-color: #09629a99;
+.bigbutton-projects {
+    background-color: #b268bf99;
     background-image: url("./resources/progress-clock.webp");
     background-size: contain;
 }
 
-.bigbutton-via:hover {
-    background-color: #eb747d99;
-    border-color: #eb747d;
+.bigbutton-transit:hover {
+    background-color: #6ea8db99;
+    border-color: #337ab7;
 }
 
 .bigbutton-kyokura:hover {
@@ -75,9 +75,9 @@
     border-color: #8bb47b;
 }
 
-.bigbutton-progress:hover {
-    background-color: #009dff99;
-    border-color: #4a99e9;
+.bigbutton-projects:hover {
+    background-color: #f29cff99;
+    border-color: #f19dff;
 }
 
 .header h1 {
@@ -87,10 +87,7 @@
     text-align: center;
 }
 
-hr {
-    height: 2px;
-    border-width: 0;
-    color: #cc70da;
+.saya-hr {
     background-color: #cc70da;
 }
 

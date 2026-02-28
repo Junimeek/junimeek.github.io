@@ -1,5 +1,7 @@
 @import url('../../resources/sayaka/styles/via.css');
 @import url('../../resources/sayaka/sayaka.css');
+@import url('../../resources/sayaka/sayaka-styleflags.css');
+@import url('../../resources/sayaka/sayaka-collapsible-content.css');
 @import url('../../resources/sayaka/sayaka-navbar.css');
 @import url('../../resources/sayaka/sayaka-table.css');
 @import url('../../resources/sayaka/miki.css');
@@ -30,7 +32,7 @@
 }
 
 .saya-table td {
-    font-size: 12pt;
+    font-size: 0.9em;
     text-align: center;
 }
 

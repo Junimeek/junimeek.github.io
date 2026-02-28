@@ -77,3 +77,104 @@
     width: 50px !important;
     height: 50px !important;
 }
+
+.via-routeplate {
+    color: white;
+    font-weight: bold;
+    font-family: 'Scene Pro', Helvetica, sans-serif;
+    font-size: 0.95em;
+    padding-left: 0.2em;
+    padding-right: 0.2em;
+    border-radius: 0.3em;
+    border-color: white;
+    border-width: 0.1em;
+    border-style: solid;
+    display: inline-block;
+}
+
+.via-routeplate-primo {
+    color: white;
+    background-color: #74211e;
+    font-weight: bold;
+    font-family: 'Scene Pro', Helvetica, sans-serif;
+    font-size: 0.95em;
+    padding-left: 0.2em;
+    padding-right: 0.2em;
+    border-radius: 0.3em;
+    border-color: #263352;
+    border-width: 0.1em;
+    border-style: solid;
+    display: inline-block;
+}
+
+.via-routeplate-express {
+    background-color: white;
+    font-weight: bold;
+    font-family: 'Scene Pro', Helvetica, sans-serif;
+    font-size: 0.95em;
+    padding-left: 0.2em;
+    padding-right: 0.2em;
+    border-radius: 0.3em;
+    border-width: 0.1em;
+    border-style: solid;
+    display: inline-block;
+}
+
+.via-routeplate-f20 {
+    background-color: #af3034;
+}
+
+.via-routeplate-f30 {
+    background-color: #375c9f;
+}
+
+.via-routeplate-f60 {
+    background-color: #6e9dbb;
+}
+
+.via-routeplate-f90 {
+    background-color: #bdae80;
+}
+
+.via-routeplate-fgreen {
+    background-color: #628125;
+}
+
+.via-routeplate-fsilver {
+    background-color: #646c6e;
+}
+
+.via-routeplate-flineup {
+    background-color: #411b43;
+}
+
+.via-routeplate-flink {
+    background-color: #54325f;
+}
+
+.via-routeplate-f20-30 {
+    background-image: linear-gradient(90deg, #af3034, #375c9f);
+}
+
+.via-routeplate-f30-20 {
+    background-image: linear-gradient(90deg, #375c9f, #af3034);
+}
+
+.via-routeplate-f60-30 {
+    background-image: linear-gradient(90deg, #6e9dbb, #375c9f);
+}
+
+.via-routeplate-express20 {
+    border-color: #af3034;
+    color: #af3034;
+}
+
+.via-routeplate-express30 {
+    border-color: #375c9f;
+    color: #375c9f;
+}
+
+.via-routeplate-express90 {
+    border-color: #bdae80;
+    color: #bdae80;
+}

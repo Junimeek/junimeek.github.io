@@ -1,0 +1,51 @@
+.saya-body {
+    font-family: Arial, sans-serif;
+}
+
+.saya-table li {
+    text-align: left;
+}
+
+.saya-table td {
+    text-align: center;
+}
+
+.saya-table-header span {
+    font-family: 'Scene Pro Black', Helvetica, sans-serif;
+    font-weight: normal;
+}
+
+.saya-h1 {
+    font-family: 'Scene Pro Black', Helvetica, sans-serif;
+}
+
+.saya-h2 {
+    font-family: 'Scene Pro', Helvetica, sans-serif;
+}
+
+.transit-bustext {
+    font-family: 'Scene Pro', Helvetica, sans-serif;    
+}
+
+.transit-bustext.col-queenslocal {
+    color: #668746;
+}
+
+.transit-bustext.col-lynx60 {
+    color: #cd6b31;
+}
+
+.transit-bustext.col-lynxnl {
+    color: #ab7485;
+}
+
+.transit-routetext {
+    font-family: 'Scene Pro', Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 14pt;
+}
+
+.transit-big-number {
+    width: 50px !important;
+    height: 50px !important;
+}

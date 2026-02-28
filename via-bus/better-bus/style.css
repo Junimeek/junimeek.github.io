@@ -4,6 +4,7 @@
 @import url('../../resources/sayaka/sayaka-table.css');
 @import url('../../resources/sayaka/miki.css');
 @import url('../../resources/fonts/font-style.css');
+@import url('../../resources/sayaka/sayaka-styleflags.css');
 
 .saya-banner-header {
     background-color: #32737a;
@@ -30,18 +31,7 @@
 }
 
 .saya-table td b u {
-    color: #03757b;
-}
-
-.saya-table td hr {
-    height: 1.5px;
-    border-width: 0;
-    color: #03757b;
-    background-color: #03757b;
-}
-
-.summary-table li {
-    margin-bottom: 0em;
+    color: #931b22;
 }
 
 .jump-footer-container {
@@ -210,7 +200,7 @@
 }
 
 .pageselector li a.active {
-  background-color: #4CAF50;
+  background-color: #03757b;
   font-weight: bold;
   color: white;
 }
@@ -228,8 +218,6 @@
 }
 
 .routeselector {
-    width: 80%;
-    max-width: 1300px;
     margin-left: auto;
     margin-right: auto;
     display: flex;
@@ -250,10 +238,6 @@
         width: 60px;
         height: 60px;
     }
-
-    html {
-        scroll-padding-top: calc(54px + 20pt);
-    }
 }
 
 @media screen and (max-width: 900px) {
@@ -261,51 +245,6 @@
         width: 50px;
         height: 50px;
     }
-
-    html {
-        scroll-padding-top: calc(108px + 20pt);
-    }
-}
-
-.timeline-table {
-    background-color: #ffffff;
-    border: 3px solid #c0c0c0;
-    border-collapse: collapse;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 2px;
-}
-
-.timeline-table tr {
-    border-bottom: 2px dashed #c0c0c0;
-    height: 70px;
-}
-
-.timeline-table tr:hover {
-    background-color: #83ebeb30;
-}
-
-.timeline-table b {
-    font-size: 14pt;
-}
-
-.timeline-table-header {
-    padding: 10px, 10px;
-    border: #c0c0c0;
-    background-color: #a0a0a0 !important;
-    height: 30px !important;
-}
-
-.timeline-table-header span {
-    color: #ffffff;
-}
-
-.timeline-table li {
-    text-align: left;
-}
-
-.timeline-table td {
-    text-align: center;
 }
 
 .timeline-table-header span {

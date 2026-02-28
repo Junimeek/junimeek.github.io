@@ -3,6 +3,7 @@
 @import url('../../resources/sayaka/sayaka-navbar.css');
 @import url('../../resources/sayaka/sayaka-flexbuttons.css');
 @import url('../../resources/fonts/font-style.css');
+@import url('../../resources/sayaka/sayaka-styleflags.css');
 
 .saya-lower-bg {
     /* background-image: url('./bg.png'); */

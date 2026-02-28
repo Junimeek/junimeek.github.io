@@ -20,9 +20,9 @@ function LoadNavBar(underlineType)
     document.writeln('<a>Site Categories <i class="fa fa-chevron-down"></i></a>');
     document.writeln('</div>');
     document.writeln('<div class="saya-navbar-dropdown-content-large">');
-    document.writeln('<a href="https://junimeek.net/via-bus/" target="_parent" class="saya-navbar-highlight-via">VIA Information</a>');
-    document.writeln('<a href="https://junimeek.net/kyokura/" target="_parent" class="saya-navbar-highlight-sakemi">Kyokura</a>');
-    document.writeln('<a href="https://junimeek.net/uniterra/" target="_parent" class="saya-navbar-highlight-uniterra">UniTerra</a>');
+    document.writeln('<a href="https://junimeek.net/transit" target="_parent" class="saya-navbar-highlight-transit">Transit Documentation</a>');
+    document.writeln('<a href="https://junimeek.net/kyokura" target="_parent" class="saya-navbar-highlight-kyokura">Kyokura</a>');
+    document.writeln('<a href="https://junimeek.net/uniterra" target="_parent" class="saya-navbar-highlight-uniterra">UniTerra</a>');
     document.writeln('</div>');
     document.writeln('</div>');
     document.writeln('</div>');
@@ -52,9 +52,9 @@ function DrawUnderline(currentUnderlineCheck)
         case 2:
             switch(storedUnderlineType) {
                 case 1:
-                    return '<div class="saya-navbar-item saya-navbar-leftborder saya-navbar-underline-via">';
+                    return '<div class="saya-navbar-item saya-navbar-leftborder saya-navbar-underline-transit">';
                 case 2:
-                    return '<div class="saya-navbar-item saya-navbar-leftborder saya-navbar-underline-sakemi">';
+                    return '<div class="saya-navbar-item saya-navbar-leftborder saya-navbar-underline-kyokura">';
                 case 3:
                     return '<div class="saya-navbar-item saya-navbar-leftborder saya-navbar-underline-uniterra">';
                 default:

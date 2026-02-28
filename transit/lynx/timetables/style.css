@@ -1,0 +1,40 @@
+@import url('../../../resources/sayaka/styles/transit.css');
+@import url('../../../resources/sayaka/sayaka.css');
+@import url('../../../resources/sayaka/sayaka-styleflags.css');
+@import url('../../../resources/sayaka/sayaka-navbar.css');
+@import url('../../../resources/sayaka/sayaka-table.css');
+@import url('../../../resources/sayaka/miki.css');
+@import url('../../../resources/fonts/font-style.css');
+
+.saya-lower-bg {
+    background-color: #ba2982;
+}
+
+.saya-banner-header {
+    background-color: #ba2982;
+    background-image: url('./potatobanner.jpg');
+}
+
+.saya-table b {
+    font-weight: normal;
+}
+
+.saya-table i {
+    color: #ba2982;
+    font-size: 16pt;
+    padding: 10px;
+}
+
+.saya-table i:hover {
+    color: #e0bb4c;
+}
+
+.saya-table img {
+    width: 40px;
+    height: 40px;
+}
+
+.saya-table td {
+    font-size: 0.9em;
+    text-align: center;
+}
