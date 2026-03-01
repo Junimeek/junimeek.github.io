@@ -13,28 +13,28 @@
     font-weight: bold;
     font-size: 16pt;
     list-style-type: none;
-
-    &:hover {
-        background-color: #2d6392;
-        cursor: pointer;
-    }
-
-    &::before {
-        font-family: 'FontAwesome';
-        font-weight: normal;
-        padding-right: 0.3em;
-        content: '\f152';
-    }
 }
 
-.saya-collapsible-section:open summary {
+.saya-collapsible-section summary:hover {
+    background-color: #2d6392;
+    cursor: pointer;
+}
+
+.saya-collapsible-section summary::before {
+    font-family: 'FontAwesome';
+    font-weight: normal;
+    padding-right: 0.3em;
+    content: '\f152';
+}
+
+.saya-collapsible-section[open] summary {
     background-color: #135237;
+}
 
-    &:hover {
-        background-color: #2d927b;
-    }
+.saya-collapsible-section[open] summary:hover {
+    background-color: #2d927b;
+}
 
-    &::before {
-        content: '\f150';
-    }
+.saya-collapsible-section[open] summary::before {
+    content: '\f150';
 }
