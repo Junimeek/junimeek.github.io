@@ -11,46 +11,6 @@
     border-bottom: 2px solid #c0c0c0;
 }
 
-.saya-table.saya-table-color-via {
-    border-color: #af3034;
-}
-
-.saya-table.saya-table-color-via tr {
-    border-color: #af3034;
-}
-
-.saya-table.saya-table-color-betterbus {
-    border-color: #03757b;
-}
-
-.saya-table.saya-table-color-betterbus tr {
-    border-color: #03757b;
-}
-
-.saya-table.saya-table-color-uniterra {
-    border-color: #4b7937;
-}
-
-.saya-table.saya-table-color-uniterra tr {
-    border-color: #4b7937;
-}
-
-.saya-table.saya-table-color-mta {
-    border-color: #0f61a9;
-}
-
-.saya-table.saya-table-color-mta tr {
-    border-color: #0f61a9;
-}
-
-.saya-table.saya-table-color-lynx {
-    border-color: #ba2982;
-}
-
-.saya-table.saya-table-color-lynx tr {
-    border-color: #ba2982;
-}
-
 .saya-tableheight-2_5 tr {
     height: 2.5em;
 }
@@ -84,31 +44,6 @@
     border: #c0c0c0;
     background-color: #a0a0a0 !important;
     height: 30px !important;
-}
-
-.saya-table-color-betterbus.saya-table-header {
-    border-color: #03757b;
-    background-color: #03757b !important;
-}
-
-.saya-table-color-uniterra.saya-table-header {
-    border-color: #4b7937;
-    background-color: #4b7937 !important;
-}
-
-.saya-table-color-mta.saya-table-header {
-    border-color: #0f61a9;
-    background-color: #0f61a9 !important;
-}
-
-.saya-table-color-lynx.saya-table-header {
-    border-color: #ba2982;
-    background-color: #ba2982 !important;
-}
-
-.saya-table-color-via.saya-table-header {
-    border-color: #af3034;
-    background-color: #af3034 !important;
 }
 
 .saya-table-header span {

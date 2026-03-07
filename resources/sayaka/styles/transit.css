@@ -23,6 +23,32 @@
     font-family: 'Scene Pro', Helvetica, sans-serif;
 }
 
+.saya-table.saya-table-color-mta {
+    border-color: #0f61a9;
+}
+
+.saya-table.saya-table-color-mta tr {
+    border-color: #0f61a9;
+}
+
+.saya-table-color-mta.saya-table-header {
+    border-color: #0f61a9;
+    background-color: #0f61a9 !important;
+}
+
+.saya-table.saya-table-color-lynx {
+    border-color: #ba2982;
+}
+
+.saya-table.saya-table-color-lynx tr {
+    border-color: #ba2982;
+}
+
+.saya-table-color-lynx.saya-table-header {
+    border-color: #ba2982;
+    background-color: #ba2982 !important;
+}
+
 .transit-bustext {
     font-family: 'Scene Pro', Helvetica, sans-serif;    
 }

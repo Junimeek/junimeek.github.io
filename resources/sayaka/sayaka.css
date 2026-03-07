@@ -2,7 +2,7 @@
     This is the primary stylesheet for SayakaUI, the name of the common UI that is used across junimeek.net.
     Additional SayakaUI stylesheets can be found in this same directory.
     
-    Current version: 2.0.1
+    Current version: 2.0.2
 
     created by:
         Junimeek
@@ -72,6 +72,17 @@
     height: 1.5px;
     border-style: none;
     background-color: gray;
+}
+
+.saya-link::before {
+    font-family: 'FontAwesome';
+    font-weight: normal;
+    font-size: 0.9em;
+    content: '\f08e\20';
+}
+
+.saya-link.external::before {
+    content: '\f08e\20';
 }
 
 @media screen and (min-width: 900px) {

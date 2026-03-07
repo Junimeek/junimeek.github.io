@@ -35,6 +35,19 @@
     font-family: Helvetica, sans-serif;
 }
 
+.saya-table.saya-table-color-neuro {
+    border-color: #ef92bd;
+}
+
+.saya-table.saya-table-color-neuro tr {
+    border-color: #ef92bd;
+}
+
+.saya-table-color-neuro.saya-table-header {
+    border-color: #ef92bd;
+    background-color: #ef92bd !important;
+}
+
 .kyosaya-hr {
     display: block;
     width: 100%;

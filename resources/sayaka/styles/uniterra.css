@@ -27,6 +27,19 @@
     font-family: 'Montserrat', Helvetica, sans-serif;
 }
 
+.saya-table.saya-table-color-uniterra {
+    border-color: #4b7937;
+}
+
+.saya-table.saya-table-color-uniterra tr {
+    border-color: #4b7937;
+}
+
+.saya-table-color-uniterra.saya-table-header {
+    border-color: #4b7937;
+    background-color: #4b7937 !important;
+}
+
 b {
     font-family: 'Montserrat', Arial, sans-serif;
 }
