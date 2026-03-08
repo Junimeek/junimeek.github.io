@@ -30,9 +30,6 @@
 
 .bigbutton-via {
     background-color: #d2203099;
-    background-image: url("../resources/via-swoosh-gray.webp");
-    background-position: right;
-    background-size: contain;
 }
 
 .bigbutton-via:hover {
@@ -42,8 +39,6 @@
 
 .bigbutton-lynx {
     background-color: #bb298399;
-    background-position: right;
-    background-size: contain;
 }
 
 .bigbutton-lynx:hover {
@@ -53,8 +48,6 @@
 
 .bigbutton-mta {
     background-color: #0f61a999;
-    background-position: right;
-    background-size: contain;
 }
 
 .bigbutton-mta:hover {
