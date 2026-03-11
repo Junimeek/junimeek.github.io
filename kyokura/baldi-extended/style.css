@@ -20,18 +20,6 @@
     max-width: 500px;
 }
 
-@media screen and (min-width: 900px) {
-    html {
-        scroll-padding-top: calc(54px + 20pt);
-    }
-}
-
-@media screen and (max-width: 900px) {
-    html {
-        scroll-padding-top: calc(108px + 20pt);
-    }
-}
-
 .bigbutton-windows {
     background-color: #0078d4;
     border-color: #0078d4;

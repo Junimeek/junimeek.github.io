@@ -2,7 +2,7 @@
     This is the primary stylesheet for SayakaUI, the name of the common UI that is used across junimeek.net.
     Additional SayakaUI stylesheets can be found in this same directory.
     
-    Current version: 2.0.2
+    Current version: 2.0.3
 
     created by:
         Junimeek
@@ -136,7 +136,7 @@
     }
 
     html {
-        scroll-padding-top: calc(54px + 20pt);
+        scroll-padding-top: calc(15vh + 20pt);
     }
 }
 
@@ -182,7 +182,7 @@
     }
 
     html {
-        scroll-padding-top: calc(108px + 20pt);
+        scroll-padding-top: calc(20vh + 20pt);
     }
 }
 
