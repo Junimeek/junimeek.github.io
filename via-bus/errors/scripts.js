@@ -301,6 +301,9 @@ function GetOldTimetableLink(timetableID)
         case 19:
             scheduleLink += "2026/01/Schedule010.pdf";
             break;
+        case 20:
+            scheduleLink += "2026/05/Schedule007.pdf";
+            break;
         default:
             scheduleLink = "";
             break;
@@ -314,7 +317,7 @@ function GetOldTimetableLink(timetableID)
 }
 
 let deadIDs = [
-    2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 16, 17, 18, 19
+    2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 16, 17, 18, 19, 20
 ];
 
 function IsDeadLink(timetableID)

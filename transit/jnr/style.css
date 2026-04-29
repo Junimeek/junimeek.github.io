@@ -1,0 +1,140 @@
+@import url('../../resources/sayaka/styles/via.css');
+@import url('../../resources/sayaka/sayaka.css');
+@import url('../../resources/sayaka/sayaka-navbar.css');
+@import url('../../resources/sayaka/sayaka-table.css');
+@import url('../../resources/sayaka/miki.css');
+@import url('../../resources/fonts/font-style.css');
+@import url('../../resources/sayaka/sayaka-collapsible-content.css');
+@import url('../../resources/sayaka/sayaka-styleflags.css');
+
+.saya-banner-header {
+    background-color: #ab4eb9;
+    background-image: url('./banner-jnr.jpg');
+}
+
+.saya-table i {
+    color: #03757b;
+    font-size: 16pt;
+    padding: 10px;
+}
+
+.saya-table i:hover {
+    color: #931b22;
+}
+
+.saya-table img {
+    width: 32px;
+    height: 32px;
+}
+
+.saya-table td {
+    font-size: 14pt;
+}
+
+.saya-table td b u {
+    color: #931b22;
+}
+
+.saya-collapsible-section {
+    margin-bottom: 0.5em;
+    width: fit-content;
+    background-color: #e7f7ff;
+}
+
+.saya-collapsible-section summary {
+    text-align: left;
+    padding-right: 0.7em;
+}
+
+.saya-collapsible-section summary::after {
+    content: 'Show stop list';
+}
+
+.saya-collapsible-section[open] summary::after {
+    content: 'Hide stop list';
+}
+
+.pageselector {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0px;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.pageselector li a {
+    display: block;
+    padding: 8px 12px;
+    text-decoration: none;
+    border: 1px solid gray;
+    background-color: white;
+    color: black;
+    margin: 4px;
+    border-radius: 5px;
+}
+
+.pageselector li a.active {
+  background-color: #03757b;
+  font-weight: bold;
+  color: white;
+}
+
+.pageselector li a:hover:not(.active) {
+  background-color: lightgray;
+}
+
+.routegroup-enabled {
+    display: block;
+}
+
+.routegroup-disabled {
+    display: none;
+}
+
+.routeselector {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-top: 0px;
+    margin-bottom: 1.5em;
+}
+
+.routeselector a {
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.routeselector img {
+    width: 87%;
+    height: 87%;
+}
+
+@media screen and (min-width: 900px) {
+    .routeselector a {
+        width: 68px;
+        height: 68px;
+    }
+
+    .routeselector a img {
+        transition: width 0.15s, height 0.15s;
+    }
+
+    .routeselector a:hover img {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .routeselector a {
+        width: 58px;
+        height: 58px;
+    }
+}
