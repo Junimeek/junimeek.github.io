@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Transit Dev Resources</title>
+        <link rel="stylesheet" href="./style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="icon" href="../../resources/favicon.ico" type="image/vnd.microsoft.icon">
+        <script src="./scripts.js"></script>
+        <script src="../../resources/sayaka/miki.js"></script>
+    </head>
+    
+    <body class="saya-lower-bg">
+        <div id="miki-viewer" class="miki-disabled" onclick="DisableMiki()">
+            <a href="javascript:void(0);" title="Close document viewer">
+                <div class="miki-button-close">
+                    <i class="fa fa-window-close"></i>
+                </div>
+            </a>
+            <a href="javascript:void(0);" title="Open document in new tab">
+                <div class="miki-button-maximize" onclick="OpenMikiEmbedInNewTab()">
+                    <i class="fa fa-window-maximize"></i>
+                </div>
+            </a>
+
+            <div class="miki-window miki-windowtype-pdf">
+                <iframe class="miki-frame" id="miki-frame" src="../../resources/sayaka/miki-loadscreen.html"></iframe>
+            </div>
+        </div>
+        
+        <nav class="saya-navbar saya-navbar-font-scene">
+            <div class="saya-navbar-container">
+                <script src="../../resources/sayaka/sayaka-navbar-loader.js" onload="LoadNavBar(1)"></script>
+            </div>
+        </nav>
+
+        <div class="saya-body">
+            <table class="saya-notification-wide">
+                <tbody>
+                    <tr>
+                        <td style="background-color: #e6883b; width: 10px; text-align: center; padding: 0px;"></td>
+                        <td style="background-color: #a0a1a3; padding: 4px;">
+                            <span style="text-align: left; font-weight: bold; color: white;"><u>DISCLAIMER</u></span><br/>
+                            <span style="text-align: left; color: white;">
+                                This site is not affiliated with any transit agency.
+                            </span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <noscript>
+                <p class="saya-short-paragraph">
+                    <a style="color: red;"><b>JavaScript is disabled in your browser settings. Please enable it to download these schedules.</b></a>
+                </p>
+                <hr/>
+            </noscript>
+
+            <h1 class="saya-h1">Developer's Resources</h1>
+            <p class="saya-short-paragraph" style="font-style: oblique;">
+                This page was last updated on April 30, 2026.
+            </p>
+            <hr class="saya-hr">
+            <p class="saya-short-paragraph">
+                This page has some resources and source files that I use to publish my work.
+            </p>
+
+            <hr class="saya-hr">
+            <h2 class="saya-h2">Key</h2>
+
+            <div style="overflow-x: auto;">
+            <table class="saya-table saya-table-color-devpage saya-sf-w900">
+                <tbody>
+                    <tr class="saya-table-header saya-table-color-devpage">
+                        <th width="25%">
+                            <span>Type</span>
+                        </th>
+                        <th width="75%" style="min-width: 300px;">
+                            <span>Description</span>
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>Inkscape SVG</td>
+                        <td>
+                            <p>
+                                A project file for <a href="https://inkscape.org/release/inkscape-1.4.3" target="_blank" style="font-style: italic;">Inkscape</a>, a Free and Open Source vector art program.
+                                Modifying one of these files may require the following fonts to be installed on your system <b>(note that these are direct download links)</b>:
+                            </p>
+                            <ul class="saya-sf-list-compact">
+                                <li><a href="./downloads/LiberationSerif.zip" target="_blank">Liberation Serif</a></li>
+                                <li><a href="./downloads/NotoSans.zip" target="_blank">Noto Sans</a></li>
+                                <li><a href="./downloads/Ouhod-Bold.zip" target="_blank">Ouhod</a></li>
+                                <li><a href="./downloads/ScenePro.zip" target="_blank">Scene Pro</a></li>
+                            </ul>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            </div>
+
+            <hr class="saya-hr">
+            <h2 class="saya-h2">Files</h2>
+
+            <div style="overflow-x: auto;">
+            <table class="saya-table saya-table-color-devpage saya-sf-w1300">
+                <tbody>
+                    <tr class="saya-table-header saya-table-color-devpage">
+                        <th width="25%">
+                            <span>Type</span>
+                        </th>
+                        <th width="55%" style="min-width: 300px;">
+                            <span>Name</span>
+                        </th>
+                        <th width="10%">
+                            <span class="saya-desktop-exclusive-contents">Download</span><span class="saya-mobile-exclusive-contents">Down-<br/>load</span>
+                        </th>
+                        <th width="10%">
+                            <span>License</span>
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>Inkscape SVG</td>
+                        <td>VIA Metro Late Night System Map</td>
+                        <td>
+                            <a href="./downloads/VIA_LateNightSystemMap.zip" download><i class="fa fa-download"></i></a>
+                        </td>
+                        <td>CC BY-SA</td>
+                    </tr>
+                </tbody>
+            </table>
+            </div>
+                
+            <br>
+            <br>
+            <br>
+        </div>
+
+        <footer class="saya-footer-container">
+            <div class="saya-footer-group" style="font-size: 20pt;">
+                <a href="https://youtube.com/@Junimeek" target="_blank"><i class="fa fa-youtube-play"></i></a>
+                <a href="https://github.com/Junimeek" target="_blank"><i class="fa fa-github"></i></a>
+                <a href="https://twitter.com/junimeek39" target="_blank"><i class="fa fa-twitter"></i></a>
+                <a href="https://en.wikipedia.org/wiki/User:Junimeek" target="_blank"><i class="fa fa-wikipedia-w"></i></a>
+            </div>
+            <div class="saya-footer-group">
+               <span>Copyright 2026 Junimeek</span><br/>
+               <span>All right reserved</span>
+            </div>
+            <div class="saya-footer-group">
+               <span>Powered by SayakaUI</span>
+            </div>
+        </footer>
+    </body>
+</html>

@@ -55,7 +55,32 @@
     border-color: #337ab7;
 }
 
+.bigbutton-jnr {
+    background-color: #b268bf99;
+}
+
+.bigbutton-jnr:hover {
+    background-color: #f29cff99;
+    border-color: #f19dff;
+}
+
+.bigbutton-dev {
+    background-color: #e6883b99;
+}
+
+.bigbutton-dev:hover {
+    background-color: #fcc47099;
+    border-color: #e6883b;
+}
+
 .header h1 {
+    font-family: 'Scene Pro', Arial, sans-serif;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+}
+
+.header h2 {
     font-family: 'Scene Pro', Arial, sans-serif;
     font-weight: bold;
     color: white;

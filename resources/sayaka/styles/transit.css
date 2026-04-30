@@ -36,6 +36,19 @@
     background-color: #0f61a9 !important;
 }
 
+.saya-table.saya-table-color-devpage {
+    border-color: #e6883b;
+}
+
+.saya-table.saya-table-color-devpage tr {
+    border-color: #e6883b;
+}
+
+.saya-table-color-devpage.saya-table-header {
+    border-color: #e6883b;
+    background-color: #e6883b !important;
+}
+
 .saya-table.saya-table-color-lynx {
     border-color: #ba2982;
 }
