@@ -1,0 +1,53 @@
+@import url('../../../../resources/sayaka/styles/via.css');
+@import url('../../../../resources/sayaka/sayaka.css');
+@import url('../../../../resources/sayaka/sayaka-navbar.css');
+@import url('../../../../resources/sayaka/sayaka-table.css');
+@import url('../../../../resources/sayaka/sayaka-collapsible-content.css');
+@import url('../../../../resources/sayaka/sayaka-styleflags.css');
+@import url('../../../../resources/fonts/font-style.css');
+
+.saya-table i {
+    color: #da4346;
+    font-size: 16pt;
+    padding: 10px;
+}
+
+.saya-table i:hover {
+    color: #375c9f;
+}
+
+.saya-table img {
+    width: 40px;
+    height: 40px;
+}
+
+.big-dropdown-container {
+    background-color: #ffffff;
+    border: 3px solid #c0c0c0;
+    border-collapse: collapse;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    max-width: 1100px;
+}
+
+.big-dropdown-container tr:hover {
+    background-color: #ffebd8;
+    cursor: pointer;
+}
+
+.dropdown-collapsed {
+    display: none;
+}
+
+.dropdown-expanded {
+    display: inline;
+}
+
+.arrow-bg-enabled {
+    background-color: #add3a9;
+}
+
+.arrow-bg-disabled {
+    background-color: #d98c97;
+}
