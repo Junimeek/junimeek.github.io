@@ -25,7 +25,7 @@ function GetTimetableLink(route)
             scheduleLink += "2025/01/Schedule022.pdf";
             break;
         case 24:
-            scheduleLink += "2024/07/Schedule024.pdf";
+            scheduleLink += "2026/03/20260504_Schedule024.pdf";
             break;
         case 26:
             scheduleLink += "2025/04/Schedule026.pdf";
@@ -299,8 +299,9 @@ function GetOldTimetableLink(timetableID)
             scheduleLink += "2024/08/Schedule620.pdf";
             break;
         case 19:
-            scheduleLink += "2026/01/Schedule010.pdf";
+            scheduleLink += "2025/07/Schedule010.pdf";
             break;
+            // change to 2026/01 if link dies
         case 20:
             scheduleLink += "2026/05/Schedule007.pdf";
             break;
@@ -308,15 +309,16 @@ function GetOldTimetableLink(timetableID)
             scheduleLink += "2026/01/Schedule008.pdf";
             break;
         case 22:
-            scheduleLink += "2025/08/Schedule077.pdf";
+            scheduleLink += "2025/07/Schedule077.pdf";
             break;
+            // change to 2025/08 if link dies
         case 23:
             scheduleLink += "2024/08/Schedule079.pdf";
             break;
         case 24:
             scheduleLink += "2025/07/Schedule602.pdf";
             break;
-            // change to 2025/08 later
+            // change to 2025/08 if link dies
         case 25:
             scheduleLink += "2024/08/Schedule632.pdf";
             break;
@@ -333,7 +335,7 @@ function GetOldTimetableLink(timetableID)
 }
 
 let deadIDs = [
-    2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 16, 17, 18, 19, 20, 21, 22, 23, 25
+    2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 16, 17, 18, 20, 21
 ];
 
 function IsDeadLink(timetableID)
