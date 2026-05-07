@@ -12,7 +12,6 @@
 
 .saya-banner-header {
     background-color: #ba2982;
-    background-image: url('./potatobanner.jpg');
 }
 
 .saya-table b {
@@ -37,4 +36,8 @@
 .saya-table td {
     font-size: 0.9em;
     text-align: center;
+}
+
+.heartie::after {
+    content: '\1FA75';
 }

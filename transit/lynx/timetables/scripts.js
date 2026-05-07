@@ -1,5 +1,36 @@
 let linkDebugMode = false;
 
+function HeartieRoll()
+{
+    let banner = document.getElementById("lovBanner");
+
+    let curMonth = new Date().getMonth() + 1;
+    if (curMonth == 4) {
+        let curDay = new Date().getDate();
+        if (curDay == 7) {
+            console.log("Today is April 7, which is a very special day for me.\n\nOn this day in 2026, I asked my bestie if he wanted to be my lov, and he, against all odds, said yes. We have been boyfriends ever since, and I could not imagine a world where I live without him.\n\nI love you potato, with all my heart <3");
+            SetHeartieBanner(banner);
+            return;
+        }
+    }
+
+    let rollBaseOdds = (53 / (8431 - 5903) * 100);
+    let randRoll = (Math.floor(Math.random() * 2529));
+
+    if (randRoll <= rollBaseOdds) {
+        SetHeartieBanner(banner);
+    }
+    else {
+        banner.style.backgroundImage = "url('./potatobanner.jpg')";
+    }
+}
+
+function SetHeartieBanner(theBanner)
+{
+    theBanner.style.backgroundImage = "url('./heartie.jpg')";
+    document.getElementById("lovTitle").className = "saya-h1 heartie";
+}
+
 function GetCurrentTimetable(route)
 {
     currentLoadLocation = 3;
