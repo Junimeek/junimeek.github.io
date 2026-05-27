@@ -55,7 +55,7 @@
 
             <h1 class="saya-h1" style="color: white;" id="lovTitle">LYNX Alternative Timetables</h1>
             <p class="saya-short-paragraph" style="color: white; font-style: oblique;">
-                This page was last updated on May 7, 2026.
+                This page was last updated on May 27, 2026.
             </p>
             <p class="saya-short-paragraph" style="color: white; font-style: oblique;">
                 These schedules were last updated on April 17, 2026 to reflect the upcoming service changes on May 26, 2026
@@ -94,10 +94,10 @@
                 <tbody>
                     <tr class="saya-table-header saya-table-color-lynx">
                         <th width="10%">
-                            <span>Route</span><span class="saya-desktop-exclusive-contents"><br/>Number</span>
+                            <span>Link</span><span class="saya-desktop-exclusive-contents"><br/>Number</span>
                         </th>
                         <th width="80%">
-                            <span>Route Name</span>
+                            <span>Link Name</span>
                         </th>
                         <th width="10%">
                             <span class="saya-desktop-exclusive-contents">Download</span><span class="saya-mobile-exclusive-contents">Down-<br/>load</span>
@@ -105,7 +105,7 @@
                     </tr>
                     <tr>
                         <td>
-                            <a href="javascript:void(0)" onclick="GetCurrentTimetable(26)">
+                            <a href="javascript:void(0);" onclick="GetCurrentTimetable(26)">
                                 <img class="transit-big-number" src="../../../resources/transit/lynx/link026.webp">
                             </a>
                         </td>
@@ -113,12 +113,12 @@
                             <span class="transit-routetext transit-bustext col-lynx60">Pleasant Hill Road / Poinciana</span>
                         </td>
                         <td>
-                            <a href="javascript:void(0)" onclick="GetCurrentTimetable(26)"><i class="fa fa-download"></i></a>
+                            <a href="javascript:void(0);" onclick="GetCurrentTimetable(26)"><i class="fa fa-download"></i></a>
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            <a href="javascript:void(0)" onclick="GetCurrentTimetable(426)">
+                            <a href="javascript:void(0);" onclick="GetCurrentTimetable(426)">
                                 <img class="transit-big-number" src="../../../resources/transit/lynx/link426.webp">
                             </a>
                         </td>
@@ -126,12 +126,12 @@
                             <span class="transit-routetext transit-bustext col-lynx60">Poinciana Circulator</span>
                         </td>
                         <td>
-                            <a href="javascript:void(0)" onclick="GetCurrentTimetable(426)"><i class="fa fa-download"></i></a>
+                            <a href="javascript:void(0);" onclick="GetCurrentTimetable(426)"><i class="fa fa-download"></i></a>
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            <a href="javascript:void(0)" onclick="GetCurrentTimetable(801)">
+                            <a href="javascript:void(0);" onclick="GetCurrentTimetable(801)">
                                 <img class="transit-big-number" src="../../../resources/transit/lynx/link801.webp">
                             </a>
                         </td>
@@ -139,7 +139,7 @@
                             <span class="transit-routetext transit-bustext col-lynxnl">Poinciana NeighborLink</span>
                         </td>
                         <td>
-                            <a href="javascript:void(0)" onclick="GetCurrentTimetable(801)"><i class="fa fa-download"></i></a>
+                            <a href="javascript:void(0);" onclick="GetCurrentTimetable(801)"><i class="fa fa-download"></i></a>
                         </td>
                     </tr>
                 </tbody>
@@ -147,33 +147,34 @@
 
             <hr class="saya-hr">
 
-            <h2 class="saya-h2">Upcoming Schedules</h2>
-            <p class="saya-paragraph">
-                On May 26, the <span class="transit-routetext transit-bustext col-lynxnl">Poinciana NeighborLink 801</span> will no longer be based at the Poinciana Walmart and will operate entirely on-demand.
-                The timepoint has been removed from the combined <span class="transit-routetext transit-bustext col-lynx60">426</span> / <span class="transit-routetext transit-bustext col-lynxnl">801</span> timetable in the NeighborLink section,
-                and the updated timetable can be found below. 
+            <h2 class="saya-h2">Archived Schedules</h2>
+            <p class="saya-short-paragraph">
+                These are schedules that are now outdated.
             </p>
 
-            <table class="saya-table saya-table-color-lynx saya-sf-w900">
+            <table class="saya-table saya-table-color-lynx saya-sf-w1300">
                 <tbody>
                     <tr class="saya-table-header saya-table-color-lynx">
-                        <th width="10%">
-                            <span>Route</span><span class="saya-desktop-exclusive-contents"><br/>Number</span>
+                        <th width="5%">
+                            <span>Link</span><span class="saya-desktop-exclusive-contents"><br/>Number</span>
                         </th>
-                        <th width="80%">
-                            <span>Route Name</span>
+                        <th width="70%">
+                            <span>Link Name</span>
                         </th>
-                        <th width="10%">
+                        <th width="20%">
+                            <span>Effective</span><br><span>Date</span>
+                        </th>
+                        <th width="5%">
                             <span class="saya-desktop-exclusive-contents">Download</span><span class="saya-mobile-exclusive-contents">Down-<br/>load</span>
                         </th>
                     </tr>
                     <tr>
                         <td>
-                            <a href="javascript:void(0)" onclick="GetUpcomingTimetable(426)">
+                            <a href="javascript:void(0);" onclick="GetArchivedTimetable(1)">
                                 <img class="transit-big-number" src="../../../resources/transit/lynx/link426.webp">
                             </a>
                             <br>
-                            <a href="javascript:void(0)" onclick="GetUpcomingTimetable(426)">
+                            <a href="javascript:void(0);" onclick="GetArchivedTimetable(1)">
                                 <img class="transit-big-number" src="../../../resources/transit/lynx/link801.webp">
                             </a>
                         </td>
@@ -182,8 +183,9 @@
                             <br>
                             <span class="transit-routetext transit-bustext col-lynxnl">Poinciana NeighborLink</span>
                         </td>
+                        <td>Jan 11, 2026</td>
                         <td>
-                            <a href="javascript:void(0)" onclick="GetUpcomingTimetable(426)"><i class="fa fa-download"></i></a>
+                            <a href="javascript:void(0);" onclick="GetArchivedTimetable(1)"><i class="fa fa-download"></i></a>
                         </td>
                     </tr>
                 </tbody>

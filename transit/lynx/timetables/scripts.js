@@ -54,9 +54,9 @@ function GetTimetablePath(route)
         case 26:
             return "2026/02/Link026_2026-01-11.pdf";
         case 426:
-            return "2026/02/Link426-NL801_2026-01-11.pdf";
+            return "2026/04/Link426-NL801_2026-05-26.pdf";
         case 801:
-            return "2026/02/Link426-NL801_2026-01-11.pdf";
+            return "2026/04/Link426-NL801_2026-05-26.pdf";
         default:
             throw "EVIL NUMBER DETECTED";
     }
@@ -84,6 +84,33 @@ function GetUpcomingTimetablePath(route)
     {
         case 426:
             return "2026/04/Link426-NL801_2026-05-26.pdf";
+        default:
+            throw "EVIL NUMBER DETECTED";
+    }
+}
+
+function GetArchivedTimetable(archivedID)
+{
+    currentLoadLocation = 3;
+
+    let scheduleLink = "https://junimeek.net/documents/";
+    if (linkDebugMode) {
+        scheduleLink = "../../../documents/";
+    }
+
+    let timetablePath = GetArchivedTimetablePath(archivedID);
+
+    scheduleLink += timetablePath;
+    embedPath = scheduleLink;
+    EnableMiki();
+}
+
+function GetArchivedTimetablePath(archivedID)
+{
+    switch(archivedID)
+    {
+        case 1:
+            return "2026/02/Link426-NL801_2026-01-11.pdf";
         default:
             throw "EVIL NUMBER DETECTED";
     }
