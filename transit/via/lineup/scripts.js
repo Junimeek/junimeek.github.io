@@ -1,4 +1,4 @@
-let linkDebugMode = true;
+let linkDebugMode = false;
 
 function GetCurrentLineupTimetable(route)
 {
@@ -106,17 +106,7 @@ function PrintableRevisionCheck(route)
 {
     switch(route)
     {
-        case 97:
-            return "Printable";
         case 202:
-            return "Printable";
-        case 225:
-            return "Printable";
-        case 276:
-            return "Printable";
-        case 282:
-            return "Printable";
-        case 288:
             return "Printable";
         default:
             return "Printable/Printable";
