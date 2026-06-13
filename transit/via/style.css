@@ -27,6 +27,12 @@
     border-color: #bdae80;
 }
 
+.bigbutton-tips {
+    background-color: #cf1c1c;
+    background-image: url("./thumb-tips.webp");
+    border-color: #cf1c1c;
+}
+
 .bigbutton-placeholder {
     background-color: #757575;
     border-color: #464646;
@@ -46,6 +52,10 @@
 
 .bigbutton-errors:hover {
     border-color: #ffecb3;
+}
+
+.bigbutton-tips:hover {
+    border-color: #ffa0a0;
 }
 
 .bigbutton-placeholder:hover {

@@ -7,7 +7,12 @@
 @import url('../../resources/sayaka/sayaka-styleflags.css');
 
 .saya-lower-bg {
+    background-image: url('./bg.jpg');
     background-color: #fbead4;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
 }
 
 .saya-table {

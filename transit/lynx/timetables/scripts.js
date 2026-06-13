@@ -53,6 +53,8 @@ function GetTimetablePath(route)
     {
         case 26:
             return "2026/02/Link026_2026-01-11.pdf";
+        case 311:
+            return "2026/06/Link311_2026-04-26.pdf";
         case 426:
             return "2026/04/Link426-NL801_2026-05-26.pdf";
         case 801:

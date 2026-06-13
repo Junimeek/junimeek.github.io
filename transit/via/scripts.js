@@ -7,7 +7,10 @@ const bannerList = [
     "via-link-car.jpg",
     "utsa-nova.jpg",
     "medical-center.jpg",
-    "josephine-xcelsior.jpg"
+    "josephine-xcelsior.jpg",
+    "martin-bus-stop.jpg",
+    "express-nova-interior.jpg",
+    "transit-police.jpg"
 ];
 
 function RandomizeBanner()
