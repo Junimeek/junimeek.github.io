@@ -116,6 +116,10 @@
     background-image: url('./background-boom.png');
 }
 
+.songinfo-nevercontainer {
+    background-image: url('./background-never.png');
+}
+
 .songinfo-chinatowncontainer {
     background-image: url('./background-chinatown.png');
 }
