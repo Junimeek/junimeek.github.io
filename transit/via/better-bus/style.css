@@ -35,6 +35,25 @@
     color: #931b22;
 }
 
+.detour-content {
+    margin-bottom: 0.5em;
+    width: fit-content;
+    background-color: #e7f7ff;
+}
+
+.detour-content summary {
+    text-align: left;
+    padding-right: 0.7em;
+}
+
+.detour-content summary::after {
+    content: 'Show stop list';
+}
+
+.detour-content[open] summary::after {
+    content: 'Hide stop list';
+}
+
 .jump-footer-container {
     position: sticky;
     top: 0px;

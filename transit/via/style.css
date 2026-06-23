@@ -27,6 +27,12 @@
     border-color: #bdae80;
 }
 
+.bigbutton-green-line {
+    background-color: #628125;
+    background-image: url("./thumb-traffic.webp");
+    border-color: #628125;
+}
+
 .bigbutton-tips {
     background-color: #cf1c1c;
     background-image: url("./thumb-tips.webp");
@@ -52,6 +58,10 @@
 
 .bigbutton-errors:hover {
     border-color: #ffecb3;
+}
+
+.bigbutton-green-line:hover {
+    border-color: #dcfc9d;
 }
 
 .bigbutton-tips:hover {

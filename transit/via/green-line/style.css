@@ -1,0 +1,114 @@
+@import url('../../../resources/sayaka/styles/via.css');
+@import url('../../../resources/sayaka/sayaka.css');
+@import url('../../../resources/sayaka/sayaka-navbar.css');
+@import url('../../../resources/sayaka/sayaka-table.css');
+@import url('../../../resources/fonts/font-style.css');
+@import url('../../../resources/sayaka/sayaka-collapsible-content.css');
+@import url('../../../resources/sayaka/sayaka-styleflags.css');
+
+.saya-banner-header {
+    background-color: #628125;
+    background-image: url('./banner-traffic.jpg');
+}
+
+.saya-table img {
+    width: 32px;
+    height: 32px;
+}
+
+.saya-table td {
+    font-size: 14pt;
+}
+
+.saya-table td b u {
+    color: #931b22;
+}
+
+.detour-routename {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    font-family: 'Scene Pro Black';
+    font-weight: normal;
+    font-size: 1.3em;
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+    border-bottom-color: gray;
+    padding: 8px;
+}
+
+.detour-collapsible {
+    margin-bottom: 0.5em;
+    width: fit-content;
+    background-color: #e7f7ff;
+}
+
+.detour-collapsible summary {
+    text-align: left;
+    padding-right: 0.7em;
+}
+
+.detour-collapsible summary::after {
+    content: 'Show stop list';
+}
+
+.detour-collapsible[open] summary::after {
+    content: 'Hide stop list';
+}
+
+.routeselector {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-top: 0px;
+    margin-bottom: 1.5em;
+}
+
+.routeselector a {
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.routeselector img {
+    width: 87%;
+    height: 87%;
+}
+
+@media screen and (min-width: 900px) {
+    .routeselector a {
+        width: 68px;
+        height: 68px;
+    }
+
+    .routeselector a img {
+        transition: width 0.15s, height 0.15s;
+    }
+
+    .routeselector a:hover img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .detour-routename {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .routeselector a {
+        width: 58px;
+        height: 58px;
+    }
+
+    .detour-routename {
+        margin-left: 1.2em;
+    }
+}
