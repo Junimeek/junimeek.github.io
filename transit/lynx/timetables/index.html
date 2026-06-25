@@ -14,17 +14,17 @@
     
     <body class="saya-lower-bg" onload="HeartieRoll()">
         <div id="miki-viewer" class="miki-disabled" onclick="DisableMiki()">
-            <a href="javascript:void(0);" title="Close document viewer">
-                <div class="miki-button-close">
+            <div class="miki-controls-container" title="Close document viewer">
+                <a class="miki-controls-button">
                     <i class="fa fa-window-close"></i>
-                </div>
-            </a>
-            <a href="javascript:void(0);" title="Open document in new tab">
-                <div class="miki-button-maximize" onclick="OpenMikiEmbedInNewTab()">
+                </a>
+                <a class="miki-controls-button" title="Open document in new tab" onclick="OpenMikiEmbedInNewTab()">
                     <i class="fa fa-window-maximize"></i>
-                </div>
-            </a>
-
+                </a>
+                <a id="miki-download-button" class="miki-controls-button" title="Download this document" download>
+                    <i class="fa fa-download"></i>
+                </a>
+            </div>
             <div class="miki-window miki-windowtype-pdf">
                 <iframe class="miki-frame" id="miki-frame" src="../../../resources/sayaka/miki-loadscreen.html"></iframe>
             </div>

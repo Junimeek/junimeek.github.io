@@ -14,15 +14,54 @@ function EnableMiki()
         return;
     }
 
+    let mikiDownloadButton = document.getElementById("miki-download-button");
+    if (mikiDownloadButton != null) {
+        mikiDownloadButton.setAttribute("href", embedPath);
+    }
+
     let viewerFrame = document.getElementById("miki-frame");
     viewerFrame.src = embedPath;
 
     let viewer = document.getElementById("miki-viewer");
     viewer.className = "miki-enabled";
+    
+    document.addEventListener("keydown", MikiShortcutCheck);
+}
+
+function MikiShortcutCheck(theKey)
+{
+    switch(theKey.key)
+    {
+        case "Escape":
+            DisableMiki();
+            break;
+        case "d":
+            if (theKey.shiftKey) {
+                document.getElementById("miki-download-button").click();
+            }
+            break;
+        case "D":
+            if (theKey.shiftKey) {
+                document.getElementById("miki-download-button").click();
+            }
+            break;
+        case "n":
+            if (theKey.shiftKey) {
+                OpenMikiEmbedInNewTab();
+            }
+            break;
+        case "N":
+            if (theKey.shiftKey) {
+                OpenMikiEmbedInNewTab();
+            }
+            break;
+    }
 }
 
 function DisableMiki()
 {
+    document.removeEventListener("keydown", MikiShortcutCheck);
+    
     let viewer = document.getElementById("miki-viewer");
     viewer.className = "miki-disabled"
 
@@ -46,6 +85,8 @@ function GetLoadScreenLocation()
         case 2:
             return loadScreenLocation.level2;
         case 3:
+            return loadScreenLocation.level3;
+        case 4:
             return loadScreenLocation.level3;
     }
 }

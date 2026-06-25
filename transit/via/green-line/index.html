@@ -8,9 +8,27 @@
         <link rel="stylesheet" href="./style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="icon" href="../favicon.ico" type="image/vnd.microsoft.icon">
+        <script src="./scripts.js"></script>
+        <script src="../../../resources/sayaka/miki.js"></script>
     </head>
     
     <body class="saya-lower-bg">
+        <div id="miki-viewer" class="miki-disabled">
+            <div class="miki-controls-container">
+                <a class="miki-controls-button" title="Close document viewer [Esc]" onclick="DisableMiki()">
+                    <i class="fa fa-window-close"></i>
+                </a>
+                <a class="miki-controls-button" title="Open document in new tab [Shift + N]" onclick="OpenMikiEmbedInNewTab()">
+                    <i class="fa fa-window-maximize"></i>
+                </a>
+                <a id="miki-download-button" class="miki-controls-button" title="Download this document [Shift + D]" download>
+                    <i class="fa fa-download"></i>
+                </a>
+            </div>
+            <div class="miki-window miki-windowtype-image">
+                <img class="miki-frame" id="miki-frame" src="../../../resources/sayaka/miki-loadscreen.html">
+            </div>
+        </div>
 
         <nav class="saya-navbar saya-navbar-font-scene">
             <div class="saya-navbar-container">
@@ -107,7 +125,7 @@
                                                 <li>H-E-B at Oblate Drive → San Pedro & Oblate</li>
                                                 <li>San Pedro & Santa Monica → San Pedro & Audubon</li>
                                                 <li>San Pedro & Hildebrand → San Pedro & Lynwood</li>
-                                                <li>San Pedro & Quincy → Quincy & Main [SW corner]</li>
+                                                <li>San Pedro & Quincy → Quincy & Main [SE corner]</li>
                                                 <li>Navarro & Augusta → Richmond & Augusta</li>
                                                 <li>Navarro & N St. Mary's [NW corner] → Navarro & N St. Mary's [NE corner]</li>
                                             </ul>
@@ -117,7 +135,7 @@
                                             <summary></summary>
                                             <ul>
                                                 <li>Navarro & Augusta → Navarro & N St. Mary's [SE corner]</li>
-                                                <li>Navarro & Quincy → Navarro & N St. Mary's [SE corner]</li>
+                                                <li>San Pedro & Quincy → Navarro & N St. Mary's [SE corner]</li>
                                                 <li>San Pedro & Audubon → San Pedro & Rex</li>
                                                 <li>San Pedro & Hermine → San Pedro & Rex</li>
                                                 <li>San Pedro & Basse → San Pedro & Nova May</li>
@@ -136,58 +154,67 @@
                                 <div style="width: 8px;"></div>
                                 <span class="via-busfreq-20">San Pedro Frequent</span>
                             </div>
-                            <ul>
-                                <li>Realigned between <b>San Pedro & Cypress</b> and <b>Navarro & St. Mary's</b>
+                            <div class="detour-description-container">
+                                <div class="detour-description-item" style="max-width: 75%;">
                                     <ul>
-                                        <li>Southbound trips travel to the Downtown area via Quincy, Richmond, and N St. Mary's</li>
-                                        <li>Northbound trips travel to SAC via N St. Mary's, Richmond, Quincy, Lexington, Main Avenue, Poplar, and San Pedro</li>
-                                    </ul>
-                                </li>
-                                <li>The location of several stops will change
-                                    <ul>
-                                        <li style="margin-bottom: 0px;">The following southbound stops will be changed:</li>
-                                        <details class="saya-collapsible-section detour-collapsible">
-                                            <summary></summary>
+                                        <li>Realigned between <b>San Pedro & Cypress</b> and <b>Navarro & St. Mary's</b>
                                             <ul>
-                                                <li>San Pedro & Rector → North Star TC</li>
-                                                <li>7219 San Pedro → North Star TC</li>
-                                                <li>San Pedro & Thames → North Star TC</li>
-                                                <li>7045 San Pedro → North Star TC</li>
-                                                <li>San Pedro & Maplewood → San Pedro & Oblate</li>
-                                                <li>6931 San Pedro → San Pedro & Oblate</li>
-                                                <li>H-E-B at Oblate Drive → San Pedro & Oblate</li>
-                                                <li>San Pedro & Mcilvaine → San Pedro & Audubon</li>
-                                                <li>San Pedro & Santa Monica → San Pedro & Audubon</li>
-                                                <li>San Pedro & Westwood → San Pedro & Audubon</li>
-                                                <li>San Pedro & Hildebrand → San Pedro & Lynwood</li>
-                                                <li>San Pedro & Rosewood → San Pedro & Lynwood</li>
-                                                <li>San Pedro & Quincy → Quincy & Main [SW corner]</li>
-                                                <li>Navarro & Augusta → Richmond & Augusta</li>
-                                                <li>Navarro & N St. Mary's [NW corner] → Navarro & N St. Mary's [NE corner]</li>
+                                                <li>Southbound trips travel to the Downtown area via Quincy, Richmond, and N St. Mary's</li>
+                                                <li>Northbound trips travel to SAC via N St. Mary's, Richmond, Quincy, Lexington, Main Avenue, Poplar, and San Pedro</li>
                                             </ul>
-                                        </details>
-                                        <li style="margin-bottom: 0px;">The following northbound stops will be changed:</li>
-                                        <details class="saya-collapsible-section detour-collapsible">
-                                            <summary></summary>
+                                        </li>
+                                        <li>The location of several stops will change
                                             <ul>
-                                                <li>Navarro & Augusta → Navarro & N St. Mary's [SE corner]</li>
-                                                <li>Navarro & Quincy → Navarro & N St. Mary's [SE corner]</li>
-                                                <li>San Pedro & Euclid → San Pedro & Cypress</li>
-                                                <li>San Pedro & Marshall → San Pedro & Cypress</li>
-                                                <li>San Pedro & Audubon → San Pedro & Rex</li>
-                                                <li>San Pedro & Clower → San Pedro & Rex</li>
-                                                <li>San Pedro & Wildwood → San Pedro & Rex</li>
-                                                <li>San Pedro & Mandalay → San Pedro & Rex</li>
-                                                <li>San Pedro & Hermine → San Pedro & Rex</li>
-                                                <li>San Pedro & El Monte → San Pedro & Nova May</li>
-                                                <li>San Pedro & La Manda → San Pedro & Nova May</li>
-                                                <li>San Pedro & Basse → San Pedro & Nova May</li>
-                                                <li>San Pedro & Recoleta → San Pedro & Nova May</li>
+                                                <li style="margin-bottom: 0px;">The following southbound stops will be changed:</li>
+                                                <details class="saya-collapsible-section detour-collapsible">
+                                                    <summary></summary>
+                                                    <ul>
+                                                        <li>San Pedro & Rector → North Star TC</li>
+                                                        <li>7219 San Pedro → North Star TC</li>
+                                                        <li>San Pedro & Thames → North Star TC</li>
+                                                        <li>7045 San Pedro → North Star TC</li>
+                                                        <li>San Pedro & Maplewood → San Pedro & Oblate</li>
+                                                        <li>6931 San Pedro → San Pedro & Oblate</li>
+                                                        <li>H-E-B at Oblate Drive → San Pedro & Oblate</li>
+                                                        <li>San Pedro & Mcilvaine → San Pedro & Audubon</li>
+                                                        <li>San Pedro & Santa Monica → San Pedro & Audubon</li>
+                                                        <li>San Pedro & Westwood → San Pedro & Audubon</li>
+                                                        <li>San Pedro & Hildebrand → San Pedro & Lynwood</li>
+                                                        <li>San Pedro & Rosewood → San Pedro & Lynwood</li>
+                                                        <li>San Pedro & Quincy → Quincy & Main [SE corner]</li>
+                                                        <li>Navarro & Augusta → Richmond & Augusta</li>
+                                                        <li>Navarro & N St. Mary's [NW corner] → Navarro & N St. Mary's [NE corner]</li>
+                                                    </ul>
+                                                </details>
+                                                <li style="margin-bottom: 0px;">The following northbound stops will be changed:</li>
+                                                <details class="saya-collapsible-section detour-collapsible">
+                                                    <summary></summary>
+                                                    <ul>
+                                                        <li>Navarro & Augusta → Navarro & N St. Mary's [SE corner]</li>
+                                                        <li>San Pedro & Quincy → Navarro & N St. Mary's [SE corner]</li>
+                                                        <li>San Pedro & Euclid → San Pedro & Cypress</li>
+                                                        <li>San Pedro & Marshall → San Pedro & Cypress</li>
+                                                        <li>San Pedro & Audubon → San Pedro & Rex</li>
+                                                        <li>San Pedro & Clower → San Pedro & Rex</li>
+                                                        <li>San Pedro & Wildwood → San Pedro & Rex</li>
+                                                        <li>San Pedro & Mandalay → San Pedro & Rex</li>
+                                                        <li>San Pedro & Hermine → San Pedro & Rex</li>
+                                                        <li>San Pedro & El Monte → San Pedro & Nova May</li>
+                                                        <li>San Pedro & La Manda → San Pedro & Nova May</li>
+                                                        <li>San Pedro & Basse → San Pedro & Nova May</li>
+                                                        <li>San Pedro & Recoleta → San Pedro & Nova May</li>
+                                                    </ul>
+                                                </details>
                                             </ul>
-                                        </details>
+                                        </li>
                                     </ul>
-                                </li>
-                            </ul>
+                                </div>
+                                <div onclick="GetScreenshot('Route004_GreenLineDetour.png')" class="detour-description-item detour-thumbnail-container">
+                                    <img class="detour-thumbnail" src="./detour-images/thumbRoute004_GreenLineDetour.webp">
+                                    <br>
+                                    <span>Click to enlarge</span>
+                                </div>
+                            </div>
                         </td>
                     </tr>
                     <tr>
@@ -317,7 +344,7 @@
                                         <details class="saya-collapsible-section detour-collapsible">
                                             <summary></summary>
                                             <ul>
-                                                <li>San Pedro & Quincy → Quincy & Main [SW corner]</li>
+                                                <li>San Pedro & Quincy → Quincy & Main [SE corner]</li>
                                                 <li>Navarro & Augusta → Richmond & Augusta</li>
                                                 <li>Navarro & N St. Mary's [NW corner] → Navarro & N St. Mary's [NE corner]</li>
                                             </ul>
@@ -327,7 +354,7 @@
                                             <summary></summary>
                                             <ul>
                                                 <li>Navarro & Augusta → Navarro & N St. Mary's [SE corner]</li>
-                                                <li>Navarro & Quincy → Navarro & N St. Mary's [SE corner]</li>
+                                                <li>San Pedro & Quincy → Navarro & N St. Mary's [SE corner]</li>
                                                 <li>San Pedro & Euclid → San Pedro & Cypress</li>
                                                 <li>San Pedro & Marshall → San Pedro & Cypress</li>
                                             </ul>
@@ -358,7 +385,7 @@
                                         <details class="saya-collapsible-section detour-collapsible">
                                             <summary></summary>
                                             <ul>
-                                                <li>San Pedro & Quincy → Quincy & Main [SW corner]</li>
+                                                <li>San Pedro & Quincy → Quincy & Main [SE corner]</li>
                                                 <li>Navarro & Augusta → Richmond & Augusta</li>
                                                 <li>Navarro & N St. Mary's [NW corner] → Navarro & N St. Mary's [NE corner]</li>
                                             </ul>
@@ -368,7 +395,7 @@
                                             <summary></summary>
                                             <ul>
                                                 <li>Navarro & Augusta → Navarro & N St. Mary's [SE corner]</li>
-                                                <li>Navarro & Quincy → Navarro & N St. Mary's [SE corner]</li>
+                                                <li>San Pedro & Quincy → Navarro & N St. Mary's [SE corner]</li>
                                                 <li>San Pedro & Euclid → San Pedro & Cypress</li>
                                                 <li>San Pedro & Marshall → San Pedro & Cypress</li>
                                             </ul>
@@ -399,7 +426,7 @@
                                         <details class="saya-collapsible-section detour-collapsible">
                                             <summary></summary>
                                             <ul>
-                                                <li>San Pedro & Quincy → Quincy & Main [SW corner]</li>
+                                                <li>San Pedro & Quincy → Quincy & Main [SE corner]</li>
                                                 <li>Navarro & Augusta → Richmond & Augusta</li>
                                                 <li>Navarro & N St. Mary's [NW corner] → Navarro & N St. Mary's [NE corner]</li>
                                             </ul>
@@ -409,7 +436,7 @@
                                             <summary></summary>
                                             <ul>
                                                 <li>Navarro & Augusta → Navarro & N St. Mary's [SE corner]</li>
-                                                <li>Navarro & Quincy → Navarro & N St. Mary's [SE corner]</li>
+                                                <li>San Pedro & Quincy → Navarro & N St. Mary's [SE corner]</li>
                                                 <li>San Pedro & Euclid → San Pedro & Cypress</li>
                                                 <li>San Pedro & Marshall → San Pedro & Cypress</li>
                                             </ul>

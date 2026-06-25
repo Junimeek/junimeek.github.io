@@ -13,18 +13,18 @@
     </head>
     
     <body class="saya-lower-bg" onload="InitializePage()">
-        <div id="miki-viewer" class="miki-disabled" onclick="DisableMiki()">
-            <a href="javascript:void(0);" title="Close document viewer">
-                <div class="miki-button-close">
+        <div id="miki-viewer" class="miki-disabled">
+            <div class="miki-controls-container">
+                <a class="miki-controls-button" title="Close document viewer [Esc]" onclick="DisableMiki()">
                     <i class="fa fa-window-close"></i>
-                </div>
-            </a>
-            <a href="javascript:void(0);" title="Open document in new tab">
-                <div class="miki-button-maximize" onclick="OpenMikiEmbedInNewTab()">
+                </a>
+                <a class="miki-controls-button" title="Open document in new tab [Shift + N]" onclick="OpenMikiEmbedInNewTab()">
                     <i class="fa fa-window-maximize"></i>
-                </div>
-            </a>
-
+                </a>
+                <a id="miki-download-button" class="miki-controls-button" title="Download this document [Shift + D]" download>
+                    <i class="fa fa-download"></i>
+                </a>
+            </div>
             <div class="miki-window miki-windowtype-pdf">
                 <iframe class="miki-frame" id="miki-frame" src="../../../resources/sayaka/miki-loadscreen.html"></iframe>
             </div>
@@ -397,7 +397,7 @@
                 <li><a class="" href="javascript:void(0);" onclick="SwitchRoutePage(-1)">&raquo;</a></li>
             </ul>
 
-            <div id="routesection-radial" class="routegroup-enabled">
+            <div id="routesection-radial" class="routegroup-disabled">
             <a name="section-radial"></a>
             <h2 class="saya-h2">Radial Routes (2–97)</h2>
             <p class="saya-tiny-paragraph">
@@ -2695,6 +2695,13 @@
                         <td style="text-align: left;">N/A</td>
                         <td style="text-align: left;">
                             The VIA Board unanimously approves a budget of $574.3 million for the 2026 Fiscal Year.<a class="in-text-citation">14</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>October 2025</td>
+                        <td style="text-align: left;">N/A</td>
+                        <td style="text-align: left;">
+                            VIA begins taking delivery of brand new New Flyer Xcelsior XN60s to replace the aging NABI 60-BRTs used in the Prímo fleet.
                         </td>
                     </tr>
                     <tr>

@@ -1,55 +1,49 @@
-.miki-button-close {
-    display: block;
+.miki-controls-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: stretch;
     position: fixed;
     z-index: 40;
     top: 16px;
     right: 16px;
+    background-color: #00000000;
+    color: white;
+    width: fit-content;
+    padding: 8px;
+}
+
+.miki-controls-button {
+    font-size: 24pt;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: #ffffff44;
     color: white;
-    padding-left: 4px;
-    padding-right: 4px;
-    padding-top: 2px;
-    padding-bottom: 2px;
+    margin: 0.1em;
+    padding: 0.2em;
+    border-style: solid;
+    border-color: white;
+    border-width: 2px;
+    border-radius: 6px;
 }
 
-.miki-button-close:hover {
-    border-color: aqua;
-    color: aqua;
+.miki-controls-button i {
+    font-size: 1em;
 }
 
-.miki-button-close i {
-    color: inherit;
-    font-size: 24pt;
-}
-
-.miki-button-maximize {
-    display: block;
-    position: fixed;
-    z-index: 40;
-    top: calc(24pt + 30px);
-    right: 16px;
-    background-color: #ffffff44;
-    color: white;
-    padding-left: 4px;
-    padding-right: 4px;
-    padding-top: 2px;
-    padding-bottom: 2px;
-}
-
-.miki-button-maximize:hover {
-    border-color: aqua;
-    color: aqua;
-}
-
-.miki-button-maximize i {
-    color: inherit;
-    font-size: 24pt;
+.miki-controls-button:hover {
+    color: cyan;
+    background-color: #00f7ff44;
+    border-color: cyan;
+    cursor: pointer;
 }
 
 .miki-enabled {
     display: block;
     position: fixed;
-    background-color: #00000088;
+    background-color: #000000cc;
     height: 100vh;
     width: 100vw;
     top: 0;
@@ -73,6 +67,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.miki-windowtype-image img {
+    height: auto;
+    max-height: 100%;
+    width: auto;
+    max-width: 100%;
 }
 
 .miki-windowtype-pdf iframe {
