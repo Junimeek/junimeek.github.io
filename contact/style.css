@@ -1,0 +1,32 @@
+@import url('../resources/sayaka/sayaka.css');
+@import url('../resources/sayaka/sayaka-navbar.css');
+@import url('../resources/fonts/font-style.css');
+@import url('../resources/sayaka/sayaka-styleflags.css');
+@import url('../resources/sayaka/sayaka-table.css');
+
+.saya-h1 {
+    font-family: 'Ammys Handwriting', Arial, sans-serif;
+    color: #ab4eb9;
+}
+
+.saya-h2 {
+    font-family: 'Ammys Handwriting', Arial, sans-serif;
+    color: #ab4eb9;
+}
+
+.saya-lower-bg {
+    background-image: linear-gradient(135deg, #f19dff, #ab4eb9);
+}
+
+.saya-table {
+    border-color: #ab4eb9;
+    text-align: center;
+}
+
+.saya-table tr {
+    border-color: #ab4eb9;
+}
+
+.saya-table-header {
+    background-color: #ab4eb9 !important;
+}
