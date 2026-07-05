@@ -1,0 +1,34 @@
+@import url('../../resources/sayaka/styles/kyokura.css');
+@import url('../../resources/sayaka/sayaka.css');
+@import url('../../resources/sayaka/sayaka-navbar.css');
+@import url('../../resources/sayaka/sayaka-flexbuttons.css');
+@import url('../../resources/fonts/font-style.css');
+@import url('../../resources/sayaka/sayaka-styleflags.css');
+
+.saya-lower-bg {
+    background-color: #388b1d;
+}
+
+.kyoko-logo {
+    width: 100%;
+    height: 100%;
+    max-width: 500px;
+}
+
+.bigbutton-classic {
+    background-color: #388b1d;
+    border-color: #388b1d;
+}
+
+.bigbutton-party {
+    background-color: #a50808;
+    border-color: #a50808;
+}
+
+.bigbutton-classic:hover {
+    border-color: #66ff33;
+}
+
+.bigbutton-party:hover {
+    border-color: #ff0000;
+}

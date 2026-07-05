@@ -17,6 +17,11 @@
     border-color: #388b1d;
 }
 
+.bigbutton-baldidecomp {
+    background-color: #388b1d;
+    border-color: #388b1d;
+}
+
 .bigbutton-neuromm {
     background-color: #b07177;
     background-image: url("./thumb-neuro.webp");
@@ -29,6 +34,10 @@
 }
 
 .bigbutton-baldiextended:hover {
+    border-color: #66ff33;
+}
+
+.bigbutton-baldidecomp:hover {
     border-color: #66ff33;
 }
 
