@@ -16,7 +16,7 @@ function GetCurrentLineupTimetable(route)
 
     scheduleLink += timetablePath;
     scheduleLink += GetRouteAsString(route);
-    scheduleLink += suffix;
+    scheduleLink += CheckForDetour(route);
 
     embedPath = scheduleLink;
     EnableMiki();
@@ -39,6 +39,25 @@ function GetRouteAsString(route)
     return stringRoute;
 }
 
+function CheckForDetour(route)
+{
+    switch(route)
+    {
+        case 97:
+            return "_GRDetour_rev1.pdf";
+        case 204:
+            return "_GRDetour_rev2.pdf";
+        case 232:
+            return "_GRDetour_rev1.pdf";
+        case 242:
+            return "_GRDetour_v0.pdf";
+        case 289:
+            return ".pdf";
+        default:
+            return ".pdf";
+    }
+}
+
 function GetCurrentPrintableLineupTimetable(route)
 {
     scheduleLink = "https://junimeek.net/documents/";
@@ -56,7 +75,7 @@ function GetCurrentPrintableLineupTimetable(route)
         scheduleLink += "097-Night";
     else
         scheduleLink += route;
-    scheduleLink += suffix;
+    scheduleLink += CheckForDetour(route);
 
     window.open(scheduleLink);
 }
@@ -68,9 +87,9 @@ function GetTimetablePath(route)
         case 68:
             return "2026/04/";
         case 97:
-            return "2026/04/";
+            return "2026/gr-lineup-detours/";
         case 204:
-            return "2026/04/";
+            return "2026/gr-lineup-detours/";
         case 214:
             return "2026/04/";
         case 222:
@@ -80,9 +99,9 @@ function GetTimetablePath(route)
         case 230:
             return "2026/04/";
         case 232:
-            return "2026/04/";
+            return "2026/gr-lineup-detours/";
         case 242:
-            return "2026/04/";
+            return "2026/gr-lineup-detours/";
         case 251:
             return "2026/04/";
         case 268:
@@ -106,7 +125,7 @@ function PrintableRevisionCheck(route)
 {
     switch(route)
     {
-        case 202:
+        case 203:
             return "Printable";
         default:
             return "Printable/Printable";
@@ -123,5 +142,24 @@ function TimetableSuffix(scheduleType)
             return "Printable.pdf";
         case 2:
             return "Grayscale.pdf";
+        case 11:
+            return "_GRDetour_";
+    }
+}
+
+function GetDetourRevision(route)
+{
+    switch(route)
+    {
+        case 97:
+            return "rev1.pdf";
+        case 204:
+            return "rev2.pdf";
+        case 232:
+            return "rev1.pdf";
+        case 242:
+            return "v0.pdf";
+        case 289:
+            return "v0.pdf";
     }
 }

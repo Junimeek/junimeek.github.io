@@ -17,6 +17,8 @@
 }
 
 .saya-table td b u {
+    display: block;
+    padding-top: 0.5em;
     color: #931b22;
 }
 
