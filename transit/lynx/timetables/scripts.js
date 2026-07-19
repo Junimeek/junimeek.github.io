@@ -31,6 +31,24 @@ function SetHeartieBanner(theBanner)
     document.getElementById("lovTitle").className = "saya-h1 heartie";
 }
 
+function GetOnedriveTimetable(route)
+{
+    currentLoadLocation = 3;
+
+    let scheduleLink = GetOnedriveLink(route);
+    embedPath = scheduleLink;
+    EnableMiki();
+}
+
+function GetOnedriveLink(route)
+{
+    switch(route)
+    {
+        case 311:
+            return "https://1drv.ms/b/c/f35e7ec862f0553c/IQRz8u7b5CCxRK2e1lb5gV42AY2YTY-U42XxWMcXD1IOWNg";
+    }
+}
+
 function GetCurrentTimetable(route)
 {
     currentLoadLocation = 3;

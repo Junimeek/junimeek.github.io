@@ -53,7 +53,7 @@
 
             <h1 class="saya-h1" style="color: white;">Juniper's Network Redesign</h1>
             <p class="saya-short-paragraph" style="color: white;">
-                <em>This page was last updated on April 28, 2026.</em>
+                <em>This page was last updated on July 19, 2026.</em>
             </p>
             <hr class="saya-hr" style="background-color: white;">
 
@@ -92,7 +92,7 @@
             <p class="saya-paragraph">
                 The green dots are express stops, and show the locations where Skip, Express, and Prímo buses would stop.
                 The purple dots are local stops. The only local stops that are visible on this map are stops that do not exist in real life
-                (for example, my proposal for <b class="via-bustext via-busfreq-30">Route 653 University Heights / Blossom</b> in the North Central area has stops labeled through Churchill Estates and along Bitters, but not on any other road since those other roads have stops that exist already for other existing routes).
+                (for example, my proposal for <b class="via-bustext via-busfreq-30">Route 1 Lockhill-Selma</b> has stops labeled along Lockhill-Selma between 1604 and Huebner and within Shavano Highlands, but not on any other road since those other roads have stops that exist already for other existing routes).
             </p>
             <div class="saya-sf-w1300 saya-sf-centered">
                 <div style="display: flex; justify-content: center;">
@@ -125,8 +125,8 @@
                             <hr class="saya-hr">
                             <b class="via-bustext"><u>Routes served</u></b>
                             <ul class="saya-sf-list-compact">
-                                <li><a href="#route008" class="via-routeplate via-routeplate-f30"><b>8 North New Braunfels</b></a></li>
-                                <li><a href="#route537" class="via-routeplate via-routeplate-f20"><b>537 Stone Oak / O'Connor Frequent</b></a></li>
+                                <li><a href="#section-proposals" onclick="DisplayRouteGroup('008');" class="via-routeplate via-routeplate-f30"><b>8 North New Braunfels</b></a></li>
+                                <li><a href="#route537" class="via-routeplate via-routeplate-f20"><b>538 Stone Oak / O'Connor Frequent</b></a></li>
                             </ul>
                         </td>
                     </tr>
@@ -141,11 +141,13 @@
                             <hr class="saya-hr">
                             <b class="via-bustext"><u>Routes served</u></b>
                             <ul class="saya-sf-list-compact">
-                                <li><a href="#route005" class="via-routeplate via-routeplate-f30"><b>5 McCullough</b></a></li>
+                                <li><a href="#section-proposals" onclick="DisplayRouteGroup('005');" class="via-routeplate via-routeplate-f30"><b>5 McCullough</b></a></li>
                                 <li><a href="#route530" class="via-routeplate via-routeplate-f30"><b>530 Callaghan</b></a></li>
                                 <li><a href="#route535" class="via-routeplate via-routeplate-f30"><b>535 Wurzbach Parkway Skip</b></a></li>
+                                <li><b class="via-routeplate via-routeplate-f30">536 Hardy Oak Blvd</b></li>
                                 <li><a href="#route640" class="via-routeplate via-routeplate-f30"><b>640 Valley Forge</b></a></li>
-                                <li><a href="#route648" class="via-routeplate via-routeplate-f30"><b>648 Blossom / Stone Oak</b></a></li>
+                                <li><a href="#route648" class="via-routeplate via-routeplate-f30"><b>648 Northwoods</b></a></li>
+                                <li><a href="#route653" class="via-routeplate via-routeplate-f30"><b>653 University Heights / Blossom</b></a></li>
                             </ul>
                         </td>
                     </tr>
@@ -154,39 +156,885 @@
             </div>
 
             <hr class="saya-hr">
+            <a name="section-proposals"></a>
+            <h3 class="saya-h3 saya-navbar-font-scene"><u>Individual Route Proposals</u></h3>
 
-            <p class="saya-tiny-paragraph">
-                Select any of the icons below to see the changes that I propose.
-            </p>
+            <div class="jnr-bigcontainer saya-scrollable-element" style="margin-bottom: 1em;">
+                <div id="proposal-000" class="jnr-routegroup">
+                    <div class="jnr-routeinfo-infocontainer">
+                        <div class="jnr-infobox jnr-routeinfo-proposals">
+                            <p class="saya-tiny-paragraph">
+                                Route information will appear here when you click any of the icons below.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div id="proposal-001" class="jnr-routegroup jnr-routegroup-disabled">
+                    <div class="jnr-routeinfo-header">
+                        <img class="via-big-number" src="./bullets/001.webp" loading="lazy">
+                        <h3 class="jnr-routeinfo-routename via-busfreq-30">Lockhill-Selma</h3>
+                    </div>
+                    <div class="jnr-routeinfo-infocontainer">
+                        <div class="jnr-infobox jnr-routeinfo-proposals">
+                            <h3 class="jnr-routeinfo-routename">Proposals</h3>
+                            <ul>
+                                <li>New <span class="via-bustext via-busfreq-30">30 minute</span> frequency route connecting <b>Shavano Highlands</b> to <b>Madison Square Park</b> via Lockhill-Selma and Blanco</li>
+                            </ul>
+                        </div>
+                        <div class="jnr-routeinfo-additionalinfo">
+                            <div class="jnr-infobox jnr-routeinfo-destinations">
+                                <h3 class="jnr-routeinfo-routename">Major Destinations</h3>
+                                <ul class="saya-sf-list-compact">
+                                    <li>Shavano Highlands</li>
+                                    <li>Castle Hills</li>
+                                    <li>Madison Square Park</li>
+                                </ul>
+                            </div>
+                            <div class="jnr-infobox jnr-routeinfo-notes">
+                                <h3 class="jnr-routeinfo-routename">Notes</h3>
+                                <ul class="saya-sf-list-compact">
+                                    <li>Provides local service along <b>Blanco</b>. Limited stop service would be available on <a href="javascript:DisplayRouteGroup('002');" class="via-routeplate via-routeplate-f20"><b>2 Blanco Skip</b></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="proposal-002" class="jnr-routegroup jnr-routegroup-disabled">
+                    <div class="jnr-routeinfo-header">
+                        <img class="via-big-number" src="./bullets/002.webp" loading="lazy">
+                        <h3 class="jnr-routeinfo-routename via-busfreq-20">Blanco Skip</h3>
+                    </div>
+                    <div class="jnr-routeinfo-infocontainer">
+                        <div class="jnr-infobox jnr-routeinfo-proposals">
+                            <h3 class="jnr-routeinfo-routename">Proposals</h3>
+                            <ul>
+                                <li>Convert to skip service</li>
+                                <li>Extend route to <b>Rogers Ranch</b> via Bitters</li>
+                            </ul>
+                        </div>
+                        <div class="jnr-routeinfo-additionalinfo">
+                            <div class="jnr-infobox jnr-routeinfo-destinations">
+                                <h3 class="jnr-routeinfo-routename">Major Destinations</h3>
+                                <ul class="saya-sf-list-compact">
+                                    <li>Rogers Ranch</li>
+                                    <li>Travis Park</li>
+                                </ul>
+                            </div>
+                            <div class="jnr-infobox jnr-routeinfo-limitedstops">
+                                <h3 class="jnr-routeinfo-routename">Limited stops</h3>
+                                <ul>
+                                    <li>Local service would be provided along <b>Rogers Ranch Parkway</b> and <b>Bitters</b></li>
+                                    <li style="margin-bottom: 0em;">Limited stop service would be provided along <b>Blanco</b> en route to Downtown:</li>
+                                    <details class="saya-collapsible-section">
+                                        <summary></summary>
+                                        <ul class="saya-sf-list-compact">
+                                            <li>Blanco & Bitters</li>
+                                            <li>Blanco & Churchill Estates</li>
+                                            <li>Blanco & Wurzbach Parkway</li>
+                                            <li>Blanco & Vista View</li>
+                                            <li>Blanco & Sir Winston</li>
+                                            <li>Blanco & West Avenue</li>
+                                            <li>Blanco & Loop 410</li>
+                                            <li>Blanco & Rector</li>
+                                            <li>Blanco & Oblate</li>
+                                            <li>Blanco & Dredsen</li>
+                                            <li>Blanco & Basse</li>
+                                            <li>Blanco & Fresno</li>
+                                            <li>Blanco & Santa Monica</li>
+                                            <li>Blanco & Hildebrand</li>
+                                            <li>Blanco & Summit</li>
+                                            <li>Blanco & Woodlawn</li>
+                                            <li>Ashby & Blanco</li>
+                                            <li>N Flores & Myrtle</li>
+                                            <li>Five Points Transfer Hub</li>
+                                            <li>San Pedro & Cypress</li>
+                                            <li>San Pedro & Quincy</li>
+                                            <li>Navarro & N St. Mary's</li>
+                                            <li>N St. Mary's & Pecan</li>
+                                        </ul>
+                                    </details>
+                                </ul>
+                            </div>
+                            <div class="jnr-infobox jnr-routeinfo-notes">
+                                <h3 class="jnr-routeinfo-routename">Notes</h3>
+                                <ul>
+                                    <li>Between <b>Bitters</b> and <b>Loop 410</b>, local service along Blanco would be available on <a href="javascript:DisplayRouteGroup('649');" class="via-routeplate via-routeplate-f30"><b>649 North Star / North Blanco / Stone Oak</b></a></li>
+                                    <li>Between <b>Loop 410</b> and <b>Downtown</b>, local service along Blanco would be available on <a href="javascript:DisplayRouteGroup('001');" class="via-routeplate via-routeplate-f30"><b>1 Lockhill-Selma</b></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="proposal-003" class="jnr-routegroup jnr-routegroup-disabled">
+                    <div class="jnr-routeinfo-header">
+                        <img class="via-big-number" src="./bullets/003.webp" loading="lazy">
+                        <h3 class="jnr-routeinfo-routename via-busfreq-20">San Pedro Skip</h3>
+                    </div>
+                    <div class="jnr-routeinfo-infocontainer">
+                        <div class="jnr-infobox jnr-routeinfo-proposals">
+                            <h3 class="jnr-routeinfo-routename">Proposals</h3>
+                            <ul>
+                                <li>Extend northern terminus to <b>Stone Oak Park & Ride</b> via US-281</li>
+                                <li>Move southern terminus to the <b>Steves Avenue ART Station</b> via South St. Mary's Street</li>
+                                <li>Reduce the number of stops made along San Pedro Avenue</li>
+                            </ul>
+                        </div>
+                        <div class="jnr-routeinfo-additionalinfo">
+                            <div class="jnr-infobox jnr-routeinfo-destinations">
+                                <h3 class="jnr-routeinfo-routename">Major Destinations</h3>
+                                <ul class="saya-sf-list-compact">
+                                    <li>Stone Oak Park & Ride</li>
+                                    <li>Northwoods</li>
+                                    <li>North Star Transit Center</li>
+                                    <li>San Antonio College</li>
+                                    <li>Travis Park</li>
+                                    <li>Juvenile Detention Center</li>
+                                </ul>
+                            </div>
+                            <div class="jnr-infobox jnr-routeinfo-limitedstops">
+                                <h3 class="jnr-routeinfo-routename">Limited stops</h3>
+                                <ul>
+                                    <li>Local service would be provided along <b>US-281</b> between Sonterra Blvd and Thousand Oaks</li>
+                                    <li style="margin-bottom: 0em;">Limited stop service would be provided along <b>US-281</b> and <b>San Pedro Avenue</b> en route to Downtown:</li>
+                                    <details class="saya-collapsible-section">
+                                        <summary></summary>
+                                        <ul class="saya-sf-list-compact">
+                                            <li>US-281 near Loop 1604</li>
+                                            <li>San Pedro & Northwoods (northbound only)</li>
+                                            <li>San Pedro at Parkhills (southbound only)</li>
+                                            <li>San Pedro & Henderson Pass (northbound only)</li>
+                                            <li>San Pedro & Donella</li>
+                                            <li>San Pedro & Thousand Oaks</li>
+                                            <li>San Pedro & Vista (northbound only)</li>
+                                            <li>San Pedro & Ramsey</li>
+                                            <li>North Star Transit Center</li>
+                                            <li>San Pedro & Basse</li>
+                                            <li>San Pedro & Hildebrand</li>
+                                            <li>San Pedro & Woodlawn</li>
+                                            <li>San Pedro & Ashby</li>
+                                            <li>San Pedro & Myrtle (VIA Metro Center / SAC)</li>
+                                            <li>San Pedro & Cypress</li>
+                                            <li>San Pedro & Quincy</li>
+                                            <li>Navarro & N St. Mary's</li>
+                                            <li>N St. Mary's & Pecan (southbound only)</li>
+                                            <li>Navarro & Pecan (northbound only)</li>
+                                            <li>S St. Mary's & Crockett (southbound only)</li>
+                                            <li>Navarro & Crockett (northbound only)</li>
+                                            <li>S St. Mary's & Villita (southbound only)</li>
+                                            <li>Navarro & Villita (northbound only)</li>
+                                            <li>S St. Mary's & Cesar Chavez</li>
+                                            <li>S St. Mary's & Alamo</li>
+                                            <li>Steves & Roosevelt</li>
+                                        </ul>
+                                    </details>
+                                </ul>
+                            </div>
+                            <div class="jnr-infobox jnr-routeinfo-notes">
+                                <h3 class="jnr-routeinfo-routename">Notes</h3>
+                                <ul>
+                                    <li>Between <b>Stone Oak</b> and <b>Sonterra Blvd</b>, local service along US-281 would be available on <a href="javascript:DisplayRouteGroup('503');" class="via-routeplate via-routeplate-f30"><b>503 Huebner Crosstown</b></a></li>
+                                    <li>Between <b>Thousand Oaks</b> and <b>North Star Transit Center</b>, local service along San Pedro would be available on <a href="javascript:DisplayRouteGroup('502');" class="via-routeplate via-routeplate-f20"><b>502 Thousand Oaks Frequent</b></a></li>
+                                    <li>South of <b>North Star Transit Center</b>, local service along San Pedro would be available on <a href="javascript:DisplayRouteGroup('green');" class="via-routeplate via-routeplate-fgreen"><b>ART Green Line</b></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="proposal-004" class="jnr-routegroup jnr-routegroup-disabled">
+                    <div class="jnr-routeinfo-header">
+                        <img class="via-big-number" src="./bullets/004.webp" loading="lazy">
+                        <h3 class="jnr-routeinfo-routename via-busfreq-20">San Pedro Frequent</h3>
+                    </div>
+                    <div class="jnr-routeinfo-infocontainer">
+                        <div class="jnr-routeinfo-additionalinfo">
+                            <div class="jnr-infobox jnr-routeinfo-notes">
+                                <h3 class="jnr-routeinfo-routename">Proposals</h3>
+                                <ul>
+                                    <li>Eliminate route as proposed in the Better Bus draft</li>
+                                </ul>
+                            </div>
+                            <div class="jnr-infobox jnr-routeinfo-notes">
+                                <h3 class="jnr-routeinfo-routename">Notes</h3>
+                                <ul>
+                                    <li>Service along San Pedro would be available on <a href="javascript:DisplayRouteGroup('green');" class="via-routeplate via-routeplate-fgreen"><b>ART Green Line</b></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="proposal-005" class="jnr-routegroup jnr-routegroup-disabled">
+                    <div class="jnr-routeinfo-header">
+                        <img class="via-big-number" src="./bullets/005.webp" loading="lazy">
+                        <h3 class="jnr-routeinfo-routename via-busfreq-30">McCullough</h3>
+                    </div>
+                    <div class="jnr-routeinfo-infocontainer">
+                        <div class="jnr-routeinfo-additionalinfo">
+                            <div class="jnr-infobox jnr-routeinfo-destinations">
+                                <h3 class="jnr-routeinfo-routename">Proposals</h3>
+                                <ul>
+                                    <li>Extend northern terminus to <a href="#inf-blossom" style="font-weight: bold;">Blossom Park & Ride</a> via San Pedro, Rhapsody, Warfield, Nakoma, Cocker Loop, Arion Parkway, and Jones Maltsberger</li>
+                                </ul>
+                            </div>
+                            <div class="jnr-infobox jnr-routeinfo-destinations">
+                                <h3 class="jnr-routeinfo-routename">Major Destinations</h3>
+                                <ul class="saya-sf-list-compact">
+                                    <li>Blossom Park & Ride</li>
+                                    <li>Arion Business Park</li>
+                                    <li>North Star Transit Center</li>
+                                    <li>North Star Mall</li>
+                                    <li>Olmos Park</li>
+                                    <li>Travis Park</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="proposal-007" class="jnr-routegroup jnr-routegroup-disabled">
+                    <div class="jnr-routeinfo-header">
+                        <img class="via-big-number" src="./bullets/007.webp" loading="lazy">
+                        <h3 class="jnr-routeinfo-routename via-busfreq-30">US-281 Stone Oak Express</h3>
+                    </div>
+                    <div class="jnr-routeinfo-infocontainer">
+                        <div class="jnr-routeinfo-additionalinfo">
+                            <div class="jnr-infobox jnr-routeinfo-notes">
+                                <h3 class="jnr-routeinfo-routename">Proposals</h3>
+                                <ul>
+                                    <li>Maintains current service pattern</li>
+                                </ul>
+                            </div>
+                            <div class="jnr-infobox jnr-routeinfo-notes">
+                                <h3 class="jnr-routeinfo-routename">Major Destinations</h3>
+                                <ul class="saya-sf-list-compact">
+                                    <li>Stone Oak Park & Ride</li>
+                                    <li>San Antonio International Airport</li>
+                                    <li>Travis Park</li>
+                                    <li>Riverwalk</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="proposal-008" class="jnr-routegroup jnr-routegroup-disabled">
+                    <div class="jnr-routeinfo-header">
+                        <img class="via-big-number" src="./bullets/008.webp" loading="lazy">
+                        <h3 class="jnr-routeinfo-routename via-busfreq-30">North St. Mary's</h3>
+                    </div>
+                    <div class="jnr-routeinfo-infocontainer">
+                        <div class="jnr-routeinfo-additionalinfo">
+                            <div class="jnr-infobox jnr-routeinfo-notes">
+                                <h3 class="jnr-routeinfo-routename">Proposals</h3>
+                                <ul>
+                                    <li>Maintains current service pattern</li>
+                                </ul>
+                            </div>
+                            <div class="jnr-infobox jnr-routeinfo-notes">
+                                <h3 class="jnr-routeinfo-routename">Major Destinations</h3>
+                                <ul class="saya-sf-list-compact">
+                                    <li>Randolph Transit Center</li>
+                                    <li>Alamo Heights</li>
+                                    <li>University of the Incarnate Word</li>
+                                    <li>Trinity University</li>
+                                    <li>Travis Park</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="proposal-009" class="jnr-routegroup jnr-routegroup-disabled">
+                    <div class="jnr-routeinfo-header">
+                        <img class="via-big-number" src="./bullets/009.webp" loading="lazy">
+                        <h3 class="jnr-routeinfo-routename via-busfreq-30">Broadway</h3>
+                    </div>
+                    <div class="jnr-routeinfo-infocontainer">
+                        <div class="jnr-routeinfo-additionalinfo">
+                            <div class="jnr-infobox jnr-routeinfo-notes">
+                                <h3 class="jnr-routeinfo-routename">Proposals</h3>
+                                <ul>
+                                    <li>Maintains current service pattern</li>
+                                    <li>Additional departures with limited stop service would be available on
+                                        <a href="javascript:DisplayRouteGroup('010');" class="via-routeplate via-routeplate-f20"><b>10 Nacogdoches Skip</b></a>
+                                        and <a href="javascript:DisplayRouteGroup('014');" class="via-routeplate via-routeplate-f20"><b>14 Austin Highway Skip</b></a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="jnr-infobox jnr-routeinfo-notes">
+                                <h3 class="jnr-routeinfo-routename">Major Destinations</h3>
+                                <ul class="saya-sf-list-compact">
+                                    <li>Naco Pass</li>
+                                    <li>Alamo Heights</li>
+                                    <li>University of the Incarnate Word</li>
+                                    <li>Travis Park</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="proposal-010" class="jnr-routegroup jnr-routegroup-disabled">
+                    <div class="jnr-routeinfo-header">
+                        <img class="via-big-number" src="./bullets/010.webp" loading="lazy">
+                        <h3 class="jnr-routeinfo-routename via-busfreq-20">Nacogdoches Skip</h3>
+                    </div>
+                    <div class="jnr-routeinfo-infocontainer">
+                        <div class="jnr-infobox jnr-routeinfo-proposals">
+                            <h3 class="jnr-routeinfo-routename">Proposals</h3>
+                            <ul>
+                                <li>Extend northern terminus to <b>Rolling Oaks Mall</b> via Nacogdoches Road (FM2252)</li>
+                                <li>Reduce the number of stops made along Nacogdoches and Broadway</li>
+                            </ul>
+                        </div>
+                        <div class="jnr-routeinfo-additionalinfo">
+                            <div class="jnr-infobox jnr-routeinfo-destinations">
+                                <h3 class="jnr-routeinfo-routename">Major Destinations</h3>
+                                <ul class="saya-sf-list-compact">
+                                    <li>Naco Pass</li>
+                                    <li>Alamo Heights</li>
+                                    <li>University of the Incarnate Word</li>
+                                    <li>Travis Park</li>
+                                    <li>Centro Plaza</li>
+                                </ul>
+                            </div>
+                            <div class="jnr-infobox jnr-routeinfo-limitedstops">
+                                <h3 class="jnr-routeinfo-routename">Limited stops</h3>
+                                <ul>
+                                    <li>Local service would be provided along <b>Nacogdoches Road (FM2252)</b> between Rolling Oaks Mall and Naco Pass</li>
+                                    <li style="margin-bottom: 0em;">Limited stop service would be provided along <b>Nacogdoches Road</b> south of Naco Pass and <b>Broadway</b> en route to Downtown:</li>
+                                    <details class="saya-collapsible-section">
+                                        <summary></summary>
+                                        <ul class="saya-sf-list-compact">
+                                            <li>Nacogdoches & Wurzbach Pkwy</li>
+                                            <li>Nacogdoches & Salado Pkwy</li>
+                                            <li>Nacogdoches & MacArthur View</li>
+                                            <li>Nacogdoches & Woodbury</li>
+                                            <li>Nacogdoches & Loop 410</li>
+                                            <li>Nacogdoches & Country Ln</li>
+                                            <li>Nacogdoches & New Braunfels</li>
+                                            <li>Nacogdoches & Lorenz</li>
+                                            <li>Nacogdoches & Hiller</li>
+                                            <li>Nacogdoches & Robinhood</li>
+                                            <li>Broadway & Nacogdoches</li>
+                                            <li>Broadway & Castano</li>
+                                            <li>Broadway & Austin Highway</li>
+                                            <li>Broadway & Terrell / Patterson</li>
+                                            <li>Broadway & Hildebrand</li>
+                                            <li>Broadway & Tuleta</li>
+                                            <li>Broadway & Funston Place</li>
+                                            <li>Broadway & Mulberry</li>
+                                            <li>Broadway & Josephine</li>
+                                            <li>Broadway at The Pearl</li>
+                                            <li>Broadway & Jones</li>
+                                            <li>Broadway & McCullough</li>
+                                            <li>Martin & Navarro / Pecan & Navarro</li>
+                                            <li>Martin & Leona</li>
+                                            <li>Centro Plaza</li>
+                                        </ul>
+                                    </details>
+                                </ul>
+                            </div>
+                            <div class="jnr-infobox jnr-routeinfo-notes">
+                                <h3 class="jnr-routeinfo-routename">Notes</h3>
+                                <ul>
+                                    <li>Between <b>Naco Pass</b> and <b>MacArthur View</b>, local service along Nacogdoches would be available on <a href="javascript:DisplayRouteGroup('009');" class="via-routeplate via-routeplate-f30"><b>9 Broadway</b></a></li>
+                                    <li>Between <b>MacArthur View</b> and <b>N New Braunfels</b>, local service along Nacogdoches would be available on <a href="javascript:DisplayRouteGroup('012');" class="via-routeplate via-routeplate-f30"><b>12 Wetmore</b></a></li>
+                                    <li>South of <b>Basse</b>, local service along Broadway would be available on <a href="javascript:DisplayRouteGroup('009');" class="via-routeplate via-routeplate-f30"><b>9 Broadway</b></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="proposal-012" class="jnr-routegroup jnr-routegroup-disabled">
+                    <div class="jnr-routeinfo-header">
+                        <img class="via-big-number" src="./bullets/012.webp" loading="lazy">
+                        <h3 class="jnr-routeinfo-routename via-busfreq-30">Wetmore</h3>
+                    </div>
+                    <div class="jnr-routeinfo-infocontainer">
+                        <div class="jnr-routeinfo-additionalinfo">
+                            <div class="jnr-infobox jnr-routeinfo-notes">
+                                <h3 class="jnr-routeinfo-routename">Proposals</h3>
+                                <ul class="saya-sf-list-compact">
+                                    <li>New <span class="via-bustext via-busfreq-30">30 minute</span> frequency route connecting <a href="#inf-bulverde" style="font-weight: bold;">Bulverde Marketplace Transit Center</a> to <b>Travis Park</b> via Wetmore, MacArthur View, Nacogdoches, N New Braunfels, Eleanor, Mulberry, and Broadway</li>
+                                </ul>
+                            </div>
+                            <div class="jnr-infobox jnr-routeinfo-notes">
+                                <h3 class="jnr-routeinfo-routename">Major Destinations</h3>
+                                <ul class="saya-sf-list-compact">
+                                    <li>Bulverde Marketplace TC</li>
+                                    <li>Alamo Heights</li>
+                                    <li>San Antonio Botanical Garden</li>
+                                    <li>Travis Park</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="proposal-014" class="jnr-routegroup jnr-routegroup-disabled">
+                    <div class="jnr-routeinfo-header">
+                        <img class="via-big-number" src="./bullets/014.webp" loading="lazy">
+                        <h3 class="jnr-routeinfo-routename via-busfreq-20">Austin Highway Skip</h3>
+                    </div>
+                    <div class="jnr-routeinfo-infocontainer">
+                        <div class="jnr-infobox jnr-routeinfo-proposals">
+                            <h3 class="jnr-routeinfo-routename">Proposals</h3>
+                            <ul>
+                                <li>Reduce the number of stops made along Austin Highway</li>
+                                <li>Realign route off of El Sendero and onto <b>Perrin Beitel</b></li>
+                            </ul>
+                        </div>
+                        <div class="jnr-routeinfo-additionalinfo">
+                            <div class="jnr-infobox jnr-routeinfo-destinations">
+                                <h3 class="jnr-routeinfo-routename">Major Destinations</h3>
+                                <ul class="saya-sf-list-compact">
+                                    <li>Naco Pass</li>
+                                    <li>Alamo Heights</li>
+                                    <li>University of the Incarnate Word</li>
+                                    <li>Travis Park</li>
+                                    <li>Centro Plaza</li>
+                                </ul>
+                            </div>
+                            <div class="jnr-infobox jnr-routeinfo-limitedstops">
+                                <h3 class="jnr-routeinfo-routename">Limited stops</h3>
+                                <ul>
+                                    <li>Local service would be provided along <b>Perrin Beitel</b></li>
+                                    <li style="margin-bottom: 0em;">Limited stop service would be provided along <b>Austin Highway</b> and <b>Broadway</b> en route to Downtown:</li>
+                                    <details class="saya-collapsible-section">
+                                        <summary></summary>
+                                        <ul class="saya-sf-list-compact">
+                                            <li>Austin Highway & Callarmen</li>
+                                            <li>Austin Highway & Lanark</li>
+                                            <li>Austin Highway & Eisenhauer</li>
+                                            <li>1533 Austin Highway</li>
+                                            <li>Austin Highway & Harry Wurzbach</li>
+                                            <li>Austin Highway & Vandiver</li>
+                                            <li>Austin Highway & Rittiman</li>
+                                            <li>Austin Highway & N New Braunfels</li>
+                                            <li>Austin Highway & Montclair</li>
+                                            <li>Austin Highway & Routt</li>
+                                            <li>Austin Highway & Ellwood</li>
+                                            <li>Broadway & Austin Highway</li>
+                                            <li>Broadway & Terrell / Patterson</li>
+                                            <li>Broadway & Hildebrand</li>
+                                            <li>Broadway & Tuleta</li>
+                                            <li>Broadway & Funston Place</li>
+                                            <li>Broadway & Mulberry</li>
+                                            <li>Broadway & Josephine</li>
+                                            <li>Broadway at The Pearl</li>
+                                            <li>Broadway & Jones</li>
+                                            <li>Broadway & McCullough</li>
+                                            <li>Martin & Navarro / Pecan & Navarro</li>
+                                            <li>Martin & Leona</li>
+                                            <li>Centro Plaza</li>
+                                        </ul>
+                                    </details>
+                                </ul>
+                            </div>
+                            <div class="jnr-infobox jnr-routeinfo-notes">
+                                <h3 class="jnr-routeinfo-routename">Notes</h3>
+                                <ul>
+                                    <li>Service along El Sendero would be available on <a href="javascript:DisplayRouteGroup('640');" class="via-routeplate via-routeplate-f30"><b>640 Valley Forge</b></a></li>
+                                    <li>Local service along Austin Highway would be available on <a href="javascript:DisplayRouteGroup('505');" class="via-routeplate via-routeplate-f30"><b>505 Basse</b></a></li>
+                                    <li>Local service along Broadway would be available on <a href="javascript:DisplayRouteGroup('009');" class="via-routeplate via-routeplate-f30"><b>9 Broadway</b></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="proposal-015" class="jnr-routegroup jnr-routegroup-disabled">
+                    <div class="jnr-routeinfo-header">
+                        <img class="via-big-number" src="./bullets/015.webp" loading="lazy">
+                        <h3 class="jnr-routeinfo-routename via-busfreq-30">Hackberry / The Pearl</h3>
+                    </div>
+                    <div class="jnr-routeinfo-infocontainer">
+                        <div class="jnr-infobox jnr-routeinfo-proposals">
+                            <h3 class="jnr-routeinfo-routename">Proposals</h3>
+                            <ul>
+                                <li>New <span class="via-bustext via-busfreq-30">30 minute</span> frequency route connecting <b>Brooks Transit Center</b> to <b>Centro Plaza</b> via Sidney Brooks Drive, S Presa, Southcross, Hackberry, Austin Street, Casa Blanca, Newell, Camden, St. Mary's / Navarro, Nueva, and Frio</li>
+                            </ul>
+                        </div>
+                        <div class="jnr-routeinfo-additionalinfo">
+                            <div class="jnr-infobox jnr-routeinfo-destinations">
+                                <h3 class="jnr-routeinfo-routename">Major Destinations</h3>
+                                <ul class="saya-sf-list-compact">
+                                    <li>Brooks Transit Center</li>
+                                    <li>The Pearl</li>
+                                    <li>Travis Park</li>
+                                    <li>Riverwalk</li>
+                                    <li>Centro Plaza</li>
+                                </ul>
+                            </div>
+                            <div class="jnr-infobox jnr-routeinfo-notes">
+                                <h3 class="jnr-routeinfo-routename">Notes</h3>
+                                <ul class="saya-sf-list-compact">
+                                    <li>On weekends, trips would deviate on Newell to directly service <b>The Pearl</b> via Avenue A, Pearl Pkwy, Avenue B, and Josephine</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="proposal-017" class="jnr-routegroup jnr-routegroup-disabled">
+                    <div class="jnr-routeinfo-header">
+                        <img class="via-big-number" src="./bullets/017.webp" loading="lazy">
+                        <h3 class="jnr-routeinfo-routename via-busfreq-30">IH-35 Express</h3>
+                    </div>
+                    <div class="jnr-routeinfo-infocontainer">
+                        <div class="jnr-routeinfo-additionalinfo">
+                            <div class="jnr-infobox jnr-routeinfo-notes">
+                                <h3 class="jnr-routeinfo-routename">Proposals</h3>
+                                <ul>
+                                    <li>Maintains new service pattern as proposed in the Better Bus Draft</li>
+                                </ul>
+                            </div>
+                            <div class="jnr-infobox jnr-routeinfo-notes">
+                                <h3 class="jnr-routeinfo-routename">Major Destinations</h3>
+                                <ul class="saya-sf-list-compact">
+                                    <li>Rolling Oaks Mall</li>
+                                    <li>Randolph Transit Center</li>
+                                    <li>Riverwalk</li>
+                                    <li>Centro Plaza</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="proposal-020" class="jnr-routegroup jnr-routegroup-disabled">
+                    <div class="jnr-routeinfo-header">
+                        <img class="via-big-number" src="./bullets/020.webp" loading="lazy">
+                        <h3 class="jnr-routeinfo-routename via-busfreq-20">New Braunfels Frequent</h3>
+                    </div>
+                    <div class="jnr-routeinfo-infocontainer">
+                        <div class="jnr-routeinfo-additionalinfo">
+                            <div class="jnr-infobox jnr-routeinfo-notes">
+                                <h3 class="jnr-routeinfo-routename">Proposals</h3>
+                                <ul>
+                                    <li>Maintains current service pattern</li>
+                                </ul>
+                            </div>
+                            <div class="jnr-infobox jnr-routeinfo-notes">
+                                <h3 class="jnr-routeinfo-routename">Major Destinations</h3>
+                                <ul class="saya-sf-list-compact">
+                                    <li>Brooks Transit Center</li>
+                                    <li>San Antonio State Hospital</li>
+                                    <li>McCreless Marketplace</li>
+                                    <li>San Antonio College</li>
+                                    <li>Centro Plaza</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="proposal-021" class="jnr-routegroup jnr-routegroup-disabled">
+                    <div class="jnr-routeinfo-header">
+                        <img class="via-big-number" src="./bullets/021.webp" loading="lazy">
+                        <h3 class="jnr-routeinfo-routename via-busfreq-20">Kirby / Ventura Frequent</h3>
+                    </div>
+                    <div class="jnr-routeinfo-infocontainer">
+                        <div class="jnr-routeinfo-additionalinfo">
+                            <div class="jnr-infobox jnr-routeinfo-notes">
+                                <h3 class="jnr-routeinfo-routename">Proposals</h3>
+                                <ul>
+                                    <li>Maintains new service pattern as proposed in the Better Bus Draft</li>
+                                </ul>
+                            </div>
+                            <div class="jnr-infobox jnr-routeinfo-notes">
+                                <h3 class="jnr-routeinfo-routename">Major Destinations</h3>
+                                <ul class="saya-sf-list-compact">
+                                    <li>Randolph Air Force Base</li>
+                                    <li>Ventura</li>
+                                    <li>Kirby</li>
+                                    <li>Travis Park</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="proposal-022" class="jnr-routegroup jnr-routegroup-disabled">
+                    <div class="jnr-routeinfo-header">
+                        <img class="via-big-number" src="./bullets/022.webp" loading="lazy">
+                        <h3 class="jnr-routeinfo-routename via-busfreq-30">Hays</h3>
+                    </div>
+                    <div class="jnr-routeinfo-infocontainer">
+                        <div class="jnr-routeinfo-additionalinfo">
+                            <div class="jnr-infobox jnr-routeinfo-notes">
+                                <h3 class="jnr-routeinfo-routename">Proposals</h3>
+                                <ul>
+                                    <li>Eliminate route as proposed in the Better Bus draft</li>
+                                </ul>
+                            </div>
+                            <div class="jnr-infobox jnr-routeinfo-notes">
+                                <h3 class="jnr-routeinfo-routename">Notes</h3>
+                                <ul>
+                                    <li>Service would be available on <a href="javascript:DisplayRouteGroup('024');" class="via-routeplate via-routeplate-f30"><b>24 Dignowity Hill</b></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="proposal-023" class="jnr-routegroup jnr-routegroup-disabled">
+                    <div class="jnr-routeinfo-header">
+                        <img class="via-big-number" src="./bullets/023.webp" loading="lazy">
+                        <h3 class="jnr-routeinfo-routename via-busfreq-30">Eastside Express</h3>
+                    </div>
+                    <div class="jnr-routeinfo-infocontainer">
+                        <div class="jnr-routeinfo-additionalinfo">
+                            <div class="jnr-infobox jnr-routeinfo-notes">
+                                <h3 class="jnr-routeinfo-routename">Proposals</h3>
+                                <ul>
+                                    <li>New <span class="via-bustext via-busfreq-30">30 minute</span> frequency express route connecting <b>Horizon Pointe</b> to <b>Downtown</b> via the I-10 Access Road, the Loop 410 Access Road, Houston Street, I-10, Commerce / Market, Navarro / St. Mary's, and Lexington</li>
+                                    <li>During weekday peak hours, select trips would provide extended service to <b>Paloma Park</b> at a <span class="via-bustext via-busfreq-60">60 minute</span> frequency via I-10</li>
+                                </ul>
+                            </div>
+                            <div class="jnr-infobox jnr-routeinfo-notes">
+                                <h3 class="jnr-routeinfo-routename">Major Destinations</h3>
+                                <ul class="saya-sf-list-compact">
+                                    <li>Paloma Park</li>
+                                    <li>Horizon Pointe</li>
+                                    <li>Eastside Transit Center</li>
+                                    <li>Riverwalk</li>
+                                    <li>Travis Park</li>
+                                    <li>Madison Square Park</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="proposal-024" class="jnr-routegroup jnr-routegroup-disabled">
+                    <div class="jnr-routeinfo-header">
+                        <img class="via-big-number" src="./bullets/024.webp" loading="lazy">
+                        <h3 class="jnr-routeinfo-routename via-busfreq-30">Dignowity Hill</h3>
+                    </div>
+                    <div class="jnr-routeinfo-infocontainer">
+                        <div class="jnr-routeinfo-additionalinfo">
+                            <div class="jnr-infobox jnr-routeinfo-notes">
+                                <h3 class="jnr-routeinfo-routename">Proposals</h3>
+                                <ul>
+                                    <li>Reduce frequency to <span class="via-bustext via-busfreq-30">30 minutes</span></li>
+                                    <li>Maintains new alignment as proposed in the Better Bus draft</li>
+                                </ul>
+                            </div>
+                            <div class="jnr-infobox jnr-routeinfo-notes">
+                                <h3 class="jnr-routeinfo-routename">Major Destinations</h3>
+                                <ul class="saya-sf-list-compact">
+                                    <li>Towne Twin Village</li>
+                                    <li>Frost Bank Center</li>
+                                    <li>Travis Park</li>
+                                    <li>Centro Plaza</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="proposal-025" class="jnr-routegroup jnr-routegroup-disabled">
+                    <div class="jnr-routeinfo-header">
+                        <img class="via-big-number" src="./bullets/025.webp" loading="lazy">
+                        <h3 class="jnr-routeinfo-routename via-busfreq-20">East Commerce Frequent</h3>
+                    </div>
+                    <div class="jnr-routeinfo-infocontainer">
+                        <div class="jnr-routeinfo-additionalinfo">
+                            <div class="jnr-infobox jnr-routeinfo-notes">
+                                <h3 class="jnr-routeinfo-routename">Proposals</h3>
+                                <ul>
+                                    <li>Increase frequency to <span class="via-bustext via-busfreq-20">15 minutes</span></li>
+                                    <li>New branch to the <b>Walmart at Rigsby & Loop 410</b>
+                                        <ul>
+                                            <li>Branches split at <b>Commerce & Spriggsdale</b> at a <span class="via-bustext via-busfreq-30">30 minute</span> frequency</li>
+                                            <li>Northernmost branch travels to <b>Eastside Transit Center</b> via Commerce and Houston</li>
+                                            <li>Southernmost branch travels to the <b>Walmart at Rigsby & Loop 410</b> via Spriggsdale, Martin Luther King, WW White, Rice, Diane, and Rigsby</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="jnr-infobox jnr-routeinfo-notes">
+                                <h3 class="jnr-routeinfo-routename">Major Destinations</h3>
+                                <ul class="saya-sf-list-compact">
+                                    <li>Huntleigh Park</li>
+                                    <li>Dellcrest</li>
+                                    <li>Ellis Alley Park & Ride</li>
+                                    <li>Travis Park</li>
+                                    <li>Centro Plaza</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="proposal-026" class="jnr-routegroup jnr-routegroup-disabled">
+                    <div class="jnr-routeinfo-header">
+                        <img class="via-big-number" src="./bullets/026.webp" loading="lazy">
+                        <h3 class="jnr-routeinfo-routename via-busfreq-30">Martin Luther King</h3>
+                    </div>
+                    <div class="jnr-routeinfo-infocontainer">
+                        <div class="jnr-routeinfo-additionalinfo">
+                            <div class="jnr-infobox jnr-routeinfo-notes">
+                                <h3 class="jnr-routeinfo-routename">Proposals</h3>
+                                <ul>
+                                    <li>Maintains new alignment as proposed in the Better Bus draft</li>
+                                </ul>
+                            </div>
+                            <div class="jnr-infobox jnr-routeinfo-notes">
+                                <h3 class="jnr-routeinfo-routename">Major Destinations</h3>
+                                <ul class="saya-sf-list-compact">
+                                    <li>Eastside Transit Center</li>
+                                    <li>Alamodome</li>
+                                    <li>Centro Plaza</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="proposal-028" class="jnr-routegroup jnr-routegroup-disabled">
+                    <div class="jnr-routeinfo-header">
+                        <img class="via-big-number" src="./bullets/028.webp" loading="lazy">
+                        <h3 class="jnr-routeinfo-routename via-busfreq-20">Pecan Valley Frequent</h3>
+                    </div>
+                    <div class="jnr-routeinfo-infocontainer">
+                        <div class="jnr-routeinfo-additionalinfo">
+                            <div class="jnr-infobox jnr-routeinfo-notes">
+                                <h3 class="jnr-routeinfo-routename">Proposals</h3>
+                                <ul>
+                                    <li>Move southern terminus to <b>Brooks Transit Center</b>
+                                        <ul>
+                                            <li>Would travel to <b>Ellis Alley Park & Ride</b> via New Braunfels, Pecan Valley Drive, Martin Luther King, Amanda Street, Yucca, Clark, Porter, Hackberry, and Montana</li>
+                                        </ul>
+                                    </li>
+                                    <li>Discontinue service to <b>Wheatley Heights</b> and the <b>Walmart at Rigsby & Loop 410</b></li>
+                                    <li>Truncate northern terminus at <b>Ellis Alley Park & Ride</b></li>
+                                </ul>
+                            </div>
+                            <div class="jnr-infobox jnr-routeinfo-notes">
+                                <h3 class="jnr-routeinfo-routename">Major Destinations</h3>
+                                <ul class="saya-sf-list-compact">
+                                    <li>Brooks Transit Center</li>
+                                    <li>Highlands</li>
+                                    <li>Alamodome</li>
+                                    <li>Ellis Alley Park & Ride</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="proposal-030" class="jnr-routegroup jnr-routegroup-disabled">
+                    <div class="jnr-routeinfo-header">
+                        <img class="via-big-number" src="./bullets/030.webp" loading="lazy">
+                        <h3 class="jnr-routeinfo-routename via-busfreq-30">Rigsby</h3>
+                    </div>
+                    <div class="jnr-routeinfo-infocontainer">
+                        <div class="jnr-infobox jnr-routeinfo-proposals">
+                            <h3 class="jnr-routeinfo-routename">Proposals</h3>
+                            <ul>
+                                <li>Maintains new alignment as proposed in the Better Bus Draft
+                                    <ul>
+                                        <li>Would also maintain service to Lakeside and the H-E-B Distribution Center</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="jnr-routeinfo-additionalinfo">
+                            <div class="jnr-infobox jnr-routeinfo-destinations">
+                                <h3 class="jnr-routeinfo-routename">Major Destinations</h3>
+                                <ul class="saya-sf-list-compact">
+                                    <li>H-E-B Distribution Center at Foster Road</li>
+                                    <li>Dellcrest</li>
+                                    <li>Comanche Park</li>
+                                    <li>Riverwalk</li>
+                                    <li>Travis Park</li>
+                                    <li>Madison Square Park</li>
+                                </ul>
+                            </div>
+                            <div class="jnr-infobox jnr-routeinfo-notes">
+                                <h3 class="jnr-routeinfo-routename">Notes</h3>
+                                <ul class="saya-sf-list-compact">
+                                    <li>Would provide local service along <b>Rigsby</b>. During peak hours, additional departures with limited stop service would be available on <a href="javascript:DisplayRouteGroup('031');" class="via-routeplate via-routeplate-f90"><b>31 St. Hedwig Skip</b></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="proposal-031" class="jnr-routegroup jnr-routegroup-disabled">
+                    <div class="jnr-routeinfo-header">
+                        <img class="via-big-number" src="./bullets/031.webp" loading="lazy">
+                        <h3 class="jnr-routeinfo-routename via-busfreq-90">St. Hedwig Skip</h3>
+                    </div>
+                    <div class="jnr-routeinfo-infocontainer">
+                        <div class="jnr-infobox jnr-routeinfo-proposals">
+                            <h3 class="jnr-routeinfo-routename">Proposals</h3>
+                            <ul>
+                                <li>New <span class="via-bustext via-busfreq-60">60 minute</span> frequency skip route connecting <b>St. Hedwig</b> to <b>Downtown</b> via FM1518, FM1346, Loop 1604, FM3465, Loop 107, Highway 87, Loop 106, Stuart, Highway 87, Rigsby, Hackberry, Cesar Chavez, and St. Mary's</li>
+                                <li>Would operates during peak hours only</li>
+                            </ul>
+                        </div>
+                        <div class="jnr-routeinfo-additionalinfo">
+                            <div class="jnr-infobox jnr-routeinfo-destinations">
+                                <h3 class="jnr-routeinfo-routename">Major Destinations</h3>
+                                <ul class="saya-sf-list-compact">
+                                    <li>St. Hedwig</li>
+                                    <li>Lone Oak</li>
+                                    <li>China Grove</li>
+                                    <li>Riverwalk</li>
+                                </ul>
+                            </div>
+                            <div class="jnr-infobox jnr-routeinfo-limitedstops">
+                                <h3 class="jnr-routeinfo-routename">Limited stops</h3>
+                                <ul>
+                                    <li>Local service would be provided east of <b>Foster Road</b></li>
+                                    <li style="margin-bottom: 0em;">Limited stop service would be provided along <b>Rigsby</b> en route to Downtown:</li>
+                                    <details class="saya-collapsible-section">
+                                        <summary></summary>
+                                        <ul class="saya-sf-list-compact">
+                                            <li>Walmart at Rigsby & Loop 410</li>
+                                            <li>Rigsby & WW White</li>
+                                            <li>Rigsby & Pecan Valley</li>
+                                            <li>Rigsby & Walters</li>
+                                            <li>Rigsby & New Braunfels</li>
+                                            <li>Hackberry & Whittier</li>
+                                            <li>Hackberry & Denver</li>
+                                            <li>Iowa & Hackberry</li>
+                                            <li>Cesar Chavez at the Alamodome</li>
+                                            <li>Cesar Chavez & Indianola</li>
+                                            <li>Cesar Chavez & Alamo</li>
+                                            <li>Cesar Chavez & S Presa</li>
+                                            <li>Villita & S St. Mary's</li>
+                                        </ul>
+                                    </details>
+                                </ul>
+                            </div>
+                            <div class="jnr-infobox jnr-routeinfo-notes">
+                                <h3 class="jnr-routeinfo-routename">Notes</h3>
+                                <ul>
+                                    <li>Local full time service along Rigsby would be available on <a href="javascript:DisplayRouteGroup('030');" class="via-routeplate via-routeplate-f30"><b>30 Rigsby</b></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-            <h3 class="saya-h3 saya-navbar-font-scene"><u>Radial routes</u></h3>
             <div class="routeselector saya-sf-w1300">
-                <a href="#route001"><img src="./bullets/001.webp" loading="lazy"></a>
-                <a href="#route002"><img src="./bullets/002.webp" loading="lazy"></a>
-                <a href="#route003"><img src="./bullets/003.webp" loading="lazy"></a>
-                <a href="#route004"><img src="./bullets/004.webp" loading="lazy"></a>
-                <a href="#route005"><img src="./bullets/005.webp" loading="lazy"></a>
-                <a href="#route007"><img src="./bullets/007.webp" loading="lazy"></a>
-                <a href="#route008"><img src="./bullets/008.webp" loading="lazy"></a>
-                <a href="#route009"><img src="./bullets/009.webp" loading="lazy"></a>
-                <a href="#route010"><img src="./bullets/010.webp" loading="lazy"></a>
-                <a href="#route014"><img src="./bullets/014.webp" loading="lazy"></a>
-                <a href="#route015"><img src="./bullets/015.webp" loading="lazy"></a>
-                <a href="#route017"><img src="./bullets/017.webp" loading="lazy"></a>
-                <a href="#route020"><img src="./bullets/020.webp" loading="lazy"></a>
-                <a href="#route021"><img src="./bullets/021.webp" loading="lazy"></a>
-                <a href="#route022"><img src="./bullets/022.webp" loading="lazy"></a>
-                <a href="#route024"><img src="./bullets/024.webp" loading="lazy"></a>
-                <a href="#route025"><img src="./bullets/025.webp" loading="lazy"></a>
-                <a href="#route026"><img src="./bullets/026.webp" loading="lazy"></a>
-                <a href="#route028"><img src="./bullets/028.webp" loading="lazy"></a>
-                <a href="#route030"><img src="./bullets/030.webp" loading="lazy"></a>
-                <a href="#route031"><img src="./bullets/031.webp" loading="lazy"></a>
+                <a href="javascript:DisplayRouteGroup('001');"><img src="./bullets/001.webp" loading="lazy"></a>
+                <a href="javascript:DisplayRouteGroup('002');"><img src="./bullets/002.webp" loading="lazy"></a>
+                <a href="javascript:DisplayRouteGroup('003');"><img src="./bullets/003.webp" loading="lazy"></a>
+                <a href="javascript:DisplayRouteGroup('004');"><img src="./bullets/004.webp" loading="lazy"></a>
+                <a href="javascript:DisplayRouteGroup('005');"><img src="./bullets/005.webp" loading="lazy"></a>
+                <a href="javascript:DisplayRouteGroup('007');"><img src="./bullets/007.webp" loading="lazy"></a>
+                <a href="javascript:DisplayRouteGroup('008');"><img src="./bullets/008.webp" loading="lazy"></a>
+                <a href="javascript:DisplayRouteGroup('009');"><img src="./bullets/009.webp" loading="lazy"></a>
+                <a href="javascript:DisplayRouteGroup('010');"><img src="./bullets/010.webp" loading="lazy"></a>
+                <a href="javascript:DisplayRouteGroup('012');"><img src="./bullets/012.webp" loading="lazy"></a>
+                <a href="javascript:DisplayRouteGroup('014');"><img src="./bullets/014.webp" loading="lazy"></a>
+                <a href="javascript:DisplayRouteGroup('015');"><img src="./bullets/015.webp" loading="lazy"></a>
+                <a href="javascript:DisplayRouteGroup('017');"><img src="./bullets/017.webp" loading="lazy"></a>
+                <a href="javascript:DisplayRouteGroup('020');"><img src="./bullets/020.webp" loading="lazy"></a>
+                <a href="javascript:DisplayRouteGroup('021');"><img src="./bullets/021.webp" loading="lazy"></a>
+                <a href="javascript:DisplayRouteGroup('022');"><img src="./bullets/022.webp" loading="lazy"></a>
+                <a href="javascript:DisplayRouteGroup('023');"><img src="./bullets/023.webp" loading="lazy"></a>
+                <a href="javascript:DisplayRouteGroup('024');"><img src="./bullets/024.webp" loading="lazy"></a>
+                <a href="javascript:DisplayRouteGroup('025');"><img src="./bullets/025.webp" loading="lazy"></a>
+                <a href="javascript:DisplayRouteGroup('026');"><img src="./bullets/026.webp" loading="lazy"></a>
+                <a href="javascript:DisplayRouteGroup('028');"><img src="./bullets/028.webp" loading="lazy"></a>
+                <a href="javascript:DisplayRouteGroup('030');"><img src="./bullets/030.webp" loading="lazy"></a>
+                <a href="javascript:DisplayRouteGroup('031');"><img src="./bullets/031.webp" loading="lazy"></a>
                 <a href="#route032"><img src="./bullets/032.webp" loading="lazy"></a>
                 <a href="#route034"><img src="./bullets/034.webp" loading="lazy"></a>
                 <a href="#route036"><img src="./bullets/036.webp" loading="lazy"></a>
-                <a href="#route037"><img src="./bullets/037.webp" loading="lazy"></a>
                 <a href="#route042"><img src="./bullets/042.webp" loading="lazy"></a>
+                <a href="#route043"><img src="./bullets/043.webp" loading="lazy"></a>
+                <a href="#route044"><img src="./bullets/044.webp" loading="lazy"></a>
                 <a href="#route046"><img src="./bullets/046.webp" loading="lazy"></a>
                 <a href="#route048"><img src="./bullets/048.webp" loading="lazy"></a>
                 <a href="#route051"><img src="./bullets/051.webp" loading="lazy"></a>
@@ -212,18 +1060,9 @@
                 <a href="#route095"><img src="./bullets/095.webp" loading="lazy"></a>
                 <a href="#route096"><img src="./bullets/096.webp" loading="lazy"></a>
                 <a href="#route097"><img src="./bullets/097.webp" loading="lazy"></a>
-            </div>
-
-            <h3 class="saya-h3 saya-navbar-font-scene"><u>Prímo routes</u></h3>
-            <div class="routeselector saya-sf-w1300">
                 <a href="#route100"><img src="./bullets/100.webp" loading="lazy"></a>
                 <a href="#route100"><img src="./bullets/102.webp" loading="lazy"></a>
                 <a href="#route100"><img src="./bullets/103.webp" loading="lazy"></a>
-                <a href="#route120"><img src="./bullets/120.webp" loading="lazy"></a>
-            </div>
-
-            <h3 class="saya-h3 saya-navbar-font-scene"><u>Crosstown routes</u></h3>
-            <div class="routeselector saya-sf-w1300">
                 <a href="#route501"><img src="./bullets/501.webp" loading="lazy"></a>
                 <a href="#route502"><img src="./bullets/502.webp" loading="lazy"></a>
                 <a href="#route503"><img src="./bullets/503.webp" loading="lazy"></a>
@@ -233,34 +1072,57 @@
                 <a href="#route510"><img src="./bullets/510.webp" loading="lazy"></a>
                 <a href="#route512"><img src="./bullets/512.webp" loading="lazy"></a>
                 <a href="#route514"><img src="./bullets/514.webp" loading="lazy"></a>
+                <a href="#route515"><img src="./bullets/515.webp" loading="lazy"></a>
                 <a href="#route516"><img src="./bullets/516.webp" loading="lazy"></a>
                 <a href="#route522"><img src="./bullets/522.webp" loading="lazy"></a>
                 <a href="#route524"><img src="./bullets/524.webp" loading="lazy"></a>
                 <a href="#route526"><img src="./bullets/526.webp" loading="lazy"></a>
                 <a href="#route530"><img src="./bullets/530.webp" loading="lazy"></a>
+                <a href="#route532"><img src="./bullets/532.webp" loading="lazy"></a>
                 <a href="#route534"><img src="./bullets/534.webp" loading="lazy"></a>
                 <a href="#route535"><img src="./bullets/535.webp" loading="lazy"></a>
+                <a href="#route536"><img src="./bullets/536.webp" loading="lazy"></a>
                 <a href="#route538"><img src="./bullets/538.webp" loading="lazy"></a>
                 <a href="#route552"><img src="./bullets/552.webp" loading="lazy"></a>
-                <a href="#route571"><img src="./bullets/571.webp" loading="lazy"></a>
                 <a href="#route572"><img src="./bullets/572.webp" loading="lazy"></a>
-            </div>
-
-            <h3 class="saya-h3 saya-navbar-font-scene"><u>Circulator routes</u></h3>
-            <div class="routeselector saya-sf-w1300">
+                <a href="#route574"><img src="./bullets/574.webp" loading="lazy"></a>
+                <a href="#route576"><img src="./bullets/576.webp" loading="lazy"></a>
                 <a href="#route601"><img src="./bullets/601.webp" loading="lazy"></a>
                 <a href="#route602"><img src="./bullets/602.webp" loading="lazy"></a>
+                <a href="#route603"><img src="./bullets/603.webp" loading="lazy"></a>
+                <a href="#route604"><img src="./bullets/604.webp" loading="lazy"></a>
+                <a href="#route605"><img src="./bullets/605.webp" loading="lazy"></a>
+                <a href="#route607"><img src="./bullets/607.webp" loading="lazy"></a>
+                <a href="#route608"><img src="./bullets/608.webp" loading="lazy"></a>
+                <a href="#route609"><img src="./bullets/609.webp" loading="lazy"></a>
+                <a href="#route610"><img src="./bullets/610.webp" loading="lazy"></a>
+                <a href="#route611"><img src="./bullets/611.webp" loading="lazy"></a>
+                <a href="#route612"><img src="./bullets/612.webp" loading="lazy"></a>
                 <a href="#route615"><img src="./bullets/615.webp" loading="lazy"></a>
-                <a href="#route628"><img src="./bullets/628.webp" loading="lazy"></a>
+                <a href="#route618"><img src="./bullets/618.webp" loading="lazy"></a>
+                <a href="#route619"><img src="./bullets/619.webp" loading="lazy"></a>
+                <a href="#route620"><img src="./bullets/620.webp" loading="lazy"></a>
+                <a href="#route622"><img src="./bullets/622.webp" loading="lazy"></a>
+                <a href="#route624"><img src="./bullets/624.webp" loading="lazy"></a>
+                <a href="#route630"><img src="./bullets/630.webp" loading="lazy"></a>
+                <a href="#route631"><img src="./bullets/631.webp" loading="lazy"></a>
+                <a href="#route632"><img src="./bullets/632.webp" loading="lazy"></a>
                 <a href="#route639"><img src="./bullets/639.webp" loading="lazy"></a>
                 <a href="#route640"><img src="./bullets/640.webp" loading="lazy"></a>
                 <a href="#route641"><img src="./bullets/641.webp" loading="lazy"></a>
                 <a href="#route643"><img src="./bullets/643.webp" loading="lazy"></a>
-                <a href="#route651"><img src="./bullets/651.webp" loading="lazy"></a>
+                <a href="#route647"><img src="./bullets/647.webp" loading="lazy"></a>
+                <a href="#route648"><img src="./bullets/648.webp" loading="lazy"></a>
+                <a href="#route649"><img src="./bullets/649.webp" loading="lazy"></a>
+                <a href="#route650"><img src="./bullets/650.webp" loading="lazy"></a>
+                <a href="#route650"><img src="./bullets/651.webp" loading="lazy"></a>
                 <a href="#route653"><img src="./bullets/653.webp" loading="lazy"></a>
                 <a href="#route671"><img src="./bullets/671.webp" loading="lazy"></a>
                 <a href="#route672"><img src="./bullets/672.webp" loading="lazy"></a>
+                <a href="#route676"><img src="./bullets/676.webp" loading="lazy"></a>
                 <a href="#route677"><img src="./bullets/677.webp" loading="lazy"></a>
+                <a href="javascript:DisplayRouteGroup('green');"><img src="./bullets/brt-green.webp" loading="lazy"></a>
+                <a href="javascript:DisplayRouteGroup('silver');"><img src="./bullets/brt-silver.webp" loading="lazy"></a>
             </div>
 
             <hr class="saya-hr">
@@ -279,668 +1141,6 @@
                         <th width="5%"><span>Route Number</span></th>
                         <th width="20%"><span>Route Name</span></th>
                         <th width="65%" style="min-width: 380px;"><span>Proposals</span></th>
-                    </tr>
-                    <tr>
-                        <td><img class="via-big-number" src="./bullets/001.webp" loading="lazy"></td>
-                        <td><b>Lockhill-Selma</b></td>
-                        <td>
-                            <a name="route001"></a>
-                            <b class="via-bustext"><u>Proposal</u></b>
-                            <ul>
-                                <li>Add new <span class="via-bustext via-busfreq-30">30 minute</span> frequency route to connect <b>Shavano Highlands</b> to <b>Madison Square Park</b> via Lockhill-Selma and Blanco</li>
-                            </ul>
-                            <hr class="saya-hr">
-                            <b class="via-bustext"><u>Major Destinations</u></b>
-                            <ul class="saya-sf-list-compact">
-                                <li>Shavano Highlands</li>
-                                <li>Castle Hills</li>
-                                <li>Madison Square Park</li>
-                            </ul>
-                            <hr class="saya-hr">
-                            <b class="via-bustext"><u>Notes</u></b>
-                            <ul>
-                                <li>Provides local service on Blanco Road, with limited-stop service available on <a href="#route002" class="via-routeplate via-routeplate-f20"><b>2 Blanco Skip</b></a></li>
-                            </ul>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><img class="via-big-number" src="./bullets/002.webp" loading="lazy"></td>
-                        <td><b>Blanco Skip</b></td>
-                        <td>
-                            <a name="route002"></a>
-                            <b class="via-bustext"><u>Proposals</u></b>
-                            <ul>
-                                <li>Extend route to <b>Rogers Ranch</b> via Bitters</li>
-                                <li>Convert to Skip Service</li>
-                            </ul>
-                            <hr class="saya-hr">
-                            <b class="via-bustext"><u>Major Destinations</u></b>
-                            <ul class="saya-sf-list-compact">
-                                <li>Rogers Ranch</li>
-                                <li>Travis Park</li>
-                            </ul>
-                            <hr class="saya-hr">
-                            <b class="via-bustext"><u>Notes</u></b>
-                            <ul>
-                                <li>Provides local service on <b>Rogers Ranch Parkway</b> and <b>Bitters</b> west of Blanco</li>
-                                <li style="margin-bottom: 0px;">En route to Downtown, limited-stop service available at:</li>
-                                <details class="saya-collapsible-section">
-                                    <summary></summary>
-                                    <ul class="saya-sf-list-compact">
-                                        <li>Blanco & Bitters</li>
-                                        <li>Blanco & Churchill Estates</li>
-                                        <li>Blanco & Wurzbach Parkway</li>
-                                        <li>Blanco & Sir Winston</li>
-                                        <li>Blanco & West Avenue</li>
-                                        <li>Blanco & Loop 410</li>
-                                        <li>Blanco & Rector</li>
-                                        <li>Blanco & Oblate</li>
-                                        <li>Blanco & Jackson Keller</li>
-                                        <li>Blanco & Dredsen</li>
-                                        <li>Blanco & Basse</li>
-                                        <li>Blanco & Fresno</li>
-                                        <li>Blanco & Santa Monica</li>
-                                        <li>Blanco & Hildebrand</li>
-                                        <li>Blanco & Fulton</li>
-                                        <li>Blanco & Magnolia</li>
-                                        <li>Blanco & Woodlawn</li>
-                                        <li>Blanco & Russell</li>
-                                        <li>N Flores & Ashby</li>
-                                        <li>N Flores & Myrtle</li>
-                                        <li>Five Points Transfer Hub</li>
-                                        <li>San Pedro & Cypress</li>
-                                        <li>San Pedro & Quincy</li>
-                                        <li>N St. Mary's & Pecan</li>
-                                    </ul>
-                                </details>
-                                <li>On Blanco between Bitters and Loop 410, local service is available on <a href="#route649" class="via-routeplate via-routeplate-f30"><b>649 North Blanco</b></a></li>
-                                <li>On Blanco between Loop 410 and Downtown, local service is available on <a href="#route001" class="via-routeplate via-routeplate-f30"><b>1 Lockhill-Selma</b></a></li>
-                            </ul>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-            </div>
-
-            <hr>
-
-            <div class="saya-scrollable-element">
-            <table class="saya-table saya-table-color-betterbus saya-sf-w1300">
-                <tbody>
-                    <tr class="saya-table-header saya-table-color-betterbus">
-                        <th width="5%"><span>Route Number</span></th>
-                        <th width="20%"><span>Route Name</span></th>
-                        <th width="65%" style="min-width: 380px;"><span>Proposals</span></th>
-                    </tr>
-                    <tr>
-                        <td><img class="via-big-number" src="./bullets/001.webp" loading="lazy"></td>
-                        <td><b>Lockhill-Selma</b></td>
-                        <td>
-                            <a name="route001"></a>
-                            <b class="via-bustext"><u>Proposal</u></b>
-                            <ul>
-                                <li>Add new <span class="via-bustext via-busfreq-30">30 minute</span> frequency route to connect <b>Shavano Highlands</b> to <b>Madison Square Park</b> via Lockhill-Selma and Blanco</li>
-                            </ul>
-                            <hr class="saya-hr">
-                            <b class="via-bustext"><u>Major Destinations</u></b>
-                            <ul class="saya-sf-list-compact">
-                                <li>Shavano Highlands</li>
-                                <li>Castle Hills</li>
-                                <li>Madison Square Park</li>
-                            </ul>
-                            <hr class="saya-hr">
-                            <b class="via-bustext"><u>Notes</u></b>
-                            <ul>
-                                <li>Provides local service on Blanco Road, with limited-stop service available on <a href="#route002" class="via-routeplate via-routeplate-f20"><b>2 Blanco Skip</b></a></li>
-                            </ul>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><img class="via-big-number" src="./bullets/002.webp" loading="lazy"></td>
-                        <td><b>Blanco Skip</b></td>
-                        <td>
-                            <a name="route002"></a>
-                            <b class="via-bustext"><u>Proposals</u></b>
-                            <ul>
-                                <li>Extend route to <b>Rogers Ranch</b> via Bitters</li>
-                                <li>Convert to Skip Service</li>
-                            </ul>
-                            <hr class="saya-hr">
-                            <b class="via-bustext"><u>Major Destinations</u></b>
-                            <ul class="saya-sf-list-compact">
-                                <li>Rogers Ranch</li>
-                                <li>Travis Park</li>
-                            </ul>
-                            <hr class="saya-hr">
-                            <b class="via-bustext"><u>Notes</u></b>
-                            <ul>
-                                <li>Provides local service on <b>Rogers Ranch Parkway</b> and <b>Bitters</b> west of Blanco</li>
-                                <li style="margin-bottom: 0px;">En route to Downtown, limited-stop service available at:</li>
-                                <details class="saya-collapsible-section">
-                                    <summary></summary>
-                                    <ul class="saya-sf-list-compact">
-                                        <li>Blanco & Bitters</li>
-                                        <li>Blanco & Churchill Estates</li>
-                                        <li>Blanco & Wurzbach Parkway</li>
-                                        <li>Blanco & Sir Winston</li>
-                                        <li>Blanco & West Avenue</li>
-                                        <li>Blanco & Loop 410</li>
-                                        <li>Blanco & Rector</li>
-                                        <li>Blanco & Oblate</li>
-                                        <li>Blanco & Jackson Keller</li>
-                                        <li>Blanco & Dredsen</li>
-                                        <li>Blanco & Basse</li>
-                                        <li>Blanco & Fresno</li>
-                                        <li>Blanco & Santa Monica</li>
-                                        <li>Blanco & Hildebrand</li>
-                                        <li>Blanco & Fulton</li>
-                                        <li>Blanco & Magnolia</li>
-                                        <li>Blanco & Woodlawn</li>
-                                        <li>Blanco & Russell</li>
-                                        <li>N Flores & Ashby</li>
-                                        <li>N Flores & Myrtle</li>
-                                        <li>Five Points Transfer Hub</li>
-                                        <li>San Pedro & Cypress</li>
-                                        <li>San Pedro & Quincy</li>
-                                        <li>N St. Mary's & Pecan</li>
-                                    </ul>
-                                </details>
-                                <li>On Blanco between Bitters and Loop 410, local service is available on <a href="#route649" class="via-routeplate via-routeplate-f30"><b>649 North Blanco</b></a></li>
-                                <li>On Blanco between Loop 410 and Downtown, local service is available on <a href="#route001" class="via-routeplate via-routeplate-f30"><b>1 Lockhill-Selma</b></a></li>
-                            </ul>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><img class="via-big-number" src="./bullets/003.webp" loading="lazy"></td>
-                        <td><b>San Pedro Skip</b></td>
-                        <td>
-                            <a name="route003"></a>
-                            <b class="via-bustext"><u>Proposals</u></b>
-                            <ul>
-                                <li>Extend northern terminus to <b>Stone Oak Park & Ride</b> via US-281</li>
-                                <li>Move southern terminus to the <b>Steves Avenue ART Station</b> via South St. Mary's Street</li>
-                                <li>Reduce stop count, generally limiting stops to transfer spots only</li>
-                            </ul>
-                            <hr class="saya-hr">
-                            <b class="via-bustext"><u>Major Destinations</u></b>
-                            <ul class="saya-sf-list-compact">
-                                <li>Stone Oak Park & Ride</li>
-                                <li>Northwoods</li>
-                                <li>North Star Transit Center</li>
-                                <li>San Antonio College</li>
-                                <li>Travis Park</li>
-                                <li>Juvenile Detention Center</li>
-                            </ul>
-                            <hr class="saya-hr">
-                            <b class="via-bustext"><u>Notes</u></b>
-                            <ul>
-                                <li>Provides local service on <b>US-281</b> between Sonterra Blvd and Thousand Oaks</li>
-                                <li style="margin-bottom: 0px;">En route to Downtown, limited-stop service available at:</li>
-                                <details class="saya-collapsible-section">
-                                    <summary></summary>
-                                    <ul class="saya-sf-list-compact">
-                                        <li>281 near Loop 1604</li>
-                                        <li>San Pedro & Northwoods (northbound only)</li>
-                                        <li>San Pedro at Parkhills (southbound only)</li>
-                                        <li>San Pedro & Henderson Pass (northbound only)</li>
-                                        <li>San Pedro & Donella</li>
-                                        <li>San Pedro & Thousand Oaks</li>
-                                        <li>San Pedro & Vista (northbound only)</li>
-                                        <li>San Pedro & Ramsey</li>
-                                        <li>North Star Transit Center</li>
-                                        <li>San Pedro & Jackson Keller</li>
-                                        <li>San Pedro & Basse</li>
-                                        <li>San Pedro & Hildebrand</li>
-                                        <li>San Pedro & Mulberry</li>
-                                        <li>San Pedro & Woodlawn</li>
-                                        <li>San Pedro & Ashby</li>
-                                        <li>San Pedro & Myrtle (VIA Metro Center / SAC)</li>
-                                        <li>San Pedro & Cypress</li>
-                                        <li>San Pedro & Elmira</li>
-                                        <li>Navarro & N St. Mary's</li>
-                                        <li>N St. Mary's & Pecan (southbound only)</li>
-                                        <li>Navarro & Pecan (northbound only)</li>
-                                        <li>S St. Mary's & Crockett (southbound only)</li>
-                                        <li>Navarro & Crockett (northbound only)</li>
-                                        <li>S St. Mary's & Villita (southbound only)</li>
-                                        <li>Navarro & Villita (northbound only)</li>
-                                        <li>S St. Mary's & Cesar Chavez</li>
-                                        <li>S St. Mary's & Alamo</li>
-                                        <li>Steves & Roosevelt</li>
-                                    </ul>
-                                </details>
-                                <li>On the 281 access road between Stone Oak and Loop 1604, local service is available on <a href="#route503" class="via-routeplate via-routeplate-f30"><b>503 Huebner Crosstown</b></a></li>
-                                <li>On San Pedro between Thousand Oaks and North Star, local service is available on <a href="#route502" class="via-routeplate via-routeplate-f20"><b>502 Thousand Oaks Frequent</b></a></li>
-                                <li>On San Pedro south of North Star, local service is available on <a href="#greenline" class="via-routeplate via-routeplate-fgreen"><b>ART Green Line</b></a></li>
-                            </ul>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><img class="via-big-number" src="./bullets/004.webp" loading="lazy"></td>
-                        <td><b>San Pedro Frequent</b></td>
-                        <td>
-                            <a name="route004"></a>
-                            <ul>
-                                <li>Eliminate route as proposed in the Better Bus draft</li>
-                            </ul>
-                            <hr class="saya-hr">
-                            <b class="via-bustext"><u>Notes</u></b>
-                            <ul>
-                                <li>San Pedro Avenue would be served by <a href="#greenline" class="via-routeplate via-routeplate-fgreen"><b>ART Green Line</b></a></li>
-                            </ul>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><img class="via-big-number" src="./bullets/005.webp" loading="lazy"></td>
-                        <td><b>McCullough</b></td>
-                        <td>
-                            <a name="route005"></a>
-                            <b class="via-bustext"><u>Proposal</u></b>
-                            <ul>
-                                <li>Extend northern terminus to <a href="#inf-blossom" style="font-weight: bold;">Blossom Park & Ride</a> via San Pedro, Rhapsody, Warfield, Nakoma, Cocker Loop, Arion Parkway, and Jones Maltsberger</li>
-                            </ul>
-                            <hr class="saya-hr">
-                            <b class="via-bustext"><u>Major Destinations</u></b>
-                            <ul class="saya-sf-list-compact">
-                                <li>Blossom Park & Ride</li>
-                                <li>Arion Business Park</li>
-                                <li>North Star Transit Center</li>
-                                <li>North Star Mall</li>
-                                <li>Olmos Park</li>
-                                <li>Travis Park</li>
-                            </ul>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><img class="via-big-number" src="./bullets/007.webp" loading="lazy"></td>
-                        <td><b>US-281 Stone Oak Express</b></td>
-                        <td>
-                            <a name="route007"></a>
-                            <ul>
-                                <li>Maintains current service pattern.</li>
-                            </ul>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><img class="via-big-number" src="./bullets/008.webp" loading="lazy"></td>
-                        <td><b>North New Braunfels</b></td>
-                        <td>
-                            <a name="route008"></a>
-                            <b class="via-bustext"><u>Proposal</u></b>
-                            <ul>
-                                <li>Move northern terminus to <a href="#inf-bulverde" style="font-weight: bold;">Bulverde Marketplace Transit Center</a></li>
-                                <li>Realign entire route east of 281
-                                    <ul>
-                                        <li>Continues on N St. Mary's, then turns on Mulberry to Tendick Street and Eleanor Avenue. Travels to Bulverde TC via North New Braunfels Avenue, Nacogdoches Road, MacArthur View, and Wetmore.</li>
-                                    </ul>
-                                </li>
-                            </ul>
-                            <hr class="saya-hr">
-                            <b class="via-bustext"><u>Major Destinations</u></b>
-                            <ul class="saya-sf-list-compact">
-                                <li>Bulverde Marketplace TC</li>
-                                <li>Alamo Heights</li>
-                                <li>Travis Park</li>
-                            </ul>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><img class="via-big-number" src="./bullets/009.webp" loading="lazy"></td>
-                        <td><b>Broadway</b></td>
-                        <td>
-                            <a name="route009"></a>
-                            <ul>
-                                <li>Maintains current service pattern.</li>
-                            </ul>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><img class="via-big-number" src="./bullets/010.webp" loading="lazy"></td>
-                        <td><b>Nacogdoches Skip</b></td>
-                        <td>
-                            <a name="route010"></a>
-                            <b class="via-bustext"><u>Proposals</u></b>
-                            <ul>
-                                <li>Extend route to <b>Rolling Oaks Mall</b> via Nacogdoches Road (FM2252)</li>
-                                <li>Reduce the number of stops that the bus makes</li>
-                            </ul>
-                            <hr class="saya-hr">
-                            <b class="via-bustext"><u>Major Destinations</u></b>
-                            <ul class="saya-sf-list-compact">
-                                <li>Rolling Oaks Mall</li>
-                                <li>Naco Pass</li>
-                                <li>Alamo Heights</li>
-                                <li>University of the Incarnate Word</li>
-                                <li>Travis Park</li>
-                                <li>Centro Plaza</li>
-                            </ul>
-                            <hr class="saya-hr">
-                            <b class="via-bustext"><u>Notes</u></b>
-                            <ul>
-                                <li>Provides local service north of Naco Pass</li>
-                                <li style="margin-bottom: 0px;">En route to Downtown, limited-stop service available at:</li>
-                                <details class="saya-collapsible-section">
-                                    <summary></summary>
-                                    <ul class="saya-sf-list-compact">
-                                        <li>Nacogdoches & Wurzback Pkwy</li>
-                                        <li>Nacogdoches & Salado Pkwy</li>
-                                        <li>Nacogdoches & MacArthur View</li>
-                                        <li>Nacogdoches & Woodbury</li>
-                                        <li>Nacogdoches & Loop 410</li>
-                                        <li>Nacogdoches & Country Ln</li>
-                                        <li>Nacogdoches & New Braunfels</li>
-                                        <li>Nacogdoches & Lorenz</li>
-                                        <li>Nacogdoches & Hiller</li>
-                                        <li>Nacogdoches & Robinhood</li>
-                                        <li>Broadway & Nacogdoches</li>
-                                        <li>Broadway & Castano</li>
-                                        <li>Broadway & Austin Highway</li>
-                                        <li>Broadway & Terrell / Patterson</li>
-                                        <li>Broadway & Hildebrand</li>
-                                        <li>Broadway & Tuleta</li>
-                                        <li>Broadway & Funston Place</li>
-                                        <li>Broadway & Mulberry</li>
-                                        <li>Broadway & Josephine</li>
-                                        <li>Broadway at The Pearl</li>
-                                        <li>Broadway & Jones</li>
-                                        <li>Broadway & McCullough</li>
-                                        <li>Martin & Navarro / Pecan & Navarro</li>
-                                        <li>Martin & Leona</li>
-                                        <li>Centro Plaza</li>
-                                    </ul>
-                                </details>
-                                <li>On Martin, Broadway, and Nacogdoches north of MacArthur View, local service is available on <a href="#route009" class="via-routeplate via-routeplate-f30"><b>9 Broadway</b></a></li>
-                                <li>On Nacogdoches between Broadway and MacArthur View, local service is available on <a href="#route008" class="via-routeplate via-routeplate-f30"><b>8 North New Braunfels</b></a></li>
-                            </ul>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><img class="via-big-number" src="./bullets/014.webp" loading="lazy"></td>
-                        <td><b>Austin Highway Skip</b></td>
-                        <td>
-                            <a name="route014"></a>
-                            <b class="via-bustext"><u>Proposals</u></b>
-                            <ul>
-                                <li>Realign off of El Sendero and Thousand Oaks and onto <b>Perrin Beitel</b></li>
-                                <li>The bus now skips stops along Austin Highway</li>
-                            </ul>
-                            <hr class="saya-hr">
-                            <b class="via-bustext"><u>Major Destinations</u></b>
-                            <ul class="saya-sf-list-compact">
-                                <li>Naco Pass</li>
-                                <li>Alamo Heights</li>
-                                <li>University of the Incarnate Word</li>
-                                <li>Travis Park</li>
-                                <li>Centro Plaza</li>
-                            </ul>
-                            <hr class="saya-hr">
-                            <b class="via-bustext"><u>Notes</u></b>
-                            <ul>
-                                <li>Provides local service north of Austin Highway</li>
-                                <li style="margin-bottom: 0px;">En route to Downtown, limited-stop service available at:</li>
-                                <details class="saya-collapsible-section">
-                                    <summary></summary>
-                                    <ul class="saya-sf-list-compact">
-                                        <li>Austin Highway & Callarmen</li>
-                                        <li>Austin Highway & Lanark</li>
-                                        <li>Austin Highway & Eisenhauer</li>
-                                        <li>1533 Austin Highway</li>
-                                        <li>Austin Highway & Harry Wurzbach</li>
-                                        <li>Austin Highway & Vandiver</li>
-                                        <li>Austin Highway & Rittiman</li>
-                                        <li>Austin Highway & N New Braunfels</li>
-                                        <li>Austin Highway & Montclair</li>
-                                        <li>Austin Highway & Routt</li>
-                                        <li>Austin Highway & Ellwood</li>
-                                        <li>Broadway & Austin Highway</li>
-                                        <li>Broadway & Terrell / Patterson</li>
-                                        <li>Broadway & Hildebrand</li>
-                                        <li>Broadway & Tuleta</li>
-                                        <li>Broadway & Funston Place</li>
-                                        <li>Broadway & Mulberry</li>
-                                        <li>Broadway & Josephine</li>
-                                        <li>Broadway at The Pearl</li>
-                                        <li>Broadway & Jones</li>
-                                        <li>Broadway & McCullough</li>
-                                        <li>Martin & Navarro / Pecan & Navarro</li>
-                                        <li>Martin & Leona</li>
-                                        <li>Centro Plaza</li>
-                                    </ul>
-                                </details>
-                                <li>On Martin, Broadway, and Nacogdoches north of MacArthur View, local service is available on <a href="#route009" class="via-routeplate via-routeplate-f30"><b>9 Broadway</b></a></li>
-                                <li>On Austin Highway, local service is available on <a href="#route505" class="via-routeplate via-routeplate-f30"><b>505 Basse</b></a></li>
-                                <li>El Sendero would be served by <a href="#route640" class="via-routeplate via-routeplate-f30"><b>640 Valley Forge</b></a></li>
-                            </ul>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><img class="via-big-number" src="./bullets/015.webp" loading="lazy"></td>
-                        <td><b>Hackberry / The Pearl</b></td>
-                        <td>
-                            <a name="route015"></a>
-                            <b class="via-bustext"><u>Proposals</u></b>
-                            <ul>
-                                <li>Add new <span class="via-bustext via-busfreq-30">30 minute</span> frequency route to connect <b>Brooks Transit Center</b> to <b>Centro Plaza</b> via New Braunfels, Research Plaza, City Base Landing, Goliad, Hot Wells, S Presa, Hackberry, Austin, Casa Blanca, Newell, Camden, St. Mary's / Navarro, Nueva, and Frio</li>
-                            </ul>
-                            <hr class="saya-hr">
-                            <b class="via-bustext"><u>Major Destinations</u></b>
-                            <ul class="saya-sf-list-compact">
-                                <li>Brooks Transit Center</li>
-                                <li>The Pearl</li>
-                                <li>Travis Park</li>
-                                <li>Centro Plaza</li>
-                            </ul>
-                            <hr class="saya-hr">
-                            <b class="via-bustext"><u>Notes</u></b>
-                            <ul class="saya-sf-list-compact">
-                                <li>The section between <b>Centro Plaza</b> and <b>The Pearl</b> would operate with a <span class="via-bustext via-busfreq-20">15 minute</span> frequency on weekends, where half of the outbound departures would turn left onto Ave A and loop around via Ave B and Josephine</li>
-                            </ul>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><img class="via-big-number" src="./bullets/017.webp" loading="lazy"></td>
-                        <td><b>IH-35 Express</b></td>
-                        <td>
-                            <a name="route017"></a>
-                            <ul>
-                                <li>Maintains service pattern as proposed in the Better Bus draft.</li>
-                            </ul>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><img class="via-big-number" src="./bullets/020.webp" loading="lazy"></td>
-                        <td><b>New Braunfels Frequent</b></td>
-                        <td>
-                            <a name="route020"></a>
-                            <ul>
-                                <li>Maintains current service pattern.</li>
-                            </ul>
-                            <hr class="saya-hr">
-                            <b class="via-bustext"><u>Notes</u></b>
-                            <ul>
-                                <li>Additional departures with limited-stop service available on <a href="#route120" class="via-routeplate-primo"><b>120 Prímo New Braunfels</b></a></li>
-                            </ul>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><img class="via-big-number" src="./bullets/021.webp" loading="lazy"></td>
-                        <td><b>Kirby / Ventura Frequent</b></td>
-                        <td>
-                            <a name="route021"></a>
-                            <ul>
-                                <li>Maintains service pattern as proposed in the Better Bus draft.</li>
-                            </ul>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><img class="via-big-number" src="./bullets/022.webp" loading="lazy"></td>
-                        <td><b>Hays</b></td>
-                        <td>
-                            <a name="route022"></a>
-                            <ul>
-                                <li>Eliminate route as proposed in the Better Bus draft</li>
-                            </ul>
-                            <hr class="saya-hr">
-                            <b class="via-bustext"><u>Notes</u></b>
-                            <ul>
-                                <li>Hays Street would be served by <a href="#route024" class="via-routeplate via-routeplate-f20"><b>24 Hays Frequent</b></a></li>
-                                <li>Nolan Street would be served by <a href="#route102" class="via-routeplate-primo"><b>120 Prímo New Braunfels</b></a></li>
-                            </ul>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><img class="via-big-number" src="./bullets/024.webp" loading="lazy"></td>
-                        <td><b>Hays Frequent</b></td>
-                        <td>
-                            <a name="route024"></a>
-                            <b class="via-bustext"><u>Proposals</u></b>
-                            <ul>
-                                <li>Realign route between <b>Travis Park</b> and <b>Walters</b>
-                                    <ul>
-                                        <li>Travels via McCullough, Nolan, Pine, Hays, and Walters</li>
-                                        <li>Route splits into two branches at <b>Walters & Commerce</b>, where one branch travels to <b>Towne Twin Village</b> via its current alignment, and the other travels to <b>Eastside Transit Center</b> via Walters, East Commerce, and East Houston</li>
-                                    </ul>
-                                </li>
-                            </ul>
-                            <hr class="saya-hr">
-                            <b class="via-bustext"><u>Major Destinations</u></b>
-                            <ul class="saya-sf-list-compact">
-                                <li>Eastside Transit Center</li>
-                                <li>Huntleigh Park</li>
-                                <li>Towne Twin Village</li>
-                                <li>Frost Bank Center</li>
-                                <li>Travis Park</li>
-                                <li>Centro Plaza</li>
-                            </ul>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><img class="via-big-number" src="./bullets/025.webp" loading="lazy"></td>
-                        <td><b>East Commerce Frequent</b></td>
-                        <td>
-                            <a name="route025"></a>
-                            <b class="via-bustext"><u>Proposals</u></b>
-                            <ul>
-                                <li>Realign route east of <b>Walters</b>
-                                    <ul>
-                                        <li>Move eastern terminus to the <b>Walmart at Loop 410 & Rigsby</b></li>
-                                        <li>Travels to Loop 410 via Spriggsdale, Martin Luther King Drive, WW White Road, Rice Road, Diane, and Rigsby</li>
-                                    </ul>
-                                </li>
-                            </ul>
-                            <hr class="saya-hr">
-                            <b class="via-bustext"><u>Major Destinations</u></b>
-                            <ul class="saya-sf-list-compact">
-                                <li>Dellcrest</li>
-                                <li>Ellis Alley Park & Ride</li>
-                                <li>Travis Park</li>
-                                <li>Centro Plaza</li>
-                            </ul>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><img class="via-big-number" src="./bullets/026.webp" loading="lazy"></td>
-                        <td><b>Martin Luther King</b></td>
-                        <td>
-                            <a name="route026"></a>
-                            <ul>
-                                <li>Maintains service pattern as proposed in the Better Bus draft.</li>
-                            </ul>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><img class="via-big-number" src="./bullets/028.webp" loading="lazy"></td>
-                        <td><b>Porter Frequent</b></td>
-                        <td>
-                            <a name="route028"></a>
-                            <b class="via-bustext"><u>Proposal</u></b>
-                            <ul>
-                                <li>Truncate northern terminus at <b>Ellis Alley Park & Ride</b></li>
-                                <li>Move southern terminus to <b>Brooks Transit Center</b> via Yucca, Amanda, MLK, Pecan Valley, and New Braunfels</li>
-                            </ul>
-                            <hr class="saya-hr">
-                            <b class="via-bustext"><u>Major Destinations</u></b>
-                            <ul class="saya-sf-list-compact">
-                                <li>Brooks Transit Center</li>
-                                <li>McCreless Marketplace</li>
-                                <li>Juvenile Detention Center</li>
-                                <li>Centro Plaza</li>
-                            </ul>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><img class="via-big-number" src="./bullets/030.webp" loading="lazy"></td>
-                        <td><b>Rigsby</b></td>
-                        <td>
-                            <a name="route030"></a>
-                            <b class="via-bustext"><u>Proposal</u></b>
-                            <ul>
-                                <li>Realign route north of Rigsby</b>
-                                    <ul>
-                                        <li>Travels to <b>Madison Square Park</b> via Hackberry, Carolina / Florida Street, Labor Street, Barrera Street, Alamo Street, Nueva Street, Navarro / South St. Mary's Street, and Lexington Avenue</li>
-                                    </ul>
-                                </li>
-                            </ul>
-                            <hr class="saya-hr">
-                            <b class="via-bustext"><u>Major Destinations</u></b>
-                            <ul class="saya-sf-list-compact">
-                                <li>HEB Distribution Center at Foster Road</li>
-                                <li>Lakeside</li>
-                                <li>Dellcrest</li>
-                                <li>Comanche Park</li>
-                                <li>Travis Park</li>
-                                <li>Madison Square Park</li>
-                            </ul>
-                            <hr class="saya-hr">
-                            <b class="via-bustext"><u>Notes</u></b>
-                            <ul>
-                                <li>Maintains extended service to HEB Distribution Center during weekday peaks only</li>
-                                <li>During peak hours, limited-stop service would be available on <a href="#route031" class="via-routeplate via-routeplate-f90"><b>31 St. Hedwig Skip</b></a></li>
-                            </ul>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><img class="via-big-number" src="./bullets/031.webp" loading="lazy"></td>
-                        <td><b>St. Hedwig Skip</b></td>
-                        <td>
-                            <a name="route031"></a>
-                            <b class="via-bustext"><u>Proposal</u></b>
-                            <ul>
-                                <li>Add new <span class="via-bustext via-busfreq-60">60 minute</span> frequency route to operate during rush hours on weekdays only to connect <b>St. Hedwig</b> to the <b>Riverwalk</b> via FM1518, FM1346, Loop 1604, FM3465, Loop 107, Highway 87, Loop 106, Stuart, Highway 87, Rigsby, Roland, I-10, I-37, and Commerce / Market</li>
-                            </ul>
-                            <hr class="saya-hr">
-                            <b class="via-bustext"><u>Major Destinations</u></b>
-                            <ul class="saya-sf-list-compact">
-                                <li>St. Hedwig</li>
-                                <li>Lone Oak</li>
-                                <li>China Grove</li>
-                                <li>Downtown</li>
-                            </ul>
-                            <hr class="saya-hr">
-                            <b class="via-bustext"><u>Notes</u></b>
-                            <ul>
-                                <li>Provides local service east of Foster Road</li>
-                                <li style="margin-bottom: 0px;">En route to Downtown, limited-stop service available at:</li>
-                                <details class="saya-collapsible-section">
-                                    <summary></summary>
-                                    <ul class="saya-sf-list-compact">
-                                        <li>Walmart at Loop 410 & Rigsby</li>
-                                        <li>Rigsby & W.W. White</li>
-                                        <li>Rigsby & Pecan Valley</li>
-                                        <li>Roland & Hammond</li>
-                                        <li>Roland & Hampton</li>
-                                        <li>Commerce & Bowie</li>
-                                        <li>Commerce & Presa</li>
-                                        <li>St. Mary's & Villita</li>
-                                        <li>Navarro & Villita</li>
-                                        <li>Market & Presa</li>
-                                        <li>Market & Alamo</li>
-                                        <li>Market at Convention Center</li>
-                                    </ul>
-                                </details>
-                                <li>Local service along Rigsby is available on <a href="#route030" class="via-routeplate via-routeplate-f30"><b>30 Rigsby</b></a></li>
-                            </ul>
-                        </td>
                     </tr>
                     <tr>
                         <td><img class="via-big-number" src="./bullets/032.webp" loading="lazy"></td>
