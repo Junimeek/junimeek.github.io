@@ -108,6 +108,24 @@
     font-family: 'Scene Pro', Helvetica, sans-serif;
 }
 
+.jnr-map-thumb {
+    display: block;
+    width: min-content;
+    margin-left: auto;
+    margin-right: auto;
+    overflow-x: hidden;
+}
+
+.jnr-map-thumb a {
+    width: fit-content;
+    height: inherit;
+}
+
+.jnr-map-thumb img {
+    height: 144px;
+    max-width: 360px;
+}
+
 .jnr-infobox {
     border: 3px solid #931b22;
     border-radius: 12px;

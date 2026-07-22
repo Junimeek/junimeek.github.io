@@ -12,21 +12,21 @@
         <script src="../../resources/sayaka/miki.js"></script>
     </head>
     
-    <body class="saya-lower-bg" onload="InitializePage()">
-        <div id="miki-viewer" class="miki-disabled" onclick="DisableMiki()">
-            <a href="javascript:void(0);" title="Close document viewer">
-                <div class="miki-button-close">
+    <body class="saya-lower-bg">
+        <div id="miki-viewer" class="miki-disabled">
+            <div class="miki-controls-container">
+                <a class="miki-controls-button" title="Close document viewer [Esc]" onclick="DisableMiki()">
                     <i class="fa fa-window-close"></i>
-                </div>
-            </a>
-            <a href="javascript:void(0);" title="Open document in new tab">
-                <div class="miki-button-maximize" onclick="OpenMikiEmbedInNewTab()">
+                </a>
+                <a class="miki-controls-button" title="Open document in new tab [Shift + N]" onclick="OpenMikiEmbedInNewTab()">
                     <i class="fa fa-window-maximize"></i>
-                </div>
-            </a>
-
-            <div class="miki-window miki-windowtype-pdf">
-                <iframe class="miki-frame" id="miki-frame" src="../../resources/sayaka/miki-loadscreen.html"></iframe>
+                </a>
+                <a id="miki-download-button" class="miki-controls-button" title="Download this document [Shift + D]" download>
+                    <i class="fa fa-download"></i>
+                </a>
+            </div>
+            <div class="miki-window miki-windowtype-image">
+                <img class="miki-frame" id="miki-frame" src="../../../resources/sayaka/miki-loadscreen.html">
             </div>
         </div>
 
@@ -165,6 +165,8 @@
                         <div class="jnr-infobox jnr-routeinfo-proposals">
                             <p class="saya-tiny-paragraph">
                                 Route information will appear here when you click any of the icons below.
+                                <br>
+                                The individual maps can be enlarged simply by clicking on them.
                             </p>
                         </div>
                     </div>
@@ -173,6 +175,11 @@
                     <div class="jnr-routeinfo-header">
                         <img class="via-big-number" src="./bullets/001.webp" loading="lazy">
                         <h3 class="jnr-routeinfo-routename via-busfreq-30">Lockhill-Selma</h3>
+                    </div>
+                    <div class="jnr-map-thumb">
+                        <a href="javascript:void(0);" onclick="GetScreenshot('001.jpg')">
+                            <img class="detour-thumbnail" src="./maps/thumb/001.webp" loading="lazy">
+                        </a>
                     </div>
                     <div class="jnr-routeinfo-infocontainer">
                         <div class="jnr-infobox jnr-routeinfo-proposals">
@@ -204,6 +211,11 @@
                         <img class="via-big-number" src="./bullets/002.webp" loading="lazy">
                         <h3 class="jnr-routeinfo-routename via-busfreq-20">Blanco Skip</h3>
                     </div>
+                    <div class="jnr-map-thumb">
+                        <a href="javascript:void(0);" onclick="GetScreenshot('002.jpg')">
+                            <img class="detour-thumbnail" src="./maps/thumb/002.webp" loading="lazy">
+                        </a>
+                    </div>
                     <div class="jnr-routeinfo-infocontainer">
                         <div class="jnr-infobox jnr-routeinfo-proposals">
                             <h3 class="jnr-routeinfo-routename">Proposals</h3>
@@ -234,13 +246,13 @@
                                             <li>Blanco & Vista View</li>
                                             <li>Blanco & Sir Winston</li>
                                             <li>Blanco & West Avenue</li>
+                                            <li>Blanco & Ramsey</li>
                                             <li>Blanco & Loop 410</li>
                                             <li>Blanco & Rector</li>
                                             <li>Blanco & Oblate</li>
                                             <li>Blanco & Dredsen</li>
                                             <li>Blanco & Basse</li>
                                             <li>Blanco & Fresno</li>
-                                            <li>Blanco & Santa Monica</li>
                                             <li>Blanco & Hildebrand</li>
                                             <li>Blanco & Summit</li>
                                             <li>Blanco & Woodlawn</li>
@@ -269,6 +281,11 @@
                     <div class="jnr-routeinfo-header">
                         <img class="via-big-number" src="./bullets/003.webp" loading="lazy">
                         <h3 class="jnr-routeinfo-routename via-busfreq-20">San Pedro Skip</h3>
+                    </div>
+                    <div class="jnr-map-thumb">
+                        <a href="javascript:void(0);" onclick="GetScreenshot('003.jpg')">
+                            <img class="detour-thumbnail" src="./maps/thumb/003.webp" loading="lazy">
+                        </a>
                     </div>
                     <div class="jnr-routeinfo-infocontainer">
                         <div class="jnr-infobox jnr-routeinfo-proposals">
