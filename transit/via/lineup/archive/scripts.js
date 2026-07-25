@@ -19,13 +19,29 @@ function ToggleDropdown(id)
     }
 }
 
+function GetDetourTimetable(id)
+{
+    let documentURL = "";
+    linkDebugMode = false;
+
+    if (linkDebugMode) {
+        documentURL = "../../../../documents/2026/gr-lineup-detours/";
+    }
+    else {
+        documentURL = "https://junimeek.net/documents/2026/gr-lineup-detours/";
+    }
+
+    documentURL += ListDetour(id);
+    window.open(documentURL);
+}
+
 function GetTimetableArchive(id)
 {
     let documentURL = "";
     linkDebugMode = false;
 
     if (linkDebugMode) {
-        documentURL = "../../../documents/";
+        documentURL = "../../../../documents/";
     }
     else {
         documentURL = "https://junimeek.net/documents/";
@@ -344,6 +360,49 @@ function List25(id)
             return "2025/12/2025_0818-LateNight-System-Map-for-web.pdf";
         case 2574:
             return "2025/12/2025_0818-LateNight-System-Map-printable.pdf";
+    }
+}
+
+function ListDetour(id)
+{
+    switch(id)
+    {
+        case "d001":
+            return "Schedule097-Night_GRDetour_v0.pdf";
+        case "d002":
+            return "printable/Printable097-Night_GRDetour_v0.pdf";
+        case "d003":
+            return "Schedule204_GRDetour_v0.pdf";
+        case "d004":
+            return "printable/Printable204_GRDetour_v0.pdf";
+        case "d005":
+            return "Schedule289_GRDetour_v0.pdf";
+        case "d006":
+            return "printable/Printable289_GRDetour_v0.pdf";
+        case "d007":
+            return "Schedule232_GRDetour_v0.pdf";
+        case "d008":
+            return "printable/Printable232_GRDetour_v0.pdf";
+        case "d009":
+            return "Schedule242_GRDetour_v0.pdf";
+        case "d010":
+            return "printable/Printable242_GRDetour_v0.pdf";
+        case "d011":
+            return "Schedule204_GRDetour_rev1.pdf";
+        case "d012":
+            return "printable/Printable204_GRDetour_rev1.pdf";
+        case "d013":
+            return "Schedule204_GRDetour_rev2.pdf";
+        case "d014":
+            return "printable/Printable204_GRDetour_rev2.pdf";
+        case "d015":
+            return "Schedule232_GRDetour_rev1.pdf";
+        case "d016":
+            return "printable/Printable232_GRDetour_rev1.pdf";
+        case "d017":
+            return "Schedule097-Night_GRDetour_rev1.pdf";
+        case "d018":
+            return "printable/Printable097-Night_GRDetour_rev1.pdf";
     }
 }
 

@@ -43,10 +43,8 @@ function CheckForDetour(route)
 {
     switch(route)
     {
-        case 97:
-            return "_GRDetour_rev1.pdf";
         case 204:
-            return "_GRDetour_rev2.pdf";
+            return "_GRDetour_rev3.pdf"
         case 232:
             return "_GRDetour_rev1.pdf";
         case 242:
@@ -87,7 +85,7 @@ function GetTimetablePath(route)
         case 68:
             return "2026/04/";
         case 97:
-            return "2026/gr-lineup-detours/";
+            return "2026/04/";
         case 204:
             return "2026/gr-lineup-detours/";
         case 214:
