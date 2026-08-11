@@ -33,6 +33,13 @@
             </p>
             <div class="saya-flexbutton-container">
                 <div class="versionbutton-buttonarea">
+                    <a href="#v0.5.5" style="text-decoration: none;">
+                        <div class="saya-flexbutton-bigbutton versionbutton">
+                            <b class="kyokura-font-comic">0.5.5</b>
+                        </div>
+                    </a>
+                </div>
+                <div class="versionbutton-buttonarea">
                     <a href="#v0.5.4" style="text-decoration: none;">
                         <div class="saya-flexbutton-bigbutton versionbutton">
                             <b class="kyokura-font-comic">0.5.4</b>
@@ -137,6 +144,72 @@
                 Play these old versions at your own risk.
             </p>
 
+            <hr class="kyosaya-hr">
+
+            <a name="v0.5.5"></a>
+            <h2 class="saya-h2 kyokura-font-comic">Version 0.5.5</h2>
+            <p class="saya-short-paragraph saya-sf-wp90">
+                Release date: <code>August 11, 2026</code>
+            </p>
+            <p class="saya-paragraph saya-sf-wp90">
+                Well this is weird, I was actually really productive this month. How coinky doinky, amiright?
+            </p>
+            <h3 class="saya-h3 kyokura-font-comic">Gameplay changes</h3>
+            <div class="saya-ul saya-sf-wp90">
+                <ul>
+                    <li>Dark Mode has been temporarily disabled while I address a major bug I found in playtesting.
+                        If you'd still like to play Dark Mode anyway and accept the presence of the bug, just enter this code into the ThinkPad: <b>10212022</b></li>
+                    <li>Baldi will now gain 0.25 anger points per exit reached instead of 0.5</li>
+                    <li>The formula I was using to calculate Baldi's slap interval has been changed. What this means to players is that his speed curve is now significantly more aggressive
+                        <ul>
+                            <li>As a result, Null is also now MUCH faster than before. If anyone plays this, I'm asking for feedback on his new speed because I'm unsure if he's too fast now or not.
+                            You can find ways to contact me about this at <a href="https://junimeek.net/contact">junimeek.net/contact</a></li>
+                        </ul>
+                    </li>
+                    <li>It is now possible to hide from the Principal while he's angry at you; he will now only chase you for as long as he can actually see you. If you break his line of sight, he will go back to wandering until he sees you again</li>
+                    <li>1st Prize will now turn much faster when he is heading for the Attendance Office or to a party</li>
+                </ul>
+            </div>
+            <h3 class="saya-h3 kyokura-font-comic">Miscellaneous changes</h3>
+            <div class="saya-ul saya-sf-wp90">
+                <ul>
+                    <li>Two new accessibility settings: Automatic Door Opening, and changing the behavior of pressing the Quick Map button</li>
+                    <li>The main menu now has background music</li>
+                    <li>The buttons on the main menu will now play a sound</li>
+                    <li>There are now signs outside of every classroom that indicate which color notebook is inside</li>
+                    <li>The textures on the fronts of the vending machines now have a lit up variant for the "angry" school</li>
+                    <li>The volume of Baldi's new audio clips introduced in 0.5.4 have been decreased to match the existing audio clips</li>
+                    <li>The culinary room in the Classic Extended map has been redesigned</li>
+                </ul>
+            </div>
+            <h3 class="saya-h3 kyokura-font-comic">Bug fixes</h3>
+            <div class="saya-ul saya-sf-wp90">
+                <ul>
+                    <li>The Attendance Slip now actually works in Juniper Hills</li>
+                    <li>The description for WD-NoSquee has been corrected to say 6 uses</li>
+                    <li>Firing a BSODA spray towards the attendance office will no longer erroneously send you to detention</li>
+                    <li>The Principal will no longer completely ignore the Bully when he's guilty</li>
+                    <li>When in detention, the Bully will no longer play his "I'm Bored" line if something that isn't the player collides with him</li>
+                    <li>Gotta Sweep will no longer get stuck on a corner if there are multiple characters caught in his hitbox</li>
+                    <li>Gotta Sweep will no longer destroy your eardrums every time a character stays on the edge of his hitbox</li>
+                    <li>If you get sent to detention while you are in Baldi's line of sight, he will no longer head straight to detention; he will continue to head to your last known location first before heading to detention</li>
+                    <li>Safe Mode Baldi will now properly yell "I'm gonna find you!!!" in the Classic and Juniper Hills maps</li>
+                    <li>Safe Mode Baldi's audio when he catches you is now filtered through the Voice audio channel instead of the SFX channel</li>
+                    <li>The secret ending will no longer cause the camera to change direction every frame</li>
+                    <li>It is no longer possible to activate the trigger to spawn Null in Dark Mode multiple times</li>
+                    <li>Null can no longer be pushed by a BSODA during his pre-bossfight monologue</li>
+                </ul>
+            </div>
+            <h3 class="saya-h3 kyokura-font-comic">Internal changes and fixes</h3>
+            <div class="saya-ul saya-sf-wp90">
+                <ul>
+                    <li>Switched some functions that check the contents of strings to check for enums instead</li>
+                    <li>Fixed an issue where changing the GameMode setting in the MasterController script had no effect</li>
+                </ul>
+            </div>
+            <p class="saya-short-paragraph saya-sf-wp90">
+                <a href="https://github.com/Junimeek/BaldiExtended/releases/tag/beta-0.5.5"><i class="fa fa-external-link"></i> Download Beta 0.5.5</a>
+            </p>
             <hr class="kyosaya-hr">
 
             <a name="v0.5.4"></a>

@@ -1,8 +1,8 @@
 {
-    "version": [0,5,4],
-    "title": "A small bugfix update is out.",
-    "icon": "images/update_0_5_4.jpg",
+    "version": [0,5,5],
+    "title": "A major bugfix update is out!",
+    "icon": "images/update_0_5_5.jpg",
     "buttonType": "download-link",
-    "infoButtonText": "Click here to download 0.5.4!",
-    "url": "https://github.com/Junimeek/BaldiExtended/releases/tag/beta-0.5.4"
+    "infoButtonText": "Click here to download 0.5.5!",
+    "url": "https://junimeek.net/kyokura/baldi-extended/index.html#download"
 }
