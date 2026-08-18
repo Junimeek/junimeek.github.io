@@ -108,6 +108,10 @@
     overflow-x: auto;
 }
 
+.songinfo-seishuncontainer {
+    background-image: url('./background-seishun.png');
+}
+
 .songinfo-lifecontainer {
     background-image: url('./background-life.png');
 }
