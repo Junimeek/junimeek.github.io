@@ -403,6 +403,10 @@ function ListDetour(id)
             return "Schedule097-Night_GRDetour_rev1.pdf";
         case "d018":
             return "printable/Printable097-Night_GRDetour_rev1.pdf";
+        case "d019":
+            return "Schedule204_GRDetour_rev3.pdf";
+        case "d020":
+            return "printable/Printable204_GRDetour_rev3.pdf";
     }
 }
 
@@ -532,5 +536,51 @@ function List26(id)
             return "2026/04/Schedule289.pdf";
         case 2661:
             return "2026/04/Printable/Printable289.pdf";
+        case 2662:
+            return "2026/05/2026_0504-LateNight-System-Map-for-web.pdf";
+        case 2663:
+            return "2026/05/2026_0504-LateNight-System-Map-printable.pdf";
+        case 2664:
+            return "2026/04/Schedule068-Night.pdf";
+        case 2665:
+            return "2026/04/Schedule214.pdf";
+        case 2666:
+            return "2026/04/Printable/Printable214.pdf";
+        case 2667:
+            return "2026/04/Schedule222.pdf";
+        case 2668:
+            return "2026/04/Printable/Printable222.pdf";
+        case 2669:
+            return "2026/04/Schedule225.pdf";
+        case 2670:
+            return "2026/04/Printable/Printable225.pdf";
+        case 2671:
+            return "2026/04/Schedule230.pdf";
+        case 2672:
+            return "2026/04/Printable/Printable230.pdf";
+        case 2673:
+            return "2026/04/Schedule251.pdf";
+        case 2674:
+            return "2026/04/Printable/Printable251.pdf";
+        case 2675:
+            return "2026/04/Schedule268.pdf";
+        case 2676:
+            return "2026/04/Printable/Printable268.pdf";
+        case 2677:
+            return "2026/04/Schedule275.pdf";
+        case 2678:
+            return "2026/04/Printable/Printable275.pdf";
+        case 2679:
+            return "2026/04/Schedule276.pdf";
+        case 2680:
+            return "2026/04/Printable/Printable276.pdf";
+        case 2681:
+            return "2026/04/Schedule282.pdf";
+        case 2682:
+            return "2026/04/Printable/Printable282.pdf";
+        case 2683:
+            return "2026/04/Schedule288.pdf";
+        case 2684:
+            return "2026/04/Printable/Printable288.pdf";
     }
 }

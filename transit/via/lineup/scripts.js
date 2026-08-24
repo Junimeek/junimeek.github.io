@@ -44,11 +44,11 @@ function CheckForDetour(route)
     switch(route)
     {
         case 204:
-            return "_GRDetour_rev3.pdf"
+            return "_GRDetour_rev4.pdf"
         case 232:
-            return "_GRDetour_rev1.pdf";
+            return "_GRDetour_rev2.pdf";
         case 242:
-            return "_GRDetour_v0.pdf";
+            return "_GRDetour_rev1.pdf";
         case 289:
             return ".pdf";
         default:
@@ -83,37 +83,35 @@ function GetTimetablePath(route)
     switch(route)
     {
         case 68:
-            return "2026/04/";
+            return "2026/07/";
         case 97:
-            return "2026/04/";
+            return "2026/08/";
         case 204:
             return "2026/gr-lineup-detours/";
         case 214:
-            return "2026/04/";
+            return "2026/07/";
         case 222:
-            return "2026/04/";
+            return "2026/07/";
         case 225:
-            return "2026/04/";
+            return "2026/07/";
         case 230:
-            return "2026/04/";
+            return "2026/07/";
         case 232:
             return "2026/gr-lineup-detours/";
         case 242:
             return "2026/gr-lineup-detours/";
-        case 251:
-            return "2026/04/";
         case 268:
-            return "2026/04/";
+            return "2026/07/";
         case 275:
-            return "2026/04/";
+            return "2026/07/";
         case 276:
-            return "2026/04/";
+            return "2026/07/";
         case 282:
-            return "2026/04/";
+            return "2026/07/";
         case 288:
-            return "2026/04/";
+            return "2026/07/";
         case 289:
-            return "2026/04/";
+            return "2026/08/";
         default:
             throw "EVIL number!";
     }
@@ -124,9 +122,9 @@ function PrintableRevisionCheck(route)
     switch(route)
     {
         case 203:
-            return "Printable";
-        default:
             return "Printable/Printable";
+        default:
+            return "Printable";
     }
 }
 

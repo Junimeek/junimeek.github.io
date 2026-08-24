@@ -93,6 +93,26 @@
     color: #54325f;
 }
 
+.via-busfreq-csp-primo {
+    color: #1d4988;
+}
+
+.via-busfreq-csp-skip {
+    color: #5eb362;
+}
+
+.via-busfreq-csp-express {
+    color: #e6883b;
+}
+
+.via-busfreq-csp-viva {
+    color: #4eacaa;
+}
+
+.via-busfreq-csp-metro {
+    color: #85398f;
+}
+
 .via-routename-text {
     font-family: 'Scene Pro', Helvetica, sans-serif;
     font-weight: bold;
