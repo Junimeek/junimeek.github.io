@@ -121,8 +121,12 @@ function PrintableRevisionCheck(route)
 {
     switch(route)
     {
-        case 203:
-            return "Printable/Printable";
+        case 204:
+            return "printable/Printable";
+        case 232:
+            return "printable/Printable";
+        case 242:
+            return "printable/Printable";
         default:
             return "Printable";
     }
