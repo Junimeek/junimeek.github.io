@@ -199,6 +199,10 @@
     border-width: 3px;
 }
 
+.route-summary-table ul {
+    font-size: 14pt;
+}
+
 .pageselector {
     display: flex;
     justify-content: center;

@@ -1,3 +1,22 @@
+:root {
+    --col-via-agency: #cf1f1c;
+    --col-via-betterbus-teal: #03757b;
+    --col-via-betterbus-red: #931b22;
+    --col-via-frequent: #af3034;
+    --col-via-standard30: #375c9f;
+    --col-via-standard60: #6e9dbb;
+    --col-via-standard90: #bdae80;
+    --col-via-lineup: #411b43;
+    --col-via-greenbrt: #628125;
+    --col-via-silverbrt: #646c6e;
+    --col-via-link: #54325f;
+    --col-via-csp-primo: #1d4988;
+    --col-via-csp-skip: #5eb362;
+    --col-via-csp-express: #e6883b;
+    --col-via-csp-viva: #4eacaa;
+    --col-via-csp-metro: #85398f;
+}
+
 .saya-body {
     font-family: Arial, sans-serif;
 }

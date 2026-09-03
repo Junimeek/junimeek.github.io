@@ -1,3 +1,7 @@
+:root {
+    --col-neuro: #ef92bd;
+}
+
 @font-face {
     font-family: 'Comic Bold';
     font-weight: normal;
