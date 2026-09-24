@@ -1,0 +1,127 @@
+@import url('../../../resources/sayaka/styles/via.css');
+@import url('../../../resources/sayaka/sayaka.css');
+@import url('../../../resources/sayaka/sayaka-navbar.css');
+@import url('../../../resources/sayaka/sayaka-table.css');
+@import url('../../../resources/fonts/font-style.css');
+@import url('../../../resources/sayaka/sayaka-collapsible-content.css');
+@import url('../../../resources/sayaka/sayaka-styleflags.css');
+@import url('../../../resources/sayaka/miki.css');
+
+.saya-banner-header {
+    background-color: #cf1c1c;
+    background-image: url('./banner.jpg');
+}
+
+.saya-table td {
+    font-size: 14pt;
+}
+
+.saya-table td b u {
+    display: block;
+    padding-top: 0.5em;
+    color: #931b22;
+}
+
+figure
+{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+figure img
+{
+    width: 350px;
+    max-width: 100%;
+}
+
+figure figcaption
+{
+    margin: 0.2em;
+    font-style: italic;
+    font-size: 0.9em;
+}
+
+.specmap-thumbnail-container {
+    display: inline-block;
+    background-color: white;
+    border-color: gray;
+    border-style: solid;
+    border-width: 2px;
+    cursor: pointer;
+    text-decoration: none;
+    height: fit-content;
+    margin: 8px;
+}
+
+.specmap-thumbnail-container div {
+    display: flex;
+    justify-content: center;
+    padding: 4px;
+}
+
+.specmap-thumbnail-container div span {
+    text-align: center;
+    color: black;
+}
+
+.specmap-thumbnail-container:hover {
+    background-color: bisque;
+}
+
+.specmap-thumbnail {
+    height: auto;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.routeselector {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-top: 0px;
+    margin-bottom: 1.5em;
+}
+
+.routeselector a {
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.routeselector img {
+    width: 87%;
+    height: 87%;
+}
+
+@media screen and (min-width: 900px) {
+    .routeselector a {
+        width: 68px;
+        height: 68px;
+    }
+
+    .routeselector a img {
+        transition: width 0.15s, height 0.15s;
+    }
+
+    .routeselector a:hover img {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .routeselector a {
+        width: 58px;
+        height: 58px;
+    }
+}

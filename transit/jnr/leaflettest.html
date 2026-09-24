@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Juniper's Network Redesign</title>
+        <link rel="stylesheet" href="./leafstyle.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="icon" href="../../resources/favicon.ico" type="image/vnd.microsoft.icon">
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+        <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+        <script src="./leafscripts.js"></script>
+    </head>
+
+    <body class="saya-lower-bg">
+        <nav class="saya-navbar saya-navbar-font-scene">
+            <div class="saya-navbar-container">
+                <script src="../../resources/sayaka/sayaka-navbar-loader.js" onload="LoadNavBar(1)"></script>
+            </div>
+        </nav>
+
+        <div class="saya-body">
+            <noscript>
+                <p class="saya-short-paragraph">
+                    <b style="color: red;">JavaScript is disabled in your browser settings. JavaScript must be enabled for this page to function properly.</b>
+                </p>
+                <hr>
+            </noscript>
+
+            <h2 class="saya-h2">Interactive map</h2>
+            <p class="saya-paragraph">
+                The map below is interactable and can be used to view the entire system at once. To open the map in a new tab, simply click the "fullscreen" button in the top right corner of the embedded map.
+            </p>
+
+            <div id="map" class="saya-sf-centered"></div>
+            <script>
+                const map = L.map('map').setView([29.4285531, -98.4904232], 15);
+
+                const tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+	            maxZoom: 19,
+	            attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+                }).addTo(map);
+            </script>
+        </div>
+    </body>
+</html>

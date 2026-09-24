@@ -33,6 +33,12 @@
     border-color: #628125;
 }
 
+.bigbutton-converse {
+    background-color: #cf1c1c;
+    background-image: url("./thumb-converse.webp");
+    border-color: #cf1c1c;
+}
+
 .bigbutton-tips {
     background-color: #cf1c1c;
     background-image: url("./thumb-tips.webp");
@@ -62,6 +68,10 @@
 
 .bigbutton-green-line:hover {
     border-color: #dcfc9d;
+}
+
+.bigbutton-converse:hover {
+    border-color: #ffa0a0;
 }
 
 .bigbutton-tips:hover {

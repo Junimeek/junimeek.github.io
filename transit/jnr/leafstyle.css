@@ -1,0 +1,13 @@
+@import url('../../resources/sayaka/styles/via.css');
+@import url('../../resources/sayaka/sayaka.css');
+@import url('../../resources/sayaka/sayaka-navbar.css');
+@import url('../../resources/sayaka/sayaka-table.css');
+@import url('../../resources/sayaka/miki.css');
+@import url('../../resources/fonts/font-style.css');
+@import url('../../resources/sayaka/sayaka-collapsible-content.css');
+@import url('../../resources/sayaka/sayaka-styleflags.css');
+
+#map {
+    height: 50vh;
+    width: 50vw;
+}

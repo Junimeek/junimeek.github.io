@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Converse Special Election</title>
+        <link rel="stylesheet" href="./style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="icon" href="../favicon.ico" type="image/vnd.microsoft.icon">
+        <script src="./scripts.js"></script>
+        <script src="../../../resources/sayaka/miki.js"></script>
+    </head>
+    
+    <body class="saya-lower-bg">
+        <div id="miki-viewer" class="miki-disabled">
+            <div class="miki-controls-container">
+                <a class="miki-controls-button" title="Close document viewer [Esc]" onclick="DisableMiki()">
+                    <i class="fa fa-window-close"></i>
+                </a>
+                <a class="miki-controls-button" title="Open document in new tab [Shift + N]" onclick="OpenMikiEmbedInNewTab()">
+                    <i class="fa fa-window-maximize"></i>
+                </a>
+                <a id="miki-download-button" class="miki-controls-button" title="Download this document [Shift + D]" download>
+                    <i class="fa fa-download"></i>
+                </a>
+            </div>
+            <div class="miki-window miki-windowtype-image">
+                <img class="miki-frame" id="miki-frame" src="../../../resources/sayaka/miki-loadscreen.html">
+            </div>
+        </div>
+
+        <nav class="saya-navbar saya-navbar-font-scene">
+            <div class="saya-navbar-container">
+                <script src="../../../resources/sayaka/sayaka-navbar-loader.js" onload="LoadNavBar(1)"></script>
+            </div>
+        </nav>
+
+        <div class="saya-banner-header"><div class="saya-banner-body">
+            <table class="saya-notification-wide">
+                <tbody>
+                    <tr>
+                        <td style="background-color: #d22030; width: 10px; text-align: center; padding: 0px;"></td>
+                        <td style="background-color: #a0a1a3; padding: 4px;">
+                            <span style="display: block; text-align: left; font-weight: bold; color: white;"><u>DISCLAIMER</u></span>
+                            <span style="display: block; text-align: left; color: white;">
+                                This site is not affiliated with VIA Metropolitan Transit or the city of Converse.
+                            </span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h1 class="saya-h1" style="color: white;">City of Converse 2026 VIA Transit Election</h1>
+            <p class="saya-short-paragraph" style="color: white;">
+                <em>This page was last updated on September 23, 2026.</em>
+            </p>
+            <hr class="saya-hr" style="background-color: white;">
+
+            <p class="saya-paragraph" style="color: white; background-color: #00000099;">
+                VIA Metropolitan Transit, operated by the City of San Antonio, provides services to multiple unincorporated municipalities within Bexar County.
+                One such municipality is the City of Converse located in eastern Bexar County.
+                This may change in the coming months, however: the ballot on the November 3 general election has a special proposition regarding the current operation of VIA.
+                Simply put, it's a vote that determines whether VIA should continue operations within Converse or not.
+            </p>
+            <p class="saya-paragraph" style="color: white; background-color: #00000099;">
+                Information about this election is scattered across several different places, and there is a very clear bias towards one side or the other depending on where the information comes from.
+                As such, this page aims to be an unbiased resource of all publicly-known information.
+                <a style="color: cyan;" href="https://junimeek.net/contact">Contact me</a> if you believe any important information is missing from here.
+            </p>
+
+            <hr class="saya-hr" style="background-color: white;">
+            <div class="saya-sf-wp80 saya-sf-centered" style="text-align: right;">
+                <span style="color: white; text-align: right;"><em>Photo by Junimeek</em></span>
+            </div>
+        </div></div>
+
+        <div class="saya-body">
+            <h2 class="saya-h2">Contents</h2>
+            <p class="saya-short-paragraph">
+                Click any of the links below to jump to that section of this page.
+            </p>
+
+            <table class="saya-table saya-sf-w600 saya-tableheight-2_5">
+                <tbody>
+                    <tr>
+                        <td colspan="2" width="20%" style="background-color: var(--col-via-betterbus-teal)"><a href="#transit-today" style="color: white;"><b>Transit in Converse Today</b></a></td>
+                        <td style="text-align: left;"><span>What do VIA's services look like within Converse's city limits today?</span></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" width="20%" style="background-color: #0864b4"><a href="#ballot" style="color: white;"><b>The Ballot</b></a></td>
+                        <td style="text-align: left;"><span>A summary of what voters will see on the ballot</span></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" style="background-color: #33ac55;"><a href="#reasoning" style="color: white;"><b>Reasoning</b></a></td>
+                        <td style="text-align: left;"><span>What is the Point of this Election?</span></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" style="background-color: #fcb82c;"><a href="#plan" style="color: black;"><b>The Plan</b></a></td>
+                        <td style="text-align: left;"><span>What will happen if the vote to discontinue VIA's services passes?</span></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" style="background-color: #cd3023;"><a href="#the-catch" style="color: white;"><b>The Catch</b></a></td>
+                        <td style="text-align: left;"><span>One potential issue that may have the potential to sway voters away from discontinuing VIA services</span></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <hr class="saya-hr">
+
+            <h2 class="saya-h2">Transit in Converse Today</h2>
+            <a name="transit-today"></a>
+            <p class="saya-paragraph">
+                Currently, these are the services that VIA provides within Converse's city limits:
+            </p>
+            <ul class="saya-ul saya-sf-w1300">
+                <li><b class="via-routeplate via-routeplate-f20">Route 21 Kirby / Ventura Frequent</b>: Provides bus service to three stops near the <b>Walmart at Crestway & Old Seguin</b> at a 20 minute weekday frequency (30 minutes weekends)</li>
+                <li><b class="via-routeplate via-routeplate-f30">Route 502 Thousand Oaks / Converse</b>: Provides bus service to 36 stops throughout Converse at a 30 minute frequency</li>
+                <li><b class="via-routeplate via-routeplate-f30">Route 632 Randolph / Ventura</b>: Provides bus service to three stops near the <b>Walmart at Crestway & Old Seguin</b> at a 30 minute frequency</li>
+                <li><b class="via-routeplate via-routeplate-f20">VIAtrans</b>: Provides curb-to-curb paratransit services within three-quarter miles of fixed route bus services</li>
+                <li><b class="via-routeplate via-routeplate-flink">VIA Link Randolph</b>: Provides point-to-point microtransit services to the Walmart at Crestway & Old Seguin, Towne East Village Apartments, the Post Office at Schaefer Road, and the Bexar County Precinct 4 office.</li>
+            </ul>
+
+            <hr class="saya-hr">
+
+            <h2 class="saya-h2">The Ballot</h2>
+            <a name="ballot"></a>
+            <p class="saya-tiny-paragraph">
+                CITY OF CONVERSE – PROPOSITION
+            </p>
+            <p class="saya-tiny-paragraph">
+                FOR or AGAINST,<br>
+                <span style="font-style: italic;">"Shall the VIA San Antonio Metropolitan Transit Authority Service be discontinued in the City of Converse, Texas?"</span>
+            </p>
+
+            <div class="saya-scrollable-element">
+            <table class="saya-table saya-table-color-betterbus saya-sf-w900">
+                <tbody>
+                    <tr>
+                        <td>
+                            <b class="via-bustext" style="font-size: 1.5em;"><u>If citizens vote FOR:</u></b>
+                            <ul>
+                                <li>All services provided by VIA Metropolitan Transit (fixed route, paratransit, and microtransit) will be <b>discontinued</b> within Converse's city limits.</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <b class="via-bustext" style="font-size: 1.5em;"><u>If citizens vote AGAINST:</u></b>
+                            <ul>
+                                <li>All services provided by VIA Metropolitan Transit (fixed route, paratransit, and microtransit) will <b>continue as it exists</b> today.</li>
+                            </ul>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            </div>
+            
+            <br>
+            <hr class="saya-hr">
+
+            <h2 class="saya-h2">What is the Point of this Election?</h2>
+            <a name="reasoning"></a>
+            <p class="saya-paragraph">
+                Everywhere where VIA exists, approximately 75% of their operational funding is provided by sales taxes. Naturally, this means that the city of Converse participates in funding VIA through a <b>half-cent sales tax</b>.
+                As such, this election is essentially Converse leaders asking their citizens if they believe that the sales tax that currently funds VIA would be better spent on funding local projects.
+            </p>
+
+            <hr class="saya-hr">
+
+            <h2 class="saya-h2">What is the Plan if VIA's Services are Discontinued in Converse?</h2>
+            <a name="plan"></a>
+            <p class="saya-paragraph">
+                As of September 23, 2026, only the City of Converse has publicly released plans for what will happen upon the discontinuation of VIA's services;
+                it is currently unknown what VIA would do in response to a "for" vote.
+            </p>
+            <div class="saya-paragraph">
+                <figure>
+                    <img src="art-bus.webp">
+                    <figcaption>A photo of an ART bus, courtesy of AACOG</figcaption>
+                </figure>
+            </div>
+            <p class="saya-paragraph">
+                If voters approve of discontinuing VIA's services, then Converse proposes replacing all of VIA's services with <b>Alamo Regional Transit</b> (or ART, not to be confused with VIA's Advanced Rapid Transit system),
+                operated by the <a class="saya-link" href="https://aacog.gov" target="_blank">Alamo Area Council of Governments</a> (or AACOG).
+                AACOG already operates ART in several other regions surrounding Bexar County.
+            </p>
+            <p class="saya-paragraph">
+                Within Converse, ART would operate as a <b>microtransit</b> service (which AACOG calls "Advanced Demand Response"), meaning that it'll operate curb-to-curb to requested pickup and drop-off locations within Converse's city limits.
+                ART would also provide a direct transfer to the <b>VIA Randolph Transit Center</b> facility near the Fratt interchange.
+                Transportation would also be provided free-of-charge.
+            </p>
+            <p class="saya-paragraph">
+                VIA, meanwhile, has not publicly provided any information as to what will happen to the existing routes that operate in Converse.
+                As such, we can only speculate on what will happen to the <b class="via-bustext via-busfreq-20">21</b>, <b class="via-bustext via-busfreq-30">502</b>, and <b class="via-bustext via-busfreq-30">632</b> buses.
+                There is, however, one thing that is certain to happen: <b>all services to the Walmart at Crestway & FM 78 will be discontinued</b>.
+                This is because the stop is on Crestway Drive, which is within Converse's city limits.
+                While VIA could technically get around this by placing a stop in the Walmart's parking lot (since the parking lot is private property and thus the City of Converse has limited control over it),
+                a recent service change on the north side (where a stop was moved out of a Walmart parking lot and onto the 281 access road due to operational safety concerns) suggests that VIA is unlikely to use this option.
+                As such, it is significantly more likely that VIA will realign all the routes in a way that avoids Converse altogether.
+            </p>
+            <p class="saya-paragraph">
+                Below, you can see my guesses as to how the routes could be realigned.
+            </p>
+
+            <h2 class="saya-h3 saya-navbar-font-scene">Route 21 Kirby / Ventura</h2>
+            <p class="saya-paragraph">
+                Only a small portion of <b class="via-bustext via-busfreq-20">Route 21</b> operates within Converse's city limits.
+                There are two different ways in which it could be realigned, both of which are shown in the maps below.
+            </p>
+            <p class="saya-paragraph">
+                One possibility is that the eastern terminus would only move slightly to be on Beech Trail Drive, and the bus would reach it via Walzem and Elm Trail Drive.
+                Another possibility is that the terminus could be truncated to the H-E-B at FM 78 & Foster Road.
+                The 21 bus already goes around the H-E-B in an odd boxy pattern, and so it would be simple for it to loop back towards Foster Road via Heritage Lake, with the discontinued service further to the east being provided by a new extension of <b class="via-bustext via-busfreq-30">Route 632</b> (more info below).
+            </p>
+            <div class="saya-sf-w1300 saya-sf-centered" style="display: flex; justify-content: center; flex-wrap: wrap;">
+                <a href="javascript:void(0);" onclick="GetScreenshot('specmap-021_01.png')" class="specmap-thumbnail-container">
+                    <img class="specmap-thumbnail" src="./specmaps/thumbspecmap-021_01.webp" loading="lazy">
+                    <br>
+                    <div>
+                        <span>Route 21 Map 1: Realigned through Ventura<br><em>[Click to enlarge]</em></span>
+                    </div>
+                </a>
+                <a href="javascript:void(0);" onclick="GetScreenshot('specmap-021_02.png')" class="specmap-thumbnail-container">
+                    <img class="specmap-thumbnail" src="./specmaps/thumbspecmap-021_02.webp" loading="lazy">
+                    <br>
+                    <div>
+                        <span>Route 21 Map 2: Terminus truncated at Woodlake<br><em>[Click to enlarge]</em></span>
+                    </div>
+                </a>
+            </div>
+
+            <h2 class="saya-h3 saya-navbar-font-scene">Route 502 Thousand Oaks / Converse</h2>
+            <p class="saya-paragraph">
+                As the name implies, a significant portion of <b class="via-bustext via-busfreq-30">Route 502</b> operates within Converse's city limits.
+                Because the portion within Converse is at the eastern end of this route, it's likely that VIA would realign it to turn right at Kitty Hawk Road and loop back to O'Connor via New World Drive.
+            </p>
+            <div class="saya-sf-w1300 saya-sf-centered" style="display: flex; justify-content: center; flex-wrap: wrap;">
+                <a href="javascript:void(0);" onclick="GetScreenshot('specmap-502.png')" class="specmap-thumbnail-container">
+                    <img class="specmap-thumbnail" src="./specmaps/thumbspecmap-502.webp" loading="lazy">
+                    <br>
+                    <div>
+                        <span>Route 502: Realigned to loop around via New World<br><em>[Click to enlarge]</em></span>
+                    </div>
+                </a>
+            </div>
+
+            <h2 class="saya-h3 saya-navbar-font-scene">Route 632 Randolph / Ventura</h2>
+            <p class="saya-paragraph">
+                Only a small portion of <b class="via-bustext via-busfreq-30">Route 632</b> operates within Converse's city limits.
+                There are two different ways in which it could be realigned, both of which are shown in the maps below.
+            </p>
+            <p class="saya-paragraph">
+                One possibility is that the eastern terminus would only move slightly to be on Beech Trail Drive near FM 78, and the bus would turn around to head back to Randolph via Walzem.
+                Another possibility is that the terminus could be extended to the H-E-B at FM 78 & Foster Road via FM 78 to allow for an easy transfer to <b class="via-bustext via-busfreq-20">Route 21</b>.
+            </p>
+            <div class="saya-sf-w1300 saya-sf-centered" style="display: flex; justify-content: center; flex-wrap: wrap;">
+                <a href="javascript:void(0);" onclick="GetScreenshot('specmap-632_01.png')" class="specmap-thumbnail-container">
+                    <img class="specmap-thumbnail" src="./specmaps/thumbspecmap-632_01.webp" loading="lazy">
+                    <br>
+                    <div>
+                        <span>Route 632 Map 1: Minor realignment<br><em>[Click to enlarge]</em></span>
+                    </div>
+                </a>
+                <a href="javascript:void(0);" onclick="GetScreenshot('specmap-632_02.png')" class="specmap-thumbnail-container">
+                    <img class="specmap-thumbnail" src="./specmaps/thumbspecmap-632_02.webp" loading="lazy">
+                    <br>
+                    <div>
+                        <span>Route 632 Map 2: Extended to Woodlake<br><em>[Click to enlarge]</em></span>
+                    </div>
+                </a>
+            </div>
+
+            <hr class="saya-hr">
+
+            <h2 class="saya-h2">One Small Catch</h2>
+            <a name="the-catch"></a>
+            <p class="saya-paragraph">
+                The City of Converse wants to reallocate the half-cent sales tax for local municipal needs, including park improvements, street maintenance, and first responder improvements, as well as funding the ART service.
+                However, there is one issue with this: the money will not be made available immediately.
+            </p>
+            <p class="saya-paragraph">
+                For reasons that I will not even attempt to explain here as I cannot speak legalese, the half-cent sales tax will continue to go to VIA even if their services are discontinued.
+                Under Texas state law (specifically, <a href="https://statutes.capitol.texas.gov/?tab=1&code=TN&chapter=TN.451&artSec=451.611" target="_blank" class="saya-link">Texas Transportation Code Chapter 451 Section 611</a>), Converse will owe VIA a financial obligation <b>totaling approximately $13 million</b>.
+                Considering the current population growth patterns within Converse, VIA estimates that it would take around <b>7 years</b> before the obligation is completely paid off.
+            </p>
+            <p class="saya-paragraph">
+                After the obligation is paid off, however, Converse would have an additional $1.7 million to go towards local needs every year. It may take almost a decade to get there, but as the old saying goes, good things come to those who wait.
+            </p>
+            <p class="saya-paragraph">
+                Is there a right or wrong decision here? It's impossible to say.
+            </p>
+            <p class="saya-paragraph">
+                Only time will tell.
+            </p>
+
+            <br>
+            <br>
+            <br>
+        </div>
+
+        <footer class="saya-footer-container">
+            <div class="saya-footer-group" style="font-size: 20pt;">
+                <a href="https://youtube.com/@Junimeek" target="_blank"><i class="fa fa-youtube-play"></i></a>
+                <a href="https://github.com/Junimeek" target="_blank"><i class="fa fa-github"></i></a>
+                <a href="https://twitter.com/junimeek39" target="_blank"><i class="fa fa-twitter"></i></a>
+                <a href="https://en.wikipedia.org/wiki/User:Junimeek" target="_blank"><i class="fa fa-wikipedia-w"></i></a>
+            </div>
+            <div class="saya-footer-group">
+               <span>Copyright 2026 Junimeek</span><br/>
+               <span>All right reserved</span>
+            </div>
+            <div class="saya-footer-group">
+               <span>Powered by SayakaUI</span>
+            </div>
+        </footer>
+    </body>
+</html>
