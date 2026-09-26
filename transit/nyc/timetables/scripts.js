@@ -23,7 +23,7 @@ function GetTimetablePath(route)
         case "q16":
             return "2026/03/ScheduleQ16_2025-06-29.pdf";
         case "q72":
-            return "2026/02/ScheduleQ72_2026-01-04.pdf";
+            return "2026/09/ScheduleQ72_2026-09-06.pdf";
         default:
             throw "EVIL NUMBER DETECTED";
     }
