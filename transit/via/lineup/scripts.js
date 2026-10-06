@@ -1,4 +1,4 @@
-let linkDebugMode = false;
+let linkDebugMode = true;
 
 function GetCurrentLineupTimetable(route)
 {
@@ -43,8 +43,10 @@ function CheckForDetour(route)
 {
     switch(route)
     {
+        case 97:
+            return "_GRDetour_rev2.pdf";
         case 204:
-            return "_GRDetour_rev4.pdf"
+            return "_GRDetour_rev4.pdf";
         case 232:
             return "_GRDetour_rev2.pdf";
         case 242:
@@ -85,7 +87,7 @@ function GetTimetablePath(route)
         case 68:
             return "2026/07/";
         case 97:
-            return "2026/08/";
+            return "2026/gr-lineup-detours/";
         case 204:
             return "2026/gr-lineup-detours/";
         case 214:
@@ -121,6 +123,8 @@ function PrintableRevisionCheck(route)
 {
     switch(route)
     {
+        case 97:
+            return "printable/Printable";
         case 204:
             return "printable/Printable";
         case 232:
