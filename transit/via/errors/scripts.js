@@ -10,13 +10,13 @@ function GetTimetableLink(route)
             scheduleLink += "2026/03/20260504_Schedule002.pdf";
             break;
         case 4:
-            scheduleLink += "2024/07/Schedule004.pdf";
+            scheduleLink += "2026/03/20260824_Schedule004.pdf";
+            break;
+        case 9:
+            scheduleLink += "2026/03/20260824_Schedule009.pdf";
             break;
         case 10:
-            scheduleLink += "2025/07/Schedule010.pdf";
-            break;
-        case 17:
-            scheduleLink += "2025/01/Schedule017.pdf";
+            scheduleLink += "2026/03/20260504_Schedule010.pdf";
             break;
         case 20:
             scheduleLink += "2025/04/Schedule020.pdf";
@@ -33,14 +33,14 @@ function GetTimetableLink(route)
         case 26:
             scheduleLink += "2025/04/Schedule026.pdf";
             break;
-        case 28:
-            scheduleLink += "2025/04/Schedule028.pdf";
-            break;
         case 30:
-            scheduleLink += "2025/07/Schedule030.pdf";
+            scheduleLink += "2026/03/20260824_Schedule030.pdf";
             break;
         case 32:
             scheduleLink += "2025/01/Schedule032.pdf";
+            break;
+        case 34:
+            scheduleLink += "2026/03/20260824_Schedule034.pdf";
             break;
         case 36:
             scheduleLink += "2024/07/Schedule036.pdf";
@@ -50,6 +50,9 @@ function GetTimetableLink(route)
             break;
         case 44:
             scheduleLink += "2025/04/Schedule044.pdf";
+            break;
+        case 46:
+            scheduleLink += "2026/03/20260504_Schedule046.pdf";
             break;
         case 62:
             scheduleLink += "2024/07/Schedule062.pdf";
@@ -61,40 +64,34 @@ function GetTimetableLink(route)
             scheduleLink += "2025/04/Schedule066.pdf";
             break;
         case 67:
-            scheduleLink += "2024/07/Schedule067.pdf";
-            break;
-        case 68:
-            scheduleLink += "2025/04/Schedule068.pdf";
+            scheduleLink += "2026/03/20260824_Schedule067.pdf";
             break;
         case 75:
             scheduleLink += "2025/01/Schedule075.pdf";
             break;
-        case 76:
-            scheduleLink += "2025/04/Schedule076.pdf";
-            break;
-        case 77:
-            scheduleLink += "2025/07/Schedule077.pdf";
-            break;
         case 79:
-            scheduleLink += "2024/08/Schedule079.pdf";
+            scheduleLink += "2026/03/20260504_Schedule079.pdf";
             break;
         case 82:
             scheduleLink += "2024/08/Schedule082.pdf";
             break;
         case 88:
-            scheduleLink += "2024/07/Schedule088.pdf";
+            scheduleLink += "2026/03/20260824_Schedule088.pdf";
             break;
         case 89:
-            scheduleLink += "2024/08/Schedule089.pdf";
+            scheduleLink += "2026/03/20260824_Schedule089.pdf";
             break;
         case 90:
-            scheduleLink += "2025/07/Schedule090.pdf";
+            scheduleLink += "2026/03/20260824_Schedule090.pdf";
+            break;
+        case 92:
+            scheduleLink += "2026/03/20260504_Schedule092.pdf";
             break;
         case 93:
             scheduleLink += "2026/03/20260824_Schedule093.pdf";
             break;
         case 96:
-            scheduleLink += "2025/01/Schedule096.pdf";
+            scheduleLink += "2026/03/20260824_Schedule096.pdf";
             break;
         case 97:
             scheduleLink += "2025/04/Schedule097.pdf";
@@ -102,14 +99,8 @@ function GetTimetableLink(route)
         case 102:
             scheduleLink += "2025/04/Schedule102-Primo.pdf";
             break;
-        case 202:
-            scheduleLink += "2024/10/LineUp-0924_Rt202.pdf";
-            break;
         case 204:
             scheduleLink += "2024/10/LineUp-0924_Rt204.pdf";
-            break;
-        case 209:
-            scheduleLink += "2024/10/LineUp-0924_Rt209.pdf";
             break;
         case 222:
             scheduleLink += "2024/10/LineUp-0924_Rt222.pdf";
@@ -122,15 +113,6 @@ function GetTimetableLink(route)
             break;
         case 232:
             scheduleLink += "2024/10/LineUp-0924_Rt232.pdf";
-            break;
-        case 243:
-            scheduleLink += "2024/10/LineUp-0924_Rt243.pdf";
-            break;
-        case 246:
-            scheduleLink += "2024/10/LineUp-0924_Rt246.pdf";
-            break;
-        case 251:
-            scheduleLink += "2024/10/LineUp-0924_Rt251.pdf";
             break;
         case 268:
             scheduleLink += "2024/10/LineUp-0924_Rt268.pdf";
@@ -153,23 +135,20 @@ function GetTimetableLink(route)
         case 289:
             scheduleLink += "2024/10/LineUp-0924_Rt289.pdf";
             break;
-        case 296:
-            scheduleLink += "2024/10/LineUp-0924_Rt296.pdf";
-            break;
         case 502:
-            scheduleLink += "2025/07/Schedule502.pdf";
+            scheduleLink += "2026/03/20260504_Schedule502.pdf";
             break;
         case 505:
             scheduleLink += "2024/08/Schedule505.pdf";
             break;
         case 515:
-            scheduleLink += "2025/01/Schedule515.pdf";
+            scheduleLink += "2026/03/20260824_Schedule515.pdf";
             break;
         case 522:
             scheduleLink += "2025/01/Schedule522.pdf";
             break;
         case 524:
-            scheduleLink += "2024/07/Schedule524.pdf";
+            scheduleLink += "2026/03/20260504_Schedule524.pdf";
             break;
         case 602:
             scheduleLink += "2025/07/Schedule602.pdf";
@@ -184,28 +163,19 @@ function GetTimetableLink(route)
             scheduleLink += "2025/07/Schedule610.pdf";
             break;
         case 611:
-            scheduleLink += "2025/01/Schedule611.pdf";
+            scheduleLink += "2026/03/20260824_Schedule611.pdf";
             break;
         case 612:
             scheduleLink += "2024/08/Schedule612.pdf";
             break;
-        case 614:
-            scheduleLink += "2024/08/Schedule614.pdf";
-            break;
         case 615:
-            scheduleLink += "2026/03/20260504_Schedule615.pdf";
-            break;
-        case 616:
-            scheduleLink += "2024/08/Schedule616.pdf";
-            break;
-        case 617:
-            scheduleLink += "2024/08/Schedule617.pdf";
+            scheduleLink += "2026/03/20260824_Schedule615.pdf";
             break;
         case 618:
             scheduleLink += "2025/07/Schedule618.pdf";
             break;
         case 619:
-            scheduleLink += "2025/07/Schedule619.pdf";
+            scheduleLink += "2026/03/20260824_Schedule619.pdf";
             break;
         case 620:
             scheduleLink += "2024/07/Schedule620.pdf";
@@ -328,6 +298,50 @@ function GetOldTimetableLink(timetableID)
         case 25:
             scheduleLink += "2024/08/Schedule632.pdf";
             break;
+        case 26:
+            scheduleLink += "2025/04/Schedule028.pdf";
+            break;
+            // change to 2025/04 if link dies
+        case 27:
+            scheduleLink += "2025/07/Schedule030.pdf";
+            break;
+            // change to 2026/01 if link dies
+        case 28:
+            scheduleLink += "2025/07/Schedule043.pdf";
+            break;
+            // change to 2026/01 if link dies
+        case 29:
+            scheduleLink += "2025/04/Schedule076.pdf";
+            break;
+        case 30:
+            scheduleLink += "2025/07/Schedule090.pdf";
+            break;
+            // change to 2026/01 if link dies
+        case 31:
+            scheduleLink += "2024/10/LineUp-0924_Rt202.pdf";
+            break;
+        case 32:
+            scheduleLink += "2024/10/LineUp-0924_Rt209.pdf";
+            break;
+        case 33:
+            scheduleLink += "2024/10/LineUp-0924_Rt243.pdf";
+            break;
+        case 34:
+            scheduleLink += "2024/10/LineUp-0924_Rt246.pdf";
+            break;
+        case 35:
+            scheduleLink += "2024/10/LineUp-0924_Rt251.pdf";
+            break;
+        case 36:
+            scheduleLink += "2024/10/LineUp-0924_Rt296.pdf";
+            break;
+        case 37:
+            scheduleLink += "2026/05/Schedule503.pdf";
+            break;
+        case 38:
+            scheduleLink += "2025/07/Schedule648.pdf";
+            break;
+            // change to 2026/01 if link dies
         default:
             scheduleLink = "";
             break;
@@ -341,7 +355,7 @@ function GetOldTimetableLink(timetableID)
 }
 
 let deadIDs = [
-    2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 16, 17, 18, 20, 21
+    2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 16, 17, 18, 20, 21, 37
 ];
 
 function IsDeadLink(timetableID)
