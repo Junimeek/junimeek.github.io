@@ -4,6 +4,9 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Junimeek">
+        <meta name="description" content="Information about VIA Metropolitan Transit's Rapid Green Line">
+        <meta name="keywords" content="san antonio,via metropolitan transit,public transportation,bus rapid transit">
         <title>ART Green Line</title>
         <link rel="stylesheet" href="./style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -58,7 +61,7 @@
 
             <h1 class="saya-h1" style="color: white;">VIA Rapid Green Line</h1>
             <p class="saya-short-paragraph" style="color: white;">
-                <em>This page was last updated on September 29, 2026.</em>
+                <em>This page was last updated on October 15, 2026.</em>
             </p>
             <hr class="saya-hr" style="background-color: white;">
 
@@ -839,28 +842,66 @@
             </table>
             </div>
 
-            <div style="display: none;">
             <hr class="saya-hr">
 
             <a name="section-station-list"></a>
-            <h2 class="saya-h2">Green Line Station List</h2>
+            <h2 class="saya-h2">Green Line Stations</h2>
+
+            <h3 class="saya-h3 saya-navbar-font-scene">Station Types</h3>
+            <img class="stationtype-diagram" src="medctr.jpg" loading="lazy">
+            <p class="saya-paragraph">
+                <b><u>Bus station</u></b>: These stations are integrated with a larger facility that features amenities such as customer service, restrooms, indoor waiting areas, and transfers to other routes
+            </p>
+            <img class="stationtype-diagram" src="ARTStation_Median.webp" loading="lazy">
+            <p class="saya-paragraph">
+                <b><u>Median-running bus lane</u></b>: These stations are in the center of the roadway and divide the two directions of traffic, accessible by using a nearby signalized crosswalk that intersects with an entrance to the station.
+                The lane directly next to the station is a bus-only lane that only allows buses and emergency vehicles to enter.
+            </p>
+            <img class="stationtype-diagram" src="ARTStation_Curb.webp" loading="lazy">
+            <p class="saya-paragraph">
+                <b><u>Curb-running bus lane</u></b>: These stations are on the right side of the roadway, accessible by simply using the sidewalk.
+                The lane directly next to the station is a bus-only lane that only allows buses and emergency vehicles to travel on it.
+                Additionally, any regular passenger vehicle or truck that intends to make a right turn onto any driveway or intersecting street must enter the bus lane, decelerate, and execute the turn.
+            </p>
+            <img class="stationtype-diagram" src="ARTStation_Mixed.webp" loading="lazy">
+            <p class="saya-paragraph">
+                <b><u>Mixed traffic lane</u></b>: These stations are on the right side of the roadway, accessible by simply using the sidewalk.
+                The lane directly next to the station is a standard general-purpose vehicle lane that is open to all vehicles.
+                Examples of this station type exist in San Antonio along Fredericksburg Road that are in use by Prímo 100 and Prímo 103.
+            </p>
+
+            <h3 class="saya-h3 saya-navbar-font-scene">Connections</h3>
+            <p class="saya-paragraph">
+                The list of connections in this table shows what is currently available along the corridor, and does not show what connections will be made available or what will be removed in the future.
+                However, the following routes will be directly replaced by the Green Line, and thus are omitted from the table:
+            </p>
+            <div class="saya-sf-centered saya-sf-w1100" style="display: flex; justify-content: center;">
+                <img style="margin: 4px;" class="via-big-number" src="../../../resources/transit/via/route-icons/003.webp" loading="lazy">
+                <img style="margin: 4px;" class="via-big-number" src="../../../resources/transit/via/route-icons/004.webp" loading="lazy">
+                <img style="margin: 4px;" class="via-big-number" src="../../../resources/transit/via/route-icons/034.webp" loading="lazy">
+                <img style="margin: 4px;" class="via-big-number" src="../../../resources/transit/via/route-icons/036.webp" loading="lazy">
+                <img style="margin: 4px;" class="via-big-number" src="../../../resources/transit/via/route-icons/042.webp" loading="lazy">
             </div>
 
-            <div class="saya-scrollable-element" style="display: none;">
+            <h3 class="saya-h3 saya-navbar-font-scene">Station List</h3>
+
+            <div class="saya-scrollable-element">
             <table class="saya-table saya-table-color-betterbus saya-sf-w1100">
                 <tbody>
                     <tr class="saya-table-header saya-table-color-betterbus">
-                        <th width="15%"><span>Station</span></th>
-                        <th width="30%"><span>Location</span></th>
-                        <th width="20%"><span>Connections</span></th>
+                        <th width="10%"><span>Station</span></th>
+                        <th width="15%"><span>Location</span></th>
+                        <th width="15%"><span>Type</span></th>
+                        <th width="25%"><span>Connections</span></th>
                         <th width="35%"><span>Notable Destinations</span></th>
                     </tr>
                     <tr>
                         <td>San Antonio International Airport</td>
                         <td>SAT Terminal B</td>
+                        <td>Mixed traffic lane</td>
                         <td>
-                            <img class="via-big-number" src="../../../resources/transit/via/route-icons/005.webp">
-                            <img class="via-big-number" src="../../../resources/transit/via/route-icons/007.webp">
+                            <img class="via-big-number" src="../../../resources/transit/via/route-icons/005.webp" loading="lazy">
+                            <img class="via-big-number" src="../../../resources/transit/via/route-icons/007.webp" loading="lazy">
                         </td>
                         <td>
                             <ul class="saya-ul">
@@ -871,18 +912,354 @@
                     <tr>
                         <td>Sahara</td>
                         <td>Isom Rd. between Oasis Dr. & Sahara Dr.</td>
+                        <td>Mixed traffic lane</td>
                         <td></td>
                         <td></td>
                     </tr>
                     <tr>
                         <td>Social Security</td>
                         <td>Isom Rd. between Contessa Dr. & San Pedro Ave.</td>
+                        <td>Curb-running bus lane</td>
                         <td></td>
                         <td>
-                            <ul class="saya-ul">
-                                <li>Social Security Administration </li>
+                            <ul class="saya-ul saya-sf-list-compact">
+                                <li>San Pedro Crossing</li>
+                                <li>Social Security Administration</li>
                             </ul>
                         </td>
+                    </tr>
+                    <tr>
+                        <td>North Star Transit Center</td>
+                        <td>7538 San Pedro Ave.</td>
+                        <td>Bus station</td>
+                        <td>
+                            <img class="via-big-number" src="../../../resources/transit/via/route-icons/005.webp" loading="lazy">
+                            <img class="via-big-number" src="../../../resources/transit/via/route-icons/502.webp" loading="lazy">
+                            <img class="via-big-number" src="../../../resources/transit/via/route-icons/534.webp" loading="lazy">
+                            <img class="via-big-number" src="../../../resources/transit/via/route-icons/552.webp" loading="lazy">
+                            <img class="via-big-number" src="../../../resources/transit/via/route-icons/647.webp" loading="lazy">
+                            <img class="via-big-number" src="../../../resources/transit/via/route-icons/648.webp" loading="lazy">
+                            <img class="via-big-number" src="../../../resources/transit/via/route-icons/649.webp" loading="lazy">
+                        </td>
+                        <td>
+                            <ul class="saya-ul saya-sf-list-compact">
+                                <li>North Star Mall</li>
+                                <li>Park North</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Rampart</td>
+                        <td>San Pedro Ave. & Rampart Dr.</td>
+                        <td>Median-running bus lane</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Oblate</td>
+                        <td>San Pedro Ave. & Oblate Dr.</td>
+                        <td>Median-running bus lane</td>
+                        <td></td>
+                        <td>
+                            <ul class="saya-ul saya-sf-list-compact">
+                                <li>H-E-B at Oblate Drive</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Jackson Keller</td>
+                        <td>San Pedro Ave. & Jackson Keller Rd.</td>
+                        <td>Median-running bus lane</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Basse</td>
+                        <td>San Pedro Ave. & Basse Rd.</td>
+                        <td>Median-running bus lane</td>
+                        <td>
+                            <img class="via-big-number" src="../../../resources/transit/via/route-icons/505.webp" loading="lazy">
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Mandalay</td>
+                        <td>San Pedro Ave. & Mandalay Dr.</td>
+                        <td>Median-running bus lane</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Millard</td>
+                        <td>San Pedro Ave. between Agnes St. & Millard St.</td>
+                        <td>Median-running bus lane</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Hildebrand</td>
+                        <td>San Pedro Ave. & Hildebrand Ave.</td>
+                        <td>Curb-running bus lane</td>
+                        <td>
+                            <img class="via-big-number" src="../../../resources/transit/via/route-icons/509.webp" loading="lazy">
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Fulton</td>
+                        <td>
+                            <b>Southbound: </b>San Pedro Ave. & Fulton Ave.
+                            <hr class="saya-hr">
+                            <b>Northbound: </b>San Pedro Ave. & Eslmere Pl.
+                        </td>
+                        <td>Curb-running bus lane</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Mulberry</td>
+                        <td>San Pedro Ave. & Mulberry Ave.</td>
+                        <td>Curb-running bus lane</td>
+                        <td></td>
+                        <td>
+                            <ul class="saya-ul saya-sf-list-compact">
+                                <li>Mark Twain Dual Language Academy</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Woodlawn</td>
+                        <td>San Pedro Ave. & Woodlawn Ave.</td>
+                        <td>Curb-running bus lane</td>
+                        <td>
+                            <img class="via-big-number" src="../../../resources/transit/via/route-icons/090.webp" loading="lazy">
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>San Pedro Park</td>
+                        <td>San Pedro Ave. & Dewey Pl.</td>
+                        <td>Median-running bus lane</td>
+                        <td>
+                            <img class="via-big-number" src="../../../resources/transit/via/route-icons/020.webp" loading="lazy">
+                        </td>
+                        <td>
+                            <ul class="saya-ul saya-sf-list-compact">
+                                <li>San Antonio College</li>
+                                <li>San Pedro Branch Library</li>
+                                <li>San Pedro Springs Park</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Cypress</td>
+                        <td>San Pedro Ave. & Cypress St.</td>
+                        <td>Median-running bus lane</td>
+                        <td>
+                            <img class="via-big-number" src="../../../resources/transit/via/route-icons/095.webp" loading="lazy">
+                            <img class="via-big-number" src="../../../resources/transit/via/route-icons/096.webp" loading="lazy">
+                            <img class="via-big-number" src="../../../resources/transit/via/route-icons/097.webp" loading="lazy">
+                        </td>
+                        <td>
+                            <ul class="saya-ul saya-sf-list-compact">
+                                <li>VIA Metro Center</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Marshall</td>
+                        <td>San Pedro Ave. & Marshall St.</td>
+                        <td>Median-running bus lane</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Augusta</td>
+                        <td>Navarro St. between Dallas St & Augusta St.</td>
+                        <td>Curb-running bus lane</td>
+                        <td>
+                            <img class="via-big-number" src="../../../resources/transit/via/route-icons/090.webp" loading="lazy">
+                            <img class="via-big-number" src="../../../resources/transit/via/route-icons/095.webp" loading="lazy">
+                            <img class="via-big-number" src="../../../resources/transit/via/route-icons/096.webp" loading="lazy">
+                            <img class="via-big-number" src="../../../resources/transit/via/route-icons/097.webp" loading="lazy">
+                        </td>
+                        <td>
+                            <ul class="saya-ul saya-sf-list-compact">
+                                <li>Central Library</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Pecan<br><em>(Southbound only)</em></td>
+                        <td>N St. Mary's St. & Pecan St.</td>
+                        <td>Curb-running bus lane</td>
+                        <td>
+                            <img class="via-big-number" src="../../../resources/transit/via/route-icons/002.webp" loading="lazy">
+                            <img class="via-big-number" src="../../../resources/transit/via/route-icons/005.webp" loading="lazy">
+                            <img class="via-big-number" src="../../../resources/transit/via/route-icons/007.webp" loading="lazy">
+                            <img class="via-big-number" src="../../../resources/transit/via/route-icons/008.webp" loading="lazy">
+                            <img class="via-big-number" src="../../../resources/transit/via/route-icons/009.webp" loading="lazy">
+                            <img class="via-big-number" src="../../../resources/transit/via/route-icons/010.webp" loading="lazy">
+                            <img class="via-big-number" src="../../../resources/transit/via/route-icons/014.webp" loading="lazy">
+                            <img class="via-big-number" src="../../../resources/transit/via/route-icons/021.webp" loading="lazy">
+                            <img class="via-big-number" src="../../../resources/transit/via/route-icons/022.webp" loading="lazy">
+                            <img class="via-big-number" src="../../../resources/transit/via/route-icons/024.webp" loading="lazy">
+                            <img class="via-big-number" src="../../../resources/transit/via/route-icons/025.webp" loading="lazy">
+                            <img class="via-big-number" src="../../../resources/transit/via/route-icons/028.webp" loading="lazy">
+                            <img class="via-big-number" src="../../../resources/transit/via/route-icons/030.webp" loading="lazy">
+                            <img class="via-big-number" src="../../../resources/transit/via/route-icons/032.webp" loading="lazy">
+                            <img class="via-big-number" src="../../../resources/transit/via/route-icons/043.webp" loading="lazy">
+                            <img class="via-big-number" src="../../../resources/transit/via/route-icons/051.webp" loading="lazy">
+                            <img class="via-big-number" src="../../../resources/transit/via/route-icons/067.webp" loading="lazy">
+                            <img class="via-big-number" src="../../../resources/transit/via/route-icons/075.webp" loading="lazy">
+                            <img class="via-big-number" src="../../../resources/transit/via/route-icons/077.webp" loading="lazy">
+                            <img class="via-big-number" src="../../../resources/transit/via/route-icons/079.webp" loading="lazy">
+                            <img class="via-big-number" src="../../../resources/transit/via/route-icons/082.webp" loading="lazy">
+                            <img class="via-big-number" src="../../../resources/transit/via/route-icons/088.webp" loading="lazy">
+                            <img class="via-big-number" src="../../../resources/transit/via/route-icons/090.webp" loading="lazy">
+                            <img class="via-big-number" src="../../../resources/transit/via/route-icons/095.webp" loading="lazy">
+                            <img class="via-big-number" src="../../../resources/transit/via/route-icons/096.webp" loading="lazy">
+                            <img class="via-big-number" src="../../../resources/transit/via/route-icons/097.webp" loading="lazy">
+                        </td>
+                        <td>
+                            <ul class="saya-ul saya-sf-list-compact">
+                                <li>Greyhound Bus Station</li>
+                                <li>Travis Park</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Martin<br><em>(Northbound only)</em></td>
+                        <td>Navarro St. & Martin St.</td>
+                        <td>Curb-running bus lane</td>
+                        <td>
+                            <img class="via-big-number" src="../../../resources/transit/via/route-icons/002.webp" loading="lazy">
+                            <img class="via-big-number" src="../../../resources/transit/via/route-icons/005.webp" loading="lazy">
+                            <img class="via-big-number" src="../../../resources/transit/via/route-icons/007.webp" loading="lazy">
+                            <img class="via-big-number" src="../../../resources/transit/via/route-icons/008.webp" loading="lazy">
+                            <img class="via-big-number" src="../../../resources/transit/via/route-icons/009.webp" loading="lazy">
+                            <img class="via-big-number" src="../../../resources/transit/via/route-icons/010.webp" loading="lazy">
+                            <img class="via-big-number" src="../../../resources/transit/via/route-icons/014.webp" loading="lazy">
+                            <img class="via-big-number" src="../../../resources/transit/via/route-icons/021.webp" loading="lazy">
+                            <img class="via-big-number" src="../../../resources/transit/via/route-icons/022.webp" loading="lazy">
+                            <img class="via-big-number" src="../../../resources/transit/via/route-icons/024.webp" loading="lazy">
+                            <img class="via-big-number" src="../../../resources/transit/via/route-icons/025.webp" loading="lazy">
+                            <img class="via-big-number" src="../../../resources/transit/via/route-icons/028.webp" loading="lazy">
+                            <img class="via-big-number" src="../../../resources/transit/via/route-icons/030.webp" loading="lazy">
+                            <img class="via-big-number" src="../../../resources/transit/via/route-icons/032.webp" loading="lazy">
+                            <img class="via-big-number" src="../../../resources/transit/via/route-icons/043.webp" loading="lazy">
+                            <img class="via-big-number" src="../../../resources/transit/via/route-icons/051.webp" loading="lazy">
+                            <img class="via-big-number" src="../../../resources/transit/via/route-icons/067.webp" loading="lazy">
+                            <img class="via-big-number" src="../../../resources/transit/via/route-icons/075.webp" loading="lazy">
+                            <img class="via-big-number" src="../../../resources/transit/via/route-icons/077.webp" loading="lazy">
+                            <img class="via-big-number" src="../../../resources/transit/via/route-icons/079.webp" loading="lazy">
+                            <img class="via-big-number" src="../../../resources/transit/via/route-icons/082.webp" loading="lazy">
+                            <img class="via-big-number" src="../../../resources/transit/via/route-icons/088.webp" loading="lazy">
+                            <img class="via-big-number" src="../../../resources/transit/via/route-icons/090.webp" loading="lazy">
+                            <img class="via-big-number" src="../../../resources/transit/via/route-icons/095.webp" loading="lazy">
+                            <img class="via-big-number" src="../../../resources/transit/via/route-icons/096.webp" loading="lazy">
+                            <img class="via-big-number" src="../../../resources/transit/via/route-icons/097.webp" loading="lazy">
+                        </td>
+                        <td>
+                            <ul class="saya-ul saya-sf-list-compact">
+                                <li>Greyhound Bus Station</li>
+                                <li>Travis Park</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Market<br><em>(Southbound only)</em></td>
+                        <td>S St. Mary's St. & Market St.</td>
+                        <td>Curb-running bus lane</td>
+                        <td>
+                            <img class="via-big-number" src="../../../resources/transit/via/route-icons/007.webp" loading="lazy">
+                            <img class="via-big-number" src="../../../resources/transit/via/route-icons/017.webp" loading="lazy">
+                            <img class="via-big-number" src="../../../resources/transit/via/route-icons/028.webp" loading="lazy">
+                            <img class="via-big-number" src="../../../resources/transit/via/route-icons/030.webp" loading="lazy">
+                            <img class="via-big-number" src="../../../resources/transit/via/route-icons/032.webp" loading="lazy">
+                            <img class="via-big-number" src="../../../resources/transit/via/route-icons/043.webp" loading="lazy">
+                            <img class="via-big-number" src="../../../resources/transit/via/route-icons/051.webp" loading="lazy">
+                            <img class="via-big-number" src="../../../resources/transit/via/route-icons/064.webp" loading="lazy">
+                            <img class="via-big-number" src="../../../resources/transit/via/route-icons/067.webp" loading="lazy">
+                            <img class="via-big-number" src="../../../resources/transit/via/route-icons/093.webp" loading="lazy">
+                            <img class="via-big-number" src="../../../resources/transit/via/route-icons/100.webp" loading="lazy">
+                        </td>
+                        <td>
+                            <ul class="saya-ul saya-sf-list-compact">
+                                <li>San Antonio Riverwalk</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Commerce<br><em>(Northbound only)</em></td>
+                        <td>Navarro St. & Commerce St.</td>
+                        <td>Curb-running bus lane</td>
+                        <td>
+                            <img class="via-big-number" src="../../../resources/transit/via/route-icons/005.webp" loading="lazy">
+                            <img class="via-big-number" src="../../../resources/transit/via/route-icons/007.webp" loading="lazy">
+                            <img class="via-big-number" src="../../../resources/transit/via/route-icons/008.webp" loading="lazy">
+                            <img class="via-big-number" src="../../../resources/transit/via/route-icons/009.webp" loading="lazy">
+                            <img class="via-big-number" src="../../../resources/transit/via/route-icons/017.webp" loading="lazy">
+                            <img class="via-big-number" src="../../../resources/transit/via/route-icons/021.webp" loading="lazy">
+                            <img class="via-big-number" src="../../../resources/transit/via/route-icons/022.webp" loading="lazy">
+                            <img class="via-big-number" src="../../../resources/transit/via/route-icons/064.webp" loading="lazy">
+                            <img class="via-big-number" src="../../../resources/transit/via/route-icons/093.webp" loading="lazy">
+                            <img class="via-big-number" src="../../../resources/transit/via/route-icons/097.webp" loading="lazy">
+                            <img class="via-big-number" src="../../../resources/transit/via/route-icons/100.webp" loading="lazy">
+                        </td>
+                        <td>
+                            <ul class="saya-ul saya-sf-list-compact">
+                                <li>San Antonio Riverwalk</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Durango</td>
+                        <td>S St. Mary's St. & Durango Blvd.</td>
+                        <td>Curb-running bus lane</td>
+                        <td>
+                            <img class="via-big-number" src="../../../resources/transit/via/route-icons/030.webp" loading="lazy">
+                            <img class="via-big-number" src="../../../resources/transit/via/route-icons/032.webp" loading="lazy">
+                            <img class="via-big-number" src="../../../resources/transit/via/route-icons/051.webp" loading="lazy">
+                            <img class="via-big-number" src="../../../resources/transit/via/route-icons/067.webp" loading="lazy">
+                            <img class="via-big-number" src="../../../resources/transit/via/route-icons/092.webp" loading="lazy">
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Pereida</td>
+                        <td>S St. Mary's St. & Pereida St.</td>
+                        <td>Curb-running bus lane</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Carolina</td>
+                        <td>S St. Mary's St. & Carolina St.</td>
+                        <td>Mixed traffic lane</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Roosevelt</td>
+                        <td>S St. Mary's St. & Roosevelt Park Dr.</td>
+                        <td>Mixed traffic lane</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Highland</td>
+                        <td>S St. Mary's St. between Yellowstone St. & Highland Blvd.</td>
+                        <td>Mixed traffic lane</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Steves</td>
+                        <td>S St. Mary's St. between I-10. & McKinley Ave.</td>
+                        <td>Mixed traffic lane</td>
+                        <td></td>
+                        <td></td>
                     </tr>
                 </tbody>
             </table>

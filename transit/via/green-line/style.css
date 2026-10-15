@@ -113,6 +113,14 @@
     height: 87%;
 }
 
+.stationtype-diagram {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: 512px;
+}
+
 @media screen and (min-width: 900px) {
     .routeselector a {
         width: 68px;
