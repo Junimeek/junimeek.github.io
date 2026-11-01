@@ -1,4 +1,4 @@
-let linkDebugMode = true;
+let linkDebugMode = false;
 
 function GetCurrentLineupTimetable(route)
 {
@@ -46,7 +46,7 @@ function CheckForDetour(route)
         case 97:
             return "_GRDetour_rev2.pdf";
         case 204:
-            return "_GRDetour_rev4.pdf";
+            return "_GRDetour_rev5.pdf";
         case 232:
             return "_GRDetour_rev2.pdf";
         case 242:
