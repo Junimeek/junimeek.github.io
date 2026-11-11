@@ -1,8 +1,8 @@
 /*
-    This is the primary stylesheet for SayakaUI, the name of the common UI that is used across junimeek.net.
-    Additional SayakaUI stylesheets can be found in this same directory.
+    This is the primary stylesheet for SayakaUi, the name of the common UI that is used across junimeek.net.
+    Additional SayakaUi stylesheets can be found in this same directory.
     
-    Current version: 2.3
+    Current version: 2.3.1
 
     created by:
         Junimeek
@@ -112,15 +112,15 @@
     border-bottom: 2px solid white;
 }
 
-.saya-link::before {
+.saya-link::after {
     font-family: 'FontAwesome';
     font-weight: normal;
     font-size: 0.9em;
-    content: '\f08e\20';
+    content: '\20\f08e';
 }
 
-.saya-link.external::before {
-    content: '\f08e\20';
+.saya-link.external::after {
+    content: '\20\f08e';
 }
 
 .saya-link-download::before {
